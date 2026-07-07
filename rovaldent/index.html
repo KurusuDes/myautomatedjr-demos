@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rovaldent · Odontología especializada en Magdalena del Mar, Lima</title>
+  <meta name="description" content="Rovaldent: diseño de sonrisa, implantes, rehabilitación oral y ortodoncia en Magdalena del Mar. 5★ con 208 reseñas en Google. Reserva tu cita." />
+  <style>
+    :root{--brand:#0ea5a4;--brand-2:#0f766e;--ink:#0b1f2a;--muted:#5c7784;--bg:#f4fbfb;--card:#fff;--gold:#f5b301;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e2eeee;}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:15px 22px;max-width:1120px;margin:0 auto;}
+    .logo{font-weight:800;font-size:22px;color:var(--brand-2);letter-spacing:-.5px;}
+    .logo span{color:var(--gold);}
+    .nav-links{display:flex;align-items:center;gap:24px;}
+    .nav-links a{color:var(--ink);text-decoration:none;font-size:15px;}
+    .nav-links a:hover{color:var(--brand);}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;transition:.15s;box-shadow:0 6px 18px rgba(14,165,164,.3);}
+    .btn:hover{background:var(--brand-2);transform:translateY(-1px);}
+    .hero{background:linear-gradient(135deg,#e6faf9,#f4fbfb 60%);padding:80px 0 66px;position:relative;overflow:hidden;}
+    .hero .pill{display:inline-block;background:#d6f5f4;color:var(--brand-2);padding:6px 15px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:18px;}
+    .hero h1{font-size:clamp(32px,5.2vw,54px);line-height:1.08;letter-spacing:-1.2px;max-width:760px;}
+    .hero h1 em{color:var(--brand);font-style:normal;}
+    .hero p{font-size:19px;color:var(--muted);margin:20px 0 30px;max-width:600px;}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+    .ghost{background:#fff;color:var(--brand-2);border:1.5px solid var(--brand);box-shadow:none;}
+    .stars{display:flex;gap:10px;align-items:center;margin-top:26px;color:var(--muted);font-size:15px;}
+    .stars b{color:var(--gold);font-size:18px;}
+    section{padding:64px 0;}
+    .eyebrow{color:var(--brand);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px;}
+    h2{font-size:clamp(26px,3.5vw,36px);letter-spacing:-.6px;margin:6px 0 10px;}
+    .lead{color:var(--muted);margin-bottom:38px;max-width:640px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
+    .card{background:var(--card);border:1px solid #e2eeee;border-radius:18px;padding:28px;transition:.18s;}
+    .card:hover{box-shadow:0 14px 34px rgba(11,31,42,.09);transform:translateY(-3px);}
+    .card .ico{width:52px;height:52px;border-radius:14px;background:#e6faf9;display:grid;place-items:center;font-size:25px;margin-bottom:15px;}
+    .card h3{font-size:19px;margin-bottom:7px;}
+    .card p{color:var(--muted);font-size:15px;}
+    .why{background:var(--ink);color:#dbe9ee;}
+    .why h2{color:#fff;}
+    .why .grid{margin-top:12px;}
+    .why .card{background:#12303d;border-color:#1d3f4d;}
+    .why .card h3{color:#fff;}
+    .why .card p{color:#a7c2cc;}
+    .why .big{font-size:42px;font-weight:800;color:var(--brand);}
+    .quote{background:linear-gradient(135deg,#0ea5a4,#0f766e);color:#fff;border-radius:24px;padding:48px;text-align:center;}
+    .quote p{font-size:22px;font-weight:500;max-width:760px;margin:0 auto 16px;line-height:1.5;}
+    .quote .who{opacity:.85;font-size:15px;}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch;}
+    .contact ul{list-style:none;}
+    .contact li{padding:13px 0;border-bottom:1px solid #e2eeee;display:flex;gap:12px;align-items:center;font-size:15px;}
+    iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:18px;}
+    footer{background:var(--ink);color:#8fabb5;text-align:center;padding:40px 22px;font-size:14px;}
+    footer .demo{display:inline-block;margin-top:12px;font-size:12px;opacity:.6;}
+    .wa{position:fixed;right:22px;bottom:22px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:30;}
+    @media(max-width:760px){.nav-links a:not(.btn){display:none;}.contact{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <header><nav class="wrap">
+    <span class="logo">Roval<span>dent</span></span>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Por qué Rovaldent</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Reservar cita</a>
+    </div>
+  </nav></header>
+
+  <section class="hero"><div class="wrap">
+    <span class="pill">🦷 Odontología especializada · Magdalena del Mar</span>
+    <h1>Tu mejor sonrisa, diseñada con <em>precisión y arte</em>.</h1>
+    <p>Diseño de sonrisa, implantes, rehabilitación oral y ortodoncia con tecnología de última generación y un trato humano que se nota desde la primera cita.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Agenda tu evaluación</a>
+      <a class="btn ghost" href="#servicios">Ver tratamientos</a>
+    </div>
+    <div class="stars"><b>★★★★★</b> 5.0 · <strong>208 reseñas</strong> en Google · Magdalena del Mar</div>
+  </div></section>
+
+  <section id="servicios" class="wrap">
+    <span class="eyebrow">Tratamientos</span>
+    <h2>Todo para tu salud bucal, en un solo lugar</h2>
+    <p class="lead">Especialistas en cada área, para que recibas exactamente el tratamiento que necesitas.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">✨</div><h3>Diseño de sonrisa</h3><p>Carillas y estética dental para una sonrisa natural y armónica, planificada digitalmente.</p></div>
+      <div class="card"><div class="ico">🦷</div><h3>Implantes dentales</h3><p>Recupera piezas perdidas con implantes de titanio de alta durabilidad y estética.</p></div>
+      <div class="card"><div class="ico">🔧</div><h3>Rehabilitación oral</h3><p>Devolvemos función y estética a tu boca con un plan integral personalizado.</p></div>
+      <div class="card"><div class="ico">😁</div><h3>Ortodoncia / Brackets</h3><p>Brackets y alineadores para corregir la posición de tus dientes a cualquier edad.</p></div>
+      <div class="card"><div class="ico">🧒</div><h3>Odontopediatría</h3><p>Atención especializada y amable para los más pequeños de la casa.</p></div>
+      <div class="card"><div class="ico">👵</div><h3>Odontogeriatría</h3><p>Cuidado dental adaptado a las necesidades del adulto mayor.</p></div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="why"><div class="wrap">
+    <span class="eyebrow">Por qué elegirnos</span>
+    <h2>Confianza construida sonrisa a sonrisa</h2>
+    <div class="grid">
+      <div class="card"><div class="big">5.0★</div><h3>208 reseñas</h3><p>La calificación perfecta en Google, respaldada por cientos de pacientes.</p></div>
+      <div class="card"><div class="big">6</div><h3>Especialidades</h3><p>Un equipo multidisciplinario bajo un mismo techo en Magdalena del Mar.</p></div>
+      <div class="card"><div class="big">100%</div><h3>Plan personalizado</h3><p>Cada tratamiento empieza con una evaluación y presupuesto claros, sin sorpresas.</p></div>
+    </div>
+  </div></section>
+
+  <section class="wrap">
+    <div class="quote">
+      <p>"Excelente atención, profesionales de primera y un trato muy humano. Quedé feliz con mi tratamiento."</p>
+      <div class="who">— Reseña de paciente · Google (5★)</div>
+    </div>
+  </section>
+
+  <section id="contacto" class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h2>Reserva tu cita hoy</h2>
+    <p class="lead">Estamos en Magdalena del Mar, listos para atenderte.</p>
+    <div class="contact">
+      <ul>
+        <li>📍 Edificio Soho, Tomás Ramsey 930, Of. 706 · Magdalena del Mar</li>
+        <li>📞 999 601 381</li>
+        <li>🕒 Lunes a Sábado · Con cita previa</li>
+        <li>💬 <a href="https://wa.me/51999601381" target="_blank" rel="noopener" style="color:var(--brand-2);font-weight:600;">Escríbenos por WhatsApp</a></li>
+        <li style="border:none;padding-top:18px;"><a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Agendar por WhatsApp</a></li>
+      </ul>
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Tomas+Ramsey+930+Magdalena+del+Mar+Lima&output=embed" title="Ubicación Rovaldent"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div><strong style="color:#cfe4ea;">Rovaldent</strong> · Odontología especializada · Magdalena del Mar, Lima</div>
+    <div>999 601 381 · Con cita previa</div>
+    <div class="demo">Demo/propuesta preparada por Juan Neyra · sin compromiso</div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/51999601381" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+</body>
+</html>

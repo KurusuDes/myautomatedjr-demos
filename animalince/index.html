@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animalince · Clínica Veterinaria en Lince, Lima</title>
+  <meta name="description" content="Animalince Clínica Veterinaria en Lince: consultas, vacunación, cirugía, emergencias y grooming. 4.6★ con 231 reseñas. Cuidamos a tu mascota como familia." />
+  <style>
+    :root{--brand:#2e9e6b;--brand-2:#1f7a51;--accent:#f59e0b;--ink:#12261d;--muted:#5d7268;--bg:#f5faf6;--card:#fff;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e3efe7;}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:15px 22px;max-width:1120px;margin:0 auto;}
+    .logo{font-weight:800;font-size:22px;color:var(--brand-2);letter-spacing:-.5px;display:flex;align-items:center;gap:7px;}
+    .nav-links{display:flex;align-items:center;gap:24px;}
+    .nav-links a{color:var(--ink);text-decoration:none;font-size:15px;}
+    .nav-links a:hover{color:var(--brand);}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;transition:.15s;box-shadow:0 6px 18px rgba(46,158,107,.32);}
+    .btn:hover{background:var(--brand-2);transform:translateY(-1px);}
+    .btn.warm{background:var(--accent);box-shadow:0 6px 18px rgba(245,158,11,.32);}
+    .btn.warm:hover{background:#d98708;}
+    .hero{background:linear-gradient(135deg,#e4f6ec,#f5faf6 60%);padding:80px 0 66px;}
+    .hero .pill{display:inline-block;background:#d5f0e0;color:var(--brand-2);padding:6px 15px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:18px;}
+    .hero h1{font-size:clamp(32px,5.2vw,54px);line-height:1.08;letter-spacing:-1.2px;max-width:780px;}
+    .hero h1 em{color:var(--brand);font-style:normal;}
+    .hero p{font-size:19px;color:var(--muted);margin:20px 0 30px;max-width:600px;}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+    .ghost{background:#fff;color:var(--brand-2);border:1.5px solid var(--brand);box-shadow:none;}
+    .stars{display:flex;gap:10px;align-items:center;margin-top:26px;color:var(--muted);font-size:15px;}
+    .stars b{color:var(--accent);font-size:18px;}
+    section{padding:64px 0;}
+    .eyebrow{color:var(--brand);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px;}
+    h2{font-size:clamp(26px,3.5vw,36px);letter-spacing:-.6px;margin:6px 0 10px;}
+    .lead{color:var(--muted);margin-bottom:38px;max-width:640px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+    .card{background:var(--card);border:1px solid #e3efe7;border-radius:18px;padding:28px;transition:.18s;}
+    .card:hover{box-shadow:0 14px 34px rgba(18,38,29,.09);transform:translateY(-3px);}
+    .card .ico{width:52px;height:52px;border-radius:14px;background:#e4f6ec;display:grid;place-items:center;font-size:25px;margin-bottom:15px;}
+    .card h3{font-size:19px;margin-bottom:7px;}
+    .card p{color:var(--muted);font-size:15px;}
+    .emergency{background:#12261d;color:#fff;border-radius:24px;padding:40px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+    .emergency h3{font-size:26px;margin-bottom:4px;}
+    .emergency p{color:#a9c4b6;}
+    .why{background:linear-gradient(135deg,#2e9e6b,#1f7a51);color:#fff;}
+    .why h2{color:#fff;}
+    .why .card{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);}
+    .why .card h3{color:#fff;}
+    .why .card p{color:#daf0e5;}
+    .why .big{font-size:42px;font-weight:800;color:#fff;}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch;}
+    .contact ul{list-style:none;}
+    .contact li{padding:13px 0;border-bottom:1px solid #e3efe7;display:flex;gap:12px;align-items:center;font-size:15px;}
+    iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:18px;}
+    footer{background:#12261d;color:#8fab9d;text-align:center;padding:40px 22px;font-size:14px;}
+    footer .demo{display:inline-block;margin-top:12px;font-size:12px;opacity:.6;}
+    .wa{position:fixed;right:22px;bottom:22px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:30;}
+    @media(max-width:760px){.nav-links a:not(.btn){display:none;}.contact{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <header><nav class="wrap">
+    <span class="logo">🐾 Animalince</span>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn" href="https://wa.me/51947590915" target="_blank" rel="noopener">Reservar cita</a>
+    </div>
+  </nav></header>
+
+  <section class="hero"><div class="wrap">
+    <span class="pill">🐾 Clínica Veterinaria · Lince</span>
+    <h1>Cuidamos a tu mascota <em>como parte de la familia</em>.</h1>
+    <p>Atención veterinaria integral en Lince: consultas, vacunación, cirugía, emergencias y grooming, con un equipo que ama a los animales tanto como tú.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/51947590915" target="_blank" rel="noopener">Agenda una cita</a>
+      <a class="btn ghost" href="#servicios">Ver servicios</a>
+    </div>
+    <div class="stars"><b>★★★★★</b> 4.6 · <strong>231 reseñas</strong> en Google · Lince</div>
+  </div></section>
+
+  <section id="servicios" class="wrap">
+    <span class="eyebrow">Servicios</span>
+    <h2>Todo lo que tu engreído necesita</h2>
+    <p class="lead">Desde el chequeo de rutina hasta la emergencia inesperada, estamos para cuidarlo.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">🩺</div><h3>Consultas médicas</h3><p>Diagnóstico y tratamiento con veterinarios especializados y mucho cariño.</p></div>
+      <div class="card"><div class="ico">💉</div><h3>Vacunación</h3><p>Planes de vacunación y desparasitación al día para proteger su salud.</p></div>
+      <div class="card"><div class="ico">🔬</div><h3>Laboratorio</h3><p>Análisis clínicos y ecografías para un diagnóstico rápido y preciso.</p></div>
+      <div class="card"><div class="ico">⚕️</div><h3>Cirugía</h3><p>Procedimientos quirúrgicos con equipamiento moderno y monitoreo constante.</p></div>
+      <div class="card"><div class="ico">✂️</div><h3>Grooming / Peluquería</h3><p>Baño, corte y estética para que salga guapo y relajado.</p></div>
+      <div class="card"><div class="ico">🚨</div><h3>Emergencias</h3><p>Atención rápida cuando tu mascota más lo necesita.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="emergency">
+      <div><h3>¿Una emergencia?</h3><p>No esperes. Escríbenos ahora mismo y te atendemos.</p></div>
+      <a class="btn warm" href="https://wa.me/51947590915" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="nosotros" class="why"><div class="wrap">
+    <span class="eyebrow" style="color:#daf0e5;">Por qué Animalince</span>
+    <h2>Cientos de familias ya nos confían a su mascota</h2>
+    <div class="grid">
+      <div class="card"><div class="big">4.6★</div><h3>231 reseñas</h3><p>La confianza de la comunidad de Lince, reflejada en Google.</p></div>
+      <div class="card"><div class="big">+10</div><h3>Años cuidando</h3><p>Experiencia y cariño en cada atención, para perros y gatos.</p></div>
+      <div class="card"><div class="big">🐶🐱</div><h3>Trato humano</h3><p>Tratamos a cada paciente peludo con la paciencia y el amor que merece.</p></div>
+    </div>
+  </div></section>
+
+  <section id="contacto" class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h2>Visítanos en Lince</h2>
+    <p class="lead">Estamos listos para atender a tu mejor amigo.</p>
+    <div class="contact">
+      <ul>
+        <li>📍 Jr. José Gálvez 2200 · Lince, Lima</li>
+        <li>📞 947 590 915</li>
+        <li>🕒 Lunes a Domingo · Consulta horarios de emergencia</li>
+        <li>💬 <a href="https://wa.me/51947590915" target="_blank" rel="noopener" style="color:var(--brand-2);font-weight:600;">Escríbenos por WhatsApp</a></li>
+        <li style="border:none;padding-top:18px;"><a class="btn" href="https://wa.me/51947590915" target="_blank" rel="noopener">Agendar por WhatsApp</a></li>
+      </ul>
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Jose+Galvez+2200+Lince+Lima&output=embed" title="Ubicación Animalince"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div><strong style="color:#cfe9dd;">🐾 Animalince Clínica Veterinaria</strong> · Lince, Lima</div>
+    <div>947 590 915</div>
+    <div class="demo">Demo/propuesta preparada por Juan Neyra · sin compromiso</div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/51947590915" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+</body>
+</html>
