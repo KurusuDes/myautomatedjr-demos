@@ -1,138 +1,324 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rovaldent · Odontología especializada en Magdalena del Mar, Lima</title>
-  <meta name="description" content="Rovaldent: diseño de sonrisa, implantes, rehabilitación oral y ortodoncia en Magdalena del Mar. 5★ con 208 reseñas en Google. Reserva tu cita." />
-  <style>
-    :root{--brand:#0ea5a4;--brand-2:#0f766e;--ink:#0b1f2a;--muted:#5c7784;--bg:#f4fbfb;--card:#fff;--gold:#f5b301;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e2eeee;}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:15px 22px;max-width:1120px;margin:0 auto;}
-    .logo{font-weight:800;font-size:22px;color:var(--brand-2);letter-spacing:-.5px;}
-    .logo span{color:var(--gold);}
-    .nav-links{display:flex;align-items:center;gap:24px;}
-    .nav-links a{color:var(--ink);text-decoration:none;font-size:15px;}
-    .nav-links a:hover{color:var(--brand);}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;transition:.15s;box-shadow:0 6px 18px rgba(14,165,164,.3);}
-    .btn:hover{background:var(--brand-2);transform:translateY(-1px);}
-    .hero{background:linear-gradient(135deg,#e6faf9,#f4fbfb 60%);padding:80px 0 66px;position:relative;overflow:hidden;}
-    .hero .pill{display:inline-block;background:#d6f5f4;color:var(--brand-2);padding:6px 15px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:18px;}
-    .hero h1{font-size:clamp(32px,5.2vw,54px);line-height:1.08;letter-spacing:-1.2px;max-width:760px;}
-    .hero h1 em{color:var(--brand);font-style:normal;}
-    .hero p{font-size:19px;color:var(--muted);margin:20px 0 30px;max-width:600px;}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-    .ghost{background:#fff;color:var(--brand-2);border:1.5px solid var(--brand);box-shadow:none;}
-    .stars{display:flex;gap:10px;align-items:center;margin-top:26px;color:var(--muted);font-size:15px;}
-    .stars b{color:var(--gold);font-size:18px;}
-    section{padding:64px 0;}
-    .eyebrow{color:var(--brand);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px;}
-    h2{font-size:clamp(26px,3.5vw,36px);letter-spacing:-.6px;margin:6px 0 10px;}
-    .lead{color:var(--muted);margin-bottom:38px;max-width:640px;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
-    .card{background:var(--card);border:1px solid #e2eeee;border-radius:18px;padding:28px;transition:.18s;}
-    .card:hover{box-shadow:0 14px 34px rgba(11,31,42,.09);transform:translateY(-3px);}
-    .card .ico{width:52px;height:52px;border-radius:14px;background:#e6faf9;display:grid;place-items:center;font-size:25px;margin-bottom:15px;}
-    .card h3{font-size:19px;margin-bottom:7px;}
-    .card p{color:var(--muted);font-size:15px;}
-    .why{background:var(--ink);color:#dbe9ee;}
-    .why h2{color:#fff;}
-    .why .grid{margin-top:12px;}
-    .why .card{background:#12303d;border-color:#1d3f4d;}
-    .why .card h3{color:#fff;}
-    .why .card p{color:#a7c2cc;}
-    .why .big{font-size:42px;font-weight:800;color:var(--brand);}
-    .quote{background:linear-gradient(135deg,#0ea5a4,#0f766e);color:#fff;border-radius:24px;padding:48px;text-align:center;}
-    .quote p{font-size:22px;font-weight:500;max-width:760px;margin:0 auto 16px;line-height:1.5;}
-    .quote .who{opacity:.85;font-size:15px;}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch;}
-    .contact ul{list-style:none;}
-    .contact li{padding:13px 0;border-bottom:1px solid #e2eeee;display:flex;gap:12px;align-items:center;font-size:15px;}
-    iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:18px;}
-    footer{background:var(--ink);color:#8fabb5;text-align:center;padding:40px 22px;font-size:14px;}
-    footer .demo{display:inline-block;margin-top:12px;font-size:12px;opacity:.6;}
-    .wa{position:fixed;right:22px;bottom:22px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:30;}
-    @media(max-width:760px){.nav-links a:not(.btn){display:none;}.contact{grid-template-columns:1fr;}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rovaldent · Diseño de sonrisa e implantes en Magdalena del Mar</title>
+<meta name="description" content="Rovaldent — Odontología especializada en diseño de sonrisa, implantes y ortodoncia en Magdalena del Mar. 5★ con 208 reseñas. Asistente virtual y reservas por WhatsApp." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<style>
+:root{
+  --brand:#0ea5a4;--brand-2:#0f766e;--deep:#062a2a;--ink:#0b1f2a;--muted:#5c7784;
+  --bg:#f4fbfb;--card:#fff;--gold:#f5b301;--line:#e2eeee;
+  --shadow:0 20px 50px rgba(6,42,42,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;overflow-x:hidden;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+a{color:inherit;}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1160px;margin:0 auto;}
+.logo{font-weight:800;font-size:23px;color:var(--brand-2);letter-spacing:-.5px;}
+.logo span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-links a{text-decoration:none;font-size:15px;color:var(--ink);transition:.15s;}
+.nav-links a:hover{color:var(--brand);}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:12px 24px;border-radius:40px;text-decoration:none;font-weight:600;transition:.18s;box-shadow:0 8px 22px rgba(14,165,164,.32);border:none;cursor:pointer;font-size:15px;}
+.btn:hover{background:var(--brand-2);transform:translateY(-2px);}
+.ghost{background:#fff;color:var(--brand-2);border:1.5px solid var(--brand);box-shadow:none;}
+.hero{position:relative;padding:76px 0 70px;background:radial-gradient(1200px 500px at 80% -10%,#d6f5f4,transparent),linear-gradient(135deg,#eafbfa,#f4fbfb 70%);overflow:hidden;}
+.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#d6f5f4;color:var(--brand-2);padding:7px 16px;border-radius:40px;font-size:13px;font-weight:700;margin-bottom:20px;}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-1.5px;}
+.hero h1 em{color:var(--brand);font-style:normal;}
+.hero p.sub{font-size:19px;color:var(--muted);margin:22px 0 30px;max-width:520px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.trust{display:flex;align-items:center;gap:14px;margin-top:30px;color:var(--muted);font-size:14px;flex-wrap:wrap;}
+.trust .rate{color:var(--gold);font-size:19px;letter-spacing:2px;}
+.trust b{color:var(--ink);}
+.hero__card{background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:26px;position:relative;}
+.hero__card .badge{position:absolute;top:-16px;right:22px;background:var(--gold);color:#3a2b00;font-weight:800;padding:8px 16px;border-radius:30px;font-size:13px;box-shadow:0 8px 20px rgba(245,179,1,.35);}
+.smile{height:190px;border-radius:18px;background:linear-gradient(135deg,#0ea5a4,#0f766e);display:grid;place-items:center;font-size:76px;position:relative;overflow:hidden;}
+.smile::after{content:"";position:absolute;inset:0;background:radial-gradient(300px 120px at 30% 20%,rgba(255,255,255,.25),transparent);}
+.hero__card h3{margin:18px 0 4px;font-size:19px;}
+.hero__card p{color:var(--muted);font-size:14px;}
+.mini{display:flex;gap:10px;margin-top:16px;}
+.mini div{flex:1;background:#f0fafa;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;}
+.mini b{display:block;font-size:20px;color:var(--brand-2);}
+.mini span{font-size:11px;color:var(--muted);}
+section{padding:72px 0;}
+.eyebrow{color:var(--brand);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:12px;}
+h2{font-size:clamp(28px,3.6vw,40px);letter-spacing:-.8px;margin:8px 0 12px;}
+.lead{color:var(--muted);margin-bottom:42px;max-width:620px;font-size:17px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;transition:.2s;}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:#c9ebe9;}
+.card .ico{width:56px;height:56px;border-radius:16px;background:#e6faf9;display:grid;place-items:center;font-size:27px;margin-bottom:16px;}
+.card h3{font-size:19px;margin-bottom:8px;}
+.card p{color:var(--muted);font-size:15px;}
+.why{background:linear-gradient(135deg,var(--deep),#0b3d3b);color:#dbf0ef;border-radius:34px;margin:0 24px;}
+.why .wrap{padding:14px 0;}
+.why h2{color:#fff;}
+.why .grid{margin-top:14px;}
+.why .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);backdrop-filter:blur(6px);}
+.why .card h3{color:#fff;}
+.why .card p{color:#a7d3d1;}
+.why .big{font-size:44px;font-weight:800;color:var(--gold);line-height:1;}
+.feed__head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;margin-bottom:28px;}
+.feed__handle{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px;}
+.feed__ig{width:44px;height:44px;border-radius:13px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:grid;place-items:center;color:#fff;font-size:22px;}
+.feed__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.post{aspect-ratio:1;border-radius:16px;position:relative;overflow:hidden;background:#0f766e;display:grid;place-items:center;color:#fff;font-size:34px;cursor:pointer;transition:.25s;}
+.post:nth-child(2){background:linear-gradient(135deg,#0ea5a4,#22d3ee);}
+.post:nth-child(3){background:linear-gradient(135deg,#0f766e,#134e4a);}
+.post:nth-child(4){background:linear-gradient(135deg,#14b8a6,#0ea5a4);}
+.post:nth-child(5){background:linear-gradient(135deg,#0891b2,#0e7490);}
+.post:nth-child(6){background:linear-gradient(135deg,#0f766e,#0ea5a4);}
+.post:nth-child(7){background:linear-gradient(135deg,#2dd4bf,#0d9488);}
+.post:nth-child(8){background:linear-gradient(135deg,#155e63,#0ea5a4);}
+.post:hover{transform:scale(1.04);}
+.post span.cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:11px;padding:14px 10px 8px;text-align:left;}
+.feed__cta{text-align:center;margin-top:26px;}
+.quote{background:linear-gradient(135deg,#0ea5a4,#0f766e);color:#fff;border-radius:26px;padding:52px;text-align:center;}
+.quote p{font-size:23px;font-weight:500;max-width:800px;margin:0 auto 18px;line-height:1.5;}
+.quote .who{opacity:.9;font-size:15px;}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;}
+.contact ul{list-style:none;}
+.contact li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;font-size:15px;}
+iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:20px;}
+footer{background:var(--deep);color:#8fbfbc;text-align:center;padding:46px 24px;font-size:14px;margin-top:24px;}
+footer .demo{display:inline-block;margin-top:14px;font-size:12px;opacity:.55;}
+.ai-fab{position:fixed;right:22px;bottom:22px;z-index:60;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border:none;cursor:pointer;box-shadow:0 12px 30px rgba(14,165,164,.5);font-size:28px;display:grid;place-items:center;transition:.2s;}
+.ai-fab:hover{transform:scale(1.08);}
+.ai-fab .dot{position:absolute;top:8px;right:8px;width:12px;height:12px;background:#22c55e;border:2px solid #fff;border-radius:50%;}
+.ai-panel{position:fixed;right:22px;bottom:98px;z-index:61;width:370px;max-width:calc(100vw - 28px);height:520px;max-height:calc(100vh - 130px);background:#fff;border-radius:22px;box-shadow:0 30px 70px rgba(6,42,42,.32);display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px) scale(.96);opacity:0;pointer-events:none;transition:.22s;border:1px solid var(--line);}
+.ai-panel.open{transform:none;opacity:1;pointer-events:auto;}
+.ai-head{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;}
+.ai-head .av{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:22px;}
+.ai-head b{font-size:15px;display:block;}
+.ai-head .on{font-size:12px;opacity:.9;display:flex;align-items:center;gap:6px;}
+.ai-head .on::before{content:"";width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block;}
+.ai-head .x{margin-left:auto;background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:16px;}
+.ai-body{flex:1;overflow-y:auto;padding:16px;background:#f4fbfb;display:flex;flex-direction:column;gap:10px;}
+.msg{max-width:82%;padding:10px 14px;border-radius:16px;font-size:14px;line-height:1.5;animation:pop .2s ease;}
+@keyframes pop{from{opacity:0;transform:translateY(6px);}}
+.msg.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start;}
+.msg.me{background:var(--brand);color:#fff;border-bottom-right-radius:5px;align-self:flex-end;}
+.msg.bot a{color:var(--brand-2);font-weight:700;}
+.typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;display:flex;gap:4px;}
+.typing i{width:7px;height:7px;background:#9fc6c4;border-radius:50%;animation:bl 1s infinite;}
+.typing i:nth-child(2){animation-delay:.2s;}.typing i:nth-child(3){animation-delay:.4s;}
+@keyframes bl{0%,60%,100%{opacity:.3;}30%{opacity:1;}}
+.ai-quick{display:flex;gap:8px;flex-wrap:wrap;padding:10px 14px 0;background:#f4fbfb;}
+.ai-quick button{background:#e6faf9;border:1px solid #c9ebe9;color:var(--brand-2);border-radius:30px;padding:7px 13px;font-size:12.5px;cursor:pointer;font-weight:600;transition:.15s;}
+.ai-quick button:hover{background:var(--brand);color:#fff;}
+.ai-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:#fff;}
+.ai-form input{flex:1;border:1px solid var(--line);border-radius:30px;padding:10px 15px;font-size:14px;outline:none;font-family:inherit;}
+.ai-form input:focus{border-color:var(--brand);}
+.ai-form button{background:var(--brand);border:none;color:#fff;width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:17px;flex:none;}
+.ai-disclaim{font-size:10.5px;color:#9fb6b5;text-align:center;padding:0 14px 10px;background:#fff;}
+@media(max-width:860px){.hero__grid{grid-template-columns:1fr;}.hero__card{order:-1;}.feed__grid{grid-template-columns:repeat(2,1fr);}.contact{grid-template-columns:1fr;}.nav-links a:not(.btn){display:none;}}
+</style>
 </head>
 <body>
-  <header><nav class="wrap">
-    <span class="logo">Roval<span>dent</span></span>
-    <div class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Por qué Rovaldent</a>
-      <a href="#contacto">Contacto</a>
-      <a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Reservar cita</a>
-    </div>
-  </nav></header>
+<header><nav class="wrap">
+  <span class="logo">Roval<span>dent</span></span>
+  <div class="nav-links">
+    <a href="#servicios">Tratamientos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#feed">Instagram</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Reservar</a>
+  </div>
+</nav></header>
 
-  <section class="hero"><div class="wrap">
+<section class="hero"><div class="wrap"><div class="hero__grid">
+  <div class="reveal">
     <span class="pill">🦷 Odontología especializada · Magdalena del Mar</span>
-    <h1>Tu mejor sonrisa, diseñada con <em>precisión y arte</em>.</h1>
-    <p>Diseño de sonrisa, implantes, rehabilitación oral y ortodoncia con tecnología de última generación y un trato humano que se nota desde la primera cita.</p>
+    <h1>Tu mejor sonrisa, <em>diseñada con ciencia y arte</em>.</h1>
+    <p class="sub">Diseño de sonrisa, implantes y ortodoncia con tecnología de última generación y un trato humano que se nota desde la primera cita.</p>
     <div class="cta-row">
       <a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Agenda tu evaluación</a>
-      <a class="btn ghost" href="#servicios">Ver tratamientos</a>
+      <button class="btn ghost" data-ai-open>💬 Pregúntale a nuestra IA</button>
     </div>
-    <div class="stars"><b>★★★★★</b> 5.0 · <strong>208 reseñas</strong> en Google · Magdalena del Mar</div>
-  </div></section>
-
-  <section id="servicios" class="wrap">
-    <span class="eyebrow">Tratamientos</span>
-    <h2>Todo para tu salud bucal, en un solo lugar</h2>
-    <p class="lead">Especialistas en cada área, para que recibas exactamente el tratamiento que necesitas.</p>
-    <div class="grid">
-      <div class="card"><div class="ico">✨</div><h3>Diseño de sonrisa</h3><p>Carillas y estética dental para una sonrisa natural y armónica, planificada digitalmente.</p></div>
-      <div class="card"><div class="ico">🦷</div><h3>Implantes dentales</h3><p>Recupera piezas perdidas con implantes de titanio de alta durabilidad y estética.</p></div>
-      <div class="card"><div class="ico">🔧</div><h3>Rehabilitación oral</h3><p>Devolvemos función y estética a tu boca con un plan integral personalizado.</p></div>
-      <div class="card"><div class="ico">😁</div><h3>Ortodoncia / Brackets</h3><p>Brackets y alineadores para corregir la posición de tus dientes a cualquier edad.</p></div>
-      <div class="card"><div class="ico">🧒</div><h3>Odontopediatría</h3><p>Atención especializada y amable para los más pequeños de la casa.</p></div>
-      <div class="card"><div class="ico">👵</div><h3>Odontogeriatría</h3><p>Cuidado dental adaptado a las necesidades del adulto mayor.</p></div>
+    <div class="trust"><span class="rate">★★★★★</span> <b>5.0</b> · 208 reseñas en Google · Magdalena del Mar</div>
+  </div>
+  <div class="hero__card reveal reveal--right">
+    <span class="badge">5.0 ★ en Google</span>
+    <div class="smile">😁</div>
+    <h3>Simulación de sonrisa digital</h3>
+    <p>Te mostramos cómo lucirá tu sonrisa antes de empezar el tratamiento.</p>
+    <div class="mini">
+      <div><b>+15</b><span>años de experiencia</span></div>
+      <div><b>6</b><span>especialidades</span></div>
+      <div><b>208</b><span>reseñas 5★</span></div>
     </div>
-  </section>
+  </div>
+</div></div></section>
 
-  <section id="nosotros" class="why"><div class="wrap">
-    <span class="eyebrow">Por qué elegirnos</span>
-    <h2>Confianza construida sonrisa a sonrisa</h2>
-    <div class="grid">
-      <div class="card"><div class="big">5.0★</div><h3>208 reseñas</h3><p>La calificación perfecta en Google, respaldada por cientos de pacientes.</p></div>
-      <div class="card"><div class="big">6</div><h3>Especialidades</h3><p>Un equipo multidisciplinario bajo un mismo techo en Magdalena del Mar.</p></div>
-      <div class="card"><div class="big">100%</div><h3>Plan personalizado</h3><p>Cada tratamiento empieza con una evaluación y presupuesto claros, sin sorpresas.</p></div>
+<section id="servicios" class="wrap">
+  <span class="eyebrow reveal">Tratamientos</span>
+  <h2 class="reveal">Todo para tu salud bucal, en un solo lugar</h2>
+  <p class="lead reveal">Especialistas en cada área, para que recibas exactamente el tratamiento que necesitas.</p>
+  <div class="grid">
+    <div class="card reveal"><div class="ico">✨</div><h3>Diseño de sonrisa</h3><p>Carillas y estética dental planificadas digitalmente para un resultado natural y armónico.</p></div>
+    <div class="card reveal"><div class="ico">🦷</div><h3>Implantes dentales</h3><p>Recupera piezas perdidas con implantes de titanio de alta durabilidad y estética.</p></div>
+    <div class="card reveal"><div class="ico">🔧</div><h3>Rehabilitación oral</h3><p>Devolvemos función y estética a tu boca con un plan integral personalizado.</p></div>
+    <div class="card reveal"><div class="ico">😁</div><h3>Ortodoncia / Brackets</h3><p>Brackets y alineadores para corregir la posición de tus dientes a cualquier edad.</p></div>
+    <div class="card reveal"><div class="ico">🧒</div><h3>Odontopediatría</h3><p>Atención especializada y amable para los más pequeños de la casa.</p></div>
+    <div class="card reveal"><div class="ico">👵</div><h3>Odontogeriatría</h3><p>Cuidado dental adaptado a las necesidades del adulto mayor.</p></div>
+  </div>
+</section>
+
+<section id="nosotros" class="why"><div class="wrap">
+  <span class="eyebrow reveal" style="color:#7fe3e0;">Por qué Rovaldent</span>
+  <h2 class="reveal">Confianza construida sonrisa a sonrisa</h2>
+  <div class="grid">
+    <div class="card reveal"><div class="big">5.0★</div><h3>208 reseñas</h3><p>La calificación perfecta en Google, respaldada por cientos de pacientes.</p></div>
+    <div class="card reveal"><div class="big">6</div><h3>Especialidades</h3><p>Un equipo multidisciplinario bajo un mismo techo en Magdalena del Mar.</p></div>
+    <div class="card reveal"><div class="big">100%</div><h3>Plan personalizado</h3><p>Cada tratamiento empieza con una evaluación y un presupuesto claros.</p></div>
+  </div>
+</div></section>
+
+<section id="feed" class="wrap">
+  <div class="feed__head">
+    <div class="reveal">
+      <span class="eyebrow">Síguenos</span>
+      <div class="feed__handle"><span class="feed__ig">📷</span> @rovaldent</div>
     </div>
-  </div></section>
+    <a class="btn ghost reveal" href="https://instagram.com" target="_blank" rel="noopener">Seguir en Instagram</a>
+  </div>
+  <div class="feed__grid reveal">
+    <div class="post">🦷<span class="cap">Diseño de sonrisa</span></div>
+    <div class="post">✨<span class="cap">Antes y después</span></div>
+    <div class="post">😁<span class="cap">Sonrisas felices</span></div>
+    <div class="post">🔬<span class="cap">Tecnología</span></div>
+    <div class="post">🪥<span class="cap">Tips de salud bucal</span></div>
+    <div class="post">👩‍⚕️<span class="cap">Nuestro equipo</span></div>
+    <div class="post">🏥<span class="cap">Nuestra clínica</span></div>
+    <div class="post">💙<span class="cap">Pacientes felices</span></div>
+  </div>
+  <div class="feed__cta reveal"><small style="color:var(--muted)">Feed conectado a tu Instagram real — se actualiza solo con cada publicación.</small></div>
+</section>
 
-  <section class="wrap">
-    <div class="quote">
-      <p>"Excelente atención, profesionales de primera y un trato muy humano. Quedé feliz con mi tratamiento."</p>
-      <div class="who">— Reseña de paciente · Google (5★)</div>
-    </div>
-  </section>
+<section class="wrap">
+  <div class="quote reveal">
+    <p>"Excelente atención, profesionales de primera y un trato muy humano. Quedé feliz con mi tratamiento y mi nueva sonrisa."</p>
+    <div class="who">— Reseña de paciente · Google (5★)</div>
+  </div>
+</section>
 
-  <section id="contacto" class="wrap">
-    <span class="eyebrow">Contacto</span>
-    <h2>Reserva tu cita hoy</h2>
-    <p class="lead">Estamos en Magdalena del Mar, listos para atenderte.</p>
-    <div class="contact">
-      <ul>
-        <li>📍 Edificio Soho, Tomás Ramsey 930, Of. 706 · Magdalena del Mar</li>
-        <li>📞 999 601 381</li>
-        <li>🕒 Lunes a Sábado · Con cita previa</li>
-        <li>💬 <a href="https://wa.me/51999601381" target="_blank" rel="noopener" style="color:var(--brand-2);font-weight:600;">Escríbenos por WhatsApp</a></li>
-        <li style="border:none;padding-top:18px;"><a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Agendar por WhatsApp</a></li>
-      </ul>
-      <iframe loading="lazy" src="https://www.google.com/maps?q=Tomas+Ramsey+930+Magdalena+del+Mar+Lima&output=embed" title="Ubicación Rovaldent"></iframe>
-    </div>
-  </section>
+<section id="contacto" class="wrap">
+  <span class="eyebrow reveal">Contacto</span>
+  <h2 class="reveal">Reserva tu cita hoy</h2>
+  <p class="lead reveal">Estamos en Magdalena del Mar, listos para atenderte.</p>
+  <div class="contact">
+    <ul class="reveal">
+      <li>📍 Edificio Soho, Tomás Ramsey 930, Of. 706 · Magdalena del Mar</li>
+      <li>📞 999 601 381</li>
+      <li>🕒 Lunes a Sábado · Con cita previa</li>
+      <li>💬 <a href="https://wa.me/51999601381" target="_blank" rel="noopener" style="color:var(--brand-2);font-weight:700;">Escríbenos por WhatsApp</a></li>
+      <li style="border:none;padding-top:20px;"><a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Agendar por WhatsApp</a></li>
+    </ul>
+    <iframe loading="lazy" src="https://www.google.com/maps?q=Tomas+Ramsey+930+Magdalena+del+Mar+Lima&output=embed" title="Ubicación Rovaldent"></iframe>
+  </div>
+</section>
 
-  <footer>
-    <div><strong style="color:#cfe4ea;">Rovaldent</strong> · Odontología especializada · Magdalena del Mar, Lima</div>
-    <div>999 601 381 · Con cita previa</div>
-    <div class="demo">Demo/propuesta preparada por Juan Neyra · sin compromiso</div>
-  </footer>
+<footer>
+  <div><strong style="color:#cfe9e7;">Rovaldent</strong> · Odontología especializada · Magdalena del Mar, Lima</div>
+  <div>999 601 381 · Con cita previa</div>
+  <div class="demo">Demo/propuesta preparada por Juan Neyra · sin compromiso</div>
+</footer>
 
-  <a class="wa" href="https://wa.me/51999601381" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+<button class="ai-fab" data-ai-open aria-label="Asistente virtual">💬<span class="dot"></span></button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Asistente virtual Rovaldent">
+  <div class="ai-head">
+    <div class="av">🦷</div>
+    <div><b>Asistente Rovaldent</b><span class="on">en línea · responde al instante</span></div>
+    <button class="x" data-ai-close aria-label="Cerrar">✕</button>
+  </div>
+  <div class="ai-body" id="aiBody"></div>
+  <div class="ai-quick" id="aiQuick"></div>
+  <form class="ai-form" id="aiForm" autocomplete="off">
+    <input id="aiInput" placeholder="Escribe tu pregunta…" aria-label="Mensaje" />
+    <button type="submit" aria-label="Enviar">➤</button>
+  </form>
+  <div class="ai-disclaim">Asistente virtual · Para diagnósticos, agenda una cita con un especialista.</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  if(!window.gsap){return;}
+  gsap.registerPlugin(window.ScrollTrigger);
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var x = el.classList.contains('reveal--right') ? 40 : 0;
+    gsap.from(el,{y:36,x:x,opacity:0,duration:.7,ease:'power2.out',
+      scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+})();
+
+(function(){
+  var WA='https://wa.me/51999601381';
+  var INTENTS={
+    saludo:"¡Hola! 👋 Soy el asistente virtual de <b>Rovaldent</b>. Puedo contarte sobre nuestros tratamientos, precios, horarios o agendar tu cita. ¿En qué te ayudo?",
+    servicios:"En Rovaldent somos especialistas en: <b>diseño de sonrisa, implantes, rehabilitación oral, ortodoncia, odontopediatría y odontogeriatría</b>. ¿Sobre cuál te gustaría saber más? 🦷",
+    diseno:"El <b>diseño de sonrisa</b> combina carillas y estética dental, planificado digitalmente para un resultado natural. Agenda una evaluación y te mostramos una simulación de tu nueva sonrisa. 😁",
+    implantes:"Reponemos piezas perdidas con <b>implantes de titanio</b> de alta durabilidad y estética. Requiere una evaluación previa para armar tu plan. ¿Te agendo una?",
+    ortodoncia:"Ofrecemos <b>brackets y alineadores</b> para alinear tus dientes a cualquier edad. En la evaluación definimos el tratamiento ideal para ti. 😁",
+    precios:"Cada tratamiento se cotiza según tu caso, luego de una <b>evaluación</b> — así te damos un presupuesto claro y sin sorpresas. ¿Agendamos tu evaluación? 💙",
+    horario:"Atendemos de <b>lunes a sábado con cita previa</b>. ¿Quieres que coordinemos un horario? 📅",
+    ubicacion:"Estamos en el <b>Edificio Soho, Tomás Ramsey 930, Of. 706 — Magdalena del Mar</b>. 📍",
+    agendar:{a:"¡Genial! Puedes agendar tu cita al instante por WhatsApp 👇",cta:{t:"Agendar por WhatsApp",h:WA}},
+    emergencia:{a:"Si es urgente o tienes dolor, escríbenos directo por WhatsApp y te atendemos lo antes posible.",cta:{t:"Escribir ahora",h:WA}},
+    gracias:"¡Con gusto! 💙 ¿Hay algo más en lo que te pueda ayudar?",
+    fallback:"Puedo ayudarte con <b>tratamientos, precios, horarios, ubicación</b> o <b>agendar una cita</b>. ¿Qué necesitas? 🦷"
+  };
+  var RULES=[
+    [/hola|buenas|buenos|hey|qué tal/i,'saludo'],
+    [/precio|costo|cu[aá]nto|cuesta|tarifa|vale/i,'precios'],
+    [/hora|horario|abren|atienden|atenci[oó]n|d[ií]as/i,'horario'],
+    [/d[oó]nde|ubica|direcci|llegar|queda|mapa/i,'ubicacion'],
+    [/implante/i,'implantes'],
+    [/bracket|ortodon|alinead|invisalign/i,'ortodoncia'],
+    [/dise[nñ]o|sonrisa|carilla|est[eé]tic|blanqueam/i,'diseno'],
+    [/agend|cita|reserv|turno|separar/i,'agendar'],
+    [/urgen|emergencia|dolor|duele/i,'emergencia'],
+    [/gracias|genial|perfecto/i,'gracias'],
+    [/servicio|tratamiento|hacen|ofrecen|especialidad/i,'servicios']
+  ];
+  var QUICK=[{l:"Tratamientos",i:"servicios"},{l:"Diseño de sonrisa",i:"diseno"},{l:"Precios",i:"precios"},{l:"Horarios",i:"horario"},{l:"Agendar cita",i:"agendar"}];
+
+  var panel=document.getElementById('aiPanel'),body=document.getElementById('aiBody'),
+      form=document.getElementById('aiForm'),input=document.getElementById('aiInput'),
+      quick=document.getElementById('aiQuick'),started=false;
+
+  function open(){panel.classList.add('open');input.focus();if(!started){started=true;setTimeout(function(){botSay(INTENTS.saludo);},250);}}
+  function close(){panel.classList.remove('open');}
+  document.querySelectorAll('[data-ai-open]').forEach(function(b){b.addEventListener('click',open);});
+  document.querySelectorAll('[data-ai-close]').forEach(function(b){b.addEventListener('click',close);});
+
+  function scroll(){body.scrollTop=body.scrollHeight;}
+  function bubble(html,who){var d=document.createElement('div');d.className='msg '+who;d.innerHTML=html;body.appendChild(d);scroll();}
+  function botSay(res){
+    var t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);scroll();
+    setTimeout(function(){
+      t.remove();
+      if(typeof res==='string'){bubble(res,'bot');}
+      else{bubble(res.a,'bot');if(res.cta){bubble('<a href="'+res.cta.h+'" target="_blank" rel="noopener">👉 '+res.cta.t+'</a>','bot');}}
+    },600+Math.random()*400);
+  }
+  function answer(text){
+    var key='fallback';
+    for(var i=0;i<RULES.length;i++){if(RULES[i][0].test(text)){key=RULES[i][1];break;}}
+    botSay(INTENTS[key]);
+  }
+  QUICK.forEach(function(q){var b=document.createElement('button');b.textContent=q.l;
+    b.addEventListener('click',function(){bubble(q.l,'me');botSay(INTENTS[q.i]);});quick.appendChild(b);});
+  form.addEventListener('submit',function(e){e.preventDefault();var v=input.value.trim();if(!v)return;bubble(v,'me');input.value='';answer(v);});
+})();
+</script>
 </body>
 </html>
