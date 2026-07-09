@@ -1,0 +1,11 @@
+{
+  "negocio": "Rovaldent Odontología Especializada en Diseño de Sonrisa | Implantes | Rehabilitación Oral | Brackets | Pediatría | Geriatría",
+  "nota": "Solo fotos publicables (recomprimidas a 1600px de lado mayor). Las descartadas (caras de menores, EPP era-covid, marcas de terceros, baja resolución) están en proyectos/rovaldent/descartes/, fuera de la carpeta que se publica.",
+  "fotos": [
+    { "archivo": "assets/img/place-1.jpg", "ancho": 1600, "alto": 2133, "autor": "Rovaldent Odontología Especializada" },
+    { "archivo": "assets/img/place-4.jpg", "ancho": 1600, "alto": 2133, "autor": "Rovaldent Odontología Especializada" },
+    { "archivo": "assets/img/place-7.jpg", "ancho": 1600, "alto": 2283, "autor": "Rovaldent Odontología Especializada" },
+    { "archivo": "assets/img/place-8.jpg", "ancho": 1600, "alto": 1656, "autor": "Rovaldent Odontología Especializada" },
+    { "archivo": "assets/img/place-10.jpg", "ancho": 1600, "alto": 2125, "autor": "Nicolet Vallejos" }
+  ]
+}

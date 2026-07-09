@@ -1,0 +1,26 @@
+{
+  "query": "dentist patient treatment chair",
+  "fuente": "Pexels (profesional)",
+  "fotos": [
+    {
+      "archivo": "assets/img/foto-1.jpg",
+      "autor": "SHVETS production",
+      "fuente": "https://www.pexels.com/photo/female-dentist-doing-an-examination-on-her-elderly-patient-8413334/"
+    },
+    {
+      "archivo": "assets/img/foto-2.jpg",
+      "autor": "Pavel Danilyuk",
+      "fuente": "https://www.pexels.com/photo/a-dentist-in-a-clinic-working-on-a-patient-6812558/"
+    },
+    {
+      "archivo": "assets/img/foto-3.jpg",
+      "autor": "Fitusm Assefa",
+      "fuente": "https://www.pexels.com/photo/white-and-gray-hospital-chair-532786/"
+    },
+    {
+      "archivo": "assets/img/foto-4.jpg",
+      "autor": "Cedric Fauntleroy",
+      "fuente": "https://www.pexels.com/photo/a-woman-having-her-dental-check-up-4269501/"
+    }
+  ]
+}

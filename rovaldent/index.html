@@ -3,379 +3,1051 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rovaldent — Diseño de sonrisa, implantes y ortodoncia · Magdalena del Mar</title>
-<meta name="description" content="Rovaldent. Odontología especializada en diseño de sonrisa, implantes y ortodoncia en Magdalena del Mar, Lima. 5.0 en Google con 208 reseñas. Reserva por WhatsApp." />
+<title>Rovaldent — Sonrisas de autor, hechas en casa · Odontología especializada en Magdalena del Mar</title>
+<meta name="description" content="Rovaldent, la clínica de Magdalena del Mar con laboratorio propio: diseño de sonrisa, implantes, rehabilitación oral, brackets, odontopediatría y odontogeriatría. 12 especialistas, 17 años, 5.0 en Google con 208 reseñas. Agenda por WhatsApp." />
+<meta name="theme-color" content="#0E2A33" />
+<meta property="og:title" content="Rovaldent — Sonrisas de autor, hechas en casa" />
+<meta property="og:description" content="La clínica de Magdalena con laboratorio propio. 12 especialistas · 17 años · 5.0 en Google (208 reseñas)." />
+<meta property="og:image" content="https://KurusuDes.github.io/myautomatedjr-demos/rovaldent/assets/img/place-1.jpg" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230E2A33'/%3E%3Cpath d='M12 6.8c1.2-1.5 2.9-2 4.2-1.2 1.6.9 1.9 2.9 1.5 5-.3 1.6-.6 3-1 4.4-.4 1.3-1.5 1.6-2 .5-.4-.9-.7-1.9-1.1-2.8-.4-.8-1.2-.8-1.6 0-.4.9-.7 1.9-1.1 2.8-.5 1.1-1.6.8-2-.5-.4-1.4-.7-2.8-1-4.4-.4-2.1-.1-4.1 1.5-5 1.3-.8 3-.3 4.2 1.2' fill='none' stroke='%23ffffff' stroke-width='1.7' stroke-linecap='round'/%3E%3Ccircle cx='17.6' cy='6.2' r='2.1' fill='%23D9A9C4'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"Rovaldent Odontología Especializada","address":{"@type":"PostalAddress","streetAddress":"Edificio Soho, Tomás Ramsey 930, Of. 706","addressLocality":"Magdalena del Mar","addressRegion":"Lima","addressCountry":"PE"},"telephone":"+51999601381","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"208"},"sameAs":["https://www.instagram.com/rovaldent/"]}
+</script>
 <style>
 :root{
-  --primary:#0891B2; --secondary:#22D3EE; --accent:#059669;
-  --bg:#ffffff; --bg-tint:#ECFEFF; --fg:#164E63; --ink:#0c2b36;
-  --muted:#5b7f8a; --border:#d4edf2; --border-2:#A5F3FC;
-  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
-  --shadow:0 22px 60px rgba(8,145,178,.13); --shadow-sm:0 8px 24px rgba(8,145,178,.09);
+  --ink:#0E2A33; --ink-2:#123B47; --ink-deep:#0B222A;
+  --body:#40606C; --muted:#5E7B85;
+  --paper:#FFFFFF; --porcelain:#F5FAFB; --line:#DFEAEE; --line-soft:#EAF2F4;
+  --sky:#0EA5E9; --sky-deep:#0B6A99; --sky-wash:#E8F5FC;
+  --rose:#A0527B; --rose-soft:#D9A9C4; --rose-hl:#F4D9E6; --rose-wash:#F9EEF4;
+  --gold-star:#E2A63D;
+  --wa:#15803D; --wa-dark:#136B34;
+  --serif:"Cormorant",Georgia,serif; --sans:"Montserrat",system-ui,sans-serif;
+  --sh-lg:0 30px 70px rgba(14,42,51,.16); --sh-sm:0 10px 30px rgba(14,42,51,.10);
+  --r:18px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:1200px;margin:0 auto;padding:0 28px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+::selection{background:var(--rose-soft);color:var(--ink);}
 a{color:inherit;text-decoration:none;}
-.ic{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;}
-.serif{font-family:var(--serif);}
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-nav{display:flex;align-items:center;justify-content:space-between;padding:17px 28px;max-width:1200px;margin:0 auto;}
-.logo{font-family:var(--serif);font-weight:700;font-size:25px;color:var(--fg);letter-spacing:-.3px;}
-.logo b{color:var(--primary);font-weight:700;}
-.nav-links{display:flex;align-items:center;gap:30px;}
-.nav-links a{font-size:14.5px;color:var(--fg);font-weight:500;letter-spacing:.2px;transition:color .18s;}
-.nav-links a:hover{color:var(--primary);}
-.btn{display:inline-flex;align-items:center;gap:9px;background:var(--primary);color:#fff;padding:12px 24px;border-radius:8px;font-weight:600;font-size:14.5px;transition:.2s;border:none;cursor:pointer;font-family:var(--sans);}
-.btn:hover{background:#0b7a97;transform:translateY(-1px);box-shadow:var(--shadow-sm);}
-.btn.accent{background:var(--accent);}
-.btn.accent:hover{background:#047a53;}
-.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--border-2);}
-.btn.ghost:hover{background:var(--bg-tint);border-color:var(--primary);color:var(--primary);}
-/* hero */
-.hero{position:relative;padding:82px 0 76px;background:linear-gradient(180deg,var(--bg-tint),#fff 78%);overflow:hidden;}
-.hero__grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;}
-.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--primary);font-weight:600;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
-.kicker .line{width:34px;height:1.5px;background:var(--primary);}
-.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,5.4vw,66px);line-height:1.04;letter-spacing:-1px;color:var(--fg);}
-.hero h1 em{font-style:italic;color:var(--primary);}
-.hero .sub{font-size:18.5px;color:var(--muted);margin:26px 0 34px;max-width:500px;line-height:1.7;}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-.trust{display:flex;align-items:center;gap:12px;margin-top:36px;color:var(--muted);font-size:14px;}
-.trust .stars{display:flex;color:#f59e0b;}
-.trust .stars .ic{width:17px;height:17px;fill:#f59e0b;stroke:#f59e0b;}
-.trust b{color:var(--ink);font-weight:600;}
-/* hero visual */
-.hero__visual{position:relative;}
-.hero__frame{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:linear-gradient(150deg,#0891B2,#164E63);position:relative;display:flex;align-items:flex-end;}
-.hero__frame::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 260px at 70% 15%,rgba(34,211,238,.5),transparent);}
-.hero__frame .cap{position:relative;padding:26px;color:#fff;}
-.hero__frame .cap .ic{width:30px;height:30px;stroke-width:1.5;margin-bottom:10px;}
-.hero__frame .cap h3{font-family:var(--serif);font-size:22px;font-weight:600;margin-bottom:4px;}
-.hero__frame .cap p{font-size:13.5px;opacity:.85;}
-.hero__stat{position:absolute;left:-26px;bottom:40px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:14px;}
-.hero__stat .num{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--primary);line-height:1;}
-.hero__stat .lbl{font-size:12px;color:var(--muted);}
-.hero__badge{position:absolute;right:-14px;top:26px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px 15px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--fg);}
-.hero__badge .g{color:#f59e0b;display:flex;}.hero__badge .g .ic{width:15px;height:15px;fill:#f59e0b;stroke:#f59e0b;}
-/* sections */
-section{padding:88px 0;}
-.head{max-width:640px;margin-bottom:52px;}
-.eyebrow{color:var(--primary);font-weight:600;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;}
-h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.8vw,44px);letter-spacing:-.6px;margin:12px 0 14px;color:var(--fg);line-height:1.1;}
-.lead{color:var(--muted);font-size:17px;line-height:1.7;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;}
-.svc{background:#fff;border:1px solid var(--border);border-radius:16px;padding:32px 28px;transition:.22s;}
-.svc:hover{border-color:var(--border-2);box-shadow:var(--shadow);transform:translateY(-4px);}
-.svc .ico{width:52px;height:52px;border-radius:13px;background:var(--bg-tint);color:var(--primary);display:grid;place-items:center;margin-bottom:20px;}
-.svc .ico .ic{width:26px;height:26px;}
-.svc h3{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:8px;color:var(--fg);}
-.svc p{color:var(--muted);font-size:15px;}
-/* editorial feature */
-.feature{background:var(--bg-tint);}
-.feature__grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-.feature__media{border-radius:20px;aspect-ratio:1/1;background:linear-gradient(150deg,#22D3EE,#0891B2);position:relative;overflow:hidden;box-shadow:var(--shadow);}
-.feature__media::after{content:"";position:absolute;inset:0;background:radial-gradient(360px 240px at 30% 80%,rgba(255,255,255,.28),transparent);}
-.feature__media .tag{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.94);border-radius:10px;padding:12px 16px;color:var(--fg);}
-.feature__media .tag b{display:block;font-family:var(--serif);font-size:17px;}
-.feature__media .tag span{font-size:12.5px;color:var(--muted);}
-.feature ul{list-style:none;margin-top:22px;display:grid;gap:14px;}
-.feature li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--fg);}
-.feature li .ic{color:var(--accent);margin-top:2px;}
-/* proof / dark */
-.proof{background:var(--fg);color:#dbeef2;border-radius:26px;margin:0 28px;}
-.proof .wrap{padding:8px 0;}
-.proof .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;}
-.proof .num{font-family:var(--serif);font-size:52px;font-weight:700;color:#fff;line-height:1;}
-.proof .lbl{color:#9fcdd8;font-size:14.5px;margin-top:8px;}
-.proof .sep{border-right:1px solid rgba(255,255,255,.12);}
-/* feed */
-.feed__head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:32px;}
-.feed__handle{display:flex;align-items:center;gap:13px;}
-.feed__ig{width:46px;height:46px;border-radius:12px;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:#fff;display:grid;place-items:center;}
-.feed__handle b{font-family:var(--serif);font-size:20px;color:var(--fg);display:block;}
-.feed__handle span{font-size:13px;color:var(--muted);}
-.feed__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.post{aspect-ratio:1;border-radius:14px;position:relative;overflow:hidden;background:linear-gradient(150deg,#22D3EE,#0891B2);cursor:pointer;transition:.28s;border:1px solid var(--border);}
-.post:nth-child(2n){background:linear-gradient(150deg,#0891B2,#164E63);}
-.post:nth-child(3n){background:linear-gradient(150deg,#67E8F9,#0891B2);}
-.post:nth-child(4n){background:linear-gradient(150deg,#0e7490,#164E63);}
-.post:hover{transform:scale(1.03);box-shadow:var(--shadow-sm);}
-.post .meta{position:absolute;left:0;right:0;bottom:0;padding:14px 12px 10px;background:linear-gradient(transparent,rgba(12,43,54,.55));color:#fff;display:flex;align-items:center;gap:7px;font-size:11.5px;}
-.post .meta .ic{width:14px;height:14px;}
-.feed__note{text-align:center;margin-top:24px;color:var(--muted);font-size:13.5px;}
-/* testimonial */
-.quote{text-align:center;max-width:860px;margin:0 auto;}
-.quote .mark{font-family:var(--serif);font-size:70px;color:var(--border-2);line-height:.6;}
-.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.7vw,30px);color:var(--fg);line-height:1.4;margin:10px 0 20px;}
-.quote .who{color:var(--muted);font-size:14.5px;}
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch;}
-.contact li{list-style:none;padding:16px 0;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:center;font-size:15px;color:var(--fg);}
-.contact li .ic{color:var(--primary);}
-iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:18px;filter:grayscale(.15);}
-footer{background:var(--fg);color:#9fcdd8;padding:56px 28px 40px;margin-top:28px;}
-footer .fwrap{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center;}
-footer .logo{color:#fff;}footer .logo b{color:var(--secondary);}
-footer .demo{width:100%;text-align:center;font-size:12px;opacity:.5;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);}
-/* AI assistant */
-.ai-fab{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:16px;background:var(--primary);color:#fff;border:none;cursor:pointer;box-shadow:0 14px 34px rgba(8,145,178,.42);display:grid;place-items:center;transition:.2s;}
-.ai-fab .ic{width:26px;height:26px;stroke-width:1.8;}
-.ai-fab:hover{transform:translateY(-2px);background:#0b7a97;}
-.ai-fab .dot{position:absolute;top:-3px;right:-3px;width:16px;height:16px;background:var(--accent);border:3px solid #fff;border-radius:50%;}
-.ai-panel{position:fixed;right:24px;bottom:96px;z-index:61;width:376px;max-width:calc(100vw - 32px);height:530px;max-height:calc(100vh - 130px);background:#fff;border-radius:18px;box-shadow:0 34px 80px rgba(12,43,54,.28);display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.97);opacity:0;pointer-events:none;transition:.22s;border:1px solid var(--border);}
-.ai-panel.open{transform:none;opacity:1;pointer-events:auto;}
-.ai-head{background:var(--fg);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;}
-.ai-head .av{width:42px;height:42px;border-radius:11px;background:var(--primary);display:grid;place-items:center;}
-.ai-head .av .ic{width:22px;height:22px;}
-.ai-head b{font-family:var(--serif);font-size:16px;display:block;}
-.ai-head .on{font-size:12px;color:#9fcdd8;display:flex;align-items:center;gap:6px;}
-.ai-head .on i{width:7px;height:7px;background:var(--accent);border-radius:50%;display:inline-block;}
-.ai-head .x{margin-left:auto;background:rgba(255,255,255,.12);border:none;color:#fff;width:30px;height:30px;border-radius:8px;cursor:pointer;display:grid;place-items:center;}
-.ai-body{flex:1;overflow-y:auto;padding:18px;background:#f7fdfe;display:flex;flex-direction:column;gap:11px;}
-.msg{max-width:84%;padding:11px 15px;border-radius:14px;font-size:14px;line-height:1.55;animation:pop .2s ease;}
-@keyframes pop{from{opacity:0;transform:translateY(6px);}}
-.msg.bot{background:#fff;border:1px solid var(--border);border-bottom-left-radius:4px;align-self:flex-start;color:var(--ink);}
-.msg.me{background:var(--primary);color:#fff;border-bottom-right-radius:4px;align-self:flex-end;}
-.msg.bot a{color:var(--primary);font-weight:600;text-decoration:underline;}
-.typing{align-self:flex-start;background:#fff;border:1px solid var(--border);border-radius:14px;padding:13px 16px;display:flex;gap:4px;}
-.typing i{width:7px;height:7px;background:#a9d5dd;border-radius:50%;animation:bl 1s infinite;}
-.typing i:nth-child(2){animation-delay:.2s;}.typing i:nth-child(3){animation-delay:.4s;}
-@keyframes bl{0%,60%,100%{opacity:.3;}30%{opacity:1;}}
-.ai-quick{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px 0;background:#f7fdfe;}
-.ai-quick button{background:#fff;border:1px solid var(--border-2);color:var(--primary);border-radius:20px;padding:7px 13px;font-size:12.5px;cursor:pointer;font-weight:500;font-family:var(--sans);transition:.15s;}
-.ai-quick button:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
-.ai-form{display:flex;gap:8px;padding:13px 16px;border-top:1px solid var(--border);background:#fff;}
-.ai-form input{flex:1;border:1px solid var(--border);border-radius:22px;padding:11px 16px;font-size:14px;outline:none;font-family:var(--sans);color:var(--ink);}
-.ai-form input:focus{border-color:var(--primary);}
-.ai-form button{background:var(--primary);border:none;color:#fff;width:42px;height:42px;border-radius:11px;cursor:pointer;display:grid;place-items:center;flex:none;}
-.ai-disclaim{font-size:10.5px;color:#a3bcc3;text-align:center;padding:0 16px 11px;background:#fff;}
-@media(max-width:880px){.hero__grid,.feature__grid,.contact{grid-template-columns:1fr;gap:40px;}.hero__visual{max-width:420px;margin:0 auto;}.hero__stat{left:0;}.feed__grid{grid-template-columns:repeat(2,1fr);}.nav-links a:not(.btn){display:none;}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;}}
+img{display:block;max-width:100%;}
+button{font-family:var(--sans);}
+:focus-visible{outline:2px solid var(--sky);outline-offset:3px;border-radius:4px;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
+.ic{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none;}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.skip{position:absolute;left:16px;top:-60px;z-index:200;background:var(--ink);color:#fff;padding:11px 20px;border-radius:0 0 12px 12px;font-size:13px;font-weight:600;transition:top .2s;}
+.skip:focus{top:0;}
+
+/* gestos de casa: eyebrow numerado + barrido rosa (nada de lineas ni em coloreado) */
+.eyebrow{display:inline-flex;align-items:baseline;gap:9px;font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);}
+.eyebrow b{font-weight:700;color:var(--rose);}
+.eyebrow i{font-style:normal;color:var(--rose-soft);}
+.eyebrow--l{color:#CFE3E8;}
+.eyebrow--l b{color:var(--rose-soft);}
+.eyebrow--l i{color:rgba(217,169,196,.55);}
+.kick{display:inline-flex;align-items:baseline;gap:9px;font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);}
+.kick b{font-weight:700;color:var(--rose);}
+.kick i{font-style:normal;color:var(--rose-soft);}
+.kick--l{color:#CFE3E8;}
+.kick--l b{color:var(--rose-soft);}
+.hl{background:linear-gradient(180deg,transparent 58%,var(--rose-hl) 58%);padding:0 .05em;}
+.hl--d{background:linear-gradient(180deg,transparent 58%,rgba(217,169,196,.30) 58%);}
+
+h1,h2,h3{font-family:var(--serif);color:var(--ink);}
+h2{font-size:clamp(36px,4.6vw,60px);font-weight:600;line-height:1.02;letter-spacing:-.01em;margin:16px 0 18px;}
+.lead{color:var(--body);font-size:17px;max-width:560px;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:600;font-size:13.5px;letter-spacing:.04em;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s;}
+.btn--ink{background:var(--ink);color:#fff;}
+.btn--ink:hover{background:var(--ink-2);transform:translateY(-2px);box-shadow:var(--sh-sm);}
+.btn--wa{background:var(--wa);color:#fff;}
+.btn--wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:var(--sh-sm);}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line);}
+.btn--ghost:hover{border-color:var(--rose);color:var(--rose);transform:translateY(-2px);}
+.btn--light{background:#fff;color:var(--ink);}
+.btn--light:hover{background:var(--rose-wash);transform:translateY(-2px);}
+section{position:relative;}
+
+/* ---------- topbar ---------- */
+.topbar{background:var(--ink-deep);color:#B9D2DA;font-size:12px;letter-spacing:.04em;}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:9px;padding-bottom:9px;}
+.topbar span{display:inline-flex;align-items:center;gap:8px;}
+.topbar .ic{width:14px;height:14px;}
+.topbar a:hover{color:#fff;}
+.topbar .tb-right{display:flex;gap:22px;}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-soft);}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;}
+.brand{display:flex;flex-direction:column;line-height:1;}
+.brand b{font-family:var(--serif);font-weight:700;font-size:27px;letter-spacing:.02em;color:var(--ink);}
+.brand b i{font-style:normal;color:var(--sky-deep);}
+.brand span{font-size:9px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--rose);margin-top:5px;}
+.nav__links{display:flex;align-items:center;gap:32px;}
+.nav__links a{font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--ink-2);position:relative;padding:4px 0;}
+.nav__links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--rose);transition:width .25s;}
+.nav__links a:not(.btn):hover::after{width:100%;}
+.nav__burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--ink);place-items:center;}
+.nav__mobile{display:none;}
+
+/* ---------- hero: texto editorial + foto real a sangre + sello giratorio ---------- */
+.hero{background:linear-gradient(180deg,var(--porcelain),#fff 82%);}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(360px,43vw,620px);}
+.hero__copy{padding:clamp(58px,7vw,100px) clamp(30px,4.5vw,84px) clamp(66px,8vw,110px) max(32px,calc((100vw - 1176px)/2));max-width:780px;}
+.hero h1{font-size:clamp(48px,6.4vw,94px);font-weight:600;line-height:.96;letter-spacing:-.015em;margin-top:26px;}
+.hero h1 .h1-it{font-style:italic;font-weight:500;}
+.hero__sub{color:var(--body);font-size:17.5px;max-width:500px;margin:30px 0 36px;}
+.hero__sub b{color:var(--ink);font-weight:600;}
+.hero__ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.hero__addr{display:flex;align-items:center;gap:9px;margin-top:38px;font-size:13px;color:var(--muted);letter-spacing:.02em;}
+.hero__addr .ic{width:15px;height:15px;color:var(--rose);}
+.hero__ph{position:relative;margin:0;min-height:clamp(540px,74vh,780px);}
+.hero__ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;}
+.hero__ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,34,42,.05),transparent 30%,transparent 66%,rgba(11,34,42,.5));pointer-events:none;}
+.hero__cap{position:absolute;left:22px;bottom:20px;z-index:2;color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.hero__cap .ic{width:13px;height:13px;}
+.hero__seal{position:absolute;left:-80px;bottom:72px;width:158px;height:158px;z-index:3;filter:drop-shadow(0 18px 38px rgba(14,42,51,.30));}
+.hero__seal .disc{position:absolute;inset:0;border-radius:50%;background:rgba(255,255,255,.95);border:1px solid var(--line-soft);}
+.seal__ring{position:absolute;inset:0;width:100%;height:100%;transform-origin:50% 50%;animation:spin 30s linear infinite;}
+.seal__ring text{font-family:var(--sans);font-weight:700;font-size:8.1px;letter-spacing:1px;fill:var(--ink);}
+.seal__core{position:absolute;inset:0;display:grid;place-items:center;text-align:center;}
+.seal__core b{font-family:var(--serif);font-size:41px;font-weight:700;line-height:1;color:var(--ink);display:block;}
+.seal__core .stars{display:flex;gap:2px;justify-content:center;color:var(--gold-star);margin-top:5px;}
+.seal__core .stars .ic{width:10px;height:10px;fill:var(--gold-star);stroke:var(--gold-star);}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ---------- marquee de especialidades ---------- */
+.marquee{background:var(--ink);color:#EAF2F4;overflow:hidden;border-block:1px solid var(--ink-2);}
+.marquee__inner{display:flex;width:max-content;animation:mq 34s linear infinite;padding:20px 0;}
+.marquee__inner:hover{animation-play-state:paused;}
+.marquee span{display:inline-flex;align-items:center;gap:26px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:25px;white-space:nowrap;padding-right:26px;}
+.marquee .ic{width:15px;height:15px;color:var(--rose-soft);fill:var(--rose-soft);stroke:none;}
+@keyframes mq{to{transform:translateX(-50%);}}
+
+/* ---------- manifiesto ---------- */
+.mani{padding:110px 0;background:#fff;}
+.mani .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;}
+.mani h2{max-width:560px;}
+.mani__stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
+.mani__stat{padding:26px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+.mani__stat:nth-child(2n){border-right:none;}
+.mani__stat:nth-child(n+3){border-bottom:none;}
+.mani__stat b{font-family:var(--serif);font-size:46px;font-weight:700;color:var(--ink);line-height:1;display:flex;align-items:baseline;gap:3px;}
+.mani__stat b small{font-family:var(--serif);font-size:26px;color:var(--rose);}
+.mani__stat span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-top:8px;}
+.mani__media{position:relative;}
+.mani__media img{border-radius:var(--r);width:100%;height:540px;object-fit:cover;box-shadow:var(--sh-lg);}
+.mani__media figcaption{position:absolute;left:18px;bottom:16px;background:rgba(14,42,51,.82);backdrop-filter:blur(6px);color:#fff;border-radius:10px;padding:9px 14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.mani__media figcaption .ic{width:13px;height:13px;}
+
+/* ---------- ruta (seccion firma) ---------- */
+.ruta{background:radial-gradient(1100px 600px at 80% -10%,#14404E,var(--ink-deep) 60%);color:#CFE3E8;padding:120px 0 130px;}
+.ruta__head{max-width:680px;margin-bottom:90px;}
+.ruta__head h2{color:#fff;}
+.ruta__head .lead{color:#9FBEC8;}
+.ruta__track{position:relative;display:grid;gap:110px;}
+.ruta__line{position:absolute;left:50%;top:6px;bottom:6px;width:1px;background:rgba(255,255,255,.12);transform:translateX(-50%);}
+.ruta__line i{position:absolute;inset:0;background:linear-gradient(var(--rose-soft),var(--sky));transform-origin:top;transform:scaleY(0);display:block;}
+.paso{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;position:relative;}
+.paso__media{position:relative;}
+.paso__media img{width:100%;height:440px;object-fit:cover;border-radius:var(--r);box-shadow:0 26px 60px rgba(0,0,0,.4);}
+.paso__media--lab img{height:340px;object-position:75% 25%;}
+.paso__cap{position:absolute;left:16px;bottom:14px;background:rgba(11,34,42,.85);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);color:#DCEBEF;border-radius:9px;padding:7px 13px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;display:flex;align-items:center;gap:7px;}
+.paso__cap .ic{width:12px;height:12px;color:var(--rose-soft);}
+.paso__num{font-family:var(--serif);font-style:italic;font-size:90px;font-weight:600;line-height:.8;color:transparent;-webkit-text-stroke:1px var(--rose-soft);display:block;margin-bottom:20px;}
+.paso h3{color:#fff;font-size:clamp(27px,2.6vw,36px);font-weight:600;line-height:1.08;margin-bottom:14px;}
+.paso p{color:#A7C4CD;font-size:15.5px;max-width:440px;}
+.paso p b{color:#E8F2F5;font-weight:600;}
+.paso:nth-child(even) .paso__media{order:2;}
+.paso:nth-child(even) .paso__body{order:1;justify-self:end;text-align:right;}
+.paso:nth-child(even) .paso__body p{margin-left:auto;}
+.paso__dot{position:absolute;left:50%;top:50%;width:13px;height:13px;border-radius:50%;background:var(--ink-deep);border:2px solid var(--rose-soft);transform:translate(-50%,-50%);z-index:2;}
+.ruta__cta{text-align:center;margin-top:100px;}
+.ruta__cta p{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,34px);color:#E8F2F5;margin-bottom:28px;}
+
+/* ---------- especialidades ---------- */
+.esp{padding:120px 0;background:var(--porcelain);}
+.esp__head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px;}
+.esp__layout{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:start;}
+.esp__list{list-style:none;border-top:1px solid var(--line);}
+.esp__row{display:grid;grid-template-columns:auto auto 1fr auto;gap:24px;align-items:center;padding:28px 6px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .25s,padding .25s;}
+.esp__row:hover,.esp__row.is-on{background:#fff;padding-left:20px;padding-right:16px;}
+.esp__num{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--rose);width:30px;}
+.esp__badge{width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;color:var(--ink-2);transition:.25s;}
+.esp__row:hover .esp__badge,.esp__row.is-on .esp__badge{background:var(--rose-wash);border-color:var(--rose-soft);color:var(--rose);}
+.esp__badge .ic{width:22px;height:22px;}
+.esp__row h3{font-size:clamp(24px,2.3vw,32px);font-weight:600;line-height:1.05;transition:color .2s;}
+.esp__row:hover h3,.esp__row.is-on h3{color:var(--sky-deep);}
+.esp__row p{font-size:13.5px;color:var(--muted);max-width:520px;margin-top:7px;}
+.esp__arrow{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:.25s;}
+.esp__row:hover .esp__arrow,.esp__row.is-on .esp__arrow{background:var(--ink);color:#fff;border-color:var(--ink);transform:rotate(45deg);}
+.esp__thumb{display:none;position:relative;}
+.esp__preview{position:sticky;top:110px;}
+.esp__preview .frame{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-lg);position:relative;}
+.esp__preview img{width:100%;height:520px;object-fit:cover;transition:opacity .28s;}
+.esp__preview img.is-sw{opacity:0;}
+.esp__hint{margin-top:18px;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:9px;}
+.esp__hint .ic{width:15px;height:15px;color:var(--sky-deep);}
+.esp__hint--m{display:none;margin:-26px 0 32px;}
+
+/* ---------- voces: 5.0 + muro de resenas reales ---------- */
+.score{padding:130px 0 110px;background:#fff;text-align:center;overflow:hidden;}
+.score__big{font-family:var(--serif);font-weight:700;font-size:clamp(130px,20vw,240px);line-height:.85;color:var(--ink);letter-spacing:-.03em;}
+.score__big small{font-size:.35em;color:var(--rose);font-style:italic;font-weight:600;}
+.score__stars{display:flex;justify-content:center;gap:8px;color:var(--gold-star);margin:26px 0 18px;}
+.score__stars .ic{width:26px;height:26px;fill:var(--gold-star);stroke:var(--gold-star);}
+.score>.wrap>p{color:var(--body);font-size:17px;max-width:480px;margin:0 auto;}
+.score p b{color:var(--ink);}
+.voces{margin:58px 0 22px;display:grid;gap:26px;}
+.voz-row{overflow:hidden;}
+.voz-track{display:flex;align-items:baseline;width:max-content;animation:mq 52s linear infinite;}
+.voz-row--rev .voz-track{animation-direction:reverse;}
+.voz-row:hover .voz-track{animation-play-state:paused;}
+.voz-track blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(19px,2vw,24px);color:var(--ink-2);white-space:nowrap;padding-right:64px;display:inline-flex;align-items:baseline;gap:14px;}
+.voz-track blockquote b{color:var(--rose);font-weight:600;}
+.voz-track cite{font-family:var(--sans);font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+.voces__note{font-size:12.5px;color:var(--muted);margin:0 auto 30px;max-width:460px;}
+.score .btn{margin-top:2px;}
+
+/* ---------- sede: solo fotos reales + tarjeta Soho ---------- */
+.sede{padding:110px 0 60px;background:var(--porcelain);}
+.sede__head{max-width:640px;margin-bottom:56px;}
+.sede__grid{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;}
+.sede__main{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm);min-height:560px;}
+.sede__main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 16%;transition:transform .6s ease;}
+.sede__main:hover img{transform:scale(1.035);}
+.sede__side{display:grid;grid-template-rows:1fr auto;gap:22px;}
+.sede__card{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm);min-height:280px;}
+.sede__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 34%;transition:transform .6s ease;}
+.sede__card:hover img{transform:scale(1.045);}
+.sede__pill{position:absolute;left:14px;bottom:12px;z-index:2;background:rgba(14,42,51,.8);backdrop-filter:blur(6px);color:#fff;border-radius:9px;padding:7px 12px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:7px;}
+.sede__pill .ic{width:12px;height:12px;}
+.sede__soho{border-radius:var(--r);background:radial-gradient(420px 260px at 85% -20%,#16414F,var(--ink-deep) 70%);color:#fff;padding:34px 34px 30px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--sh-sm);}
+.sede__soho .soho__pin{width:46px;height:46px;border-radius:14px;background:rgba(217,169,196,.14);border:1px solid rgba(217,169,196,.4);color:var(--rose-soft);display:grid;place-items:center;margin-bottom:6px;}
+.sede__soho b{font-family:var(--serif);font-size:30px;font-weight:700;line-height:1.05;}
+.sede__soho p{font-size:13.5px;color:#B9D2DA;line-height:1.75;}
+.sede__soho .soho__tag{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-soft);}
+.sede__soho a{margin-top:6px;font-size:13px;font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:4px;display:inline-flex;align-items:center;gap:7px;}
+.sede__soho a:hover{color:var(--rose-soft);}
+.sede__soho a .ic{width:14px;height:14px;}
+.sede__foot{display:flex;align-items:center;gap:12px;margin-top:26px;color:var(--muted);font-size:13.5px;}
+.sede__foot .ic{color:var(--sky-deep);}
+
+/* ---------- feed ---------- */
+.feed{padding:110px 0;background:#fff;}
+.feed__top{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap;margin:22px 0 44px;}
+.feed__id{display:flex;align-items:center;gap:16px;}
+.feed__badge{width:56px;height:56px;border-radius:16px;background:linear-gradient(45deg,#F09433,#DC2743,#BC1888);color:#fff;display:grid;place-items:center;flex:none;}
+.feed__badge .ic{width:26px;height:26px;}
+.feed__id b{font-family:var(--serif);font-size:26px;font-weight:700;display:block;line-height:1.1;}
+.feed__id span{font-size:12.5px;color:var(--muted);display:block;margin-top:3px;}
+.feed__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.feed__post{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;cursor:pointer;}
+.feed__post img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.feed__post:hover img{transform:scale(1.06);}
+.feed__post::after{content:"";position:absolute;inset:0;background:rgba(11,34,42,0);transition:.3s;}
+.feed__post:hover::after{background:rgba(11,34,42,.38);}
+.feed__post .ov{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.3s;z-index:2;color:#fff;}
+.feed__post:hover .ov{opacity:1;}
+.feed__post .ov .ic{width:26px;height:26px;}
+
+/* ---------- cta final + contacto ---------- */
+.cta-final{background:radial-gradient(900px 500px at 15% 0%,#14404E,var(--ink-deep) 65%);color:#fff;padding:110px 0;text-align:center;}
+.cta-final h2{color:#fff;max-width:820px;margin-inline:auto;}
+.cta-final p{color:#9FBEC8;max-width:520px;margin:0 auto 36px;}
+.cta-final .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.contacto{padding:110px 0;background:var(--porcelain);}
+.contacto .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:stretch;}
+.contacto__list{list-style:none;margin:34px 0 30px;}
+.contacto__list li{display:flex;gap:16px;align-items:flex-start;padding:17px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink-2);}
+.contacto__list li .ic{color:var(--sky-deep);margin-top:2px;}
+.contacto__list li b{display:block;font-weight:600;color:var(--ink);}
+.contacto__list li span{color:var(--muted);font-size:13px;}
+.contacto__map{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm);min-height:440px;}
+.contacto__map iframe{width:100%;height:100%;min-height:440px;border:0;filter:saturate(.85);}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink-deep);color:#8FB0BA;padding:64px 0 34px;}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:44px;}
+footer .brand b{color:#fff;}
+footer .brand b i{color:var(--sky);}
+footer .brand span{color:var(--rose-soft);}
+footer p{font-size:13px;max-width:300px;margin-top:14px;line-height:1.7;}
+footer h4{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#fff;margin-bottom:16px;}
+footer ul{list-style:none;display:grid;gap:10px;font-size:13.5px;}
+footer ul a:hover{color:#fff;}
+footer .foot-demo{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.09);margin-top:16px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#A9C4CD;}
+footer .foot-demo a{text-decoration:underline;text-underline-offset:3px;}
+footer .foot-demo a:hover{color:#fff;}
+
+/* ---------- fabs ---------- */
+.fabs{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;flex-direction:column;gap:12px;align-items:flex-end;}
+.fab{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 14px 34px rgba(11,34,42,.35);transition:transform .2s;position:relative;}
+.fab:hover{transform:translateY(-3px);}
+.fab--wa{background:var(--wa);color:#fff;}
+.fab--chat{background:var(--ink);color:#fff;}
+.fab--chat .dot{position:absolute;top:2px;right:2px;width:14px;height:14px;border-radius:50%;background:#22C55E;border:3px solid #fff;}
+.fab .ic{width:25px;height:25px;}
+
+/* ---------- chat ---------- */
+.chat{position:fixed;right:22px;bottom:96px;z-index:95;width:384px;max-width:calc(100vw - 28px);height:560px;max-height:calc(100dvh - 130px);background:#fff;border-radius:20px;border:1px solid var(--line-soft);box-shadow:0 40px 90px rgba(11,34,42,.35);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(18px) scale(.97);pointer-events:none;transition:.24s ease;}
+.chat.open{opacity:1;transform:none;pointer-events:auto;}
+.chat__head{background:var(--ink);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:13px;}
+.chat__ava{width:44px;height:44px;border-radius:13px;background:linear-gradient(140deg,var(--sky-deep),var(--ink-2));display:grid;place-items:center;flex:none;position:relative;}
+.chat__ava .ic{width:23px;height:23px;color:var(--rose-soft);}
+.chat__ava i{position:absolute;right:-2px;bottom:-2px;width:11px;height:11px;border-radius:50%;background:#22C55E;border:2px solid var(--ink);}
+.chat__head b{font-family:var(--serif);font-size:18px;display:block;line-height:1.15;}
+.chat__head small{font-size:11.5px;color:#9FBEC8;display:flex;align-items:center;gap:6px;}
+.chat__head small u{width:6px;height:6px;background:#22C55E;border-radius:50%;display:inline-block;}
+.chat__x{margin-left:auto;width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.12);border:none;color:#fff;cursor:pointer;display:grid;place-items:center;}
+.chat__x:hover{background:rgba(255,255,255,.22);}
+.chat__body{flex:1;overflow-y:auto;padding:18px;background:var(--porcelain);display:flex;flex-direction:column;gap:11px;}
+.msg{max-width:85%;padding:12px 15px;border-radius:15px;font-size:13.5px;line-height:1.6;animation:pop .22s ease;}
+@keyframes pop{from{opacity:0;transform:translateY(7px);}}
+.msg--bot{background:#fff;border:1px solid var(--line-soft);border-bottom-left-radius:5px;align-self:flex-start;color:var(--ink-2);}
+.msg--me{background:var(--ink);color:#fff;border-bottom-right-radius:5px;align-self:flex-end;}
+.msg--bot b{color:var(--ink);}
+.msg--bot a{color:var(--sky-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px;}
+.typing{align-self:flex-start;background:#fff;border:1px solid var(--line-soft);border-radius:15px;padding:14px 17px;display:flex;gap:4px;}
+.typing i{width:6px;height:6px;background:#9FBEC8;border-radius:50%;animation:blink 1s infinite;}
+.typing i:nth-child(2){animation-delay:.18s;}.typing i:nth-child(3){animation-delay:.36s;}
+@keyframes blink{0%,60%,100%{opacity:.25;}30%{opacity:1;}}
+.chat__quick{display:flex;gap:8px;flex-wrap:wrap;padding:12px 15px 2px;background:var(--porcelain);}
+.chat__quick button{background:#fff;border:1px solid var(--line);color:var(--sky-deep);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;transition:.18s;}
+.chat__quick button:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.chat__form{display:flex;gap:9px;padding:13px 15px 9px;background:#fff;border-top:1px solid var(--line-soft);}
+.chat__form input{flex:1;border:1px solid var(--line);border-radius:999px;padding:12px 18px;font-size:13.5px;outline:none;color:var(--ink);font-family:var(--sans);}
+.chat__form input:focus{border-color:var(--sky-deep);}
+.chat__form button{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;border:none;cursor:pointer;display:grid;place-items:center;flex:none;}
+.chat__form button:hover{background:var(--ink-2);}
+.chat__note{font-size:11px;color:var(--body);text-align:center;padding:0 16px 11px;background:#fff;}
+
+/* ---------- reveals ---------- */
+.rv{will-change:transform;}
+
+/* ---------- responsive ---------- */
+@media(max-width:1100px){
+  .esp__layout{grid-template-columns:1fr;}
+  .esp__preview{display:none;}
+  .esp__hint--m{display:flex;}
+  .esp__row{grid-template-columns:auto auto 1fr auto;}
+  .esp__badge{display:none;}
+  .esp__thumb{display:block;width:74px;height:74px;border-radius:12px;overflow:hidden;flex:none;}
+  .esp__thumb img{width:100%;height:100%;object-fit:cover;}
+  .esp__thumb .pl{position:absolute;right:4px;bottom:4px;width:26px;height:26px;border-radius:8px;background:rgba(255,255,255,.94);color:var(--ink);display:grid;place-items:center;}
+  .esp__thumb .pl .ic{width:14px;height:14px;}
+  .mani .wrap{grid-template-columns:1fr;gap:50px;}
+  .mani__media img{height:440px;}
+  .sede__grid{grid-template-columns:1fr;}
+  .sede__main{min-height:440px;}
+  footer .wrap{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:920px){
+  .topbar .tb-left span:first-child{display:none;}
+  .nav__links{display:none;}
+  .nav__burger{display:grid;}
+  .nav__mobile{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--sh-sm);padding:10px 32px 24px;}
+  .nav__mobile.open{display:grid;gap:4px;}
+  .nav__mobile a{padding:13px 0;border-bottom:1px solid var(--line-soft);font-size:14.5px;font-weight:600;color:var(--ink-2);}
+  .nav__mobile .btn{margin-top:14px;justify-content:center;border-bottom:none;color:#fff;}
+  .hero__grid{grid-template-columns:1fr;}
+  .hero__copy{padding:52px 32px 58px;}
+  .hero__ph{min-height:0;height:clamp(360px,92vw,560px);}
+  .hero__seal{left:auto;right:22px;bottom:auto;top:-56px;width:126px;height:126px;}
+  .seal__core b{font-size:33px;}
+  .paso{grid-template-columns:1fr;gap:30px;}
+  .paso:nth-child(even) .paso__media{order:1;}
+  .paso:nth-child(even) .paso__body{order:2;justify-self:start;text-align:left;}
+  .ruta__line{left:7px;}
+  .paso__dot{left:7px;top:8px;}
+  .paso{padding-left:38px;}
+  .ruta__track{gap:80px;}
+  .paso__media img{height:340px;}
+  .paso__media--lab img{height:300px;}
+  .contacto .wrap{grid-template-columns:1fr;}
+  .feed__grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px;}
+  .topbar .tb-right span:last-child{display:none;}
+  .hero__copy{padding:44px 20px 52px;}
+  .hero h1{font-size:clamp(42px,12.5vw,56px);}
+  .hero__addr{align-items:flex-start;}
+  .hero__seal{right:16px;top:-48px;width:112px;height:112px;}
+  .seal__core b{font-size:29px;}
+  .mani__stats{grid-template-columns:1fr 1fr;}
+  .mani__stat{padding:20px;}
+  .mani__stat b{font-size:36px;}
+  .mani__media img{height:380px;}
+  .esp__row{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:12px 16px;}
+  .esp__thumb{grid-row:1/3;order:-1;width:64px;height:64px;}
+  .esp__num{display:none;}
+  .esp__arrow{display:none;}
+  .paso__media img{height:240px;}
+  .paso__media--lab img{height:230px;}
+  .paso__num{font-size:64px;}
+  .sede__main{min-height:380px;}
+  .sede__card{min-height:240px;}
+  .feed__grid{gap:9px;}
+  .chat{right:14px;bottom:88px;}
+  .chat__form input{font-size:16px;}
+  .fabs{right:14px;bottom:14px;}
+  footer .wrap{grid-template-columns:1fr;gap:32px;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .marquee__inner,.voz-track{animation:none;width:auto;flex-wrap:wrap;}
+  .voz-track blockquote{white-space:normal;padding-right:0;margin:0 22px 10px;}
+  .dup{display:none;}
+  .seal__ring{animation:none;}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;}
+}
 </style>
 </head>
 <body>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 5.6c1.2-1.6 3-2.2 4.4-1.4 1.7 1 2 3.2 1.6 5.4-.3 1.7-.6 3.2-1 4.8-.4 1.4-1.6 1.7-2.2.6-.5-1-.7-2.1-1.2-3.1-.4-.8-1.2-.8-1.6 0-.5 1-.7 2.1-1.2 3.1-.6 1.1-1.8.8-2.2-.6-.4-1.6-.7-3.1-1-4.8C7 7.4 7.3 5.2 9 4.2c1.4-.8 3.2-.2 4.4 1.4"/></symbol>
-<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18 16l.7 1.8L20.5 18l-1.8.7L18 21l-.7-1.8L15.5 18l1.8-.5z"/></symbol>
-<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L4 17v3h3l5.4-5.4a4 4 0 0 0 5.3-5.3l-2.3 2.3-2.4-.6-.6-2.4z"/></symbol>
-<symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></symbol>
-<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M4 20a5 5 0 0 1 10 0"/><path d="M16 5.3a3 3 0 0 1 0 5.4M20 20a5 5 0 0 0-3.5-4.8"/></symbol>
-<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 8.6a5 5 0 0 0-8.8-3 5 5 0 0 0-8.8 3c0 4 4.5 7.4 8.8 10.4 4.3-3 8.8-6.4 8.8-10.4"/></symbol>
-<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 5.6c1.3-1.7 3.2-2.3 4.7-1.4 1.8 1 2.1 3.3 1.7 5.6-.3 1.8-.7 3.4-1.1 5-.4 1.5-1.7 1.8-2.3.6-.5-1-.8-2.2-1.3-3.2-.4-.9-1.3-.9-1.7 0-.5 1-.8 2.2-1.3 3.2-.6 1.2-1.9.9-2.3-.6-.4-1.6-.8-3.2-1.1-5-.4-2.3-.1-4.6 1.7-5.6 1.5-.9 3.4-.3 4.7 1.4"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></symbol>
+<symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></symbol>
+<symbol id="i-user-check" viewBox="0 0 24 24"><circle cx="9.5" cy="8" r="3.5"/><path d="M3.5 20a6 6 0 0 1 12 0"/><path d="m15.5 10.5 2 2 4-4.5"/></symbol>
+<symbol id="i-hand-heart" viewBox="0 0 24 24"><path d="M11 14h2a2 2 0 0 0 0-4h-3.5L7 12H3v6h4l4 2h6.5a2 2 0 0 0 0-4H13"/><path d="M14.8 3.7a2.3 2.3 0 0 0-3.3 3.2L14 9.5l2.5-2.6a2.3 2.3 0 0 0-1.7-3.2z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m8.8 11.8 2.2 2.2 4.2-4.5"/></symbol>
 <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
 <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
 <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2"/></symbol>
 <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
-<symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.3L3 21l2.2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.5 9.5c0 4 3 6 6 6"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.3L3 21l2.2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.7 9.2c.2 2.9 2.3 5.3 5.4 6"/></symbol>
 <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
-<symbol id="i-send" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></symbol>
 <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><path d="M20 19H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2.5L9 4h6l2.5 3H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+<symbol id="i-align" viewBox="0 0 24 24"><path d="M4 5c2.5 2 5 3 8 3s5.5-1 8-3"/><path d="M4 19c2.5-2 5-3 8-3s5.5 1 8 3"/><path d="M9 8.5v7M15 8.5v7"/></symbol>
+<symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 5c0-1.5 1-2.5 2.5-2.5"/><path d="M9.5 12h.01M14.5 12h.01"/><path d="M9.5 15.5c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1"/></symbol>
+<symbol id="i-cursor" viewBox="0 0 24 24"><path d="m5 3 14 7-6.5 1.5L9 18z"/><path d="m13 13 6 6"/></symbol>
+<symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 8c-3 0-5 2-5 5v3h5v-5H7.5C7.7 9.7 8.7 9 10 9z"/><path d="M20 8c-3 0-5 2-5 5v3h5v-5h-2.5c.2-1.3 1.2-2 2.5-2z"/></symbol>
 </defs></svg>
 
-<header><nav class="wrap">
-  <span class="logo">Roval<b>dent</b></span>
-  <div class="nav-links">
-    <a href="#servicios">Tratamientos</a>
-    <a href="#diseno">Diseño de sonrisa</a>
-    <a href="#feed">Instagram</a>
-    <a href="#contacto">Contacto</a>
-    <a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Reservar cita</a>
-  </div>
-</nav></header>
-
-<section class="hero"><div class="wrap"><div class="hero__grid">
-  <div class="reveal">
-    <span class="kicker"><span class="line"></span> Odontología especializada · Magdalena del Mar</span>
-    <h1>Una sonrisa <em>diseñada</em> con ciencia y arte.</h1>
-    <p class="sub">Diseño de sonrisa, implantes y ortodoncia con planificación digital y un trato cercano que se nota desde tu primera evaluación.</p>
-    <div class="cta-row">
-      <a class="btn accent" href="https://wa.me/51999601381" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"></use></svg> Agenda tu evaluación</a>
-      <button class="btn ghost" data-ai-open><svg class="ic"><use href="#i-chat"></use></svg> Consulta con nuestra IA</button>
+<!-- topbar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left" style="display:flex;gap:22px;">
+      <span><svg class="ic"><use href="#i-pin"/></svg> Edificio Soho, Tomás Ramsey 930, Of. 706 — Magdalena del Mar</span>
     </div>
-    <div class="trust">
-      <span class="stars"><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg><svg class="ic"><use href="#i-star"></use></svg></span>
-      <span><b>5.0</b> · 208 reseñas verificadas en Google</span>
+    <div class="tb-right">
+      <span><svg class="ic"><use href="#i-phone"/></svg> <a href="tel:+51999601381">999 601 381</a></span>
+      <span><svg class="ic"><use href="#i-ig"/></svg> <a href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener">@rovaldent</a></span>
     </div>
   </div>
-  <div class="hero__visual reveal reveal--right">
-    <div class="hero__frame">
-      <div class="cap"><svg class="ic"><use href="#i-sparkle"></use></svg><h3>Simulación de sonrisa digital</h3><p>Visualiza tu resultado antes de empezar.</p></div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Rovaldent, inicio">
+      <b>Roval<i>dent</i></b>
+      <span>Odontología Especializada</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#proceso">El proceso</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#sede">La sede</a>
+      <a href="#feed">Instagram</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn--ink" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> Agendar cita</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <nav class="nav__mobile" id="navMobile" aria-label="Menú móvil">
+      <a href="#proceso">El proceso</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#sede">La sede</a>
+      <a href="#feed">Instagram</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn--wa" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> Agendar por WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- hero: editorial a la izquierda, foto real a sangre a la derecha, sello girando -->
+<section class="hero" id="inicio">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="kick rv">Clínica y laboratorio dental <i>/</i> <b>Magdalena del Mar</b></p>
+      <h1 class="rv">Sonrisas<br /><span class="h1-it">de autor,</span><br />hechas <span class="hl">en&nbsp;casa.</span></h1>
+      <p class="hero__sub rv">Rovaldent es la clínica con <b>laboratorio propio</b>: tu sonrisa se diseña, se fabrica y se ajusta sin salir de nuestra sede. <b>12 especialistas</b> y <b>17 años</b> de trayectoria lo respaldan.</p>
+      <div class="hero__ctas rv">
+        <a class="btn btn--wa" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> Agenda tu evaluación</a>
+        <button class="btn btn--ghost" data-chat-open><svg class="ic"><use href="#i-chat"/></svg> Pregúntale a Val</button>
+      </div>
+      <p class="hero__addr rv"><svg class="ic"><use href="#i-pin"/></svg> Edificio Soho · Tomás Ramsey 930, Of. 706 — Magdalena del Mar, Lima</p>
     </div>
-    <div class="hero__stat"><span class="num">+15</span><span class="lbl">años<br>de experiencia</span></div>
-    <div class="hero__badge"><span class="g"><svg class="ic"><use href="#i-star"></use></svg></span> 5.0 en Google</div>
+    <figure class="hero__ph">
+      <img src="assets/img/place-1.jpg" width="1600" height="2133" alt="Sala de atención de Rovaldent con ventanales de piso a techo y vista al skyline de Lima" fetchpriority="high" decoding="async" />
+      <figcaption class="hero__cap"><svg class="ic"><use href="#i-camera"/></svg> Foto real · nuestra sala de atención</figcaption>
+      <div class="hero__seal" role="img" aria-label="Calificación 5.0 en Google con 208 reseñas">
+        <span class="disc" aria-hidden="true"></span>
+        <svg class="seal__ring" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="sealo" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+          <text><textPath href="#sealo">5.0 EN GOOGLE · 208 RESEÑAS · 5.0 EN GOOGLE · 208 RESEÑAS ·</textPath></text>
+        </svg>
+        <span class="seal__core" aria-hidden="true">
+          <span><b>5.0</b>
+          <span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span></span>
+        </span>
+      </div>
+    </figure>
   </div>
-</div></div></section>
+</section>
 
-<section id="servicios"><div class="wrap">
-  <div class="head reveal">
-    <span class="eyebrow">Tratamientos</span>
-    <h2>Especialidades bajo un mismo techo</h2>
-    <p class="lead">Un equipo multidisciplinario para que recibas exactamente el cuidado que tu sonrisa necesita.</p>
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__inner">
+    <span>Laboratorio propio <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span>Diseño de Sonrisa <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span>Implantes <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span>Rehabilitación Oral <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span>Brackets <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span>Odontopediatría <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span>Odontogeriatría <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Laboratorio propio <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Diseño de Sonrisa <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Implantes <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Rehabilitación Oral <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Brackets <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Odontopediatría <svg class="ic"><use href="#i-spark"/></svg></span>
+    <span class="dup">Odontogeriatría <svg class="ic"><use href="#i-spark"/></svg></span>
   </div>
-  <div class="grid">
-    <div class="svc reveal"><div class="ico"><svg class="ic"><use href="#i-sparkle"></use></svg></div><h3>Diseño de sonrisa</h3><p>Carillas y estética dental planificadas digitalmente para un resultado natural y armónico.</p></div>
-    <div class="svc reveal"><div class="ico"><svg class="ic"><use href="#i-tooth"></use></svg></div><h3>Implantes dentales</h3><p>Recupera piezas perdidas con implantes de titanio de alta durabilidad y estética.</p></div>
-    <div class="svc reveal"><div class="ico"><svg class="ic"><use href="#i-tool"></use></svg></div><h3>Rehabilitación oral</h3><p>Devolvemos función y estética a tu boca con un plan integral personalizado.</p></div>
-    <div class="svc reveal"><div class="ico"><svg class="ic"><use href="#i-smile"></use></svg></div><h3>Ortodoncia y brackets</h3><p>Brackets y alineadores para corregir la posición de tus dientes a cualquier edad.</p></div>
-    <div class="svc reveal"><div class="ico"><svg class="ic"><use href="#i-users"></use></svg></div><h3>Odontopediatría</h3><p>Atención especializada y amable para los más pequeños de la casa.</p></div>
-    <div class="svc reveal"><div class="ico"><svg class="ic"><use href="#i-heart"></use></svg></div><h3>Odontogeriatría</h3><p>Cuidado dental adaptado a las necesidades del adulto mayor.</p></div>
-  </div>
-</div></section>
+</div>
 
-<section id="diseno" class="feature"><div class="wrap"><div class="feature__grid">
-  <div class="feature__media reveal">
-    <div class="tag"><b>Antes y después</b><span>Casos reales de nuestros pacientes</span></div>
-  </div>
-  <div class="reveal reveal--right">
-    <span class="eyebrow">Nuestro sello</span>
-    <h2>Diseño de sonrisa con planificación digital</h2>
-    <p class="lead">No improvisamos: proyectamos tu sonrisa digitalmente y te la mostramos antes de tocar un solo diente. Precisión, previsibilidad y un resultado que se ve —y se siente— natural.</p>
-    <ul>
-      <li><svg class="ic"><use href="#i-check"></use></svg> Evaluación y simulación digital de tu sonrisa</li>
-      <li><svg class="ic"><use href="#i-check"></use></svg> Presupuesto claro, sin sorpresas</li>
-      <li><svg class="ic"><use href="#i-check"></use></svg> Materiales de alta gama y durabilidad</li>
-      <li><svg class="ic"><use href="#i-check"></use></svg> Seguimiento personalizado en cada etapa</li>
-    </ul>
-    <div class="cta-row" style="margin-top:30px;"><a class="btn" href="https://wa.me/51999601381" target="_blank" rel="noopener">Quiero mi evaluación</a></div>
-  </div>
-</div></div></section>
-
-<section class="proof-wrap"><div class="proof"><div class="wrap"><div class="grid3">
-  <div class="reveal"><div class="num">5.0</div><div class="lbl">Calificación en Google</div></div>
-  <div class="reveal sep" style="border-left:1px solid rgba(255,255,255,.12);border-right:1px solid rgba(255,255,255,.12);"><div class="num">208</div><div class="lbl">Reseñas de pacientes</div></div>
-  <div class="reveal"><div class="num">6</div><div class="lbl">Especialidades</div></div>
-</div></div></div></section>
-
-<section id="feed"><div class="wrap">
-  <div class="feed__head">
-    <div class="feed__handle reveal">
-      <span class="feed__ig"><svg class="ic"><use href="#i-ig"></use></svg></span>
-      <span><b>@rovaldent</b><span>Casos, tips y el día a día de la clínica</span></span>
+<!-- manifiesto -->
+<section class="mani">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv"><b>01</b><i>/</i>La casa</span>
+      <h2 class="rv">Aquí no se encarga tu sonrisa. <span class="hl">Se hace.</span></h2>
+      <p class="lead rv" style="margin-bottom:20px;">La mayoría de clínicas envía tus coronas, prótesis y carillas a un laboratorio externo, y tú esperas. En Rovaldent el laboratorio está dentro de la clínica: el especialista y el técnico conversan frente a tu caso, los ajustes no viajan por Lima y cada detalle se controla en casa.</p>
+      <p class="lead rv">Por eso, desde hace 17 años, cada sonrisa que sale de aquí lleva firma.</p>
+      <div class="mani__stats rv" style="margin-top:38px;">
+        <div class="mani__stat"><b><span data-count="17">17</span></b><span>Años de trayectoria</span></div>
+        <div class="mani__stat"><b><span data-count="12">12</span></b><span>Especialistas</span></div>
+        <div class="mani__stat"><b><span data-count="6">6</span></b><span>Especialidades</span></div>
+        <div class="mani__stat"><b><span data-count="208">208</span><small>×5.0</small></b><span>Reseñas en Google</span></div>
+      </div>
     </div>
-    <a class="btn ghost reveal" href="https://instagram.com" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"></use></svg> Seguir</a>
+    <figure class="mani__media rv">
+      <img src="assets/img/place-7.jpg" width="1600" height="2283" alt="Macro de un implante dental en contra-ángulo, trabajo del equipo de Rovaldent" loading="lazy" decoding="async" />
+      <figcaption><svg class="ic"><use href="#i-camera"/></svg> Foto real · trabajo de casa</figcaption>
+    </figure>
   </div>
-  <div class="feed__grid reveal">
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Diseño de sonrisa</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Antes y después</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Nuestro equipo</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Tecnología</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Tips de salud bucal</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> La clínica</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Pacientes felices</div></div>
-    <div class="post"><div class="meta"><svg class="ic"><use href="#i-heart"></use></svg> Ortodoncia</div></div>
-  </div>
-  <p class="feed__note reveal">Feed conectado a tu Instagram real — se actualiza automáticamente con cada publicación.</p>
-</div></section>
+</section>
 
-<section><div class="wrap"><div class="quote reveal">
-  <div class="mark">&ldquo;</div>
-  <p>Excelente atención, profesionales de primera y un trato muy humano. Quedé feliz con mi tratamiento y con mi nueva sonrisa.</p>
-  <div class="who">Reseña de paciente · Google · 5.0</div>
-</div></div></section>
-
-<section id="contacto"><div class="wrap">
-  <div class="head reveal">
-    <span class="eyebrow">Contacto</span>
-    <h2>Reserva tu cita hoy</h2>
-    <p class="lead">Estamos en Magdalena del Mar, listos para atenderte.</p>
+<!-- ruta de la sonrisa (seccion firma) -->
+<section class="ruta" id="proceso">
+  <div class="wrap">
+    <div class="ruta__head">
+      <span class="eyebrow eyebrow--l rv"><b>02</b><i>/</i>El proceso</span>
+      <h2 class="rv">Tu sonrisa nunca sale <span class="hl hl--d">de casa.</span></h2>
+      <p class="lead rv">De la primera consulta a la entrega final, todo ocurre bajo el mismo techo. Así se hace una sonrisa de autor:</p>
+    </div>
+    <div class="ruta__track" id="rutaTrack">
+      <div class="ruta__line" aria-hidden="true"><i id="rutaLine"></i></div>
+      <article class="paso">
+        <span class="paso__dot" aria-hidden="true"></span>
+        <figure class="paso__media rv">
+          <img src="assets/img/stock-clinic-2.jpg" width="1600" height="1067" alt="Instrumental odontológico moderno sobre la unidad dental" loading="lazy" decoding="async" />
+        </figure>
+        <div class="paso__body rv">
+          <span class="paso__num">01</span>
+          <h3>Te escuchamos y evaluamos</h3>
+          <p>Tu primera cita es una conversación, no una venta. Revisamos tu caso, te explicamos las opciones con claridad y armamos <b>un plan a tu medida, sin letra chica</b>.</p>
+        </div>
+      </article>
+      <article class="paso">
+        <span class="paso__dot" aria-hidden="true"></span>
+        <figure class="paso__media rv">
+          <img src="assets/img/place-4.jpg" width="1600" height="2133" alt="Especialista de Rovaldent realizando una cirugía de implante" loading="lazy" decoding="async" />
+          <figcaption class="paso__cap"><svg class="ic"><use href="#i-camera"/></svg> Foto real · cirugía de implantes del equipo</figcaption>
+        </figure>
+        <div class="paso__body rv">
+          <span class="paso__num">02</span>
+          <h3>Te trata un especialista, no un generalista</h3>
+          <p>Cada tratamiento lo ejecuta uno de nuestros <b>12 especialistas</b>: el implante lo pone un cirujano, los brackets un ortodoncista, y los niños tienen su propia doctora.</p>
+        </div>
+      </article>
+      <article class="paso">
+        <span class="paso__dot" aria-hidden="true"></span>
+        <figure class="paso__media paso__media--lab rv">
+          <img src="assets/img/place-8.jpg" width="1600" height="1656" alt="Prótesis dental fabricada en el laboratorio propio de Rovaldent" loading="lazy" decoding="async" />
+          <figcaption class="paso__cap"><svg class="ic"><use href="#i-camera"/></svg> Foto real · laboratorio propio</figcaption>
+        </figure>
+        <div class="paso__body rv">
+          <span class="paso__num">03</span>
+          <h3>Tu sonrisa se fabrica aquí mismo</h3>
+          <p>Coronas, prótesis y carillas nacen en nuestro <b>laboratorio propio</b>, a metros de tu sillón. Menos semanas de espera, ajustes el mismo día y un técnico que conoce tu caso de primera mano.</p>
+        </div>
+      </article>
+      <article class="paso">
+        <span class="paso__dot" aria-hidden="true"></span>
+        <figure class="paso__media rv">
+          <img src="assets/img/stock-smile-4.jpg" width="1600" height="1066" alt="Retrato en blanco y negro de una sonrisa amplia y natural" loading="lazy" decoding="async" />
+        </figure>
+        <div class="paso__body rv">
+          <span class="paso__num">04</span>
+          <h3>La estrenas y te acompañamos</h3>
+          <p>Probamos, afinamos y entregamos. Y como el laboratorio vive aquí, <b>cualquier ajuste posterior se resuelve en casa</b>, con la misma mano que fabricó tu sonrisa.</p>
+        </div>
+      </article>
+    </div>
+    <div class="ruta__cta rv">
+      <p>"Se diseña aquí. Se fabrica aquí. Se estrena contigo."</p>
+      <a class="btn btn--light" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> Empezar mi evaluación</a>
+    </div>
   </div>
-  <div class="contact">
-    <ul class="reveal">
-      <li><svg class="ic"><use href="#i-pin"></use></svg> Edificio Soho, Tomás Ramsey 930, Of. 706 · Magdalena del Mar</li>
-      <li><svg class="ic"><use href="#i-phone"></use></svg> 999 601 381</li>
-      <li><svg class="ic"><use href="#i-clock"></use></svg> Lunes a Sábado · Con cita previa</li>
-      <li><svg class="ic"><use href="#i-shield"></use></svg> Evaluación inicial y presupuesto sin compromiso</li>
-      <li style="border:none;padding-top:22px;"><a class="btn accent" href="https://wa.me/51999601381" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"></use></svg> Agendar por WhatsApp</a></li>
-    </ul>
-    <iframe loading="lazy" src="https://www.google.com/maps?q=Tomas+Ramsey+930+Magdalena+del+Mar+Lima&output=embed" title="Ubicación Rovaldent"></iframe>
-  </div>
-</div></section>
+</section>
 
-<footer><div class="fwrap">
-  <span class="logo">Roval<b>dent</b></span>
-  <div style="font-size:14px;">Odontología especializada · Magdalena del Mar, Lima · 999 601 381</div>
-  <div class="demo">Demo/propuesta preparada por Juan Neyra · sin compromiso</div>
-</div></footer>
-
-<button class="ai-fab" data-ai-open aria-label="Abrir asistente virtual"><svg class="ic"><use href="#i-chat"></use></svg><span class="dot"></span></button>
-<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Asistente virtual Rovaldent">
-  <div class="ai-head">
-    <div class="av"><svg class="ic"><use href="#i-tooth"></use></svg></div>
-    <div><b>Asistente Rovaldent</b><span class="on"><i></i> En línea · responde al instante</span></div>
-    <button class="x" data-ai-close aria-label="Cerrar"><svg class="ic"><use href="#i-x"></use></svg></button>
+<!-- especialidades -->
+<section class="esp" id="especialidades">
+  <div class="wrap">
+    <div class="esp__head">
+      <div>
+        <span class="eyebrow rv"><b>03</b><i>/</i>Especialidades</span>
+        <h2 class="rv" style="margin-bottom:0;">Seis maneras de<br />cuidar <span class="hl">tu sonrisa.</span></h2>
+      </div>
+      <p class="lead rv" style="max-width:380px;font-size:15px;">Un equipo multidisciplinario bajo un mismo techo: cada caso lo ve el especialista que corresponde.</p>
+    </div>
+    <p class="esp__hint esp__hint--m rv"><svg class="ic"><use href="#i-cursor"/></svg> Toca una especialidad y pregúntale directo a Val, nuestra asistente.</p>
+    <div class="esp__layout">
+      <ul class="esp__list rv">
+        <li class="esp__row" data-img="assets/img/stock-smile-1.jpg" data-intent="diseno" tabindex="0" role="button" aria-label="Diseño de Sonrisa: preguntar a Val">
+          <span class="esp__num">01</span>
+          <span class="esp__badge" aria-hidden="true"><svg class="ic"><use href="#i-scan"/></svg></span>
+          <span class="esp__thumb"><img src="assets/img/stock-smile-1.jpg" alt="" loading="lazy" /><span class="pl" aria-hidden="true"><svg class="ic"><use href="#i-scan"/></svg></span></span>
+          <div><h3>Diseño de Sonrisa</h3><p>Carillas y estética dental pensadas para tu rostro, tu gesto y tu forma de reír. Naturalidad ante todo.</p></div>
+          <span class="esp__arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </li>
+        <li class="esp__row" data-img="assets/img/place-7.jpg" data-intent="implantes" tabindex="0" role="button" aria-label="Implantes: preguntar a Val">
+          <span class="esp__num">02</span>
+          <span class="esp__badge" aria-hidden="true"><svg class="ic"><use href="#i-tooth"/></svg></span>
+          <span class="esp__thumb"><img src="assets/img/place-7.jpg" alt="" loading="lazy" /><span class="pl" aria-hidden="true"><svg class="ic"><use href="#i-tooth"/></svg></span></span>
+          <div><h3>Implantes</h3><p>Recupera piezas perdidas con implantes y coronas fabricadas en nuestro propio laboratorio. Función y estética que duran.</p></div>
+          <span class="esp__arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </li>
+        <li class="esp__row" data-img="assets/img/place-8.jpg" data-intent="rehabilitacion" tabindex="0" role="button" aria-label="Rehabilitación Oral: preguntar a Val">
+          <span class="esp__num">03</span>
+          <span class="esp__badge" aria-hidden="true"><svg class="ic"><use href="#i-user-check"/></svg></span>
+          <span class="esp__thumb"><img src="assets/img/place-8.jpg" alt="" loading="lazy" /><span class="pl" aria-hidden="true"><svg class="ic"><use href="#i-user-check"/></svg></span></span>
+          <div><h3>Rehabilitación Oral</h3><p>Casos complejos, plan integral: reconstruimos la función completa de tu boca, pieza por pieza.</p></div>
+          <span class="esp__arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </li>
+        <li class="esp__row" data-img="assets/img/stock-clinic-2.jpg" data-intent="ortodoncia" tabindex="0" role="button" aria-label="Brackets y ortodoncia: preguntar a Val">
+          <span class="esp__num">04</span>
+          <span class="esp__badge" aria-hidden="true"><svg class="ic"><use href="#i-align"/></svg></span>
+          <span class="esp__thumb"><img src="assets/img/stock-clinic-2.jpg" alt="" loading="lazy" /><span class="pl" aria-hidden="true"><svg class="ic"><use href="#i-align"/></svg></span></span>
+          <div><h3>Brackets y Ortodoncia</h3><p>Alineamos tu mordida a cualquier edad, con controles cercanos y un plan claro de inicio a fin.</p></div>
+          <span class="esp__arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </li>
+        <li class="esp__row" data-img="assets/img/stock-patient-3.jpg" data-intent="ninos" tabindex="0" role="button" aria-label="Odontopediatría: preguntar a Val">
+          <span class="esp__num">05</span>
+          <span class="esp__badge" aria-hidden="true"><svg class="ic"><use href="#i-baby"/></svg></span>
+          <span class="esp__thumb"><img src="assets/img/stock-patient-3.jpg" alt="" loading="lazy" /><span class="pl" aria-hidden="true"><svg class="ic"><use href="#i-baby"/></svg></span></span>
+          <div><h3>Odontopediatría</h3><p>Primeras visitas sin miedo: especialistas que saben tratar a los más pequeños de la casa.</p></div>
+          <span class="esp__arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </li>
+        <li class="esp__row" data-img="assets/img/stock-patient-1.jpg" data-intent="geriatria" tabindex="0" role="button" aria-label="Odontogeriatría: preguntar a Val">
+          <span class="esp__num">06</span>
+          <span class="esp__badge" aria-hidden="true"><svg class="ic"><use href="#i-hand-heart"/></svg></span>
+          <span class="esp__thumb"><img src="assets/img/stock-patient-1.jpg" alt="" loading="lazy" /><span class="pl" aria-hidden="true"><svg class="ic"><use href="#i-hand-heart"/></svg></span></span>
+          <div><h3>Odontogeriatría</h3><p>Cuidado dental pensado para el adulto mayor: paciencia, delicadeza y prótesis que sí se sienten bien.</p></div>
+          <span class="esp__arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </li>
+      </ul>
+      <aside class="esp__preview rv" aria-hidden="true">
+        <div class="frame"><img id="espPrev" src="assets/img/stock-smile-1.jpg" alt="" loading="lazy" /></div>
+        <p class="esp__hint"><svg class="ic"><use href="#i-cursor"/></svg> Toca una especialidad y pregúntale directo a Val, nuestra asistente.</p>
+      </aside>
+    </div>
   </div>
-  <div class="ai-body" id="aiBody"></div>
-  <div class="ai-quick" id="aiQuick"></div>
-  <form class="ai-form" id="aiForm" autocomplete="off">
-    <input id="aiInput" placeholder="Escribe tu consulta…" aria-label="Mensaje" />
-    <button type="submit" aria-label="Enviar"><svg class="ic"><use href="#i-send"></use></svg></button>
+</section>
+
+<!-- voces: 5.0 + muro de resenas reales -->
+<section class="score" id="voces">
+  <div class="wrap">
+    <h2 class="sr">La nota de nuestros pacientes</h2>
+    <span class="eyebrow rv" style="justify-content:center;"><b>04</b><i>/</i>Voces reales</span>
+    <div class="score__big rv">5<small>.0</small></div>
+    <div class="score__stars rv" aria-hidden="true"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div>
+    <p class="rv"><b>208 pacientes</b> le pusieron nota a Rovaldent en Google y todos coincidieron en la máxima. Estas voces son suyas:</p>
+  </div>
+  <div class="voces rv">
+    <div class="voz-row">
+      <div class="voz-track">
+        <blockquote>"El servicio es de primera, con un toque muy personal que <b>inspira confianza</b> desde el primer momento… su dedicación se nota en cada detalle." <cite>Maria Grazia S.</cite></blockquote>
+        <blockquote>"La Dra. Rocío fue muy <b>paciente y minuciosa</b> en la consulta y el diagnóstico… todo el personal, muy amable." <cite>Andrea V.</cite></blockquote>
+        <blockquote class="dup" aria-hidden="true">"El servicio es de primera, con un toque muy personal que <b>inspira confianza</b> desde el primer momento… su dedicación se nota en cada detalle." <cite>Maria Grazia S.</cite></blockquote>
+        <blockquote class="dup" aria-hidden="true">"La Dra. Rocío fue muy <b>paciente y minuciosa</b> en la consulta y el diagnóstico… todo el personal, muy amable." <cite>Andrea V.</cite></blockquote>
+      </div>
+    </div>
+    <div class="voz-row voz-row--rev">
+      <div class="voz-track">
+        <blockquote>"Mi hijo de 6 años la pasó fantástico… <b>salió feliz</b>, preguntando cuándo podía volver; el consultorio es espectacular." <cite>Gonzalo S.</cite></blockquote>
+        <blockquote>"Los doctores son muy <b>amables y pacientes</b>… se aseguraron de que me sintiera cómoda durante los tratamientos." <cite>Kayla L.</cite></blockquote>
+        <blockquote>"Mi esposa quedó muy contenta con la atención… felices con este <b>descubrimiento</b> cada vez que viajamos a Lima." <cite>Jet V.</cite></blockquote>
+        <blockquote class="dup" aria-hidden="true">"Mi hijo de 6 años la pasó fantástico… <b>salió feliz</b>, preguntando cuándo podía volver; el consultorio es espectacular." <cite>Gonzalo S.</cite></blockquote>
+        <blockquote class="dup" aria-hidden="true">"Los doctores son muy <b>amables y pacientes</b>… se aseguraron de que me sintiera cómoda durante los tratamientos." <cite>Kayla L.</cite></blockquote>
+        <blockquote class="dup" aria-hidden="true">"Mi esposa quedó muy contenta con la atención… felices con este <b>descubrimiento</b> cada vez que viajamos a Lima." <cite>Jet V.</cite></blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="voces__note rv">Reseñas reales de Google Maps · citas traducidas del inglés.</p>
+    <a class="btn btn--ghost rv" href="https://www.google.com/maps/search/?api=1&amp;query=Rovaldent+Odontolog%C3%ADa+Especializada+Magdalena+del+Mar" target="_blank" rel="noopener"><svg class="ic"><use href="#i-quote"/></svg> Leer las reseñas en Google</a>
+  </div>
+</section>
+
+<!-- sede -->
+<section class="sede" id="sede">
+  <div class="wrap">
+    <div class="sede__head">
+      <span class="eyebrow rv"><b>05</b><i>/</i>La sede</span>
+      <h2 class="rv">Una clínica que no parece <span class="hl">consultorio.</span></h2>
+      <p class="lead rv">Ventanales, luz natural y Lima de fondo: en las oficinas boutique del Edificio Soho te atendemos con calma, sin salas frías ni pasillos de hospital.</p>
+    </div>
+    <div class="sede__grid">
+      <figure class="sede__main rv">
+        <img src="assets/img/place-1.jpg" width="1600" height="2133" alt="Ventanales de piso a techo de la sala de atención de Rovaldent, con el skyline de Lima de fondo" loading="lazy" decoding="async" />
+        <figcaption class="sede__pill"><svg class="ic"><use href="#i-camera"/></svg> Foto real · sala de atención, Of. 706</figcaption>
+      </figure>
+      <div class="sede__side">
+        <figure class="sede__card rv">
+          <img src="assets/img/place-10.jpg" width="1600" height="2125" alt="Logo retroiluminado de Rovaldent en la sede" loading="lazy" decoding="async" />
+          <figcaption class="sede__pill"><svg class="ic"><use href="#i-camera"/></svg> Foto real · la marca en la sede</figcaption>
+        </figure>
+        <div class="sede__soho rv">
+          <span class="soho__pin" aria-hidden="true"><svg class="ic"><use href="#i-pin"/></svg></span>
+          <b>Edificio Soho</b>
+          <p>Tomás Ramsey 930 · Oficina 706<br />Magdalena del Mar, Lima</p>
+          <span class="soho__tag">Oficinas boutique</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Rovaldent+Odontolog%C3%ADa+Especializada+Magdalena+del+Mar" target="_blank" rel="noopener">Cómo llegar <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <p class="sede__foot rv"><svg class="ic"><use href="#i-pin"/></svg> Edificio Soho, Tomás Ramsey 930, Of. 706 — Magdalena del Mar, Lima</p>
+  </div>
+</section>
+
+<!-- feed instagram -->
+<section class="feed" id="feed">
+  <div class="wrap">
+    <span class="eyebrow rv"><b>06</b><i>/</i>Instagram</span>
+    <div class="feed__top">
+      <div class="feed__id rv">
+        <span class="feed__badge"><svg class="ic"><use href="#i-ig"/></svg></span>
+        <div>
+          <b>@rovaldent</b>
+          <span>12 Especialistas · 17 años con el respaldo de nuestros pacientes · Laboratorio Propio</span>
+        </div>
+      </div>
+      <a class="btn btn--ink rv" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg> Seguir en Instagram</a>
+    </div>
+    <div class="feed__grid rv">
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/place-7.jpg" alt="Macro de un implante dental en contra-ángulo" loading="lazy" decoding="async" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/place-8.jpg" alt="Prótesis dental del laboratorio propio de Rovaldent" loading="lazy" decoding="async" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/place-10.jpg" alt="Logo retroiluminado de la sede Rovaldent" loading="lazy" decoding="async" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/place-1.jpg" alt="Sala de atención con vista al skyline de Lima" loading="lazy" decoding="async" style="object-position:center 45%;" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/place-4.jpg" alt="Cirugía de implante del equipo de Rovaldent" loading="lazy" decoding="async" style="object-position:center 20%;" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/stock-clinic-4.jpg" alt="Sillón dental en ambiente editorial" loading="lazy" decoding="async" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/stock-patient-1.jpg" alt="Atención odontológica a paciente adulto mayor" loading="lazy" decoding="async" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+      <a class="feed__post" href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener" aria-label="Ver publicación de Instagram de Rovaldent">
+        <img src="assets/img/stock-clinic-2.jpg" alt="Instrumental odontológico moderno" loading="lazy" decoding="async" /><span class="ov"><svg class="ic"><use href="#i-ig"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- cta final -->
+<section class="cta-final">
+  <div class="wrap">
+    <p class="kick kick--l rv">Rovaldent <i>/</i> <b>Magdalena del Mar</b></p>
+    <h2 class="rv">Se diseña aquí. Se fabrica aquí. <span class="hl hl--d">Se estrena contigo.</span></h2>
+    <p class="rv">Escríbenos y coordinemos tu evaluación con el especialista que tu caso necesita.</p>
+    <div class="btn-row rv">
+      <a class="btn btn--wa" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> Escribir al 999 601 381</a>
+      <button class="btn btn--light" data-chat-open><svg class="ic"><use href="#i-chat"/></svg> Conversar con Val</button>
+    </div>
+  </div>
+</section>
+
+<!-- contacto -->
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv"><b>07</b><i>/</i>Contacto</span>
+      <h2 class="rv">Empecemos por <span class="hl">una evaluación.</span></h2>
+      <ul class="contacto__list rv">
+        <li><svg class="ic"><use href="#i-pin"/></svg><div><b>Edificio Soho, Tomás Ramsey 930, Of. 706</b><span>Oficinas boutique · Magdalena del Mar, Lima</span></div></li>
+        <li><svg class="ic"><use href="#i-phone"/></svg><div><b>999 601 381</b><span>Llamada o WhatsApp</span></div></li>
+        <li><svg class="ic"><use href="#i-clock"/></svg><div><b>Atención con cita previa</b><span>Escríbenos y coordinamos el horario que mejor te acomode</span></div></li>
+        <li><svg class="ic"><use href="#i-shield"/></svg><div><b>Evaluación y presupuesto claros</b><span>Cada plan se explica antes de empezar, sin sorpresas</span></div></li>
+        <li><svg class="ic"><use href="#i-ig"/></svg><div><b>@rovaldent</b><span>Casos y el día a día de la clínica en Instagram</span></div></li>
+      </ul>
+      <a class="btn btn--wa rv" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> Agendar por WhatsApp</a>
+    </div>
+    <div class="contacto__map rv">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Edificio+Soho,+Tom%C3%A1s+Ramsey+930,+Magdalena+del+Mar,+Lima&output=embed" title="Mapa: Rovaldent en Tomás Ramsey 930, Magdalena del Mar"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#" aria-label="Rovaldent, inicio"><b>Roval<i>dent</i></b><span>Odontología Especializada</span></a>
+      <p>Sonrisas de autor, hechas en casa. Diseño de sonrisa, implantes y rehabilitación oral con laboratorio propio, en Magdalena del Mar.</p>
+    </div>
+    <div>
+      <h4>Especialidades</h4>
+      <ul>
+        <li><a href="#especialidades">Diseño de Sonrisa</a></li>
+        <li><a href="#especialidades">Implantes</a></li>
+        <li><a href="#especialidades">Rehabilitación Oral</a></li>
+        <li><a href="#especialidades">Brackets y Ortodoncia</a></li>
+        <li><a href="#especialidades">Odontopediatría y Odontogeriatría</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/51999601381" target="_blank" rel="noopener">WhatsApp 999 601 381</a></li>
+        <li><a href="https://www.instagram.com/rovaldent/" target="_blank" rel="noopener">Instagram @rovaldent</a></li>
+        <li><a href="#contacto">Tomás Ramsey 930, Of. 706</a></li>
+        <li><a href="#contacto">Magdalena del Mar, Lima</a></li>
+      </ul>
+    </div>
+    <div class="foot-demo">
+      <span>Rovaldent Odontología Especializada · Magdalena del Mar, Lima</span>
+      <span>Demo preparada por <a href="https://wa.me/51902557403" target="_blank" rel="noopener">Juan Neyra</a> · sin compromiso · WhatsApp +51 902 557 403 · El feed mostrado se conecta al Instagram real (@rovaldent) al activar la web.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- fabs -->
+<div class="fabs">
+  <a class="fab fab--wa" href="https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escribir a Rovaldent por WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+  <button class="fab fab--chat" data-chat-open aria-label="Abrir chat con Val, asistente virtual"><svg class="ic"><use href="#i-chat"/></svg><span class="dot" aria-hidden="true"></span></button>
+</div>
+
+<!-- chat Val -->
+<div class="chat" id="chat" role="dialog" aria-label="Chat con Val, asistente virtual de Rovaldent">
+  <div class="chat__head">
+    <span class="chat__ava"><svg class="ic"><use href="#i-tooth"/></svg><i aria-hidden="true"></i></span>
+    <div><b>Val · Rovaldent</b><small><u aria-hidden="true"></u> En línea · responde al instante</small></div>
+    <button class="chat__x" data-chat-close aria-label="Cerrar chat"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="chat__body" id="chatBody" aria-live="polite"></div>
+  <div class="chat__quick" id="chatQuick"></div>
+  <form class="chat__form" id="chatForm" autocomplete="off">
+    <input id="chatInput" placeholder="Escribe tu consulta..." aria-label="Escribe tu mensaje" />
+    <button type="submit" aria-label="Enviar mensaje"><svg class="ic"><use href="#i-send"/></svg></button>
   </form>
-  <div class="ai-disclaim">Asistente virtual · Para un diagnóstico, agenda una cita con un especialista.</div>
+  <p class="chat__note">Asistente virtual de demostración · Para un diagnóstico, agenda tu cita con un especialista.</p>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
+/* ---------- nav mobile ---------- */
 (function(){
-  if(!window.gsap||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+  var burger=document.getElementById('burger'),menu=document.getElementById('navMobile');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});});
+})();
+
+/* ---------- GSAP (si no carga o hay reduced-motion, el HTML ya trae los valores reales) ---------- */
+(function(){
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!window.gsap||reduced){return;}
   gsap.registerPlugin(window.ScrollTrigger);
-  document.querySelectorAll('.reveal').forEach(function(el){
-    var x=el.classList.contains('reveal--right')?36:0;
-    gsap.from(el,{y:34,x:x,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%'}});
+
+  document.querySelectorAll('.rv').forEach(function(el){
+    gsap.from(el,{y:36,opacity:0,duration:.85,ease:'power2.out',
+      scrollTrigger:{trigger:el,start:'top 90%',once:true}});
+  });
+
+  gsap.fromTo('#rutaLine',{scaleY:0},{scaleY:1,ease:'none',
+    scrollTrigger:{trigger:'#rutaTrack',start:'top 72%',end:'bottom 60%',scrub:.6}});
+
+  /* contadores: el HTML trae 17/12/6/208; solo aqui, con GSAP corriendo, se bajan a 0 y se animan */
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var end=parseInt(el.dataset.count,10),obj={v:0};
+    el.textContent='0';
+    gsap.to(obj,{v:end,duration:1.7,ease:'power1.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true},
+      onUpdate:function(){el.textContent=Math.round(obj.v);}});
   });
 })();
 
-(function(){
-  var WA='https://wa.me/51999601381';
+/* ---------- chat Val (motor de intents, datos reales) ---------- */
+var RovalChat=(function(){
+  var WA='https://wa.me/51999601381?text=Hola%20Rovaldent%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n.';
   var T={
-    saludo:"Hola, soy el asistente virtual de <b>Rovaldent</b>. Puedo contarte sobre nuestros tratamientos, precios, horarios o ayudarte a agendar una cita. ¿En qué te ayudo?",
-    servicios:"Somos especialistas en <b>diseño de sonrisa, implantes, rehabilitación oral, ortodoncia, odontopediatría y odontogeriatría</b>. ¿Sobre cuál te gustaría saber más?",
-    diseno:"El <b>diseño de sonrisa</b> combina carillas y estética dental con planificación digital, para un resultado natural. Agenda una evaluación y te mostramos una simulación de tu nueva sonrisa.",
-    implantes:"Reponemos piezas perdidas con <b>implantes de titanio</b> de alta durabilidad y estética. Necesita una evaluación previa para armar tu plan. ¿Te agendo una?",
-    ortodoncia:"Ofrecemos <b>brackets y alineadores</b> para alinear tus dientes a cualquier edad. En la evaluación definimos el tratamiento ideal para ti.",
-    precios:"Cada tratamiento se cotiza según tu caso, luego de una <b>evaluación</b>, para darte un presupuesto claro y sin sorpresas. ¿Agendamos tu evaluación?",
-    horario:"Atendemos de <b>lunes a sábado con cita previa</b>. ¿Quieres que coordinemos un horario?",
-    ubicacion:"Estamos en el <b>Edificio Soho, Tomás Ramsey 930, Of. 706 — Magdalena del Mar</b>.",
-    agendar:{a:"Con gusto. Puedes agendar tu cita al instante por WhatsApp:",cta:{t:"Agendar por WhatsApp",h:WA}},
-    emergencia:{a:"Si es urgente o tienes dolor, escríbenos directo por WhatsApp y te atendemos lo antes posible.",cta:{t:"Escribir ahora",h:WA}},
-    gracias:"Con gusto. ¿Hay algo más en lo que te pueda ayudar?",
-    fallback:"Puedo ayudarte con <b>tratamientos, precios, horarios, ubicación</b> o <b>agendar una cita</b>. ¿Qué necesitas?"
+    saludo:"Hola, soy <b>Val</b>, la asistente virtual de Rovaldent. Puedo contarte de nuestras <b>6 especialidades</b>, el <b>laboratorio propio</b>, la ubicación en Magdalena o ayudarte a agendar. ¿Qué necesitas?",
+    servicios:"Tenemos 6 especialidades bajo un mismo techo: <b>Diseño de Sonrisa, Implantes, Rehabilitación Oral, Brackets, Odontopediatría y Odontogeriatría</b>. Cada caso lo ve el especialista que corresponde. ¿Sobre cuál te cuento más?",
+    diseno:"El <b>Diseño de Sonrisa</b> combina carillas y estética dental pensadas para tu rostro y tu forma de reír. Y como tenemos <b>laboratorio propio</b>, tus carillas se fabrican aquí mismo. ¿Te agendo una evaluación?",
+    implantes:"Con los <b>implantes</b> recuperas piezas perdidas con función y estética. La corona se fabrica en nuestro laboratorio propio, así los ajustes no esperan semanas. Requiere una evaluación previa, ¿la coordinamos?",
+    rehabilitacion:"La <b>Rehabilitación Oral</b> es para casos complejos: reconstruimos la función completa de tu boca con un plan integral, pieza por pieza, con prótesis hechas en casa. ¿Quieres que un especialista revise tu caso?",
+    ortodoncia:"Ofrecemos <b>brackets y ortodoncia</b> a cualquier edad, con controles cercanos y un plan claro de inicio a fin. En tu evaluación definimos qué opción te conviene.",
+    ninos:"En <b>Odontopediatría</b> los más pequeños tienen su propio especialista: primeras visitas tranquilas, sin miedo y con mucha paciencia. ¿Coordinamos una cita para tu hijo o hija?",
+    geriatria:"La <b>Odontogeriatría</b> es cuidado dental pensado para el adulto mayor: delicadeza, paciencia y prótesis que sí se sienten bien, fabricadas en nuestro laboratorio. ¿Te ayudo a agendar?",
+    laboratorio:"Es nuestro sello: somos una clínica con <b>laboratorio propio</b>. Tus coronas, prótesis y carillas se fabrican dentro de la sede, a metros de tu sillón: menos esperas, ajustes el mismo día y control de calidad en casa.",
+    equipo:"Somos <b>12 especialistas</b> con <b>17 años</b> de trayectoria y la máxima calificación de Google: <b>5.0 con 208 reseñas</b>. Cada tratamiento lo ejecuta el especialista que corresponde.",
+    precios:{a:"Cada caso es distinto y no queremos darte un número a ciegas: primero un especialista evalúa tu boca y te entrega un <b>plan y presupuesto claros, sin sorpresas</b>. Escríbenos y coordinamos tu evaluación:",cta:{t:"Cotizar por WhatsApp",h:WA}},
+    horario:{a:"Atendemos <b>con cita previa</b> en nuestra sede de Magdalena del Mar. Escríbenos al WhatsApp <b>999 601 381</b> y coordinamos el horario que mejor te acomode:",cta:{t:"Coordinar horario",h:WA}},
+    ubicacion:"Estamos en el <b>Edificio Soho, Tomás Ramsey 930, Of. 706 — Magdalena del Mar, Lima</b> (oficinas boutique). En la sección Contacto de esta página tienes el mapa.",
+    agendar:{a:"Con gusto. Agenda tu evaluación al instante por WhatsApp al <b>999 601 381</b>:",cta:{t:"Agendar por WhatsApp",h:WA}},
+    urgencia:{a:"Si tienes dolor o es urgente, escríbenos directo por WhatsApp y te atendemos lo antes posible:",cta:{t:"Escribir ahora",h:WA}},
+    instagram:{a:"Nos encuentras como <b>@rovaldent</b>: casos, tips y el día a día de la clínica.",cta:{t:"Abrir Instagram",h:"https://www.instagram.com/rovaldent/"}},
+    gracias:"Con gusto. Si necesitas algo más, aquí estoy. Y cuando quieras, tu evaluación te espera en Magdalena.",
+    fallback:"Puedo ayudarte con las <b>especialidades</b>, el <b>laboratorio propio</b>, <b>precios</b>, <b>horarios</b>, la <b>ubicación</b> o <b>agendar una cita</b>. ¿Qué necesitas?"
   };
   var R=[
-    [/hola|buenas|buenos|hey|qué tal/i,'saludo'],
-    [/precio|costo|cu[aá]nto|cuesta|tarifa|vale/i,'precios'],
-    [/hora|horario|abren|atienden|atenci[oó]n|d[ií]as/i,'horario'],
-    [/d[oó]nde|ubica|direcci|llegar|queda|mapa/i,'ubicacion'],
+    [/hola|buenas|buenos|hey|qu[eé] tal/i,'saludo'],
+    [/precio|costo|cu[aá]nto|cuesta|tarifa|vale|presupuesto/i,'precios'],
+    [/hora|horario|abren|atienden|disponib|d[ií]as/i,'horario'],
+    [/d[oó]nde|ubica|direcci|llegar|queda|mapa|soho|magdalena/i,'ubicacion'],
+    [/laborator|f[aá]brica|pr[oó]tesis propia|hacen aqu[ií]/i,'laboratorio'],
     [/implante/i,'implantes'],
-    [/bracket|ortodon|alinead|invisalign/i,'ortodoncia'],
+    [/rehabilita/i,'rehabilitacion'],
+    [/bracket|ortodon|alinead|mordida/i,'ortodoncia'],
+    [/ni[nñ]o|hij[oa]|pediatr|beb[eé]|peque[nñ]/i,'ninos'],
+    [/adulto mayor|geriatr|abuel|tercera edad/i,'geriatria'],
     [/dise[nñ]o|sonrisa|carilla|est[eé]tic|blanqueam/i,'diseno'],
-    [/agend|cita|reserv|turno|separar/i,'agendar'],
-    [/urgen|emergencia|dolor|duele/i,'emergencia'],
-    [/gracias|genial|perfecto/i,'gracias'],
+    [/equipo|especialistas|doctores|doctora|experiencia|a[nñ]os/i,'equipo'],
+    [/instagram|redes|feed|@/i,'instagram'],
+    [/agend|cita|reserv|turno|separar|evaluaci[oó]n/i,'agendar'],
+    [/urgen|emergencia|dolor|duele|se me rompi/i,'urgencia'],
+    [/gracias|genial|perfecto|buenazo/i,'gracias'],
     [/servicio|tratamiento|hacen|ofrecen|especialidad/i,'servicios']
   ];
-  var Q=[{l:"Tratamientos",i:"servicios"},{l:"Diseño de sonrisa",i:"diseno"},{l:"Precios",i:"precios"},{l:"Horarios",i:"horario"},{l:"Agendar cita",i:"agendar"}];
-  var panel=document.getElementById('aiPanel'),body=document.getElementById('aiBody'),form=document.getElementById('aiForm'),input=document.getElementById('aiInput'),quick=document.getElementById('aiQuick'),started=false;
-  function open(){panel.classList.add('open');input.focus();if(!started){started=true;setTimeout(function(){say(T.saludo);},250);}}
-  function close(){panel.classList.remove('open');}
-  document.querySelectorAll('[data-ai-open]').forEach(function(b){b.addEventListener('click',open);});
-  document.querySelectorAll('[data-ai-close]').forEach(function(b){b.addEventListener('click',close);});
-  function sc(){body.scrollTop=body.scrollHeight;}
-  function bub(html,who){var d=document.createElement('div');d.className='msg '+who;d.innerHTML=html;body.appendChild(d);sc();}
-  function say(res){var t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);sc();
-    setTimeout(function(){t.remove();if(typeof res==='string'){bub(res,'bot');}else{bub(res.a,'bot');if(res.cta){bub('<a href="'+res.cta.h+'" target="_blank" rel="noopener">'+res.cta.t+' &rarr;</a>','bot');}}},600+Math.random()*400);}
-  function ans(text){var k='fallback';for(var i=0;i<R.length;i++){if(R[i][0].test(text)){k=R[i][1];break;}}say(T[k]);}
-  Q.forEach(function(q){var b=document.createElement('button');b.textContent=q.l;b.addEventListener('click',function(){bub(q.l,'me');say(T[q.i]);});quick.appendChild(b);});
-  form.addEventListener('submit',function(e){e.preventDefault();var v=input.value.trim();if(!v)return;bub(v,'me');input.value='';ans(v);});
+  var CHIPS=[
+    {l:"Especialidades",i:"servicios"},
+    {l:"Laboratorio propio",i:"laboratorio"},
+    {l:"Precios",i:"precios"},
+    {l:"Ubicación",i:"ubicacion"},
+    {l:"Agendar cita",i:"agendar"}
+  ];
+  var panel=document.getElementById('chat'),body=document.getElementById('chatBody'),
+      form=document.getElementById('chatForm'),input=document.getElementById('chatInput'),
+      quick=document.getElementById('chatQuick'),started=false,lastFocus=null;
+  function scrollBottom(){body.scrollTop=body.scrollHeight;}
+  function bubble(html,who){var d=document.createElement('div');d.className='msg msg--'+who;d.innerHTML=html;body.appendChild(d);scrollBottom();}
+  function say(res){
+    var t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';
+    body.appendChild(t);scrollBottom();
+    setTimeout(function(){
+      t.remove();
+      if(typeof res==='string'){bubble(res,'bot');}
+      else{bubble(res.a,'bot');if(res.cta){bubble('<a href="'+res.cta.h+'" target="_blank" rel="noopener">'+res.cta.t+' &rarr;</a>','bot');}}
+    },620+Math.random()*450);
+  }
+  function answer(text){
+    var key='fallback';
+    for(var i=0;i<R.length;i++){if(R[i][0].test(text)){key=R[i][1];break;}}
+    say(T[key]);
+  }
+  function open(){
+    lastFocus=document.activeElement;
+    panel.classList.add('open');
+    if(window.matchMedia('(min-width: 700px)').matches){input.focus();}
+    if(!started){started=true;setTimeout(function(){say(T.saludo);},260);}
+  }
+  function close(){
+    panel.classList.remove('open');
+    if(lastFocus&&typeof lastFocus.focus==='function'){lastFocus.focus();}
+  }
+  function ask(intentKey,label){
+    open();
+    setTimeout(function(){bubble(label,'me');say(T[intentKey]);},started?150:900);
+  }
+  document.querySelectorAll('[data-chat-open]').forEach(function(b){b.addEventListener('click',open);});
+  document.querySelectorAll('[data-chat-close]').forEach(function(b){b.addEventListener('click',close);});
+  /* teclado completo: Escape cierra (y devuelve el foco), Tab queda atrapado dentro del dialogo */
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&panel.classList.contains('open')){close();}
+  });
+  panel.addEventListener('keydown',function(e){
+    if(e.key!=='Tab'){return;}
+    var f=panel.querySelectorAll('a[href],button:not([disabled]),input');
+    if(!f.length){return;}
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  CHIPS.forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.textContent=c.l;
+    b.addEventListener('click',function(){bubble(c.l,'me');say(T[c.i]);});
+    quick.appendChild(b);
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();var v=input.value.trim();if(!v){return;}
+    bubble(v,'me');input.value='';answer(v);
+  });
+  return {ask:ask};
+})();
+
+/* ---------- especialidades: preview + puente al chat ---------- */
+(function(){
+  var rows=document.querySelectorAll('.esp__row'),prev=document.getElementById('espPrev');
+  var labels={diseno:"Cuéntame del Diseño de Sonrisa",implantes:"Cuéntame de los Implantes",rehabilitacion:"Cuéntame de la Rehabilitación Oral",ortodoncia:"Cuéntame de Brackets y Ortodoncia",ninos:"Cuéntame de Odontopediatría",geriatria:"Cuéntame de Odontogeriatría"};
+  rows.forEach(function(row){
+    function activate(){
+      rows.forEach(function(r){r.classList.toggle('is-on',r===row);});
+      if(prev&&prev.getAttribute('data-cur')!==row.dataset.img){
+        prev.setAttribute('data-cur',row.dataset.img);
+        prev.classList.add('is-sw');
+        setTimeout(function(){
+          prev.src=row.dataset.img;
+          prev.onload=function(){prev.classList.remove('is-sw');};
+        },140);
+      }
+    }
+    row.addEventListener('mouseenter',activate);
+    row.addEventListener('focus',activate);
+    row.addEventListener('click',function(){RovalChat.ask(row.dataset.intent,labels[row.dataset.intent]);});
+    row.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();RovalChat.ask(row.dataset.intent,labels[row.dataset.intent]);}});
+  });
 })();
 </script>
 </body>

@@ -1,0 +1,26 @@
+{
+  "query": "perfect smile teeth closeup woman",
+  "fuente": "Pexels (profesional)",
+  "fotos": [
+    {
+      "archivo": "assets/img/foto-1.jpg",
+      "autor": "Shiny Diamond",
+      "fuente": "https://www.pexels.com/photo/close-up-photo-of-woman-with-pink-lipstick-smiling-3762402/"
+    },
+    {
+      "archivo": "assets/img/foto-2.jpg",
+      "autor": "Kasim H",
+      "fuente": "https://www.pexels.com/photo/beautiful-gummy-smile-with-white-teeth-16212691/"
+    },
+    {
+      "archivo": "assets/img/foto-3.jpg",
+      "autor": "Public Domain Pictures",
+      "fuente": "https://www.pexels.com/photo/women-s-red-lipstick-41208/"
+    },
+    {
+      "archivo": "assets/img/foto-4.jpg",
+      "autor": "Pixabay",
+      "fuente": "https://www.pexels.com/photo/human-lips-65665/"
+    }
+  ]
+}

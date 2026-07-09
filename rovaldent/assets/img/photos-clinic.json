@@ -1,0 +1,26 @@
+{
+  "query": "modern dental clinic interior",
+  "fuente": "Pexels (profesional)",
+  "fotos": [
+    {
+      "archivo": "assets/img/foto-1.jpg",
+      "autor": "Daniel Frank",
+      "fuente": "https://www.pexels.com/photo/white-dental-equipment-near-wall-305567/"
+    },
+    {
+      "archivo": "assets/img/foto-2.jpg",
+      "autor": "cottonbro studio",
+      "fuente": "https://www.pexels.com/photo/close-up-shot-of-a-dental-handpieces-6502543/"
+    },
+    {
+      "archivo": "assets/img/foto-3.jpg",
+      "autor": "Pavel Danilyuk",
+      "fuente": "https://www.pexels.com/photo/screen-and-dental-instruments-in-doctors-office-6809639/"
+    },
+    {
+      "archivo": "assets/img/foto-4.jpg",
+      "autor": "Cedric Fauntleroy",
+      "fuente": "https://www.pexels.com/photo/back-view-of-a-dental-chair-in-a-clinic-4269268/"
+    }
+  ]
+}
