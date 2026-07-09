@@ -1,0 +1,25 @@
+{
+  "fuente": "Pexels (profesional)",
+  "nota": "Stock de AMBIENTE, renombrado por uso final. Nunca presentarlo como fotos del negocio.",
+  "fotos": [
+    {
+      "archivo": "assets/img/servicio-1.jpg",
+      "uso": "card servicio: consulta general",
+      "autor": "Tima Miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/man-in-blue-scrub-suit-checking-up-a-dog-6235114/"
+    },
+    {
+      "archivo": "assets/img/servicio-2.jpg",
+      "uso": "card servicio: tratamientos / chequeo",
+      "autor": "Mikhail Nilov",
+      "fuente": "https://www.pexels.com/photo/man-checking-on-a-dog-7468978/"
+    },
+    {
+      "archivo": "assets/img/servicio-3.jpg",
+      "uso": "card servicio: atencion integral con dueno",
+      "autor": "Tima Miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/pet-owner-and-veterinarian-having-a-conversation-while-looking-at-the-pomeranian-dog-on-the-table-6235011/"
+    }
+  ],
+  "descartes_iter2": "servicio-4.jpg y servicio-5.jpg (stock de grooming, Goochie Poochie Grooming) se eliminaron en iter-2 por quedar huerfanos: grooming ya usa la foto REAL feature-2.jpg del negocio, asi que el stock duplicado no aportaba y sumaba peso muerto."
+}

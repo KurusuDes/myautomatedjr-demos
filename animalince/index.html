@@ -1,138 +1,1425 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Animalince · Clínica Veterinaria en Lince, Lima</title>
-  <meta name="description" content="Animalince Clínica Veterinaria en Lince: consultas, vacunación, cirugía, emergencias y grooming. 4.6★ con 231 reseñas. Cuidamos a tu mascota como familia." />
-  <style>
-    :root{--brand:#2e9e6b;--brand-2:#1f7a51;--accent:#f59e0b;--ink:#12261d;--muted:#5d7268;--bg:#f5faf6;--card:#fff;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e3efe7;}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:15px 22px;max-width:1120px;margin:0 auto;}
-    .logo{font-weight:800;font-size:22px;color:var(--brand-2);letter-spacing:-.5px;display:flex;align-items:center;gap:7px;}
-    .nav-links{display:flex;align-items:center;gap:24px;}
-    .nav-links a{color:var(--ink);text-decoration:none;font-size:15px;}
-    .nav-links a:hover{color:var(--brand);}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;transition:.15s;box-shadow:0 6px 18px rgba(46,158,107,.32);}
-    .btn:hover{background:var(--brand-2);transform:translateY(-1px);}
-    .btn.warm{background:var(--accent);box-shadow:0 6px 18px rgba(245,158,11,.32);}
-    .btn.warm:hover{background:#d98708;}
-    .hero{background:linear-gradient(135deg,#e4f6ec,#f5faf6 60%);padding:80px 0 66px;}
-    .hero .pill{display:inline-block;background:#d5f0e0;color:var(--brand-2);padding:6px 15px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:18px;}
-    .hero h1{font-size:clamp(32px,5.2vw,54px);line-height:1.08;letter-spacing:-1.2px;max-width:780px;}
-    .hero h1 em{color:var(--brand);font-style:normal;}
-    .hero p{font-size:19px;color:var(--muted);margin:20px 0 30px;max-width:600px;}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-    .ghost{background:#fff;color:var(--brand-2);border:1.5px solid var(--brand);box-shadow:none;}
-    .stars{display:flex;gap:10px;align-items:center;margin-top:26px;color:var(--muted);font-size:15px;}
-    .stars b{color:var(--accent);font-size:18px;}
-    section{padding:64px 0;}
-    .eyebrow{color:var(--brand);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px;}
-    h2{font-size:clamp(26px,3.5vw,36px);letter-spacing:-.6px;margin:6px 0 10px;}
-    .lead{color:var(--muted);margin-bottom:38px;max-width:640px;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
-    .card{background:var(--card);border:1px solid #e3efe7;border-radius:18px;padding:28px;transition:.18s;}
-    .card:hover{box-shadow:0 14px 34px rgba(18,38,29,.09);transform:translateY(-3px);}
-    .card .ico{width:52px;height:52px;border-radius:14px;background:#e4f6ec;display:grid;place-items:center;font-size:25px;margin-bottom:15px;}
-    .card h3{font-size:19px;margin-bottom:7px;}
-    .card p{color:var(--muted);font-size:15px;}
-    .emergency{background:#12261d;color:#fff;border-radius:24px;padding:40px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
-    .emergency h3{font-size:26px;margin-bottom:4px;}
-    .emergency p{color:#a9c4b6;}
-    .why{background:linear-gradient(135deg,#2e9e6b,#1f7a51);color:#fff;}
-    .why h2{color:#fff;}
-    .why .card{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);}
-    .why .card h3{color:#fff;}
-    .why .card p{color:#daf0e5;}
-    .why .big{font-size:42px;font-weight:800;color:#fff;}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch;}
-    .contact ul{list-style:none;}
-    .contact li{padding:13px 0;border-bottom:1px solid #e3efe7;display:flex;gap:12px;align-items:center;font-size:15px;}
-    iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:18px;}
-    footer{background:#12261d;color:#8fab9d;text-align:center;padding:40px 22px;font-size:14px;}
-    footer .demo{display:inline-block;margin-top:12px;font-size:12px;opacity:.6;}
-    .wa{position:fixed;right:22px;bottom:22px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.5);z-index:30;}
-    @media(max-width:760px){.nav-links a:not(.btn){display:none;}.contact{grid-template-columns:1fr;}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animalince · Clínica Veterinaria 24 horas en Lince, Lima</title>
+<meta name="description" content="Animalince Clínica Veterinaria en Lince, Lima: emergencias 24 horas, consultas, cirugías, laboratorio, ecografías, rayos X y grooming. Jr. José Gálvez 2200. WhatsApp 947 590 915.">
+<meta name="theme-color" content="#191036">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235A31B0'%3E%3Ccircle cx='11' cy='4' r='2'/%3E%3Ccircle cx='18' cy='8' r='2'/%3E%3Ccircle cx='20' cy='16' r='2'/%3E%3Cpath d='M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://KurusuDes.github.io/myautomatedjr-demos/animalince/">
+<meta property="og:title" content="Animalince · Clínica Veterinaria 24 horas en Lince, Lima">
+<meta property="og:description" content="Emergencias 24/7, los 365 días. Consultas, cirugías, laboratorio y grooming en Jr. José Gálvez 2200, Lince. 4.6 de 5 en Google con 231 familias que ya confían en nosotros.">
+<meta property="og:image" content="https://KurusuDes.github.io/myautomatedjr-demos/animalince/assets/img/hero.jpg">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Animalince · Clínica Veterinaria 24 horas en Lince, Lima">
+<meta name="twitter:description" content="Emergencias 24/7, los 365 días. Tu mascota no mira el reloj. Nosotros tampoco.">
+<meta name="twitter:image" content="https://KurusuDes.github.io/myautomatedjr-demos/animalince/assets/img/hero.jpg">
+<style>
+:root{
+  --cream:#FAF6EF;
+  --paper:#FFFFFF;
+  --lilac:#EFE9FA;
+  --lilac-line:#DDD2F2;
+  --violet:#5A31B0;
+  --violet-deep:#46258C;
+  --night:#191036;
+  --night-2:#241852;
+  --night-line:#3A2A6E;
+  --ink:#241640;
+  --body-c:#544A6B;
+  --soft:#6A5F82;
+  --orange:#F97934;
+  --orange-hi:#FFA25E;
+  --orange-ink:#B34700;
+  --wa:#25D366;
+  --radius-xl:34px;
+  --radius-lg:24px;
+  --radius-md:16px;
+  --shadow-card:0 2px 6px rgba(36,22,64,.05),0 18px 44px -18px rgba(36,22,64,.18);
+  --shadow-pop:0 24px 60px -20px rgba(36,22,64,.35);
+  --ease:cubic-bezier(.32,.94,.6,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.display{font-family:"Nunito",sans-serif;font-weight:900;line-height:1.06;letter-spacing:-.02em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--violet);
+}
+.eyebrow svg{width:15px;height:15px}
+.eyebrow--light{color:var(--orange-hi)}
+h2{font-size:clamp(30px,4.2vw,50px);margin:14px 0 16px}
+.lead{color:var(--body-c);font-size:clamp(16.5px,1.4vw,18.5px);max-width:56ch}
+.ico{width:22px;height:22px;flex:none}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;
+  padding:16px 28px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s;
+}
+.btn svg{width:19px;height:19px}
+.btn--orange{
+  background:var(--orange);color:var(--night);
+  box-shadow:0 10px 26px -8px rgba(249,121,52,.55);
+}
+.btn--orange:hover{transform:translateY(-2px) scale(1.015);box-shadow:0 16px 34px -8px rgba(249,121,52,.6)}
+.btn--ghost{
+  background:transparent;color:var(--ink);
+  box-shadow:inset 0 0 0 2px var(--lilac-line);
+}
+.btn--ghost:hover{box-shadow:inset 0 0 0 2px var(--violet);color:var(--violet-deep)}
+.btn--violet{background:var(--violet);color:#fff;box-shadow:0 10px 26px -8px rgba(90,49,176,.5)}
+.btn--violet:hover{background:var(--violet-deep);transform:translateY(-2px)}
+.btn:active{transform:scale(.96)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+/* ---------- Barra de emergencia (siempre visible) ---------- */
+.urgbar{
+  background:var(--night);color:#EDE7FF;
+  font-size:13.5px;font-weight:500;
+}
+.urgbar__in{
+  max-width:1200px;margin:0 auto;padding:9px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.urgbar__msg{display:inline-flex;align-items:center;gap:9px}
+.urgbar__msg svg{width:16px;height:16px;color:var(--orange-hi)}
+.urgbar__msg b{color:#fff;font-weight:700}
+.urgbar__pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--orange);flex:none;
+  animation:pulse 1.8s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(249,121,52,.55)}70%{box-shadow:0 0 0 9px rgba(249,121,52,0)}100%{box-shadow:0 0 0 0 rgba(249,121,52,0)}}
+.urgbar a{color:#fff;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+.urgbar a:hover{color:var(--orange-hi)}
+.urgbar a svg{width:15px;height:15px}
+.urgbar__fijo{color:#B9ACDD;font-weight:500}
+.urgbar__fijo b{color:#EDE7FF}
+
+/* ---------- Header ---------- */
+.hdr{
+  position:sticky;top:0;z-index:60;
+  background:rgba(250,246,239,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(221,210,242,.6);
+  transition:box-shadow .3s;
+}
+.hdr.is-scrolled{box-shadow:0 10px 30px -18px rgba(36,22,64,.25)}
+.hdr__in{
+  max-width:1200px;margin:0 auto;padding:14px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand__mark{
+  width:44px;height:44px;border-radius:15px;flex:none;
+  background:linear-gradient(140deg,var(--violet) 10%,var(--violet-deep));
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 8px 18px -6px rgba(90,49,176,.5);
+}
+.brand__mark svg{width:24px;height:24px}
+.brand__txt{line-height:1.1}
+.brand__name{font-family:"Nunito",sans-serif;font-weight:900;font-size:21px;letter-spacing:-.01em;color:var(--ink)}
+.brand__tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{
+  text-decoration:none;font-weight:500;font-size:15.5px;color:var(--body-c);
+  transition:color .2s;position:relative;
+}
+.nav a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2.5px;border-radius:2px;
+  background:var(--orange);transition:right .28s var(--ease);
+}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{right:0}
+.hdr__cta{display:flex;align-items:center;gap:12px}
+.hdr .btn{padding:12px 22px;font-size:15px}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;color:var(--ink);padding:6px}
+.menu-btn svg{width:27px;height:27px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:74px 0 30px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-220px;right:-180px;width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,rgba(90,49,176,.10),transparent 65%);
+}
+.hero__grid{
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5.6fr);
+  gap:clamp(34px,5vw,72px);align-items:center;
+}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--lilac);color:var(--violet-deep);
+  border:1px solid var(--lilac-line);
+  font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 18px;border-radius:999px;margin-bottom:26px;
+}
+.hero__badge svg{width:15px;height:15px}
+.hero h1{font-size:clamp(42px,5.6vw,76px);color:var(--ink)}
+.hero h1 .h1-soft{display:block;color:var(--soft);font-weight:800;font-size:.62em;letter-spacing:-.01em;margin-bottom:10px}
+.hero h1 .h1-hit{
+  display:inline-block;position:relative;color:var(--violet);
+}
+.hero h1 .h1-hit::after{
+  content:"";position:absolute;left:2%;bottom:.04em;width:96%;height:.16em;
+  background:var(--orange);border-radius:99px;opacity:.85;z-index:-1;
+  transform:scaleX(0);transform-origin:left;
+}
+.hero.is-in .h1-hit::after{animation:draw .7s .65s var(--ease) forwards}
+@keyframes draw{to{transform:scaleX(1)}}
+.hero__note{
+  margin-top:26px;color:var(--body-c);font-size:clamp(16.5px,1.45vw,19px);max-width:47ch;
+}
+.hero__note b{color:var(--ink);font-weight:700}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero__proof{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px;margin-top:36px;
+  color:var(--body-c);font-size:14.5px;font-weight:500;
+}
+.hero__stars{display:inline-flex;align-items:center;gap:8px}
+.hero__stars svg{width:17px;height:17px;color:var(--orange)}
+.hero__stars b{font-family:"Nunito",sans-serif;font-weight:900;color:var(--ink);font-size:16.5px}
+.hero__proof .dotsep{width:4px;height:4px;border-radius:50%;background:var(--lilac-line)}
+
+/* Foto hero */
+.hero__media{position:relative}
+.hero__photo{
+  position:relative;border-radius:var(--radius-xl);overflow:hidden;
+  box-shadow:var(--shadow-pop);
+  aspect-ratio:4/4.6;
+}
+.hero__photo img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero__photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(25,16,54,0) 55%,rgba(25,16,54,.5));
+}
+.hero__caption{
+  position:absolute;left:18px;right:18px;bottom:18px;z-index:2;
+  color:#fff;font-size:13.5px;font-weight:500;line-height:1.45;
+  display:flex;align-items:center;gap:10px;
+}
+.hero__caption svg{width:17px;height:17px;flex:none;color:var(--orange-hi)}
+.hero__chip{
+  position:absolute;z-index:3;background:var(--paper);border-radius:20px;
+  box-shadow:var(--shadow-pop);padding:14px 18px;
+  display:flex;align-items:center;gap:12px;
+}
+.hero__chip--24{top:26px;right:-14px}
+.hero__chip--ig{bottom:70px;left:-26px}
+.hero__chip .chip-ic{
+  width:40px;height:40px;border-radius:13px;display:grid;place-items:center;flex:none;
+}
+.hero__chip--24 .chip-ic{background:var(--night);color:var(--orange-hi)}
+.hero__chip--ig .chip-ic{background:var(--lilac);color:var(--violet)}
+.hero__chip .chip-ic svg{width:21px;height:21px}
+.hero__chip b{font-family:"Nunito",sans-serif;font-weight:900;font-size:15.5px;display:block;line-height:1.15}
+.hero__chip span{font-size:12.5px;color:var(--soft);font-weight:500;line-height:1.2}
+
+/* ---------- Ticker ---------- */
+.ticker{
+  margin-top:64px;border-top:1px solid var(--lilac-line);border-bottom:1px solid var(--lilac-line);
+  background:var(--paper);overflow:hidden;padding:17px 0;
+}
+.ticker__track{display:flex;gap:0;width:max-content;animation:tick 34s linear infinite}
+.ticker:hover .ticker__track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+.ticker__item{
+  display:inline-flex;align-items:center;gap:14px;padding:0 26px;
+  font-family:"Nunito",sans-serif;font-weight:800;font-size:15px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--violet-deep);white-space:nowrap;
+}
+.ticker__item svg{width:14px;height:14px;color:var(--orange)}
+</style>
+<style>
+/* ---------- Servicios (bento) ---------- */
+.serv{padding:104px 0 60px}
+.serv__head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:46px}
+.bento{
+  display:grid;gap:20px;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:118px;
+}
+.bcard{
+  border-radius:var(--radius-lg);overflow:hidden;position:relative;
+  background:var(--paper);box-shadow:var(--shadow-card);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.bcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop)}
+.bcard--urg{grid-column:span 5;grid-row:span 3;background:var(--night);color:#EDE7FF;display:flex;flex-direction:column;justify-content:space-between;padding:30px}
+.bcard--eco{grid-column:span 4;grid-row:span 4}
+.bcard--consulta{grid-column:span 3;grid-row:span 4}
+.bcard--cir{grid-column:span 5;grid-row:span 2;}
+.bcard--groom{grid-column:span 4;grid-row:span 3}
+.bcard--trat{grid-column:span 4;grid-row:span 3}
+.bcard--lab{grid-column:span 4;grid-row:span 2}
+.bcard--rx{grid-column:span 4;grid-row:span 1;display:flex;align-items:center}
+
+.bcard__photo{position:absolute;inset:0}
+.bcard__photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.bcard:hover .bcard__photo img{transform:scale(1.05)}
+.bcard__photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(185deg,rgba(25,16,54,.02) 38%,rgba(25,16,54,.78) 88%);
+}
+.bcard__body{position:absolute;left:0;right:0;bottom:0;padding:24px;color:#fff;z-index:2}
+.bcard__body h3{font-size:21px;margin-bottom:5px}
+.bcard__body p{font-size:14px;color:rgba(255,255,255,.82);line-height:1.5;max-width:34ch}
+.bcard__ic{
+  width:44px;height:44px;border-radius:14px;display:grid;place-items:center;margin-bottom:13px;
+  background:rgba(255,255,255,.16);backdrop-filter:blur(6px);color:#fff;
+}
+.bcard__ic svg{width:22px;height:22px}
+.bcard__real{
+  position:absolute;top:16px;left:16px;z-index:3;
+  background:rgba(25,16,54,.72);backdrop-filter:blur(8px);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:7px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px;
+}
+.bcard__real svg{width:13px;height:13px;color:var(--orange-hi)}
+/* card texto plano */
+.bcard--flat{padding:26px;display:flex;flex-direction:column;justify-content:flex-end}
+.bcard--flat .bcard__ic{background:var(--lilac);color:var(--violet)}
+.bcard--flat h3{font-size:20px;margin-bottom:5px;color:var(--ink)}
+.bcard--flat p{font-size:14px;color:var(--body-c);line-height:1.55}
+.bcard--rx.bcard--flat{flex-direction:row;align-items:center;gap:16px;justify-content:flex-start}
+.bcard--rx .bcard__ic{margin-bottom:0}
+.bcard--rx h3{margin-bottom:2px}
+/* card emergencia */
+.bcard--urg .bcard__ic{background:rgba(249,121,52,.16);color:var(--orange-hi)}
+.bcard--urg h3{font-size:26px;color:#fff;margin-bottom:8px}
+.bcard--urg p{color:#B9ACDD;font-size:15px;max-width:38ch}
+.bcard--urg .btn{margin-top:20px;align-self:flex-start;padding:13px 24px;font-size:15px}
+.bcard--urg .urg-times{display:flex;gap:22px;margin-top:18px}
+.bcard--urg .urg-times div b{font-family:"Nunito",sans-serif;font-weight:900;font-size:19px;color:var(--orange-hi);display:block}
+.bcard--urg .urg-times div span{font-size:12px;color:#B9ACDD;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+
+/* ---------- Interludio 3:47 a.m. ---------- */
+.night{
+  position:relative;margin:70px 0;padding:130px 0 140px;
+  background:
+    radial-gradient(58% 90% at 72% 8%,rgba(90,49,176,.32),transparent 60%),
+    radial-gradient(40% 60% at 12% 88%,rgba(249,121,52,.10),transparent 65%),
+    var(--night);
+  color:#EDE7FF;overflow:hidden;
+}
+.night::before,.night::after{
+  content:"";position:absolute;border-radius:50%;pointer-events:none;
+}
+.night::before{width:3px;height:3px;background:#fff;opacity:.7;top:22%;left:14%;box-shadow:210px 90px 0 rgba(255,255,255,.55),480px -40px 0 rgba(255,255,255,.4),720px 130px 0 rgba(255,255,255,.6),960px 30px 0 rgba(255,255,255,.35),120px 260px 0 rgba(255,255,255,.3),620px 320px 0 rgba(255,255,255,.45),1080px 220px 0 rgba(255,255,255,.5)}
+.night__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,90px);align-items:center}
+.night__clock{text-align:center}
+.night__time{
+  font-family:"Nunito",sans-serif;font-weight:900;font-size:clamp(88px,11vw,168px);
+  line-height:.95;letter-spacing:-.03em;color:#fff;
+  text-shadow:0 0 60px rgba(249,121,52,.35);
+  font-variant-numeric:tabular-nums;
+}
+.night__time .colon{display:inline-block;animation:blink 1.6s steps(1) infinite;color:var(--orange-hi)}
+@keyframes blink{50%{opacity:.15}}
+.night__ampm{
+  font-family:"Nunito",sans-serif;font-weight:800;font-size:clamp(19px,2vw,26px);
+  letter-spacing:.3em;text-transform:uppercase;color:var(--orange-hi);margin-top:10px;
+}
+.night__sub{color:#B9ACDD;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-top:18px}
+.night h2{color:#fff;font-size:clamp(30px,3.8vw,46px)}
+.night .lead{color:#C9BEE8}
+.night__pts{margin:28px 0 34px;display:grid;gap:15px}
+.night__pt{display:flex;gap:13px;align-items:flex-start;font-size:15.5px;color:#DDD5F3}
+.night__pt svg{width:19px;height:19px;flex:none;color:var(--orange-hi);margin-top:3px}
+.night__pt b{color:#fff}
+.night__cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.night__fijo{font-size:14px;color:#B9ACDD}
+.night__fijo b{color:#fff;font-weight:700}
+
+/* ---------- Proceso ---------- */
+.ruta{padding:100px 0 50px}
+.ruta__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,80px);align-items:start}
+.ruta__sticky{position:sticky;top:130px}
+.ruta__foto{
+  margin-top:30px;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-pop);
+  position:relative;aspect-ratio:4/4.4;
+}
+.ruta__foto img{width:100%;height:100%;object-fit:cover}
+.ruta__foto figcaption{
+  position:absolute;left:16px;bottom:16px;right:16px;
+  background:rgba(25,16,54,.72);backdrop-filter:blur(8px);color:#fff;
+  border-radius:14px;padding:11px 16px;font-size:13px;font-weight:500;
+  display:flex;gap:9px;align-items:center;
+}
+.ruta__foto figcaption svg{width:15px;height:15px;flex:none;color:var(--orange-hi)}
+.step{
+  display:grid;grid-template-columns:64px 1fr;gap:22px;
+  padding:30px 0;border-bottom:1px dashed var(--lilac-line);
+}
+.step:last-child{border-bottom:none}
+.step__n{
+  width:64px;height:64px;border-radius:22px;background:var(--paper);box-shadow:var(--shadow-card);
+  display:grid;place-items:center;color:var(--violet);
+}
+.step__n svg{width:28px;height:28px}
+.step h3{font-size:21px;margin-bottom:7px}
+.step h3 span{color:var(--soft);font-weight:800;font-size:14px;letter-spacing:.1em;margin-right:8px}
+.step p{color:var(--body-c);font-size:15.5px;max-width:52ch}
+
+/* ---------- Confianza / stats ---------- */
+.proof{padding:60px 0}
+.proof__band{
+  background:linear-gradient(135deg,var(--violet) 0%,var(--violet-deep) 90%);
+  border-radius:var(--radius-xl);color:#fff;
+  padding:clamp(36px,4.5vw,60px);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px;
+  box-shadow:0 30px 70px -28px rgba(70,37,140,.55);
+  position:relative;overflow:hidden;
+}
+.proof__band::after{
+  content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%);
+}
+.stat b{font-family:"Nunito",sans-serif;font-weight:900;font-size:clamp(34px,3.6vw,52px);display:block;line-height:1}
+.stat b .stat-sym{color:var(--orange-hi)}
+.stat span{font-size:13.5px;color:#DCD2F5;font-weight:500;display:block;margin-top:8px;line-height:1.4}
+.stat a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+</style>
+<style>
+/* ---------- Muro de la sala de espera (testimonios) ---------- */
+.wall{padding:70px 0 40px;position:relative}
+.wall__head{max-width:62ch;margin-bottom:48px}
+.wall__grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:28px 24px;
+  align-items:start;
+}
+.note{
+  grid-column:span 4;
+  background:var(--paper);
+  border-radius:6px 6px 44px 6px/6px 6px 30px 6px;
+  padding:26px 24px 22px;
+  box-shadow:var(--shadow-card);
+  position:relative;
+}
+.note:nth-child(1){transform:rotate(-1.6deg)}
+.note:nth-child(2){transform:rotate(1.1deg);margin-top:34px}
+.note:nth-child(3){transform:rotate(-.8deg)}
+.note:nth-child(4){grid-column:span 4;transform:rotate(1.4deg);margin-top:10px}
+.note::before{
+  content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);
+  width:64px;height:26px;border-radius:2px;
+  background:linear-gradient(180deg,rgba(249,121,52,.55),rgba(249,121,52,.32));
+  box-shadow:0 6px 10px -4px rgba(36,22,64,.25);
+}
+.note__stars{display:flex;gap:3px;color:var(--orange);margin-bottom:12px}
+.note__stars svg{width:16px;height:16px}
+.note__quote{font-family:"Nunito",sans-serif;font-weight:700;font-size:16px;color:var(--ink);line-height:1.5;margin-bottom:16px}
+.note__foot{display:flex;align-items:center;gap:12px}
+.note__pic{
+  width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-family:"Nunito",sans-serif;font-weight:900;font-size:14.5px;color:#fff;
+  background:linear-gradient(140deg,var(--violet),var(--orange));
+  box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--lilac-line);
+}
+.note__who b{display:block;font-size:14px;color:var(--ink);font-weight:800}
+.note__who span{display:block;font-size:12px;color:var(--soft);margin-top:1px}
+.wall__more{
+  grid-column:span 4;margin-top:20px;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;
+  padding:26px 6px;
+}
+.wall__more b{font-family:"Nunito",sans-serif;font-weight:900;font-size:20px;color:var(--ink);max-width:20ch}
+.wall__more p{font-size:14.5px;color:var(--body-c)}
+</style>
+<style>
+/* ---------- Feed IG ---------- */
+.feed{padding:90px 0 60px}
+.feed__head{display:flex;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:42px;flex-wrap:wrap}
+.feed__handle{
+  display:inline-flex;align-items:center;gap:12px;text-decoration:none;
+  font-family:"Nunito",sans-serif;font-weight:900;font-size:19px;color:var(--ink);
+}
+.feed__handle .chip-ic{
+  width:46px;height:46px;border-radius:15px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--violet),var(--orange));color:#fff;
+}
+.feed__handle .chip-ic svg{width:23px;height:23px}
+.feed__handle small{display:block;font-family:"DM Sans",sans-serif;font-weight:500;font-size:13px;color:var(--soft)}
+.feed__grid{
+  display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:16px;
+}
+.feed__item{
+  position:relative;border-radius:var(--radius-md);overflow:hidden;display:block;
+  box-shadow:var(--shadow-card);
+}
+.feed__item:nth-child(1){grid-column:span 2;grid-row:span 3}
+.feed__item:nth-child(2){grid-column:span 2;grid-row:span 2}
+.feed__item:nth-child(3){grid-column:span 2;grid-row:span 3}
+.feed__item:nth-child(4){grid-column:span 2;grid-row:span 2}
+.feed__item:nth-child(5){grid-column:span 2;grid-row:span 2}
+.feed__item:nth-child(6){grid-column:span 2;grid-row:span 2}
+.feed__item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.feed__item:hover img{transform:scale(1.06)}
+.feed__item .feed__over{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:rgba(25,16,54,.45);opacity:0;transition:opacity .3s;color:#fff;
+}
+.feed__item:hover .feed__over{opacity:1}
+.feed__over svg{width:30px;height:30px}
+.feed__item--brighter img{filter:brightness(1.08) saturate(1.04)}
+.feed__cta{margin-top:36px;text-align:center}
+
+/* ---------- Visítanos ---------- */
+.visita{padding:90px 0}
+.visita__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:stretch}
+.visita__card{
+  background:var(--paper);border-radius:var(--radius-xl);box-shadow:var(--shadow-card);
+  padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:0;
+}
+.vrow{display:flex;gap:16px;padding:17px 0;border-bottom:1px dashed var(--lilac-line);align-items:flex-start}
+.vrow:last-of-type{border-bottom:none}
+.vrow .chip-ic{
+  width:42px;height:42px;border-radius:14px;flex:none;display:grid;place-items:center;
+  background:var(--lilac);color:var(--violet);
+}
+.vrow .chip-ic svg{width:20px;height:20px}
+.vrow b{font-family:"Nunito",sans-serif;font-weight:900;font-size:16px;display:block;color:var(--ink)}
+.vrow p{font-size:14.5px;color:var(--body-c);line-height:1.5}
+.vrow p a{color:var(--violet-deep);font-weight:700;text-decoration:none}
+.vrow p a:hover{text-decoration:underline}
+.vrow--urg{background:var(--night);border-radius:18px;padding:17px;border-bottom:none;margin-top:12px}
+.vrow--urg .chip-ic{background:rgba(249,121,52,.16);color:var(--orange-hi)}
+.vrow--urg b{color:#fff}
+.vrow--urg p{color:#B9ACDD}
+.vrow--urg p a{color:var(--orange-hi)}
+.visita__facha{
+  display:flex;gap:14px;align-items:center;margin-top:20px;
+  background:var(--lilac);border-radius:18px;padding:13px;
+}
+.visita__facha img{width:86px;height:70px;object-fit:cover;border-radius:12px;flex:none}
+.visita__facha p{font-size:13.5px;color:var(--violet-deep);font-weight:500;line-height:1.45}
+.visita__map{border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-card);min-height:420px;position:relative}
+.visita__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- CTA final ---------- */
+.cierre{padding:40px 0 110px}
+.cierre__box{
+  position:relative;overflow:hidden;border-radius:var(--radius-xl);
+  background:var(--night);color:#fff;text-align:center;
+  padding:clamp(56px,7vw,96px) clamp(24px,5vw,80px);
+  background-image:radial-gradient(55% 80% at 50% 115%,rgba(90,49,176,.5),transparent 70%);
+}
+.cierre__box .paw-bg{position:absolute;opacity:.05;color:#fff}
+.cierre__box .paw-bg--a{width:170px;height:170px;top:-30px;left:4%;transform:rotate(-18deg)}
+.cierre__box .paw-bg--b{width:120px;height:120px;bottom:-16px;right:6%;transform:rotate(14deg)}
+.cierre h2{color:#fff;font-size:clamp(30px,4.4vw,54px);max-width:20ch;margin:14px auto 16px}
+.cierre h2 em{font-style:normal;color:var(--orange-hi)}
+.cierre p{color:#C9BEE8;max-width:52ch;margin:0 auto 34px}
+.cierre__cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+/* ---------- Footer ---------- */
+.foot{background:var(--night);color:#B9ACDD;padding:70px 0 34px;font-size:14.5px}
+.foot__grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:44px;padding-bottom:44px;border-bottom:1px solid var(--night-line)}
+.foot .brand__name{color:#fff}
+.foot .brand__tag{color:var(--orange-hi)}
+.foot__about{margin-top:16px;max-width:38ch;line-height:1.6}
+.foot__soc{display:flex;gap:12px;margin-top:22px}
+.foot__soc a{
+  width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+  background:var(--night-2);color:#EDE7FF;transition:background .2s,transform .2s;
+}
+.foot__soc a:hover{background:var(--violet);transform:translateY(-2px)}
+.foot__soc svg{width:20px;height:20px}
+.foot h4{font-family:"Nunito",sans-serif;font-weight:900;color:#fff;font-size:15px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+.foot ul{list-style:none;display:grid;gap:11px}
+.foot a{color:#B9ACDD;text-decoration:none}
+.foot a:hover{color:#fff}
+.foot__legal{padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9C8FC0}
+.foot__legal a{color:#EDE7FF;font-weight:500}
+
+/* ---------- WhatsApp flotante ---------- */
+.wa-float{
+  position:fixed;right:24px;bottom:24px;z-index:80;
+  width:60px;height:60px;border-radius:50%;
+  background:var(--wa);color:#fff;display:grid;place-items:center;
+  box-shadow:0 14px 34px -8px rgba(37,211,102,.65);
+  transition:transform .25s var(--ease);
+}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px}
+
+/* ---------- Chat IA ---------- */
+.chat-toggle{
+  position:fixed;right:24px;bottom:98px;z-index:80;
+  display:flex;align-items:center;gap:11px;border:none;cursor:pointer;
+  background:var(--night);color:#fff;border-radius:999px;padding:10px 20px 10px 10px;
+  box-shadow:0 16px 40px -10px rgba(25,16,54,.55);
+  font-family:"Nunito",sans-serif;font-weight:800;font-size:14.5px;
+  transition:transform .25s var(--ease);
+}
+.chat-toggle:hover{transform:translateY(-2px)}
+.chat-toggle__av{
+  width:40px;height:40px;border-radius:50%;position:relative;flex:none;
+  background:linear-gradient(140deg,var(--violet),var(--orange));display:grid;place-items:center;
+}
+.chat-toggle__av svg{width:21px;height:21px}
+.chat-toggle__dot,.chat__dot{
+  position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;
+  background:#3DDC7A;border:2px solid var(--night);
+}
+.chat{
+  position:fixed;right:24px;bottom:98px;z-index:90;
+  width:min(390px,calc(100vw - 32px));max-height:min(600px,calc(100dvh - 130px));
+  background:var(--paper);border-radius:26px;box-shadow:0 30px 90px -20px rgba(25,16,54,.5);
+  display:flex;flex-direction:column;overflow:hidden;
+  opacity:0;pointer-events:none;transform:translateY(16px) scale(.98);
+  transition:opacity .3s var(--ease),transform .3s var(--ease);
+}
+.chat.is-open{opacity:1;pointer-events:auto;transform:none}
+.chat__head{
+  background:var(--night);color:#fff;padding:16px 18px;
+  display:flex;align-items:center;gap:12px;
+}
+.chat__av{
+  width:44px;height:44px;border-radius:50%;position:relative;flex:none;
+  background:linear-gradient(140deg,var(--violet),var(--orange));display:grid;place-items:center;color:#fff;
+}
+.chat__av svg{width:23px;height:23px}
+.chat__dot{border-color:var(--night)}
+.chat__who b{font-family:"Nunito",sans-serif;font-weight:900;font-size:15.5px;display:block;line-height:1.2}
+.chat__who span{font-size:12.5px;color:#3DDC7A;font-weight:500;display:inline-flex;align-items:center;gap:5px}
+.chat__close{margin-left:auto;background:none;border:none;color:#B9ACDD;cursor:pointer;padding:6px}
+.chat__close:hover{color:#fff}
+.chat__close svg{width:20px;height:20px}
+.chat__log{
+  flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;
+  background:var(--cream);min-height:230px;
+}
+.msg{max-width:84%;padding:11px 15px;border-radius:17px;font-size:14.3px;line-height:1.5;white-space:pre-line}
+.msg--bot{background:var(--paper);color:var(--ink);border-bottom-left-radius:6px;align-self:flex-start;box-shadow:0 3px 10px -4px rgba(36,22,64,.14)}
+.msg--user{background:var(--violet);color:#fff;border-bottom-right-radius:6px;align-self:flex-end}
+.msg--bot a{color:var(--violet-deep);font-weight:700}
+.msg--typing{display:inline-flex;gap:5px;align-items:center;padding:14px 16px}
+.msg--typing i{width:7px;height:7px;border-radius:50%;background:var(--soft);animation:tdot 1.1s infinite}
+.msg--typing i:nth-child(2){animation-delay:.18s}
+.msg--typing i:nth-child(3){animation-delay:.36s}
+@keyframes tdot{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-4px);opacity:1}}
+.chat__chips{display:flex;gap:8px;flex-wrap:wrap;padding:11px 14px;background:var(--paper);border-top:1px solid var(--lilac);}
+.chat__chip{
+  border:1.5px solid var(--lilac-line);background:var(--paper);color:var(--violet-deep);
+  font-family:"DM Sans",sans-serif;font-weight:500;font-size:13px;
+  padding:7px 14px;border-radius:999px;cursor:pointer;transition:background .2s,border-color .2s;
+}
+.chat__chip:hover{background:var(--lilac);border-color:var(--violet)}
+.chat__form{display:flex;gap:9px;padding:12px 14px;background:var(--paper)}
+.chat__input{
+  flex:1;border:1.5px solid var(--lilac-line);border-radius:999px;padding:11px 18px;
+  font-family:"DM Sans",sans-serif;font-size:14.3px;color:var(--ink);background:var(--cream);
+}
+.chat__input::placeholder{color:var(--soft)}
+.chat__input:focus{outline:none;border-color:var(--violet)}
+.chat__send{
+  width:46px;height:46px;border-radius:50%;border:none;background:var(--orange);color:var(--night);
+  display:grid;place-items:center;cursor:pointer;flex:none;transition:transform .2s;
+}
+.chat__send:hover{transform:scale(1.07)}
+.chat__send svg{width:20px;height:20px}
+.chat__note{font-size:11px;color:var(--soft);text-align:center;padding:0 14px 10px;background:var(--paper)}
+
+/* ---------- Reveals ---------- */
+.rv{opacity:0;transform:translateY(34px)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1 !important;transform:none !important}
+  .hero h1 .h1-hit::after{transform:scaleX(1) !important;animation:none !important}
+  .ticker__track{animation:none !important;transform:none !important}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .bcard--urg{grid-column:span 6;grid-row:span 3}
+  .bcard--eco{grid-column:span 6;grid-row:span 4}
+  .bcard--consulta{grid-column:span 6;grid-row:span 3}
+  .bcard--cir{grid-column:span 6;grid-row:span 2}
+  .bcard--groom{grid-column:span 6;grid-row:span 3}
+  .bcard--trat{grid-column:span 6;grid-row:span 3}
+  .bcard--lab{grid-column:span 6;grid-row:span 2}
+  .bcard--rx{grid-column:span 6;grid-row:span 1}
+}
+@media (max-width:960px){
+  .nav{display:none}
+  .menu-btn{display:block}
+  .hdr--open .nav{
+    display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--lilac-line);box-shadow:0 30px 50px -20px rgba(36,22,64,.25);
+  }
+  .hdr--open .nav a{padding:16px 28px;border-bottom:1px solid var(--lilac);width:100%}
+  .hdr--open .nav a::after{display:none}
+  .hero__grid{grid-template-columns:1fr;gap:44px}
+  .hero__media{max-width:520px}
+  .hero__photo{aspect-ratio:4/3.6}
+  .night__grid{grid-template-columns:1fr;gap:50px}
+  .ruta__grid{grid-template-columns:1fr}
+  .ruta__sticky{position:static}
+  .ruta__foto{max-width:480px;aspect-ratio:4/3.4}
+  .proof__band{grid-template-columns:repeat(2,1fr)}
+  .visita__grid{grid-template-columns:1fr}
+  .visita__map{min-height:340px}
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .serv__head{flex-direction:column;align-items:flex-start}
+  .feed__grid{grid-auto-rows:130px}
+  .wall__grid{grid-template-columns:repeat(2,1fr)}
+  .note{grid-column:span 1 !important;margin-top:0 !important}
+  .wall__more{grid-column:span 2 !important}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .wrap{padding:0 18px}
+  .urgbar__in{padding:8px 14px;justify-content:center}
+  .urgbar__fijo{display:none}
+  .hdr__in{padding:12px 16px}
+  .hdr .btn span{display:none}
+  .hdr .btn{padding:12px 14px}
+  .brand__tag{display:none}
+  .hero{padding-top:46px}
+  .hero__chip--ig{left:-6px;bottom:52px}
+  .hero__chip--24{right:-4px;top:16px}
+  .hero__chip{padding:11px 14px}
+  .hero__cta .btn{width:100%}
+  .bcard--urg,.bcard--eco,.bcard--consulta,.bcard--cir,.bcard--groom,.bcard--trat,.bcard--lab,.bcard--rx{grid-column:span 12}
+  .bcard--eco{grid-row:span 4}
+  .bcard--consulta,.bcard--groom,.bcard--trat{grid-row:span 3}
+  .bcard--cir,.bcard--lab{grid-row:span 2}
+  .bento{grid-auto-rows:104px}
+  .feed__grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+  .feed__item:nth-child(n){grid-column:span 1;grid-row:span 2}
+  .feed__item:nth-child(4),.feed__item:nth-child(6){grid-row:span 1}
+  .proof__band{grid-template-columns:1fr 1fr;gap:22px}
+  .wall__grid{grid-template-columns:1fr;gap:26px}
+  .note,.wall__more{grid-column:span 1 !important;transform:none !important;margin-top:0 !important}
+  .step{grid-template-columns:50px 1fr;gap:15px}
+  .step__n{width:50px;height:50px;border-radius:17px}
+  .step__n svg{width:23px;height:23px}
+  .foot__grid{grid-template-columns:1fr;gap:34px}
+  .foot__legal{flex-direction:column}
+  .wa-float{right:16px;bottom:16px}
+  .chat-toggle{right:16px;bottom:88px}
+  .chat{right:16px;bottom:88px}
+  .night{padding:90px 0 100px}
+}
+</style>
 </head>
 <body>
-  <header><nav class="wrap">
-    <span class="logo">🐾 Animalince</span>
-    <div class="nav-links">
+<noscript><style>.rv{opacity:1;transform:none}.hero h1 .h1-hit::after{transform:scaleX(1)}</style></noscript>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="sp">
+      <symbol id="i-paw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></symbol>
+      <symbol id="i-siren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+      <symbol id="i-steth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+      <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+      <symbol id="i-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></symbol>
+      <symbol id="i-bone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/></symbol>
+      <symbol id="i-heartpulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-cat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/></symbol>
+      <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+    </g>
+  </defs>
+</svg>
+
+<!-- Barra de emergencias: visible siempre -->
+<div class="urgbar" role="region" aria-label="Emergencias 24 horas">
+  <div class="urgbar__in">
+    <span class="urgbar__msg"><span class="urgbar__pulse" aria-hidden="true"></span><svg class="ico" aria-hidden="true"><use href="#i-siren"/></svg><b>Emergencias 24 horas</b><span>— también de madrugada</span></span>
+    <a href="tel:+51947590915"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>947 590 915</a>
+    <span class="urgbar__fijo">Fijo: <b>(1) 471-8761</b></span>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="#inicio" aria-label="Animalince, inicio">
+      <span class="brand__mark"><svg aria-hidden="true"><use href="#i-paw"/></svg></span>
+      <span class="brand__txt">
+        <span class="brand__name">Animalince</span><br>
+        <span class="brand__tag">Clínica veterinaria · 24 h</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-      <a class="btn" href="https://wa.me/51947590915" target="_blank" rel="noopener">Reservar cita</a>
+      <a href="#emergencias">Emergencias</a>
+      <a href="#comovamos">Cómo cuidamos</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="btn btn--orange" href="https://wa.me/51947590915?text=Hola%20Animalince%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Agendar cita</span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
-  </nav></header>
+  </div>
+</header>
 
-  <section class="hero"><div class="wrap">
-    <span class="pill">🐾 Clínica Veterinaria · Lince</span>
-    <h1>Cuidamos a tu mascota <em>como parte de la familia</em>.</h1>
-    <p>Atención veterinaria integral en Lince: consultas, vacunación, cirugía, emergencias y grooming, con un equipo que ama a los animales tanto como tú.</p>
-    <div class="cta-row">
-      <a class="btn" href="https://wa.me/51947590915" target="_blank" rel="noopener">Agenda una cita</a>
-      <a class="btn ghost" href="#servicios">Ver servicios</a>
+<main id="inicio">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <span class="hero__badge rv"><svg aria-hidden="true"><use href="#i-paw"/></svg>Clínica veterinaria · Lince, Lima</span>
+          <h1 class="rv">
+            <span class="h1-soft">No solo digas que lo amas.</span>
+            <span class="h1-hit">Demuéstraselo.</span>
+          </h1>
+          <p class="hero__note rv">La frase está pintada en nuestro mostrador y se cumple todos los días: consultas, cirugías, laboratorio y <b>emergencias las 24 horas</b>, en Jr. José Gálvez 2200, Lince.</p>
+          <div class="hero__cta rv">
+            <a class="btn btn--orange" href="https://wa.me/51947590915?text=Hola%20Animalince%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar por WhatsApp</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="hero__proof rv">
+            <span class="hero__stars"><svg aria-hidden="true"><use href="#i-star"/></svg><b>4.6</b> · 231 reseñas en Google</span>
+            <span class="dotsep" aria-hidden="true"></span>
+            <span>Perros y gatos</span>
+            <span class="dotsep" aria-hidden="true"></span>
+            <span>L–D 9:00–20:00 · Emergencias 24 h</span>
+          </div>
+        </div>
+        <div class="hero__media rv">
+          <figure class="hero__photo">
+            <img src="assets/img/hero.jpg" alt="Recepción real de Animalince: un perro espera tranquilo frente al mostrador donde está pintada la frase No solo digas que lo amas, demuéstraselo" width="1600" height="1200" fetchpriority="high">
+            <figcaption class="hero__caption"><svg aria-hidden="true"><use href="#i-camera"/></svg>Nuestra recepción, tal cual es. La frase del mostrador no es marketing: es la casa.</figcaption>
+          </figure>
+          <div class="hero__chip hero__chip--24">
+            <span class="chip-ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <span><b>Emergencias 24 h</b><span>todos los días del año</span></span>
+          </div>
+          <div class="hero__chip hero__chip--ig">
+            <span class="chip-ic"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+            <span><b>@animalince</b><span>+5,800 familias nos siguen</span></span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="stars"><b>★★★★★</b> 4.6 · <strong>231 reseñas</strong> en Google · Lince</div>
-  </div></section>
 
-  <section id="servicios" class="wrap">
-    <span class="eyebrow">Servicios</span>
-    <h2>Todo lo que tu engreído necesita</h2>
-    <p class="lead">Desde el chequeo de rutina hasta la emergencia inesperada, estamos para cuidarlo.</p>
-    <div class="grid">
-      <div class="card"><div class="ico">🩺</div><h3>Consultas médicas</h3><p>Diagnóstico y tratamiento con veterinarios especializados y mucho cariño.</p></div>
-      <div class="card"><div class="ico">💉</div><h3>Vacunación</h3><p>Planes de vacunación y desparasitación al día para proteger su salud.</p></div>
-      <div class="card"><div class="ico">🔬</div><h3>Laboratorio</h3><p>Análisis clínicos y ecografías para un diagnóstico rápido y preciso.</p></div>
-      <div class="card"><div class="ico">⚕️</div><h3>Cirugía</h3><p>Procedimientos quirúrgicos con equipamiento moderno y monitoreo constante.</p></div>
-      <div class="card"><div class="ico">✂️</div><h3>Grooming / Peluquería</h3><p>Baño, corte y estética para que salga guapo y relajado.</p></div>
-      <div class="card"><div class="ico">🚨</div><h3>Emergencias</h3><p>Atención rápida cuando tu mascota más lo necesita.</p></div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Emergencias 24 horas</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Consultas</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Tratamientos</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Cirugías</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Laboratorio</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Ecografías</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Rayos X</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Grooming</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Emergencias 24 horas</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Consultas</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Tratamientos</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Cirugías</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Laboratorio</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Ecografías</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Rayos X</span>
+        <span class="ticker__item"><svg><use href="#i-paw"/></svg>Grooming</span>
+      </div>
     </div>
   </section>
 
-  <section class="wrap">
-    <div class="emergency">
-      <div><h3>¿Una emergencia?</h3><p>No esperes. Escríbenos ahora mismo y te atendemos.</p></div>
-      <a class="btn warm" href="https://wa.me/51947590915" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+  <!-- ============ SERVICIOS (BENTO) ============ -->
+  <section class="serv" id="servicios">
+    <div class="wrap">
+      <div class="serv__head rv">
+        <div>
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#i-steth"/></svg>Servicios de la casa</span>
+          <h2>Todo lo que tu engreído<br>puede necesitar, bajo un techo</h2>
+          <p class="lead">Los mismos servicios que anunciamos en nuestro Instagram, sin letra chica: de la vacuna de rutina a la madrugada difícil.</p>
+        </div>
+        <a class="btn btn--ghost" href="https://wa.me/51947590915?text=Hola%20Animalince%2C%20quiero%20informes%20sobre%20un%20servicio" target="_blank" rel="noopener">Pedir informes<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="bento">
+        <article class="bcard bcard--urg rv">
+          <div>
+            <span class="bcard__ic"><svg aria-hidden="true"><use href="#i-siren"/></svg></span>
+            <h3>Emergencias 24 horas</h3>
+            <p>Una obstrucción, una caída, un envenenamiento: las urgencias no avisan. Aquí siempre hay alguien que contesta y una puerta abierta.</p>
+            <div class="urg-times">
+              <div><b>24 h</b><span>urgencias</span></div>
+              <div><b>L–D</b><span>9:00–20:00 consultas</span></div>
+              <div><b>Lince</b><span>José Gálvez 2200</span></div>
+            </div>
+          </div>
+          <a class="btn btn--orange" href="tel:+51947590915"><svg aria-hidden="true"><use href="#i-phone"/></svg>Emergencia: 947 590 915</a>
+        </article>
+
+        <article class="bcard bcard--eco rv">
+          <div class="bcard__photo"><img src="assets/img/feature-1.jpg" alt="Gatito naranja siendo atendido en la mesa de Animalince, con el ecógrafo de la clínica al fondo" loading="lazy" width="1600" height="2133"></div>
+          <span class="bcard__real"><svg aria-hidden="true"><use href="#i-camera"/></svg>Foto real de la clínica</span>
+          <div class="bcard__body">
+            <h3>Ecografías</h3>
+            <p>Diagnóstico por imagen en nuestra propia sala: vemos lo que no se nota por fuera, sin mandarte a recorrer Lima.</p>
+          </div>
+        </article>
+
+        <article class="bcard bcard--consulta rv">
+          <div class="bcard__photo"><img src="assets/img/servicio-1.jpg" alt="Veterinaria examinando a un pastor alemán en consulta" loading="lazy" width="1880" height="1253"></div>
+          <div class="bcard__body">
+            <h3>Consultas</h3>
+            <p>Chequeos, vacunas y prevención para cada etapa de su vida.</p>
+          </div>
+        </article>
+
+        <article class="bcard bcard--cir bcard--flat rv">
+          <span class="bcard__ic"><svg aria-hidden="true"><use href="#i-heartpulse"/></svg></span>
+          <div>
+            <h3>Cirugías</h3>
+            <p>Procedimientos programados y de urgencia, con monitoreo antes, durante y después.</p>
+          </div>
+        </article>
+
+        <article class="bcard bcard--trat rv">
+          <div class="bcard__photo"><img src="assets/img/servicio-2.jpg" alt="Veterinario revisando con cuidado los ojos de un perro durante un tratamiento" loading="lazy" width="1880" height="1253"></div>
+          <div class="bcard__body">
+            <h3>Tratamientos</h3>
+            <p>Te explicamos qué tiene y qué vamos a hacer, en palabras simples.</p>
+          </div>
+        </article>
+
+        <article class="bcard bcard--groom rv">
+          <div class="bcard__photo"><img src="assets/img/feature-2.jpg" alt="Perrito recién salido del grooming de Animalince, con la bandana naranja de la casa" loading="lazy" width="1179" height="1025"></div>
+          <span class="bcard__real"><svg aria-hidden="true"><use href="#i-camera"/></svg>Paciente de la casa</span>
+          <div class="bcard__body">
+            <h3>Grooming</h3>
+            <p>Baño, corte y bandana de regalo: salen oliendo rico y caminando orgullosos.</p>
+          </div>
+        </article>
+
+        <article class="bcard bcard--lab bcard--flat rv">
+          <span class="bcard__ic"><svg aria-hidden="true"><use href="#i-flask"/></svg></span>
+          <div>
+            <h3>Laboratorio</h3>
+            <p>Análisis clínicos aquí mismo, para decidir a tiempo y no a la semana.</p>
+          </div>
+        </article>
+
+        <article class="bcard bcard--rx bcard--flat rv">
+          <span class="bcard__ic"><svg aria-hidden="true"><use href="#i-bone"/></svg></span>
+          <div>
+            <h3>Rayos X</h3>
+            <p>Imágenes al instante cuando cada minuto cuenta.</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="nosotros" class="why"><div class="wrap">
-    <span class="eyebrow" style="color:#daf0e5;">Por qué Animalince</span>
-    <h2>Cientos de familias ya nos confían a su mascota</h2>
-    <div class="grid">
-      <div class="card"><div class="big">4.6★</div><h3>231 reseñas</h3><p>La confianza de la comunidad de Lince, reflejada en Google.</p></div>
-      <div class="card"><div class="big">+10</div><h3>Años cuidando</h3><p>Experiencia y cariño en cada atención, para perros y gatos.</p></div>
-      <div class="card"><div class="big">🐶🐱</div><h3>Trato humano</h3><p>Tratamos a cada paciente peludo con la paciencia y el amor que merece.</p></div>
-    </div>
-  </div></section>
-
-  <section id="contacto" class="wrap">
-    <span class="eyebrow">Contacto</span>
-    <h2>Visítanos en Lince</h2>
-    <p class="lead">Estamos listos para atender a tu mejor amigo.</p>
-    <div class="contact">
-      <ul>
-        <li>📍 Jr. José Gálvez 2200 · Lince, Lima</li>
-        <li>📞 947 590 915</li>
-        <li>🕒 Lunes a Domingo · Consulta horarios de emergencia</li>
-        <li>💬 <a href="https://wa.me/51947590915" target="_blank" rel="noopener" style="color:var(--brand-2);font-weight:600;">Escríbenos por WhatsApp</a></li>
-        <li style="border:none;padding-top:18px;"><a class="btn" href="https://wa.me/51947590915" target="_blank" rel="noopener">Agendar por WhatsApp</a></li>
-      </ul>
-      <iframe loading="lazy" src="https://www.google.com/maps?q=Jose+Galvez+2200+Lince+Lima&output=embed" title="Ubicación Animalince"></iframe>
+  <!-- ============ INTERLUDIO 3:47 A.M. ============ -->
+  <section class="night" id="emergencias">
+    <div class="wrap">
+      <div class="night__grid">
+        <div class="night__clock rv">
+          <div class="night__time" aria-hidden="true"><span id="nightH">3</span><span class="colon">:</span><span id="nightM">47</span></div>
+          <div class="night__ampm">a. m.</div>
+          <p class="night__sub">Lince, Lima · un martes cualquiera</p>
+        </div>
+        <div class="night__copy">
+          <span class="eyebrow eyebrow--light rv"><svg aria-hidden="true"><use href="#i-moon"/></svg>Nuestro diferencial</span>
+          <h2 class="rv">Tu mascota no mira el reloj. Nosotros tampoco.</h2>
+          <p class="lead rv">Las emergencias tienen la mala costumbre de llegar de madrugada. Por eso Animalince atiende las 24 horas: en José Gálvez siempre hay una luz prendida.</p>
+          <div class="night__pts">
+            <p class="night__pt rv"><svg aria-hidden="true"><use href="#i-zap"/></svg><span><b>Llama mientras vienes.</b> Te decimos qué hacer en el camino; cada minuto cuenta.</span></p>
+            <p class="night__pt rv"><svg aria-hidden="true"><use href="#i-activity"/></svg><span><b>Diagnóstico sin esperar al amanecer:</b> laboratorio, ecografía y rayos X en la misma clínica.</span></p>
+            <p class="night__pt rv"><svg aria-hidden="true"><use href="#i-pin"/></svg><span><b>Fácil de encontrar a cualquier hora:</b> Jr. José Gálvez 2200 — la fachada morada de Lince.</span></p>
+          </div>
+          <div class="night__cta rv">
+            <a class="btn btn--orange" href="tel:+51947590915"><svg aria-hidden="true"><use href="#i-phone"/></svg>Llamar: 947 590 915</a>
+            <span class="night__fijo">Fijo: <b>(1) 471-8761</b> · WhatsApp: <b>947 590 915</b></span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div><strong style="color:#cfe9dd;">🐾 Animalince Clínica Veterinaria</strong> · Lince, Lima</div>
-    <div>947 590 915</div>
-    <div class="demo">Demo/propuesta preparada por Juan Neyra · sin compromiso</div>
-  </footer>
+  <!-- ============ CÓMO CUIDAMOS ============ -->
+  <section class="ruta" id="comovamos">
+    <div class="wrap">
+      <div class="ruta__grid">
+        <div class="ruta__sticky rv">
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#i-paw"/></svg>Cómo cuidamos</span>
+          <h2>Así es traerlo a Animalince</h2>
+          <p class="lead">Sin vueltas ni palabras raras: esto es exactamente lo que pasa desde que cruzas la puerta hasta que vuelven a casa.</p>
+          <figure class="ruta__foto">
+            <img src="assets/img/servicio-3.jpg" alt="Pomerania acompañado por su dueña durante una consulta veterinaria" loading="lazy" width="1880" height="1253">
+            <figcaption><svg aria-hidden="true"><use href="#i-heartpulse"/></svg>Tú te quedas cerca: aquí el dueño es parte del tratamiento.</figcaption>
+          </figure>
+        </div>
+        <div class="ruta__steps">
+          <div class="step rv">
+            <span class="step__n"><svg aria-hidden="true"><use href="#i-msg"/></svg></span>
+            <div><h3><span>01</span>Escríbenos o llega directo</h3><p>Agenda por WhatsApp al 947 590 915. Si es emergencia, no pidas cita: ven de frente, estamos 24 horas.</p></div>
+          </div>
+          <div class="step rv">
+            <span class="step__n"><svg aria-hidden="true"><use href="#i-steth"/></svg></span>
+            <div><h3><span>02</span>Consulta y evaluación</h3><p>Revisamos sus signos, su historia y te escuchamos con calma: nadie conoce a tu mascota mejor que tú.</p></div>
+          </div>
+          <div class="step rv">
+            <span class="step__n"><svg aria-hidden="true"><use href="#i-activity"/></svg></span>
+            <div><h3><span>03</span>Diagnóstico en casa</h3><p>Laboratorio, ecografía y rayos X propios: resultados sin peregrinar por media Lima con tu engreído a cuestas.</p></div>
+          </div>
+          <div class="step rv">
+            <span class="step__n"><svg aria-hidden="true"><use href="#i-heartpulse"/></svg></span>
+            <div><h3><span>04</span>Tratamiento y recuperación</h3><p>Cirugía si hace falta, tratamiento claro y monitoreo constante hasta que esté estable y comiendo como siempre.</p></div>
+          </div>
+          <div class="step rv">
+            <span class="step__n"><svg aria-hidden="true"><use href="#i-home"/></svg></span>
+            <div><h3><span>05</span>De vuelta a casa</h3><p>Sales con indicaciones simples por escrito, y nosotros quedamos a un WhatsApp de distancia para cualquier duda.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <a class="wa" href="https://wa.me/51947590915" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+  <!-- ============ CONFIANZA ============ -->
+  <section class="proof">
+    <div class="wrap">
+      <div class="proof__band rv">
+        <div class="stat"><b>4.6<span class="stat-sym"> de 5</span></b><span>calificación en Google Maps, con reseñas públicas que puedes <a href="https://maps.google.com/?cid=9199040413286927304" target="_blank" rel="noopener">leer aquí</a></span></div>
+        <div class="stat"><b>231</b><span>familias de Lince y alrededores ya dejaron su opinión</span></div>
+        <div class="stat"><b>24 h</b><span>de emergencias reales, los 365 días del año</span></div>
+        <div class="stat"><b>+5,800</b><span>nos siguen en Instagram como @animalince</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MURO DE LA SALA DE ESPERA (TESTIMONIOS) ============ -->
+  <section class="wall" id="opiniones">
+    <div class="wrap">
+      <div class="wall__head">
+        <span class="eyebrow rv"><svg aria-hidden="true"><use href="#i-star"/></svg>Reseñas reales de Google</span>
+        <h2 class="rv">El muro de la sala de espera</h2>
+        <p class="lead rv">Notas que dejaría cualquier familia de Lince después de una visita. Estas son textuales, tomadas de nuestras reseñas públicas en Google Maps.</p>
+      </div>
+      <div class="wall__grid">
+        <figure class="note rv">
+          <div class="note__stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote class="note__quote">"Gracias por cuidar con tanto amor, paciencia y profesionalismo a nuestros amigos peludos. Se nota cuando alguien de verdad ama su trabajo. ¡Excelente veterinaria!"</blockquote>
+          <figcaption class="note__foot">
+            <span class="note__pic" aria-hidden="true">JS</span>
+            <span class="note__who"><b>Jennifer Soto León</b><span>Reseña de Google · traducida · hace 6 meses</span></span>
+          </figcaption>
+        </figure>
+        <figure class="note rv">
+          <div class="note__stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote class="note__quote">"Estoy muy feliz y agradecida por el cuidado 24/7 y todo el amor que le dieron durante su estadía. Excelente equipo médico."</blockquote>
+          <figcaption class="note__foot">
+            <span class="note__pic" aria-hidden="true">S</span>
+            <span class="note__who"><b>Stefany</b><span>Reseña de Google · traducida · hace 1 mes</span></span>
+          </figcaption>
+        </figure>
+        <figure class="note rv">
+          <div class="note__stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote class="note__quote">"Son muy serviciales y amables, desde la recepcionista hasta el veterinario. El Dr. Sebastián fue muy atento y cuidadoso con mi gatito, y explicó todo en detalle. Siempre esperas que traten bien a tus mascotas. ¡Gracias!"</blockquote>
+          <figcaption class="note__foot">
+            <span class="note__pic" aria-hidden="true">PS</span>
+            <span class="note__who"><b>Pedro Luis Solana</b><span>Reseña de Google · traducida · hace 1 mes</span></span>
+          </figcaption>
+        </figure>
+        <figure class="note rv">
+          <div class="note__stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote class="note__quote">"Estoy muy agradecida por el cuidado que reciben Perlita y Thomas. Los doctores son increíblemente precisos y muy amables. Se aseguran de que nuestros peludos continúen su tratamiento. ¡Muy recomendados!"</blockquote>
+          <figcaption class="note__foot">
+            <span class="note__pic" aria-hidden="true">MQ</span>
+            <span class="note__who"><b>Mariella Quiroz</b><span>Reseña de Google · traducida · hace 1 mes</span></span>
+          </figcaption>
+        </figure>
+        <div class="wall__more rv">
+          <b>231 familias ya dejaron su opinión</b>
+          <p>4.6 de 5 en Google Maps. Puedes leer todas las reseñas, con nombre y fecha, antes de tu primera visita.</p>
+          <a class="btn btn--ghost" href="https://maps.google.com/?cid=9199040413286927304" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-star"/></svg>Leer todas en Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEED INSTAGRAM ============ -->
+  <section class="feed" id="comunidad">
+    <div class="wrap">
+      <div class="feed__head rv">
+        <div>
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#i-ig"/></svg>Comunidad</span>
+          <h2>Los pacientes hablan<br>(bueno, maúllan)</h2>
+          <p class="lead">Esto es lo que se ve un día normal en la clínica: casos reales, recuperaciones y uno que otro purrito envuelto en su manta.</p>
+        </div>
+        <a class="feed__handle" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener">
+          <span class="chip-ic"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+          <span>@animalince<small>+5,800 seguidores · Lince, Lima</small></span>
+        </a>
+      </div>
+      <div class="feed__grid">
+        <a class="feed__item rv" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Ver publicación de @animalince en Instagram">
+          <img src="assets/img/feed-1.jpg" alt="Gato blanco y negro de ojos amarillos, paciente de Animalince" loading="lazy" width="900" height="1600">
+          <span class="feed__over"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+        </a>
+        <a class="feed__item rv" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Ver publicación de @animalince en Instagram">
+          <img src="assets/img/feed-2.jpg" alt="Gato con collar isabelino recuperándose tras su atención en Animalince" loading="lazy" width="1200" height="1600">
+          <span class="feed__over"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+        </a>
+        <a class="feed__item rv" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Ver publicación de @animalince en Instagram">
+          <img src="assets/img/feed-3.jpg" alt="Gata calicó sobre la mesa de atención, con el monitor clínico al fondo" loading="lazy" width="1600" height="2133">
+          <span class="feed__over"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+        </a>
+        <a class="feed__item rv" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Ver publicación de @animalince en Instagram">
+          <img src="assets/img/feed-4.jpg" alt="Gato envuelto en una manta como un purrito, sobre la mesa de acero" loading="lazy" width="720" height="1280">
+          <span class="feed__over"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+        </a>
+        <a class="feed__item feed__item--brighter rv" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Ver publicación de @animalince en Instagram">
+          <img src="assets/img/feed-5.jpg" alt="Gato blanco abrigado mientras el personal de Animalince lo atiende" loading="lazy" width="1600" height="2133">
+          <span class="feed__over"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+        </a>
+        <a class="feed__item rv" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Ver publicación de @animalince en Instagram">
+          <img src="assets/img/feed-6.jpg" alt="Fachada morada de Animalince en Jr. José Gálvez 2200, Lince" loading="lazy" width="1109" height="946">
+          <span class="feed__over"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+        </a>
+      </div>
+      <div class="feed__cta rv">
+        <a class="btn btn--violet" href="https://www.instagram.com/animalince/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Seguir a @animalince</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISÍTANOS ============ -->
+  <section class="visita" id="visitanos">
+    <div class="wrap">
+      <span class="eyebrow rv"><svg aria-hidden="true"><use href="#i-pin"/></svg>Visítanos</span>
+      <h2 class="rv">La fachada morada de Lince</h2>
+      <p class="lead rv" style="margin-bottom:40px">A unas cuadras del cruce de César Vallejo, en pleno corazón de Lince. Si vienes de madrugada, toca sin miedo: estamos despiertos.</p>
+      <div class="visita__grid">
+        <div class="visita__card rv">
+          <div class="vrow">
+            <span class="chip-ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <div><b>Dirección</b><p>Jr. José Gálvez 2200, Lince, Lima<br><a href="https://maps.google.com/?cid=9199040413286927304" target="_blank" rel="noopener">Abrir en Google Maps</a></p></div>
+          </div>
+          <div class="vrow">
+            <span class="chip-ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <div><b>Horario</b><p>Lunes a domingo · 9:00 a. m. – 8:00 p. m.<br>Emergencias: 24 horas, todos los días</p></div>
+          </div>
+          <div class="vrow">
+            <span class="chip-ic"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <div><b>Teléfonos</b><p>WhatsApp y llamadas: <a href="https://wa.me/51947590915" target="_blank" rel="noopener">947 590 915</a><br>Fijo: <a href="tel:+5114718761">(1) 471-8761</a></p></div>
+          </div>
+          <div class="vrow vrow--urg">
+            <span class="chip-ic"><svg aria-hidden="true"><use href="#i-siren"/></svg></span>
+            <div><b>¿Es una emergencia?</b><p>No agendes nada: <a href="tel:+51947590915">llama ya al 947 590 915</a> y ven de frente.</p></div>
+          </div>
+          <div class="visita__facha">
+            <img src="assets/img/feed-6.jpg" alt="Fachada morada de Animalince con su letrero" loading="lazy" width="1109" height="946">
+            <p>Búscanos así: fachada morada con el logo de la huella. Imposible perderse, incluso a las 3 a. m.</p>
+          </div>
+        </div>
+        <div class="visita__map rv">
+          <iframe src="https://www.google.com/maps?q=Jr.+Jos%C3%A9+G%C3%A1lvez+2200,+Lince,+Lima,+Per%C3%BA&output=embed" title="Mapa: Animalince Clínica Veterinaria, Jr. José Gálvez 2200, Lince" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="cierre">
+    <div class="wrap">
+      <div class="cierre__box rv">
+        <svg class="paw-bg paw-bg--a" aria-hidden="true"><use href="#i-paw"/></svg>
+        <svg class="paw-bg paw-bg--b" aria-hidden="true"><use href="#i-paw"/></svg>
+        <span class="eyebrow eyebrow--light"><svg aria-hidden="true"><use href="#i-paw"/></svg>Animalince · Lince, Lima</span>
+        <h2>Ya se lo dices todos los días. <em>Hoy demuéstraselo.</em></h2>
+        <p>Agenda su chequeo, su vacuna o su grooming en un solo mensaje. Y guarda nuestro número: ojalá nunca lo necesites de madrugada, pero si pasa, contestamos.</p>
+        <div class="cierre__cta">
+          <a class="btn btn--orange" href="https://wa.me/51947590915?text=Hola%20Animalince%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+          <a class="btn btn--violet" href="#visitanos">Cómo llegar<svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <a class="brand" href="#inicio" aria-label="Animalince, inicio">
+          <span class="brand__mark"><svg aria-hidden="true"><use href="#i-paw"/></svg></span>
+          <span class="brand__txt">
+            <span class="brand__name">Animalince</span><br>
+            <span class="brand__tag">Clínica veterinaria · 24 h</span>
+          </span>
+        </a>
+        <p class="foot__about">"No solo digas que lo amas, demuéstraselo." Clínica veterinaria en Lince con emergencias las 24 horas, laboratorio y diagnóstico por imagen propios.</p>
+        <div class="foot__soc">
+          <a href="https://www.instagram.com/animalince/" target="_blank" rel="noopener" aria-label="Instagram de Animalince"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://www.facebook.com/Animalince" target="_blank" rel="noopener" aria-label="Facebook de Animalince"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a href="https://wa.me/51947590915" target="_blank" rel="noopener" aria-label="WhatsApp de Animalince"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#emergencias">Emergencias 24 horas</a></li>
+          <li><a href="#servicios">Consultas y tratamientos</a></li>
+          <li><a href="#servicios">Cirugías</a></li>
+          <li><a href="#servicios">Laboratorio · Ecografías · Rayos X</a></li>
+          <li><a href="#servicios">Grooming</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>Jr. José Gálvez 2200, Lince, Lima</li>
+          <li>WhatsApp: <a href="https://wa.me/51947590915" target="_blank" rel="noopener">947 590 915</a></li>
+          <li>Fijo: <a href="tel:+5114718761">(1) 471-8761</a></li>
+          <li>L–D 9:00–20:00 · Emergencias 24 h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <span>© 2026 Animalince Clínica Veterinaria · Lince, Lima</span>
+      <span>Demo preparada por <a href="https://wa.me/51902557403" target="_blank" rel="noopener">Juan Neyra</a> · sin compromiso · WhatsApp +51 902 557 403</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOTANTES ============ -->
+<a class="wa-float" href="https://wa.me/51947590915?text=Hola%20Animalince%2C%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir a Animalince por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<button class="chat-toggle" id="chatToggle" aria-haspopup="dialog" aria-expanded="false">
+  <span class="chat-toggle__av"><svg aria-hidden="true"><use href="#i-cat"/></svg><span class="chat-toggle__dot" aria-hidden="true"></span></span>
+  ¿Dudas? Pregúntame
+</button>
+
+<section class="chat" id="chatPanel" role="dialog" aria-label="Asistente virtual de Animalince" aria-modal="false">
+  <header class="chat__head">
+    <span class="chat__av"><svg aria-hidden="true"><use href="#i-cat"/></svg><span class="chat__dot" aria-hidden="true"></span></span>
+    <div class="chat__who">
+      <b>Nala · Asistente Animalince</b>
+      <span>En línea · responde al instante</span>
+    </div>
+    <button class="chat__close" id="chatClose" aria-label="Cerrar chat"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  </header>
+  <div class="chat__log" id="chatLog" aria-live="polite"></div>
+  <div class="chat__chips" id="chatChips">
+    <button class="chat__chip" data-q="Tengo una emergencia">Emergencia</button>
+    <button class="chat__chip" data-q="¿Cuál es el horario?">Horarios</button>
+    <button class="chat__chip" data-q="¿Qué servicios tienen?">Servicios</button>
+    <button class="chat__chip" data-q="¿Dónde están ubicados?">Ubicación</button>
+    <button class="chat__chip" data-q="¿Cuánto cuesta una consulta?">Precios</button>
+    <button class="chat__chip" data-q="Quiero grooming para mi engreído">Grooming</button>
+  </div>
+  <form class="chat__form" id="chatForm">
+    <input class="chat__input" id="chatInput" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" maxlength="200" aria-label="Escribe tu pregunta">
+    <button class="chat__send" type="submit" aria-label="Enviar mensaje"><svg aria-hidden="true"><use href="#i-send"/></svg></button>
+  </form>
+  <p class="chat__note">Asistente de demostración con datos reales de Animalince.</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Header + menú móvil */
+  var hdr = document.getElementById("hdr");
+  var menuBtn = document.getElementById("menuBtn");
+  window.addEventListener("scroll", function(){ hdr.classList.toggle("is-scrolled", window.scrollY > 8); }, {passive:true});
+  menuBtn.addEventListener("click", function(){
+    var open = hdr.classList.toggle("hdr--open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.querySelectorAll(".nav a").forEach(function(a){
+    a.addEventListener("click", function(){ hdr.classList.remove("hdr--open"); menuBtn.setAttribute("aria-expanded","false"); });
+  });
+
+  /* Animaciones */
+  function showAll(){ document.querySelectorAll(".rv").forEach(function(el){ el.style.opacity = 1; el.style.transform = "none"; }); }
+  if (reduced || !window.gsap || !window.ScrollTrigger) {
+    showAll();
+    document.getElementById("hero").classList.add("is-in");
+  } else {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.batch(".rv", {
+      start: "top 88%",
+      once: true,
+      onEnter: function(batch){
+        gsap.to(batch, {opacity:1, y:0, duration:.9, ease:"power3.out", stagger:.1, overwrite:true});
+      }
+    });
+    ScrollTrigger.addEventListener("refreshInit", function(){
+      document.querySelectorAll(".rv").forEach(function(el){
+        if (el.getBoundingClientRect().top < window.innerHeight * .88) { el.style.opacity = 1; el.style.transform = "none"; }
+      });
+    });
+    window.addEventListener("load", function(){ ScrollTrigger.refresh(); });
+    document.getElementById("hero").classList.add("is-in");
+
+    /* Reloj 3:47 a.m. */
+    var nH = document.getElementById("nightH"), nM = document.getElementById("nightM");
+    var clockObj = {min: 0}; /* minutos desde medianoche -> 227 = 3:47 */
+    ScrollTrigger.create({
+      trigger: "#emergencias",
+      start: "top 70%",
+      once: true,
+      onEnter: function(){
+        gsap.fromTo(clockObj, {min:0}, {min:227, duration:2.4, ease:"power2.out", onUpdate:function(){
+          var m = Math.round(clockObj.min);
+          var h = Math.floor(m / 60); if (h === 0) { h = 12; }
+          nH.textContent = h;
+          nM.textContent = String(m % 60).padStart(2, "0");
+        }});
+      }
+    });
+  }
+
+  /* ============ Chat de intents ============ */
+  var panel = document.getElementById("chatPanel");
+  var toggle = document.getElementById("chatToggle");
+  var closeBtn = document.getElementById("chatClose");
+  var log = document.getElementById("chatLog");
+  var form = document.getElementById("chatForm");
+  var input = document.getElementById("chatInput");
+  var chips = document.getElementById("chatChips");
+  var greeted = false;
+
+  var WA = '<a href="https://wa.me/51947590915" target="_blank" rel="noopener">947 590 915</a>';
+  var TEL = '<a href="tel:+51947590915">947 590 915</a>';
+  var FIJO = '<a href="tel:+5114718761">(1) 471-8761</a>';
+
+  var INTENTS = [
+    { k:["emergencia","urgencia","urgente","accidente","atropell","envenen","convulsion","sangra","no respira","se cae","intoxic","grave","ahog","3am","madrugada","auxilio"],
+      r:"Si es una emergencia, no esperes: llama YA al " + TEL + " o al fijo " + FIJO + ".\n\nAtendemos las 24 horas, todos los días, en Jr. José Gálvez 2200, Lince. Si puedes, llámanos mientras vienes: así nos preparamos para recibirlo." },
+    { k:["horario","hora","atienden","abren","cierran","domingo","feriado","hoy","abierto"],
+      r:"Nuestros horarios:\n\nConsultas y grooming: lunes a domingo, 9:00 a. m. a 8:00 p. m.\nEmergencias: las 24 horas, los 365 días.\n\nSí, de madrugada también contestamos." },
+    { k:["servicio","ofrecen","hacen","atencion","especialidad"],
+      r:"Estos son los servicios de la casa:\n\n- Emergencias 24 horas\n- Consultas y tratamientos\n- Cirugías\n- Laboratorio\n- Ecografías\n- Rayos X\n- Grooming\n\n¿Quieres detalles de alguno? También puedes escribirnos al " + WA + "." },
+    { k:["donde","ubicad","direccion","llegar","local","lince","galvez","mapa","queda"],
+      r:"Estamos en Jr. José Gálvez 2200, Lince, Lima: busca la fachada morada con la huella, imposible perderse.\n\nPuedes vernos en el mapa de la sección Visítanos o abrirnos en Google Maps desde ahí." },
+    { k:["precio","costo","cuanto","tarifa","cobran","vale","presupuesto","cotiz"],
+      r:"Los precios dependen de cada paciente: especie, tamaño y lo que necesite. Preferimos no darte un número a ciegas.\n\nEscríbenos al " + WA + " con los datos de tu engreído y te cotizamos al toque." },
+    { k:["grooming","baño","bano","corte","peluqueria","pelo","estetica","bandana"],
+      r:"Nuestro grooming incluye baño, corte y mucha paciencia (a veces hasta bandana de regalo).\n\nHorario: lunes a domingo de 9:00 a. m. a 8:00 p. m. Agenda al " + WA + "." },
+    { k:["ecografia","rayos","radiografia","laboratorio","analisis","examen","diagnostico","placa"],
+      r:"Tenemos laboratorio, ecografías y rayos X en la misma clínica: los resultados no se van de viaje por Lima.\n\nSi tu veterinario pidió un examen o quieres un chequeo completo, escríbenos al " + WA + "." },
+    { k:["cirugia","operacion","esteriliz","castr","tumor","sutura"],
+      r:"Realizamos cirugías programadas y de urgencia, con monitoreo antes, durante y después del procedimiento.\n\nCuéntanos el caso al " + WA + " y el equipo te orienta sin compromiso." },
+    { k:["vacuna","desparasit","cachorro","gatito","control","chequeo","prevencion"],
+      r:"Para vacunas, desparasitación y controles de cachorros o gatitos, agenda una consulta: lunes a domingo de 9:00 a. m. a 8:00 p. m.\n\nEscríbenos al " + WA + " y coordinamos el mejor horario." },
+    { k:["gato","perro","conejo","mascota","exotic","hamster","atienden a"],
+      r:"Atendemos perros y gatos (nuestro Instagram es prueba de que los michis nos adoran).\n\nSi tienes otra especie, consúltanos al " + WA + " y te confirmamos si podemos ayudarte o a dónde derivarte." },
+    { k:["whatsapp","telefono","numero","llamar","contacto","escribir"],
+      r:"Nuestros contactos:\n\nWhatsApp y llamadas: " + WA + "\nFijo: " + FIJO + "\nInstagram: @animalince\n\nPara emergencias, mejor llama: es más rápido." },
+    { k:["cita","agendar","reserva","turno","atencion para"],
+      r:"Para agendar una cita, escríbenos al " + WA + " con el nombre de tu mascota y qué necesita.\n\nAtendemos de lunes a domingo, 9:00 a. m. a 8:00 p. m. Y si es urgente, ven directo: 24 horas." },
+    { k:["gracias","genial","perfecto","buenazo","chevere"],
+      r:"Con mucho gusto. Dale un cariño a tu engreído de nuestra parte.\n\n¿Algo más en lo que te pueda ayudar?" },
+    { k:["hola","buenas","buenos dias","buenas tardes","buenas noches","alo","hey"],
+      r:"¡Hola! Soy Nala, la asistente virtual de Animalince.\n\nPuedo contarte sobre horarios, servicios, ubicación, grooming o ayudarte si tienes una emergencia. ¿Por dónde empezamos?" }
+  ];
+
+  function norm(s){
+    return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  }
+  function reply(text){
+    var t = norm(text);
+    for (var i = 0; i < INTENTS.length; i++){
+      for (var j = 0; j < INTENTS[i].k.length; j++){
+        if (t.indexOf(INTENTS[i].k[j]) !== -1) { return INTENTS[i].r; }
+      }
+    }
+    return "Esa pregunta me queda grande: se la paso al equipo humano.\n\nEscríbeles al " + WA + " y te responden rapidito. Mientras tanto, ¿te ayudo con horarios, servicios, ubicación o una emergencia?";
+  }
+  function addMsg(html, who){
+    var d = document.createElement("div");
+    d.className = "msg msg--" + who;
+    if (who === "user") { d.textContent = html; } else { d.innerHTML = html; }
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+    return d;
+  }
+  function botSay(text){
+    var typing = document.createElement("div");
+    typing.className = "msg msg--bot msg--typing";
+    typing.innerHTML = "<i></i><i></i><i></i>";
+    log.appendChild(typing);
+    log.scrollTop = log.scrollHeight;
+    setTimeout(function(){
+      typing.remove();
+      addMsg(text, "bot");
+    }, reduced ? 60 : 650 + Math.min(text.length * 3, 700));
+  }
+  function ask(q){
+    addMsg(q, "user");
+    botSay(reply(q));
+  }
+  function openChat(){
+    panel.classList.add("is-open");
+    toggle.style.display = "none";
+    toggle.setAttribute("aria-expanded","true");
+    if (!greeted){
+      greeted = true;
+      botSay("¡Hola! Soy Nala, la asistente virtual de Animalince.\n\nPuedo ayudarte con horarios, servicios, ubicación, precios o una emergencia. También puedes tocar un botón aquí abajo.");
+    }
+    setTimeout(function(){ input.focus(); }, 300);
+  }
+  function closeChat(){
+    panel.classList.remove("is-open");
+    toggle.style.display = "";
+    toggle.setAttribute("aria-expanded","false");
+    toggle.focus();
+  }
+  toggle.addEventListener("click", openChat);
+  closeBtn.addEventListener("click", closeChat);
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && panel.classList.contains("is-open")) closeChat(); });
+  chips.addEventListener("click", function(e){
+    var b = e.target.closest(".chat__chip");
+    if (b) ask(b.getAttribute("data-q"));
+  });
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = input.value.trim();
+    if (!v) return;
+    input.value = "";
+    ask(v);
+  });
+})();
+</script>
 </body>
 </html>

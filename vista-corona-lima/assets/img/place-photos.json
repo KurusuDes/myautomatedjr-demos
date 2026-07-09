@@ -1,0 +1,65 @@
+{
+  "negocio": "Vista Corona Lima",
+  "fotos": [
+    {
+      "archivo": "assets/img/place-1.jpg",
+      "ancho": 3072,
+      "alto": 4096,
+      "autor": "Adele Paucar"
+    },
+    {
+      "archivo": "assets/img/place-2.jpg",
+      "ancho": 1080,
+      "alto": 1350,
+      "autor": "Vista Corona Lima"
+    },
+    {
+      "archivo": "assets/img/place-3.jpg",
+      "ancho": 4000,
+      "alto": 3000,
+      "autor": "Billy Meza Carranza"
+    },
+    {
+      "archivo": "assets/img/place-4.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Laura Guzman"
+    },
+    {
+      "archivo": "assets/img/place-5.jpg",
+      "ancho": 3271,
+      "alto": 4361,
+      "autor": "Vista Corona Lima"
+    },
+    {
+      "archivo": "assets/img/place-6.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Betsy Villegas Aguilar"
+    },
+    {
+      "archivo": "assets/img/place-7.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Carlos Francisco Salazar López"
+    },
+    {
+      "archivo": "assets/img/place-8.jpg",
+      "ancho": 4000,
+      "alto": 3000,
+      "autor": "Rosario p. aguilar"
+    },
+    {
+      "archivo": "assets/img/place-9.jpg",
+      "ancho": 1080,
+      "alto": 988,
+      "autor": "KARINA GALVEZ"
+    },
+    {
+      "archivo": "assets/img/place-10.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Betsy Villegas Aguilar"
+    }
+  ]
+}

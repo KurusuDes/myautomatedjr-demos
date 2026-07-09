@@ -1,0 +1,15 @@
+{
+  "negocio": "Animalince Clínica Veterinaria",
+  "nota": "Fotos REALES de Google Places, renombradas por uso final. place-3 (fachada antigua) descartada por conflicto de marca. Dimensiones = archivo descargado (max 1600px).",
+  "fotos": [
+    { "archivo": "assets/img/hero.jpg", "original": "place-10", "ancho": 1600, "alto": 1200, "autor": "Carlos Gutierrez Fernandez-Davila" },
+    { "archivo": "assets/img/feature-1.jpg", "original": "place-4", "ancho": 1600, "alto": 2133, "autor": "Jorge Anda" },
+    { "archivo": "assets/img/feature-2.jpg", "original": "place-7", "ancho": 1179, "alto": 1025, "autor": "Kiara Victoria Rodriguez Bure" },
+    { "archivo": "assets/img/feed-1.jpg", "original": "place-1", "ancho": 900, "alto": 1600, "autor": "Paula SALCEDO" },
+    { "archivo": "assets/img/feed-2.jpg", "original": "place-2", "ancho": 1200, "alto": 1600, "autor": "Claudia Salcedo" },
+    { "archivo": "assets/img/feed-3.jpg", "original": "place-6", "ancho": 1600, "alto": 2133, "autor": "Mayte Gadea" },
+    { "archivo": "assets/img/feed-4.jpg", "original": "place-8", "ancho": 720, "alto": 1280, "autor": "Diego Calderon" },
+    { "archivo": "assets/img/feed-5.jpg", "original": "place-9", "ancho": 1600, "alto": 2133, "autor": "Yoshiling Mallqui" },
+    { "archivo": "assets/img/feed-6.jpg", "original": "place-5", "ancho": 1109, "alto": 946, "autor": "Animalince Clínica Veterinaria (foto propia del negocio)" }
+  ]
+}
