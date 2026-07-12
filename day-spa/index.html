@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#2A0E1C" />
+<title>Day Spa · Miraflores — Belleza en voz baja</title>
+<meta name="description" content="Day Spa, spa boutique en el Sótano -101 de Av. Alfredo Benavides 477, Miraflores. Nail art de autor, masajes, faciales, cabello y cejas. 4.8 en Google con 504 reseñas." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%231C0D15'/%3E%3Cpath d='M8 32V19a12 12 0 0124 0v13' fill='none' stroke='%23E2B183' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M20 25.5c-2.6-1.7-3.4-4.3-1.9-6.5.6-.9 1.3-1.5 1.9-2.6.6 1.1 1.3 1.7 1.9 2.6 1.5 2.2.7 4.8-1.9 6.5z' fill='none' stroke='%23E2B183' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<meta property="og:type" content="business.business" />
+<meta property="og:title" content="Day Spa · Miraflores — Belleza en voz baja" />
+<meta property="og:description" content="Spa boutique en el Sótano -101 de Av. Alfredo Benavides 477, Miraflores. Nail art de autor, masajes, faciales, cabello y cejas. 4.8 en Google con 504 reseñas." />
+<meta property="og:image" content="https://KurusuDes.github.io/myautomatedjr-demos/day-spa/assets/img/feed-2.jpg" />
+<meta property="og:url" content="https://KurusuDes.github.io/myautomatedjr-demos/day-spa/" />
+<meta property="og:locale" content="es_PE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Day Spa · Miraflores — Belleza en voz baja" />
+<meta name="twitter:description" content="Nail art de autor, masajes, faciales, cabello y cejas en el Sótano -101 de Av. Benavides 477, Miraflores." />
+<meta name="twitter:image" content="https://KurusuDes.github.io/myautomatedjr-demos/day-spa/assets/img/feed-2.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DaySpa",
+  "name": "Day Spa",
+  "telephone": "+51982062683",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sótano -101, Av. Alfredo Benavides 477",
+    "addressLocality": "Miraflores",
+    "addressRegion": "Lima",
+    "addressCountry": "PE"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "504" },
+  "sameAs": ["https://www.instagram.com/dayspamirafloress/", "https://www.facebook.com/DaySpaMirafloress"]
+}
+</script>
+
+<style>
+/* ============================================================
+   DAY SPA · Miraflores — "Belleza en voz baja"
+   Sistema: Soft UI Evolution (ui-ux-pro-max) afinado a boutique
+   Tipografía: Fraunces / Hanken Grotesk
+   iter-2 — corrige critica-1.md (unicidad, tipografia, testimonios,
+   hero con foto real, bug de intents, contraste, OG/favicon, chat, topbar)
+   ============================================================ */
+:root{
+  --bg:#FDF4F7;
+  --bg-alt:#F8EAF0;
+  --surface:#FFFFFF;
+  --ink:#3B1226;
+  --ink-soft:#6E4A5C;
+  --primary:#A82459;
+  --primary-deep:#8C1C4A;
+  --accent:#6D4BC4;
+  --border:#F0D5E0;
+  --ring:#A82459;
+
+  --night:#1C0D15;
+  --night-2:#2A0E1C;
+  --candle:#E2B183;
+  --candle-soft:#C89A73;
+  --cream:#F7EADD;
+
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Hanken Grotesk", system-ui, -apple-system, sans-serif;
+
+  --shadow-sm:0 1px 2px rgba(59,18,38,.06), 0 4px 12px rgba(59,18,38,.05);
+  --shadow-md:0 2px 6px rgba(59,18,38,.07), 0 12px 32px rgba(59,18,38,.09);
+  --shadow-lg:0 4px 10px rgba(59,18,38,.08), 0 24px 60px rgba(59,18,38,.14);
+
+  --r-sm:10px; --r-md:16px; --r-lg:24px;
+  --container:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px;border-radius:4px}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+/* ===== Grain ===== */
+.grain{
+  position:fixed;inset:-50%;z-index:1;pointer-events:none;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.028 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== Profundímetro (depth gauge — idea firma) ===== */
+.gauge{
+  position:fixed;right:22px;top:50%;transform:translateY(-50%);
+  z-index:60;display:flex;flex-direction:column;align-items:center;gap:10px;
+  pointer-events:none;
+}
+.gauge__lbl{
+  font-size:9px;letter-spacing:.22em;font-weight:600;color:var(--ink-soft);
+  writing-mode:vertical-rl;text-orientation:mixed;
+}
+.gauge__lbl--end{color:var(--primary)}
+.gauge__track{position:relative;width:2px;height:34vh;min-height:180px;background:var(--border);border-radius:2px;overflow:visible}
+.gauge__fill{position:absolute;top:0;left:0;width:100%;height:0%;background:linear-gradient(180deg,var(--primary),var(--accent));border-radius:2px}
+.gauge__dot{
+  position:absolute;left:50%;top:0%;transform:translate(-50%,-50%);
+  width:11px;height:11px;border-radius:50%;
+  background:var(--primary);border:2px solid var(--bg);
+  box-shadow:0 0 0 3px rgba(168,36,89,.18);
+}
+.gauge__depth{
+  font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--primary);
+  font-variant-numeric:tabular-nums;min-width:3.5ch;text-align:center;
+}
+body.on-dark .gauge__lbl{color:rgba(247,234,221,.55)}
+body.on-dark .gauge__lbl--end{color:var(--candle)}
+body.on-dark .gauge__track{background:rgba(247,234,221,.16)}
+body.on-dark .gauge__fill{background:linear-gradient(180deg,var(--candle),var(--primary))}
+body.on-dark .gauge__dot{background:var(--candle);border-color:var(--night)}
+body.on-dark .gauge__depth{color:var(--candle)}
+@media (max-width:1023px){.gauge{display:none}}
+
+/* ===== Topbar ===== */
+.topbar{background:var(--night-2);color:var(--cream);font-size:12.5px;position:relative;z-index:40}
+.topbar__inner{display:flex;align-items:center;gap:14px;padding:9px 24px;justify-content:center;flex-wrap:wrap}
+.topbar__item{display:inline-flex;align-items:center;gap:7px;letter-spacing:.02em}
+.topbar__item svg{flex:none;color:var(--candle)}
+.topbar__sep{opacity:.35}
+.topbar__cta{color:var(--candle);font-weight:600;display:inline-flex;align-items:center;gap:6px;transition:opacity .2s}
+.topbar__cta:hover{opacity:.8}
+.topbar__show-m{display:none}
+@media (max-width:767px){
+  .topbar__hide-m{display:none}
+  .topbar__show-m{display:inline}
+  .topbar__inner{padding:8px 18px;flex-wrap:nowrap;justify-content:space-between;gap:10px}
+  .topbar__item{font-size:11.5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topbar__cta{flex:none}
+}
+
+/* ===== Nav ===== */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,244,247,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s, box-shadow .3s;
+}
+.nav.is-scrolled{border-bottom-color:var(--border);box-shadow:0 4px 24px rgba(59,18,38,.06)}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px}
+.brand{display:inline-flex;align-items:center;gap:11px}
+.brand__mark{color:var(--primary);display:grid;place-items:center}
+.brand__name{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:.14em;display:block;line-height:1.1}
+.brand__tag{font-size:10px;letter-spacing:.24em;color:var(--ink-soft);text-transform:uppercase;display:block}
+.nav__links{display:flex;align-items:center;gap:22px}
+.nav__links a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .2s, padding-left .2s;position:relative;padding-left:0}
+.nav__links a:not(.nav__cta)::before{
+  content:"";position:absolute;left:-11px;top:50%;transform:translateY(-50%) scale(0);width:5px;height:5px;
+  border-radius:50%;background:var(--primary);transition:transform .2s;
+}
+.nav__links a:not(.nav__cta):hover{color:var(--primary);padding-left:11px}
+.nav__links a:not(.nav__cta):hover::before{transform:translateY(-50%) scale(1)}
+.nav__cta{
+  background:var(--primary);color:#fff !important;padding:10px 20px;border-radius:999px;
+  font-weight:600;box-shadow:var(--shadow-sm);transition:background .2s, transform .2s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.nav__cta:hover{background:var(--primary-deep);transform:translateY(-1px)}
+.nav__burger{display:none;flex-direction:column;gap:5px;padding:8px}
+.nav__burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s, opacity .3s}
+.nav__burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav__burger.is-open span:nth-child(2){opacity:0}
+.nav__burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:1023px){
+  .nav__links{
+    position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;
+    background:var(--bg);border-bottom:1px solid var(--border);padding:20px 24px;gap:18px;
+    transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform .25s, opacity .25s;
+    box-shadow:var(--shadow-md);
+  }
+  .nav__links.is-open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav__burger{display:flex}
+}
+
+/* ===== Botones ===== */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;
+  font-weight:600;font-size:15px;transition:transform .2s, background .2s, box-shadow .2s, border-color .2s;
+  cursor:pointer;
+}
+.btn svg{flex:none}
+.btn--primary{background:var(--primary);color:#fff;box-shadow:0 8px 24px rgba(168,36,89,.28)}
+.btn--primary:hover{background:var(--primary-deep);transform:translateY(-2px);box-shadow:0 12px 30px rgba(168,36,89,.34)}
+.btn--ghost{border:1.5px solid var(--border);color:var(--ink);background:var(--surface)}
+.btn--ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+.btn--candle{background:var(--candle);color:var(--night);box-shadow:0 8px 26px rgba(226,177,131,.25)}
+.btn--candle:hover{background:#EDC298;transform:translateY(-2px)}
+.btn--small{padding:11px 20px;font-size:14px}
+
+/* ===== Tipos de sección ===== */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--primary);
+}
+.eyebrow__line{width:34px;height:1px;background:currentColor;opacity:.5}
+.section-title{font-family:var(--font-display);font-size:clamp(30px,4.4vw,50px);line-height:1.12;font-weight:600;letter-spacing:-.01em}
+.section-title em{font-style:italic;font-weight:500}
+.section-sub{color:var(--ink-soft);font-size:16.5px;max-width:56ch}
+.grad{
+  background:linear-gradient(100deg,var(--primary) 20%,var(--accent) 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+/* ===== Hero: "la boca de la escalera" ===== */
+.hero{position:relative;padding:56px 0 0;overflow:hidden}
+.hero__bg{position:absolute;inset:0;pointer-events:none}
+.hero__bg .halo{
+  position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;
+}
+.halo--1{width:520px;height:520px;background:#F6CFDF;top:-180px;right:-120px}
+.halo--2{width:420px;height:420px;background:#E4D6F8;bottom:-160px;left:-140px;opacity:.45}
+.hero__inner{position:relative;z-index:2}
+.hero__eyebrow-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.hero__title{
+  font-family:var(--font-display);font-weight:600;letter-spacing:-.015em;font-optical-sizing:auto;
+  font-size:clamp(40px,7.4vw,96px);line-height:1.03;max-width:20ch;
+}
+.hero__title .line{display:block;overflow:hidden}
+.hero__title .line > span{display:inline-block}
+.hero__title em{font-style:italic;font-weight:500;color:var(--primary)}
+
+/* Bloque de texto a ancho de lectura, sin foto al costado (rompe el patrón split-hero) */
+.hero__lead-block{max-width:640px;margin-top:34px}
+.hero__lead{color:var(--ink-soft);font-size:17.5px}
+.hero__lead strong{color:var(--ink);font-weight:600}
+.hero__quote{
+  margin-top:18px;padding-left:16px;border-left:2px solid var(--primary);
+  font-family:var(--font-display);font-style:italic;font-size:17px;color:var(--ink);
+}
+.hero__quote small{display:block;font-family:var(--font-body);font-style:normal;font-size:12px;color:var(--ink-soft);margin-top:4px;letter-spacing:.06em}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+
+/* Franja de descenso: banda diagonal a sangre con la foto real como protagonista */
+.descent{position:relative;margin-top:52px}
+.descent__band{
+  position:relative;height:clamp(320px,42vw,540px);overflow:hidden;
+  clip-path:polygon(0 6.5%,100% 0,100% 100%,0 93.5%);
+}
+.descent__band img{width:100%;height:100%;object-fit:cover;transform-origin:center}
+.descent__tint{position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,13,21,.32),rgba(28,13,21,0) 55%);mix-blend-mode:multiply;pointer-events:none}
+.descent__shard{
+  position:absolute;left:6%;bottom:-46px;width:clamp(140px,17vw,210px);aspect-ratio:4/5;
+  border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-lg);
+  border:5px solid var(--bg);transform:rotate(-4deg);z-index:3;
+}
+.descent__shard img{width:100%;height:100%;object-fit:cover}
+.descent__label{
+  position:absolute;right:24px;top:24px;z-index:3;background:var(--night-2);color:var(--cream);
+  border-radius:999px;padding:9px 16px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow-md);
+}
+.descent__label svg{color:var(--candle)}
+
+/* Franja de confianza estática debajo de la foto — no flota sobre la imagen */
+.hero-strip{
+  display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin-top:64px;
+  border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);
+  box-shadow:var(--shadow-sm);
+}
+.hero-strip__cell{
+  flex:1 1 200px;padding:20px 24px;display:flex;align-items:center;gap:13px;
+  border-right:1px solid var(--border);
+}
+.hero-strip__cell:last-child{border-right:none}
+.hero-strip__ico{
+  width:38px;height:38px;border-radius:11px;background:var(--bg-alt);color:var(--primary);
+  display:grid;place-items:center;flex:none;
+}
+.hero-strip strong{font-family:var(--font-display);font-size:17px;font-weight:600;display:block}
+.hero-strip span{font-size:12px;color:var(--ink-soft);letter-spacing:.02em}
+.hero-strip__cell--cta{background:var(--night-2);color:var(--cream);flex:1 1 220px;transition:background .2s}
+.hero-strip__cell--cta:hover{background:var(--primary-deep)}
+.hero-strip__cell--cta .hero-strip__ico{background:rgba(226,177,131,.16);color:var(--candle)}
+.hero-strip__cell--cta strong{color:var(--cream)}
+.hero-strip__cell--cta span{color:rgba(247,234,221,.65)}
+@media (max-width:1023px){
+  .descent__shard{display:none}
+  .hero-strip{border-radius:var(--r-md)}
+}
+@media (max-width:767px){
+  .hero{padding-top:40px}
+  .descent{margin-top:38px}
+  .descent__band{clip-path:polygon(0 4%,100% 0,100% 100%,0 97%);height:280px}
+  .descent__label{left:16px;right:16px;top:16px;justify-content:center}
+  .hero-strip{margin-top:40px;flex-direction:column}
+  .hero-strip__cell{border-right:none;border-bottom:1px solid var(--border)}
+  .hero-strip__cell:last-child{border-bottom:none}
+}
+
+/* ===== Renglón de servicios — lista estática con separadores, sin ticker ===== */
+.svc-line{
+  margin-top:0;position:relative;z-index:2;padding:22px 24px;text-align:center;
+}
+.svc-line::before{
+  content:"";display:block;width:52px;height:2px;margin:0 auto 16px;
+  background:var(--accent);border-radius:2px;
+}
+.svc-line__text{
+  font-family:var(--font-body);font-weight:600;
+  font-size:clamp(11.5px,1.3vw,13px);color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase;
+  max-width:920px;margin:0 auto;line-height:2.1;
+}
+.svc-line__text .dot{color:var(--accent);margin:0 8px;font-weight:700;text-transform:none}
+
+/* ===== La bajada (sección firma, oscura) ===== */
+.bajada{position:relative;background:var(--night);color:var(--cream);overflow:hidden}
+.bajada__bg{position:absolute;inset:0}
+.bajada__bg img{width:100%;height:100%;object-fit:cover;opacity:.22}
+.bajada__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--night-2) 0%,rgba(28,13,21,.6) 30%,rgba(28,13,21,.75) 70%,var(--night) 100%)}
+.bajada__inner{position:relative;z-index:2;padding:110px 24px 120px}
+.bajada__head{max-width:640px;margin-bottom:70px}
+.bajada__head .eyebrow{color:var(--candle)}
+.bajada__head .section-title{color:var(--cream)}
+.bajada__head .section-sub{color:rgba(247,234,221,.72)}
+.bajada__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:70px;align-items:start}
+.bajada__meter{position:sticky;top:120px;text-align:left}
+.bajada__meter-lbl{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(247,234,221,.55);display:block;margin-bottom:6px}
+.bajada__num{
+  font-family:var(--font-display);font-weight:600;line-height:.9;
+  font-size:clamp(90px,13vw,190px);color:var(--candle);
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em;
+}
+.bajada__num-note{margin-top:14px;font-size:13.5px;color:rgba(247,234,221,.6);max-width:30ch}
+.steps{position:relative;padding-left:44px}
+.steps__rail{position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:rgba(247,234,221,.14);border-radius:2px;overflow:hidden}
+.steps__rail-fill{position:absolute;inset:0;background:linear-gradient(180deg,var(--candle),var(--primary));transform-origin:top;transform:scaleY(0)}
+.step{position:relative;padding:0 0 46px}
+.step:last-child{padding-bottom:0}
+.step__flame{
+  position:absolute;left:-44px;top:2px;width:24px;height:24px;border-radius:50%;
+  display:grid;place-items:center;background:rgba(226,177,131,.12);
+  border:1px solid rgba(226,177,131,.35);color:var(--candle);
+}
+.step__lvl{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--candle);font-weight:600}
+.step h3{font-family:var(--font-display);font-size:24px;font-weight:600;margin:6px 0 8px;color:var(--cream)}
+.step p{color:rgba(247,234,221,.72);font-size:15.5px;max-width:46ch}
+.bajada__cta{margin-top:60px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.bajada__addr{display:flex;align-items:center;gap:10px;color:rgba(247,234,221,.75);font-size:14px}
+.bajada__addr svg{color:var(--candle);flex:none}
+@media (max-width:1023px){
+  .bajada__grid{grid-template-columns:1fr;gap:56px}
+  .bajada__meter{position:static}
+}
+@media (max-width:767px){.bajada__inner{padding:80px 24px 90px}}
+
+/* ===== Servicios ===== */
+.servicios{padding:110px 0 80px;position:relative}
+.servicios .section-head{margin-bottom:54px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.svc-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.svc{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);
+  transition:transform .25s, box-shadow .25s;position:relative;
+}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.svc--feature{grid-column:span 7;flex-direction:row}
+.svc--photo{grid-column:span 5}
+.svc--mini{grid-column:span 4}
+.svc__media{position:relative;overflow:hidden;flex:none}
+.svc--feature .svc__media{width:46%}
+.svc--photo .svc__media{aspect-ratio:16/9}
+.svc__media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.svc:hover .svc__media img{transform:scale(1.05)}
+.svc__badge{
+  position:absolute;top:14px;left:14px;background:var(--night-2);color:var(--candle);
+  font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:7px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;
+}
+.svc__body{padding:26px 26px 24px;display:flex;flex-direction:column;flex:1}
+.svc__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.svc__num{font-family:var(--font-display);font-style:italic;font-size:15px;color:var(--primary);letter-spacing:.04em}
+.svc__ico{
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  background:var(--bg-alt);color:var(--primary);
+}
+.svc h3{font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:8px}
+.svc p{color:var(--ink-soft);font-size:14.5px;flex:1}
+.svc__link{
+  margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;
+  color:var(--primary);transition:gap .2s;
+}
+.svc__link:hover{gap:12px}
+.svc__note{font-size:12px;color:var(--ink-soft);margin-top:6px}
+@media (max-width:1023px){
+  .svc--feature{grid-column:span 12;flex-direction:column}
+  .svc--feature .svc__media{width:100%;aspect-ratio:16/9}
+  .svc--photo{grid-column:span 6}
+  .svc--mini{grid-column:span 6}
+}
+@media (max-width:767px){
+  .servicios{padding:80px 0 60px}
+  .svc--photo,.svc--mini{grid-column:span 12}
+}
+
+/* ===== Prueba social (contadores) ===== */
+.proof{background:var(--bg-alt);padding:64px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.proof__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.proof__num{font-family:var(--font-display);font-weight:600;font-size:clamp(34px,4.5vw,52px);color:var(--primary);line-height:1;font-variant-numeric:tabular-nums}
+.proof__num small{font-size:.55em;font-weight:500}
+.proof__lbl{font-size:13px;color:var(--ink-soft);margin-top:8px;letter-spacing:.03em}
+@media (max-width:767px){.proof__grid{grid-template-columns:repeat(2,1fr);gap:34px 16px}}
+
+/* ===== Testimonios (reseñas reales de Google) ===== */
+.testi{padding:110px 0 100px}
+.testi__head{max-width:640px;margin-bottom:52px}
+.testi__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.testi__card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:28px 26px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:14px;
+}
+.testi__stars{display:flex;gap:2px;color:#E8A33D}
+.testi__quote{color:var(--ink);font-size:15px;line-height:1.6;flex:1}
+.testi__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px solid var(--border)}
+.testi__name{font-family:var(--font-display);font-weight:600;font-size:14.5px}
+.testi__src{font-size:11.5px;color:var(--ink-soft);letter-spacing:.03em}
+@media (max-width:1023px){.testi__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){.testi{padding:80px 0 70px}.testi__grid{grid-template-columns:1fr}}
+
+/* ===== Feed / Nail art ===== */
+.feed{padding:110px 0}
+.feed__top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+.feed__follow{
+  display:inline-flex;align-items:center;gap:13px;background:var(--surface);
+  border:1px solid var(--border);border-radius:999px;padding:10px 22px 10px 12px;
+  box-shadow:var(--shadow-sm);transition:transform .2s, box-shadow .2s;
+}
+.feed__follow:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.feed__ig{
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF);flex:none;
+}
+.feed__handle{display:flex;flex-direction:column;line-height:1.25}
+.feed__handle strong{font-size:14.5px}
+.feed__handle small{font-size:12px;color:var(--ink-soft)}
+.feed__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feed__item{
+  position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:1/1;
+  box-shadow:var(--shadow-sm);
+}
+.feed__item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.feed__item:hover img{transform:scale(1.06)}
+.feed__overlay{
+  position:absolute;inset:0;background:linear-gradient(200deg,rgba(28,13,21,0) 40%,rgba(28,13,21,.72));
+  opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:16px;
+  color:var(--cream);font-size:13px;font-weight:500;gap:8px;
+}
+.feed__overlay svg{flex:none}
+.feed__item:hover .feed__overlay,.feed__item:focus-visible .feed__overlay{opacity:1}
+.feed__cta{margin-top:36px;text-align:center}
+@media (max-width:767px){
+  .feed{padding:80px 0}
+  .feed__grid{grid-template-columns:repeat(2,1fr);gap:10px}
+}
+
+/* ===== Nosotras ===== */
+.nosotras{padding:30px 0 110px}
+.nosotras__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:center}
+.ph--team{aspect-ratio:16/10}
+.nosotras__copy .section-title{margin:14px 0 18px}
+.nosotras__copy p{color:var(--ink-soft);margin-bottom:16px}
+.nosotras__copy p strong{color:var(--ink)}
+.ticklist{list-style:none;margin:22px 0 30px;display:grid;gap:13px}
+.ticklist li{display:flex;align-items:flex-start;gap:11px;font-size:15px;color:var(--ink)}
+.ticklist li svg{flex:none;color:var(--primary);margin-top:3px}
+@media (max-width:1023px){.nosotras__grid{grid-template-columns:1fr;gap:44px}}
+@media (max-width:767px){.nosotras{padding-bottom:80px}}
+
+/* ===== Asistente IA ===== */
+.asistente{background:var(--night);color:var(--cream);padding:110px 0;position:relative;overflow:hidden}
+.asistente::before{
+  content:"";position:absolute;width:560px;height:560px;border-radius:50%;
+  background:radial-gradient(circle,rgba(168,36,89,.25),transparent 65%);top:-200px;right:-140px;
+}
+.asistente__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center;position:relative;z-index:2}
+.asistente .eyebrow{color:var(--candle)}
+.asistente .section-title{color:var(--cream)}
+.asistente .section-sub{color:rgba(247,234,221,.72)}
+.asistente__feats{list-style:none;margin:26px 0 0;display:grid;gap:14px}
+.asistente__feats li{display:flex;align-items:center;gap:12px;font-size:15px}
+.asistente__featico{
+  width:30px;height:30px;border-radius:9px;background:rgba(226,177,131,.14);
+  display:grid;place-items:center;color:var(--candle);flex:none;
+}
+.asistente__disclaim{margin-top:22px;font-size:12px;color:rgba(247,234,221,.65)}
+
+/* ===== Chat (compartido inline + flotante) ===== */
+.chat{
+  background:var(--surface);border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow-lg);display:flex;flex-direction:column;color:var(--ink);
+  border:1px solid var(--border);
+}
+.chat__header{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--night-2);color:var(--cream)}
+.chat__avatar{
+  position:relative;width:42px;height:42px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  display:grid;place-items:center;color:#fff;
+}
+.chat__online{
+  position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;
+  background:#4ADE80;border:2px solid var(--night-2);
+}
+.chat__id{flex:1;line-height:1.3}
+.chat__id strong{font-size:14.5px;display:block}
+.chat__presence{font-size:11.5px;color:rgba(247,234,221,.7);display:inline-flex;align-items:center;gap:6px}
+.chat__presence i{width:7px;height:7px;border-radius:50%;background:#4ADE80;display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.chat__logo{font-family:var(--font-display);font-size:12px;letter-spacing:.18em;color:var(--candle)}
+.chat__body{padding:18px;display:flex;flex-direction:column;gap:12px;height:330px;max-height:44vh;overflow-y:auto;background:var(--bg)}
+.msg{max-width:82%;padding:11px 15px;border-radius:16px;font-size:14px;line-height:1.5}
+.msg a{color:var(--primary);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.msg--bot{background:var(--surface);border:1px solid var(--border);border-bottom-left-radius:5px;align-self:flex-start;box-shadow:var(--shadow-sm)}
+.msg--user{background:var(--primary);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+.msg--typing{display:inline-flex;gap:5px;align-items:center;padding:14px 16px}
+.msg--typing span{width:7px;height:7px;border-radius:50%;background:var(--ink-soft);opacity:.5;animation:tp 1.2s infinite}
+.msg--typing span:nth-child(2){animation-delay:.15s}
+.msg--typing span:nth-child(3){animation-delay:.3s}
+@keyframes tp{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.chat__quick{display:flex;gap:8px;padding:12px 16px;flex-wrap:wrap;background:var(--surface);border-top:1px solid var(--border)}
+.chat__chip{
+  border:1.5px solid var(--border);border-radius:999px;padding:7px 14px;font-size:12.5px;
+  font-weight:500;color:var(--ink-soft);transition:all .2s;background:var(--bg);
+}
+.chat__chip:hover{border-color:var(--primary);color:var(--primary);background:var(--surface)}
+.chat__form{display:flex;gap:10px;padding:12px 16px;background:var(--surface);border-top:1px solid var(--border)}
+.chat__text{
+  flex:1;border:1.5px solid var(--border);border-radius:999px;padding:11px 18px;
+  font-size:14px;font-family:inherit;color:var(--ink);background:var(--bg);outline:none;
+  transition:border-color .2s;min-width:0;
+}
+.chat__text:focus{border-color:var(--primary)}
+.chat__send{
+  width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;flex:none;
+  display:grid;place-items:center;transition:background .2s, transform .2s;
+}
+.chat__send:hover{background:var(--primary-deep);transform:scale(1.06)}
+
+/* ===== Visítanos ===== */
+.visita{padding:110px 0}
+.visita__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:26px;margin-top:50px;align-items:stretch}
+.visita__card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:38px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:24px;
+}
+.vrow{display:flex;gap:16px;align-items:flex-start}
+.vrow__ico{
+  width:44px;height:44px;border-radius:13px;background:var(--bg-alt);color:var(--primary);
+  display:grid;place-items:center;flex:none;
+}
+.vrow strong{display:block;font-size:15px;margin-bottom:3px}
+.vrow p{font-size:14px;color:var(--ink-soft)}
+.vrow a{color:var(--primary);font-weight:600}
+.vrow a:hover{text-decoration:underline;text-underline-offset:2px}
+.visita__note{
+  background:var(--bg-alt);border-radius:var(--r-md);padding:16px 18px;font-size:13.5px;
+  color:var(--ink);display:flex;gap:10px;align-items:flex-start;
+}
+.visita__note svg{flex:none;color:var(--primary);margin-top:2px}
+.visita__map{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);min-height:420px;border:1px solid var(--border)}
+.visita__map iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:1023px){.visita__grid{grid-template-columns:1fr}.visita__map{min-height:340px}}
+@media (max-width:767px){.visita{padding:80px 0}.visita__card{padding:28px}}
+
+/* ===== CTA band ===== */
+.ctaband{position:relative;overflow:hidden;color:var(--cream);text-align:center}
+.ctaband__bg{position:absolute;inset:0}
+.ctaband__bg img{width:100%;height:100%;object-fit:cover}
+.ctaband__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,13,21,.82),rgba(42,14,28,.88))}
+.ctaband__inner{position:relative;z-index:2;padding:110px 24px;max-width:720px;margin:0 auto}
+.ctaband h2{font-family:var(--font-display);font-size:clamp(30px,4.6vw,50px);font-weight:600;line-height:1.15}
+.ctaband h2 em{font-style:italic;color:var(--candle)}
+.ctaband p{margin:18px 0 34px;color:rgba(247,234,221,.78);font-size:16.5px}
+
+/* ===== Footer ===== */
+.footer{background:var(--night);color:rgba(247,234,221,.75);padding:70px 0 0;font-size:14px}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:50px}
+.footer .brand__mark{color:var(--candle)}
+.footer .brand__name{color:var(--cream)}
+.footer .brand__tag{color:rgba(247,234,221,.65)}
+.footer__brand p{margin:16px 0 20px;max-width:30ch}
+.footer__tagline{font-family:var(--font-display);font-style:italic;color:var(--candle);font-size:16px}
+.footer__social{display:flex;gap:12px}
+.footer__social a{
+  width:38px;height:38px;border-radius:50%;border:1px solid rgba(247,234,221,.2);
+  display:grid;place-items:center;transition:all .2s;color:var(--cream);
+}
+.footer__social a:hover{background:var(--candle);color:var(--night);border-color:var(--candle)}
+.footer__col h4{
+  color:var(--cream);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  margin-bottom:18px;font-weight:600;
+}
+.footer__col a{display:block;padding:5px 0;transition:color .2s}
+.footer__col a:hover{color:var(--candle)}
+.footer__bottom{
+  border-top:1px solid rgba(247,234,221,.12);padding:22px 0;display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:rgba(247,234,221,.65);
+}
+.footer__credit a{color:var(--candle);font-weight:600}
+.footer__credit a:hover{text-decoration:underline;text-underline-offset:2px}
+@media (max-width:1023px){.footer__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){.footer__grid{grid-template-columns:1fr;gap:34px}}
+
+/* ===== FABs ===== */
+.fab-wa{
+  position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.4);
+  transition:transform .2s;
+}
+.fab-wa:hover{transform:scale(1.08)}
+.fab-chat{
+  position:fixed;right:22px;bottom:92px;z-index:70;display:flex;align-items:center;gap:10px;
+  background:var(--night-2);color:var(--cream);border-radius:999px;padding:9px 18px 9px 9px;
+  box-shadow:var(--shadow-lg);transition:transform .2s;
+}
+.fab-chat:hover{transform:translateY(-2px)}
+.fab-chat__ava{
+  position:relative;width:38px;height:38px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;color:#fff;
+}
+.fab-chat__ava i{
+  position:absolute;right:0;bottom:0;width:10px;height:10px;border-radius:50%;
+  background:#4ADE80;border:2px solid var(--night-2);
+}
+.fab-chat strong{font-size:13.5px;display:block;line-height:1.2}
+.fab-chat span{font-size:10.5px;color:rgba(247,234,221,.65);display:block}
+.chat-panel{
+  position:fixed;right:22px;bottom:160px;z-index:80;width:min(380px,calc(100vw - 32px));
+  max-height:calc(100vh - 190px);display:flex;
+  opacity:0;transform:translateY(14px) scale(.98);pointer-events:none;
+  transition:opacity .25s, transform .25s;
+}
+.chat-panel.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.chat-panel .chat{max-height:100%}
+.chat-panel .chat__body{height:min(300px,44vh)}
+.chat-close{margin-left:auto;color:var(--cream);opacity:.7;transition:opacity .2s;padding:4px}
+.chat-close:hover{opacity:1}
+@media (max-width:767px){
+  .fab-chat span{display:none}
+  .chat-panel{bottom:150px;max-height:calc(100vh - 180px)}
+}
+@media (max-height:640px){
+  .chat-panel{bottom:96px;max-height:calc(100vh - 120px)}
+  .chat-panel .chat__body{height:min(220px,38vh)}
+}
+
+/* ===== Reveals (estado inicial lo maneja GSAP con .from) ===== */
+.reveal{will-change:transform}
+
+/* ===== Utilidades ===== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== Profundímetro: marcador de descenso ligado al scroll ===== -->
+<div class="gauge" id="gauge" aria-hidden="true">
+  <span class="gauge__lbl">CALLE</span>
+  <div class="gauge__track">
+    <div class="gauge__fill" id="gaugeFill"></div>
+    <div class="gauge__dot" id="gaugeDot"></div>
+  </div>
+  <span class="gauge__lbl gauge__lbl--end">SÓTANO</span>
+  <span class="gauge__depth" id="gaugeDepth">0</span>
+</div>
+
+<!-- ===== Topbar ===== -->
+<div class="topbar">
+  <div class="topbar__inner">
+    <span class="topbar__item">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+      <span class="topbar__hide-m">Sótano -101 · Av. Alfredo Benavides 477, Miraflores</span>
+      <span class="topbar__show-m">Sótano -101 · Benavides 477</span>
+    </span>
+    <span class="topbar__sep topbar__hide-m">·</span>
+    <span class="topbar__item topbar__hide-m">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+      4.8 en Google · 504 reseñas
+    </span>
+    <a class="topbar__cta" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener">
+      <span class="topbar__hide-m">Reservar por WhatsApp</span>
+      <span class="topbar__show-m">Reservar</span>
+      <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ===== Nav ===== -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="#inicio" aria-label="Day Spa, inicio">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="36" height="36">
+          <path d="M8 34V20a12 12 0 0124 0v14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M20 27c-2.6-1.7-3.4-4.4-1.9-6.6.6-.9 1.3-1.5 1.9-2.6.6 1.1 1.3 1.7 1.9 2.6 1.5 2.2.7 4.9-1.9 6.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M5 34h30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand__type">
+        <span class="brand__name">DAY SPA</span>
+        <span class="brand__tag">Miraflores · Sótano -101</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Principal">
+      <a href="#bajada">La bajada</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nailart">Nail art</a>
+      <a href="#nosotras">Nosotras</a>
+      <a href="#asistente">Asistente IA</a>
+      <a href="#visitanos">Visítanos</a>
+      <a class="nav__cta" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21a9 9 0 10-8.5-6.1L2 21l5.2-1.4A9 9 0 0012 21z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        Reservar
+      </a>
+    </nav>
+
+    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="inicio">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="halo halo--1"></span>
+    <span class="halo halo--2"></span>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__eyebrow-row">
+      <span class="eyebrow"><span class="eyebrow__line"></span> Spa boutique en Miraflores</span>
+      <span class="eyebrow" style="color:var(--ink-soft)">Belleza en voz baja <span class="eyebrow__line"></span></span>
+    </div>
+
+    <h1 class="hero__title">
+      <span class="line"><span>La calma vive</span></span>
+      <span class="line"><span><em>un piso más abajo.</em></span></span>
+    </h1>
+
+    <div class="hero__lead-block">
+      <p class="hero__lead">
+        En plena Av. Benavides hay una escalera que casi nadie nota. Abajo, en el <strong>Sótano -101</strong>,
+        te espera un refugio de <strong>nail art de autor</strong>, masajes que destensan la semana,
+        faciales, cabello y cejas — y un equipo que te atiende como en casa.
+      </p>
+      <blockquote class="hero__quote">
+        “Cuidarte y consentirte es nuestro secreto para verte más bella.”
+        <small>— La casa Day Spa</small>
+      </blockquote>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener">
+          Reservar por WhatsApp
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#bajada">
+          Conocer el ritual
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- La boca de la escalera: banda diagonal a sangre con foto real como protagonista -->
+  <div class="descent reveal">
+    <div class="descent__band">
+      <img id="heroImg" src="assets/img/feed-2.jpg" alt="Nail art negro minimalista hecho en Day Spa, foto real del salón" loading="eager" fetchpriority="high" />
+      <span class="descent__tint" aria-hidden="true"></span>
+    </div>
+    <span class="descent__label">
+      <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg>
+      Foto real del salón
+    </span>
+    <div class="descent__shard" aria-hidden="true">
+      <img src="assets/img/hero.jpg" alt="" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero-strip reveal">
+      <div class="hero-strip__cell">
+        <span class="hero-strip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg></span>
+        <div><strong>4.8 de 5</strong><span>504 reseñas en Google</span></div>
+      </div>
+      <div class="hero-strip__cell">
+        <span class="hero-strip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg></span>
+        <div><strong>17K seguidores</strong><span>@dayspamirafloress en Instagram</span></div>
+      </div>
+      <a class="hero-strip__cell hero-strip__cell--cta" href="#bajada">
+        <span class="hero-strip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19"><path d="M4 5h5v4h5v4h5v6H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8l3 3m0-3l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <div><strong>Baja al -101</strong><span>la entrada está en Benavides 477</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Renglón de servicios: texto estático con separadores, sin animación ni ticker -->
+  <p class="svc-line">
+    <span class="svc-line__text">Nail art<span class="dot">·</span>Manicure<span class="dot">·</span>Pedicure<span class="dot">·</span>Masajes relajantes<span class="dot">·</span>Faciales<span class="dot">·</span>Balayage<span class="dot">·</span>Cortes<span class="dot">·</span>Cejas<span class="dot">·</span>Depilación</span>
+  </p>
+</section>
+
+<!-- ===== LA BAJADA — sección firma ===== -->
+<section class="bajada" id="bajada">
+  <div class="bajada__bg" aria-hidden="true">
+    <img src="assets/img/gallery-1.jpg" alt="" loading="lazy" />
+  </div>
+  <div class="container bajada__inner">
+    <div class="bajada__head reveal">
+      <span class="eyebrow"><span class="eyebrow__line"></span> El ritual empieza en la escalera</span>
+      <h2 class="section-title">El descenso <em>al -101</em></h2>
+      <p class="section-sub" style="margin-top:16px">
+        Nuestro spa no da a la calle, y esa es la gracia. Bajar es la primera parte del tratamiento:
+        cada escalón te separa un poco más del ruido de Lima.
+      </p>
+    </div>
+
+    <div class="bajada__grid">
+      <div class="bajada__meter reveal">
+        <span class="bajada__meter-lbl">Nivel</span>
+        <div class="bajada__num" id="depthNum" aria-hidden="true">&minus;101</div>
+        <span class="sr-only">Sótano -101</span>
+        <p class="bajada__num-note">La coordenada exacta de la calma en Miraflores.</p>
+      </div>
+
+      <div class="steps">
+        <div class="steps__rail" aria-hidden="true"><span class="steps__rail-fill" id="railFill"></span></div>
+
+        <article class="step reveal">
+          <span class="step__flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <span class="step__lvl">Nivel calle</span>
+          <h3>Av. Alfredo Benavides 477</h3>
+          <p>Cláxones, tráfico, pendientes, el grupo del trabajo sonando en el bolsillo. Todo eso se queda aquí arriba.</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M4 5h5v4h5v4h5v6H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="step__lvl">La escalera</span>
+          <h3>El ruido baja un tono</h3>
+          <p>Con cada paso la luz se vuelve más cálida y la ciudad suena más lejos. Es corto, pero se siente como cambiar de país.</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M12 21c-3.5-2.2-4.6-5.9-2.6-8.8.9-1.3 1.8-2 2.6-3.5.8 1.5 1.7 2.2 2.6 3.5 2 2.9.9 6.6-2.6 8.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="step__lvl">El umbral</span>
+          <h3>Huele a aceites y esmalte nuevo</h3>
+          <p>Te reciben por tu nombre, te ofrecen asiento y alguien ya sabe qué diseño de uñas quedaste debiendo desde la última vez.</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step__flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          </span>
+          <span class="step__lvl">Sótano -101</span>
+          <h3>Empieza tu ritual</h3>
+          <p>El celular en la cartera, la semana en pausa. Manos, piel, cabello: la próxima hora es solo tuya.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="bajada__cta reveal">
+      <a class="btn btn--candle" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20reservar%20mi%20ritual" target="_blank" rel="noopener">
+        Reservar mi bajada
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <span class="bajada__addr">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        Sótano -101, Av. Alfredo Benavides 477, Miraflores
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Servicios ===== -->
+<section class="servicios" id="servicios">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow"><span class="eyebrow__line"></span> La carta de la casa</span>
+        <h2 class="section-title" style="margin-top:12px">Seis maneras de <span class="grad">consentirte</span></h2>
+      </div>
+      <p class="section-sub">Sin apuro y a tu medida. Cada servicio se cotiza según lo que buscas: escríbenos por WhatsApp y te respondemos al toque.</p>
+    </div>
+
+    <div class="svc-grid">
+      <!-- 01 · Manicure & Nail art (estrella) -->
+      <article class="svc svc--feature reveal">
+        <div class="svc__media">
+          <img src="assets/img/feature-2.jpg" alt="Estaciones de manicure de Day Spa con clientas siendo atendidas" loading="lazy" />
+          <span class="svc__badge">
+            <svg viewBox="0 0 24 24" width="11" height="11" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+            La firma de la casa
+          </span>
+        </div>
+        <div class="svc__body">
+          <div class="svc__top">
+            <span class="svc__num">N.º 01</span>
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="21" height="21"><path d="M12 3c1.8 2.4 2.8 4.5 2.8 6.6 0 2.6-1.2 4-2.8 4s-2.8-1.4-2.8-4C9.2 7.5 10.2 5.4 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.5 13.5L8 21m6.5-7.5L16 21m-4-7.4V21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <h3>Manicure, pedicure &amp; nail art</h3>
+          <p>
+            Nuestra especialidad y la razón por la que 17 mil personas nos siguen. Del francés clásico al diseño
+            que se te ocurrió anoche: cada set sale del -101 con nombre propio. Manicure y pedicure completos,
+            esmaltado tradicional o semipermanente.
+          </p>
+          <a class="svc__link" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20cotizar%20un%20manicure%20con%20nail%20art" target="_blank" rel="noopener">
+            Cotizar mi diseño
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <span class="svc__note">Precio según diseño · cotización sin compromiso</span>
+        </div>
+      </article>
+
+      <!-- 02 · Masajes -->
+      <article class="svc svc--photo reveal">
+        <div class="svc__media">
+          <img src="assets/img/feature-3.jpg" alt="Piedras calientes sobre una camilla de masajes" loading="lazy" />
+        </div>
+        <div class="svc__body">
+          <div class="svc__top">
+            <span class="svc__num">N.º 02</span>
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="21" height="21"><ellipse cx="12" cy="15.5" rx="7.5" ry="4" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="10.5" rx="5.5" ry="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="6.2" rx="3.4" ry="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+          </div>
+          <h3>Masajes relajantes</h3>
+          <p>Para soltar la semana: masajes descontracturantes y relajantes en cabina, con la calma extra que da estar bajo tierra, lejos del ruido.</p>
+          <a class="svc__link" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20informaci%C3%B3n%20sobre%20masajes" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 03 · Faciales -->
+      <article class="svc svc--photo reveal">
+        <div class="svc__media">
+          <img src="assets/img/feature-4.jpg" alt="Tratamiento facial profesional en cabina" loading="lazy" />
+        </div>
+        <div class="svc__body">
+          <div class="svc__top">
+            <span class="svc__num">N.º 03</span>
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="21" height="21"><path d="M12 21c-4.4-2.7-5.8-7.3-3.2-10.9C10 8.4 11 7.6 12 6c1 1.6 2 2.4 3.2 4.1 2.6 3.6 1.2 8.2-3.2 10.9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 17.5c-1.4-.9-1.9-2.4-1.1-3.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <h3>Faciales &amp; cuidado de piel</h3>
+          <p>Limpieza profunda, hidratación y protocolos según tu tipo de piel. Sales con la cara descansada y el ánimo también.</p>
+          <a class="svc__link" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20informaci%C3%B3n%20sobre%20faciales" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 04 · Cabello -->
+      <article class="svc svc--mini reveal">
+        <div class="svc__body">
+          <div class="svc__top">
+            <span class="svc__num">N.º 04</span>
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="21" height="21"><circle cx="6.5" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="6.5" cy="17" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.7 8.6L20 19M8.7 15.4L20 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <h3>Cabello</h3>
+          <p>Cortes para ellas y para ellos, balayage, mechas, highlights y hairstyling para eventos. Color con criterio, nada de sustos.</p>
+          <a class="svc__link" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20cotizar%20un%20servicio%20de%20cabello" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 05 · Depilación -->
+      <article class="svc svc--mini reveal">
+        <div class="svc__body">
+          <div class="svc__top">
+            <span class="svc__num">N.º 05</span>
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="21" height="21"><path d="M12 21c-3.5-2.2-4.6-5.9-2.6-8.8.9-1.3 1.8-2 2.6-3.5.8 1.5 1.7 2.2 2.6 3.5 2 2.9.9 6.6-2.6 8.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 4c2 .8 3.4 2 4.2 3.8M19 4c-2 .8-3.4 2-4.2 3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <h3>Depilación corporal</h3>
+          <p>Depilación con técnica y delicadeza, en cabina privada y con los tiempos que tu piel necesita. Sin apuros ni incomodidad.</p>
+          <a class="svc__link" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20informaci%C3%B3n%20sobre%20depilaci%C3%B3n" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 06 · Cejas -->
+      <article class="svc svc--mini reveal">
+        <div class="svc__body">
+          <div class="svc__top">
+            <span class="svc__num">N.º 06</span>
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="21" height="21"><path d="M3 14c2.5-4.5 6-6.8 9-6.8s6.5 2.3 9 6.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 17.5h.01M12 16.5h.01M17 17.5h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <h3>Cejas</h3>
+          <p>Diseño y perfilado según tu rostro: el marco correcto cambia toda la mirada. Un detalle chico con efecto grande.</p>
+          <a class="svc__link" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20informaci%C3%B3n%20sobre%20dise%C3%B1o%20de%20cejas" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Prueba social ===== -->
+<section class="proof">
+  <div class="container proof__grid">
+    <div class="reveal">
+      <div class="proof__num"><span data-count="4.8" data-decimals="1">4.8</span></div>
+      <div class="proof__lbl">Calificación en Google</div>
+    </div>
+    <div class="reveal">
+      <div class="proof__num"><span data-count="504">504</span></div>
+      <div class="proof__lbl">Reseñas de clientas</div>
+    </div>
+    <div class="reveal">
+      <div class="proof__num"><span data-count="17">17</span><small>K</small></div>
+      <div class="proof__lbl">Seguidores en Instagram</div>
+    </div>
+    <div class="reveal">
+      <div class="proof__num"><span data-count="6">6</span></div>
+      <div class="proof__lbl">Especialidades bajo un techo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonios reales de Google ===== -->
+<section class="testi" id="testimonios">
+  <div class="container">
+    <div class="testi__head reveal">
+      <span class="eyebrow"><span class="eyebrow__line"></span> Lo que dicen al subir la escalera</span>
+      <h2 class="section-title" style="margin-top:12px">504 reseñas, <span class="grad">tres voces reales</span></h2>
+      <p class="section-sub" style="margin-top:14px">Citas textuales de Google Maps, sin editar. Así nos describen quienes ya bajaron al -101.</p>
+    </div>
+    <div class="testi__grid">
+      <article class="testi__card reveal">
+        <div class="testi__stars" aria-label="5 de 5 estrellas">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+        </div>
+        <p class="testi__quote">“Travelled to Peru from Australia and needed a quick refill mid trip. They squeezed me in last minute and did an amazing job! The lady who did my lashes was very attentive to my request even though I don't speak Spanish. Highly recommend!!!”</p>
+        <div class="testi__foot">
+          <span class="testi__name">Taryn K</span>
+          <span class="testi__src">Google · hace 8 meses</span>
+        </div>
+      </article>
+      <article class="testi__card reveal">
+        <div class="testi__stars" aria-label="5 de 5 estrellas">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+        </div>
+        <p class="testi__quote">“I got so many compliments on my nails that I almost went back and got the same exact design a month later… my lady delivered. She painted the design onto my nails and people thought they were stickers. Amazing job, good price, and they take walk ins!”</p>
+        <div class="testi__foot">
+          <span class="testi__name">Kimberly Clemens</span>
+          <span class="testi__src">Google · hace 1 año</span>
+        </div>
+      </article>
+      <article class="testi__card reveal">
+        <div class="testi__stars" aria-label="4 de 5 estrellas">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3l2.5 5.6 6 .6-4.5 4 1.3 5.9L12 16l-5.3 3.1L8 13.2l-4.5-4 6-.6z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <p class="testi__quote">“I made a last minute appointment for a pedicure last night in Mira Flores. The service was incredible and Rosalía was extremely precise and careful with my toenails and cuticles… I was told I could come by in the morning if there was any issues and they had three women helping me! I would highly recommend the spa…”</p>
+        <div class="testi__foot">
+          <span class="testi__name">Jill Reinstadler</span>
+          <span class="testi__src">Google · hace 1 mes</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Nail art / Feed IG ===== -->
+<section class="feed" id="nailart">
+  <div class="container">
+    <div class="feed__top reveal">
+      <div>
+        <span class="eyebrow"><span class="eyebrow__line"></span> Nail art · directo de nuestro Instagram</span>
+        <h2 class="section-title" style="margin-top:12px">Cada set sale con <span class="grad">nombre propio</span></h2>
+        <p class="section-sub" style="margin-top:14px">Esto no es stock: son manos reales que subieron la escalera con otro ánimo. Nuestro feed es el portafolio.</p>
+      </div>
+      <a class="feed__follow" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener">
+        <span class="feed__ig" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="21" height="21"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg>
+        </span>
+        <span class="feed__handle">
+          <strong>@dayspamirafloress</strong>
+          <small>17 mil seguidores · Seguir</small>
+        </span>
+      </a>
+    </div>
+
+    <div class="feed__grid">
+      <a class="feed__item reveal" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Ver nail art lila con glitter en Instagram">
+        <img src="assets/img/feed-1.jpg" alt="Nail art lila con glitter hecho en Day Spa" loading="lazy" />
+        <span class="feed__overlay"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg> Ver en Instagram</span>
+      </a>
+      <a class="feed__item reveal" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Ver nail art francés invertido negro en Instagram">
+        <img src="assets/img/feed-2.jpg" alt="Nail art negro minimalista con francés invertido" loading="lazy" />
+        <span class="feed__overlay"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg> Ver en Instagram</span>
+      </a>
+      <a class="feed__item reveal" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Ver manicure frente al logo de Day Spa en Instagram">
+        <img src="assets/img/feed-3.jpg" alt="Uñas largas esmaltadas frente al logo de Day Spa" loading="lazy" />
+        <span class="feed__overlay"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg> Ver en Instagram</span>
+      </a>
+      <a class="feed__item reveal" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Ver manicure con hojas azules en Instagram">
+        <img src="assets/img/feed-4.jpg" alt="Manicure con diseño de hojas azules en el salón de Day Spa" loading="lazy" />
+        <span class="feed__overlay"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg> Ver en Instagram</span>
+      </a>
+      <a class="feed__item reveal" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Ver nail art de flores retro en Instagram">
+        <img src="assets/img/feed-5.jpg" alt="Nail art de flores retro en tonos naranja y rosa" loading="lazy" />
+        <span class="feed__overlay"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg> Ver en Instagram</span>
+      </a>
+      <a class="feed__item reveal" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Ver nail art de Minnie con corazones en Instagram">
+        <img src="assets/img/feed-6.jpg" alt="Nail art de Minnie con corazones rojos" loading="lazy" />
+        <span class="feed__overlay"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg> Ver en Instagram</span>
+      </a>
+    </div>
+
+    <div class="feed__cta reveal">
+      <a class="btn btn--ghost" href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener">
+        Seguir a @dayspamirafloress
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Nosotras ===== -->
+<section class="nosotras" id="nosotras">
+  <div class="container nosotras__grid">
+    <div class="reveal">
+      <div class="ph ph--team">
+        <img class="ph__img" src="assets/img/feature-1.jpg" alt="El equipo de Day Spa frente al logo plateado del salón" loading="lazy" />
+        <span class="ph__shade" aria-hidden="true"></span>
+        <span class="ph__caption">
+          <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 19c.8-3 2.9-4.6 5.5-4.6s4.7 1.6 5.5 4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16.5" cy="9" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 14.6c2.4.1 4.2 1.6 4.9 4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          El equipo, en el -101
+        </span>
+      </div>
+    </div>
+    <div class="nosotras__copy reveal">
+      <span class="eyebrow"><span class="eyebrow__line"></span> Nosotras</span>
+      <h2 class="section-title">Las manos detrás <em>del secreto</em></h2>
+      <p>
+        Day Spa es un equipo de especialistas en uñas, piel, cabello y cejas que convirtió un sótano de
+        Benavides en uno de los spas mejor calificados de Miraflores: <strong>4.8 en Google con 504 reseñas</strong>
+        y una comunidad de 17 mil personas que sigue cada diseño que sale de aquí.
+      </p>
+      <p>
+        Sin letreros gigantes ni local a pie de calle: nuestro marketing siempre fue el de antes —
+        una clienta que sube la escalera contenta y se lo cuenta a otra.
+      </p>
+      <ul class="ticklist">
+        <li>
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Atención personalizada: te conocemos por tu nombre, no por un número de ticket.
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Nail art de nivel editorial: nuestro Instagram es el portafolio, no un catálogo.
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Todo bajo un techo: uñas, masajes, faciales, cabello y cejas en una sola visita.
+        </li>
+      </ul>
+      <a class="btn btn--primary" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20agendar%20una%20visita" target="_blank" rel="noopener">
+        Agendar mi visita
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Asistente IA ===== -->
+<section class="asistente" id="asistente">
+  <div class="container asistente__grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="eyebrow__line"></span> Atención inteligente · 24/7</span>
+      <h2 class="section-title" style="margin-top:12px">Dana, la recepcionista que <em>nunca duerme</em></h2>
+      <p class="section-sub" style="margin-top:16px">
+        Mientras el equipo está en cabina, Dana —nuestra asistente con IA— responde tus dudas al instante:
+        servicios, cómo llegar al -101 y cómo reservar. Cuando quieras cerrar tu cita, te pasa directo con
+        una persona real por WhatsApp.
+      </p>
+      <ul class="asistente__feats">
+        <li>
+          <span class="asistente__featico" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Responde al instante, también fuera de horario
+        </li>
+        <li>
+          <span class="asistente__featico" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Conoce toda la carta: uñas, masajes, faciales, cabello y cejas
+        </li>
+        <li>
+          <span class="asistente__featico" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Te conecta con el equipo por WhatsApp para cotizar y agendar
+        </li>
+      </ul>
+      <p class="asistente__disclaim">Asistente de demostración cargado con los datos reales del negocio.</p>
+    </div>
+
+    <div class="chat reveal" aria-label="Chat de demostración con Dana">
+      <div class="chat__header">
+        <span class="chat__avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21c-3.5-2.2-4.6-5.9-2.6-8.8.9-1.3 1.8-2 2.6-3.5.8 1.5 1.7 2.2 2.6 3.5 2 2.9.9 6.6-2.6 8.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 3v2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="chat__online"></span>
+        </span>
+        <div class="chat__id">
+          <strong>Dana · Asistente IA</strong>
+          <span class="chat__presence"><i></i> En línea · responde al instante</span>
+        </div>
+        <span class="chat__logo">DAY SPA</span>
+      </div>
+      <div class="chat__body" id="chatBody" role="log" aria-live="polite" aria-label="Conversación con Dana"></div>
+      <div class="chat__quick" id="chatQuick"></div>
+      <form class="chat__form" id="chatForm" autocomplete="off">
+        <input class="chat__text" id="chatText" type="text" placeholder="Escríbele a Dana… ej: ¿dónde están?" aria-label="Escribe tu mensaje" />
+        <button class="chat__send" type="submit" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M4 12l16-8-6 16-3-6-7-2z" fill="currentColor"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Visítanos ===== -->
+<section class="visita" id="visitanos">
+  <div class="container">
+    <div class="section-head reveal" style="max-width:640px">
+      <span class="eyebrow"><span class="eyebrow__line"></span> Visítanos</span>
+      <h2 class="section-title" style="margin-top:12px">La escalera está en <span class="grad">Benavides 477</span></h2>
+      <p class="section-sub" style="margin-top:14px">A mitad de cuadra, en plena avenida. Busca la entrada, baja al Sótano -101 y déjate atender.</p>
+    </div>
+
+    <div class="visita__grid">
+      <div class="visita__card reveal">
+        <div class="vrow">
+          <span class="vrow__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <div>
+            <strong>Dirección</strong>
+            <p>Sótano -101, Av. Alfredo Benavides 477<br />Miraflores, Lima</p>
+          </div>
+        </div>
+        <div class="vrow">
+          <span class="vrow__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21a9 9 0 10-8.5-6.1L2 21l5.2-1.4A9 9 0 0012 21z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <strong>WhatsApp &amp; teléfono</strong>
+            <p><a href="https://wa.me/51982062683" target="_blank" rel="noopener">982 062 683</a> — cotiza y agenda por aquí</p>
+          </div>
+        </div>
+        <div class="vrow">
+          <span class="vrow__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <strong>Horarios</strong>
+            <p>Varían según el día: confírmalos por <a href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20%C2%BFqu%C3%A9%20horarios%20tienen%20hoy%3F" target="_blank" rel="noopener">WhatsApp</a> antes de bajar.</p>
+          </div>
+        </div>
+        <div class="vrow">
+          <span class="vrow__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.3" fill="currentColor"/></svg>
+          </span>
+          <div>
+            <strong>Redes</strong>
+            <p>
+              <a href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener">@dayspamirafloress</a> ·
+              <a href="https://www.facebook.com/DaySpaMirafloress" target="_blank" rel="noopener">Facebook</a>
+            </p>
+          </div>
+        </div>
+        <div class="visita__note">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 5h5v4h5v4h5v6H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8l3 3m0-3l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span><strong>Tip de la casa:</strong> no busques vitrina a pie de calle. La gracia de Day Spa es justamente esa: bajar la escalera y desaparecer del ruido un rato.</span>
+        </div>
+      </div>
+
+      <div class="visita__map reveal">
+        <iframe title="Mapa: Day Spa, Av. Alfredo Benavides 477, Miraflores" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.%20Alfredo%20Benavides%20477%2C%20Miraflores%2C%20Lima&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA band ===== -->
+<section class="ctaband">
+  <div class="ctaband__bg" aria-hidden="true">
+    <img src="assets/img/banner.jpg" alt="" loading="lazy" />
+  </div>
+  <div class="ctaband__inner reveal">
+    <h2>Hoy también puedes <em>bajarte del día</em>.</h2>
+    <p>Escríbenos, cuéntanos qué necesitas —un diseño, un masaje, un cambio de look— y te guardamos el sitio en el -101.</p>
+    <a class="btn btn--candle" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener">
+      Reservar por WhatsApp
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <path d="M8 34V20a12 12 0 0124 0v14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M20 27c-2.6-1.7-3.4-4.4-1.9-6.6.6-.9 1.3-1.5 1.9-2.6.6 1.1 1.3 1.7 1.9 2.6 1.5 2.2.7 4.9-1.9 6.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M5 34h30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__type">
+          <span class="brand__name">DAY SPA</span>
+          <span class="brand__tag">Miraflores · Sótano -101</span>
+        </span>
+      </span>
+      <p class="footer__tagline">Belleza en voz baja.</p>
+      <p>Nail art de autor, masajes, faciales, cabello y cejas, un piso bajo el ruido de la Av. Benavides.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener" aria-label="Instagram de Day Spa">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/DaySpaMirafloress" target="_blank" rel="noopener" aria-label="Facebook de Day Spa">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 8h2V5h-2c-2 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2L17 10h-3V8.4c0-.3.3-.4.6-.4z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://wa.me/51982062683" target="_blank" rel="noopener" aria-label="WhatsApp de Day Spa">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21a9 9 0 10-8.5-6.1L2 21l5.2-1.4A9 9 0 0012 21z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Servicios</h4>
+      <a href="#servicios">Manicure &amp; nail art</a>
+      <a href="#servicios">Masajes relajantes</a>
+      <a href="#servicios">Faciales</a>
+      <a href="#servicios">Cabello &amp; balayage</a>
+      <a href="#servicios">Depilación y cejas</a>
+    </div>
+    <div class="footer__col">
+      <h4>La casa</h4>
+      <a href="#bajada">El descenso al -101</a>
+      <a href="#nailart">Nail art</a>
+      <a href="#nosotras">Nosotras</a>
+      <a href="#asistente">Asistente IA</a>
+      <a href="#visitanos">Cómo llegar</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="https://wa.me/51982062683" target="_blank" rel="noopener">WhatsApp 982 062 683</a>
+      <a href="#visitanos">Sótano -101, Av. Benavides 477</a>
+      <a href="#visitanos">Miraflores, Lima</a>
+      <a href="https://www.instagram.com/dayspamirafloress/" target="_blank" rel="noopener">@dayspamirafloress</a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© 2026 Day Spa · Miraflores. Todos los derechos reservados.</span>
+    <span class="footer__credit">Demo preparada por Juan Neyra · sin compromiso · <a href="https://wa.me/51902557403" target="_blank" rel="noopener">WhatsApp +51 902 557 403</a></span>
+  </div>
+</footer>
+
+<!-- ===== Chat flotante ===== -->
+<button class="fab-chat" id="fabChat" type="button" aria-label="Abrir chat con Dana, asistente con IA" aria-expanded="false">
+  <span class="fab-chat__ava" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="19" height="19"><path d="M12 21c-3.5-2.2-4.6-5.9-2.6-8.8.9-1.3 1.8-2 2.6-3.5.8 1.5 1.7 2.2 2.6 3.5 2 2.9.9 6.6-2.6 8.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 3v2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <i></i>
+  </span>
+  <span><strong>Dana · IA</strong><span>En línea, pregúntame</span></span>
+</button>
+
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat con Dana, asistente con IA">
+  <div class="chat">
+    <div class="chat__header">
+      <span class="chat__avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21c-3.5-2.2-4.6-5.9-2.6-8.8.9-1.3 1.8-2 2.6-3.5.8 1.5 1.7 2.2 2.6 3.5 2 2.9.9 6.6-2.6 8.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 3v2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="chat__online"></span>
+      </span>
+      <div class="chat__id">
+        <strong>Dana · Asistente IA</strong>
+        <span class="chat__presence"><i></i> En línea · responde al instante</span>
+      </div>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Cerrar chat">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="chat__body" id="fchatBody" role="log" aria-live="polite" aria-label="Conversación con Dana"></div>
+    <div class="chat__quick" id="fchatQuick"></div>
+    <form class="chat__form" id="fchatForm" autocomplete="off">
+      <input class="chat__text" id="fchatText" type="text" placeholder="Escríbele a Dana…" aria-label="Escribe tu mensaje" />
+      <button class="chat__send" type="submit" aria-label="Enviar mensaje">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M4 12l16-8-6 16-3-6-7-2z" fill="currentColor"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== WhatsApp flotante ===== -->
+<a class="fab-wa" href="https://wa.me/51982062683?text=Hola%20Day%20Spa%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" width="27" height="27" aria-hidden="true"><path d="M16 3a13 13 0 00-11 19.9L3 29l6.3-2A13 13 0 1016 3z" fill="currentColor"/><path d="M22.5 19.3c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 01-4.2-3.7c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6 0-.2-.8-1.9-1-2.6-.3-.7-.5-.6-.8-.6h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.5 3.8 6 5.2 2.2.9 3 1 4.1.8.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z" fill="#fff"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+"use strict";
+
+/* ============ Nav ============ */
+var nav = document.getElementById("nav");
+var burger = document.getElementById("burger");
+var navLinks = document.getElementById("navLinks");
+
+window.addEventListener("scroll", function(){
+  nav.classList.toggle("is-scrolled", window.scrollY > 10);
+}, { passive: true });
+
+burger.addEventListener("click", function(){
+  var open = navLinks.classList.toggle("is-open");
+  burger.classList.toggle("is-open", open);
+  burger.setAttribute("aria-expanded", String(open));
+});
+navLinks.addEventListener("click", function(e){
+  if (e.target.tagName === "A") {
+    navLinks.classList.remove("is-open");
+    burger.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", "false");
+  }
+});
+
+/* ============ Profundímetro (depth gauge) ============ */
+var gaugeFill = document.getElementById("gaugeFill");
+var gaugeDot = document.getElementById("gaugeDot");
+var gaugeDepth = document.getElementById("gaugeDepth");
+var gaugeTick = false;
+
+function updateGauge(){
+  gaugeTick = false;
+  var doc = document.documentElement;
+  var max = doc.scrollHeight - window.innerHeight;
+  var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+  gaugeFill.style.height = (p * 100) + "%";
+  gaugeDot.style.top = (p * 100) + "%";
+  gaugeDepth.textContent = p === 0 ? "0" : "−" + Math.round(p * 101);
+}
+window.addEventListener("scroll", function(){
+  if (!gaugeTick) { gaugeTick = true; requestAnimationFrame(updateGauge); }
+}, { passive: true });
+updateGauge();
+
+/* Cambia el tema del gauge sobre secciones oscuras */
+if ("IntersectionObserver" in window) {
+  var darkSections = document.querySelectorAll(".bajada, .asistente, .ctaband, .footer");
+  var darkVisible = new Set();
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) darkVisible.add(en.target); else darkVisible.delete(en.target);
+    });
+    document.body.classList.toggle("on-dark", darkVisible.size > 0);
+  }, { rootMargin: "-45% 0px -45% 0px" });
+  darkSections.forEach(function(s){ io.observe(s); });
+}
+
+/* ============ Motion (GSAP + ScrollTrigger) ============ */
+var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+
+if (hasGsap && !reduceMotion) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Hero: líneas del titular suben */
+  gsap.from(".hero__title .line > span", {
+    yPercent: 110, duration: 1.05, ease: "power3.out", stagger: 0.12, delay: 0.15
+  });
+  gsap.from(".hero__lead-block > *", {
+    y: 26, opacity: 0, duration: 0.8, ease: "power2.out", stagger: 0.09, delay: 0.5
+  });
+  gsap.from(".descent", {
+    y: 40, opacity: 0, duration: 1, ease: "power3.out", delay: 0.55
+  });
+  gsap.from(".hero-strip", {
+    y: 24, opacity: 0, duration: 0.8, ease: "power2.out", delay: 0.8
+  });
+  gsap.to("#heroImg", {
+    scale: 1.1, ease: "none",
+    scrollTrigger: { trigger: ".descent", start: "top bottom", end: "bottom top", scrub: true }
+  });
+
+  /* Reveals genéricos */
+  gsap.utils.toArray(".reveal").forEach(function(el){
+    if (el.closest(".hero")) return;
+    gsap.from(el, {
+      y: 44, opacity: 0, duration: 0.9, ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 86%" }
+    });
+  });
+
+  /* La bajada: contador que desciende de 0 a -101 */
+  var depthNum = document.getElementById("depthNum");
+  var depthState = { v: 0 };
+  gsap.to(depthState, {
+    v: 101, ease: "none",
+    scrollTrigger: { trigger: ".bajada", start: "top 65%", end: "bottom 75%", scrub: 0.4 },
+    onUpdate: function(){
+      var v = Math.round(depthState.v);
+      depthNum.textContent = v === 0 ? "0" : "−" + v;
+    }
+  });
+
+  /* Riel de escalones que se enciende */
+  gsap.to("#railFill", {
+    scaleY: 1, ease: "none",
+    scrollTrigger: { trigger: ".steps", start: "top 75%", end: "bottom 60%", scrub: 0.4 }
+  });
+
+  /* Contadores de prueba social */
+  gsap.utils.toArray("[data-count]").forEach(function(el){
+    var target = parseFloat(el.getAttribute("data-count"));
+    var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+    var state = { v: 0 };
+    gsap.to(state, {
+      v: target, duration: 1.6, ease: "power2.out",
+      scrollTrigger: { trigger: el, start: "top 88%" },
+      onUpdate: function(){ el.textContent = state.v.toFixed(decimals); }
+    });
+  });
+}
+
+/* ============ Dana — motor de intents ============ */
+var WA = "https://wa.me/51982062683";
+function waLink(text, label){
+  return '<a href="' + WA + "?text=" + encodeURIComponent(text) + '" target="_blank" rel="noopener">' + label + "</a>";
+}
+
+var INTENTS = [
+  {
+    keys: ["hola", "buenas", "buenos dias", "buenas tardes", "buenas noches", "hey", "alo", "que tal"],
+    reply: "Hola, soy Dana, la asistente de Day Spa. Puedo contarte sobre nuestros servicios, cómo llegar al Sótano -101 o ayudarte a reservar. ¿Qué necesitas hoy?",
+    chips: ["¿Qué servicios tienen?", "¿Dónde están?", "Quiero reservar"]
+  },
+  {
+    keys: ["servicio", "carta", "que hacen", "que ofrecen", "tratamiento", "menu"],
+    reply: "Nuestra carta completa: manicure y pedicure con nail art (la especialidad de la casa), masajes relajantes, faciales y cuidado de piel, depilación corporal, cabello (cortes para ellas y ellos, balayage, mechas, hairstyling) y diseño de cejas. ¿Sobre cuál te cuento más?",
+    chips: ["Nail art", "Masajes", "Cabello", "Precios"]
+  },
+  {
+    keys: ["nail", "unas", "manicure", "manicura", "pedicure", "pedicura", "esmalt", "gel", "acrilic", "semipermanente"],
+    reply: "El nail art es lo nuestro: del francés clásico al diseño que se te ocurrió anoche. Hacemos manicure y pedicure completos, con esmaltado tradicional o semipermanente. Mira el portafolio en Instagram (@dayspamirafloress) y " + waLink("Hola Day Spa, quiero cotizar un manicure con nail art", "cotiza tu diseño por WhatsApp") + ".",
+    chips: ["Precios", "Quiero reservar", "¿Dónde están?"]
+  },
+  {
+    keys: ["masaje", "relaj", "descontractur", "espalda", "estres", "estresada"],
+    reply: "Nuestros masajes relajantes son en cabina, bajo tierra y lejos del ruido: la siesta más productiva de Miraflores. Para ver opciones y disponibilidad, " + waLink("Hola Day Spa, quiero información sobre masajes", "escríbenos por WhatsApp") + ".",
+    chips: ["Quiero reservar", "¿Qué más hacen?", "Horarios"]
+  },
+  {
+    keys: ["facial", "piel", "limpieza", "hidrata", "rostro", "cutis", "acne"],
+    reply: "Hacemos faciales de limpieza profunda e hidratación, adaptados a tu tipo de piel. Cuéntanos qué busca tu piel y te orientamos: " + waLink("Hola Day Spa, quiero información sobre faciales", "consulta por WhatsApp") + ".",
+    chips: ["Quiero reservar", "Precios", "¿Qué más hacen?"]
+  },
+  {
+    keys: ["depila", "cera", "waxing", "vello"],
+    reply: "Ofrecemos depilación corporal en cabina privada, con técnica y delicadeza. Para zonas, disponibilidad y cotización, " + waLink("Hola Day Spa, quiero información sobre depilación", "escríbenos por WhatsApp") + ".",
+    chips: ["Quiero reservar", "¿Qué más hacen?"]
+  },
+  {
+    keys: ["cabello", "pelo", "corte", "balayage", "mechas", "highlights", "tinte", "color", "peinado", "hairstyling", "varon", "caballero", "hombre"],
+    reply: "En cabello hacemos cortes para ellas y también para caballeros, balayage, mechas, highlights y hairstyling para eventos. Color con criterio, nada de sustos. Cotiza tu cambio de look: " + waLink("Hola Day Spa, quiero cotizar un servicio de cabello", "por WhatsApp aquí") + ".",
+    chips: ["Precios", "Quiero reservar"]
+  },
+  {
+    keys: ["ceja", "perfilado", "mirada"],
+    reply: "El diseño de cejas es de nuestros servicios más pedidos: perfilamos según tu rostro, porque el marco correcto cambia toda la mirada. " + waLink("Hola Day Spa, quiero información sobre diseño de cejas", "Consulta por WhatsApp") + ".",
+    chips: ["Quiero reservar", "¿Qué más hacen?"]
+  },
+  {
+    keys: ["precio", "costo", "cuanto", "tarifa", "cotiza", "promocion", "oferta", "descuento"],
+    reply: "Cada servicio se cotiza según lo que buscas — el nail art, por ejemplo, depende del diseño. Escríbenos al WhatsApp 982 062 683 con lo que tienes en mente y te pasamos el precio al toque: " + waLink("Hola Day Spa, quiero cotizar un servicio", "cotizar ahora") + ".",
+    chips: ["Quiero reservar", "¿Qué servicios tienen?"]
+  },
+  {
+    keys: ["horario", "hora", "abren", "cierran", "atienden", "hoy", "domingo", "feriado"],
+    reply: "Los horarios pueden variar según el día, así que lo más seguro es confirmarlos directo con el equipo: " + waLink("Hola Day Spa, ¿qué horarios tienen hoy?", "pregunta por WhatsApp") + " y te responden en el día.",
+    chips: ["¿Dónde están?", "Quiero reservar"]
+  },
+  {
+    keys: ["donde", "ubicacion", "direccion", "llegar", "sotano", "benavides", "miraflores", "mapa", "local"],
+    reply: "Estamos en Av. Alfredo Benavides 477, Miraflores — Sótano -101. Busca la entrada en plena avenida y baja las escaleras: el descenso es parte del ritual. En la sección Visítanos de esta página tienes el mapa.",
+    chips: ["Horarios", "Quiero reservar", "¿Qué servicios tienen?"]
+  },
+  {
+    keys: ["reserva", "cita", "agendar", "agenda", "turno", "separar", "book"],
+    reply: "Perfecto. Las citas se coordinan por WhatsApp con una persona real del equipo: dinos qué servicio quieres y para cuándo, y te confirman disponibilidad. " + waLink("Hola Day Spa, quiero reservar una cita", "Reservar ahora") + ".",
+    chips: ["¿Qué servicios tienen?", "Horarios", "¿Dónde están?"]
+  },
+  {
+    keys: ["instagram", "redes", "fotos", "portafolio", "seguidores", "facebook"],
+    reply: "Nuestro portafolio vive en Instagram: @dayspamirafloress, con 17 mil seguidores y nail art nuevo casi a diario. También estamos en Facebook como DaySpaMirafloress.",
+    chips: ["Nail art", "Quiero reservar"]
+  },
+  {
+    keys: ["gracias", "genial", "perfecto", "buenazo", "ok", "listo", "ya"],
+    reply: "Un gusto ayudarte. Cuando quieras bajar al -101, ya sabes: " + waLink("Hola Day Spa, quiero reservar una cita", "reserva por WhatsApp") + ". Te esperamos.",
+    chips: ["Quiero reservar", "¿Dónde están?"]
+  },
+  {
+    keys: ["chau", "adios", "hasta luego", "nos vemos", "bye"],
+    reply: "Hasta pronto. Que el resto del día te trate bonito — y si no, ya sabes dónde queda la escalera.",
+    chips: ["Quiero reservar"]
+  }
+];
+
+var FALLBACK = {
+  reply: "Esa me la guardo para el equipo, que sabe más que yo. Escríbeles al WhatsApp 982 062 683 y te responden en el día: " + waLink("Hola Day Spa, tengo una consulta", "abrir WhatsApp") + ". ¿Te ayudo con algo más?",
+  chips: ["¿Qué servicios tienen?", "¿Dónde están?", "Quiero reservar"]
+};
+
+var GREETING = {
+  reply: "Hola, soy Dana, la asistente con IA de Day Spa. Estamos en el Sótano -101 de Av. Benavides 477, Miraflores. ¿Te cuento sobre la carta, cómo llegar o reservamos de una vez?",
+  chips: ["¿Qué servicios tienen?", "Nail art", "¿Dónde están?", "Quiero reservar"]
+};
+
+function normalize(s){
+  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function matchIntent(text){
+  var t = " " + normalize(text) + " ";
+  var best = null, bestScore = 0;
+  INTENTS.forEach(function(intent){
+    var score = 0;
+    intent.keys.forEach(function(k){
+      /* match de palabra/frase completa: espacio a ambos lados, nunca substring suelto */
+      if (t.indexOf(" " + k + " ") !== -1) score += k.length;
+    });
+    if (score > bestScore) { bestScore = score; best = intent; }
+  });
+  return best || FALLBACK;
+}
+
+function createChat(bodyEl, quickEl, formEl, inputEl){
+  var busy = false;
+
+  function addMsg(html, who){
+    var div = document.createElement("div");
+    div.className = "msg msg--" + who;
+    div.innerHTML = html;
+    bodyEl.appendChild(div);
+    bodyEl.scrollTop = bodyEl.scrollHeight;
+    return div;
+  }
+
+  function setChips(chips){
+    quickEl.innerHTML = "";
+    (chips || []).forEach(function(c){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chat__chip";
+      b.textContent = c;
+      b.addEventListener("click", function(){ send(c); });
+      quickEl.appendChild(b);
+    });
+  }
+
+  function send(text){
+    if (busy || !text.trim()) return;
+    busy = true;
+    addMsg(text.replace(/</g, "&lt;"), "user");
+    setChips([]);
+    var typing = document.createElement("div");
+    typing.className = "msg msg--bot msg--typing";
+    typing.innerHTML = "<span></span><span></span><span></span>";
+    bodyEl.appendChild(typing);
+    bodyEl.scrollTop = bodyEl.scrollHeight;
+
+    var intent = matchIntent(text);
+    setTimeout(function(){
+      typing.remove();
+      addMsg(intent.reply, "bot");
+      setChips(intent.chips);
+      busy = false;
+    }, 750 + Math.random() * 550);
+  }
+
+  formEl.addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = inputEl.value;
+    inputEl.value = "";
+    send(v);
+  });
+
+  addMsg(GREETING.reply, "bot");
+  setChips(GREETING.chips);
+
+  return { send: send };
+}
+
+createChat(
+  document.getElementById("chatBody"),
+  document.getElementById("chatQuick"),
+  document.getElementById("chatForm"),
+  document.getElementById("chatText")
+);
+createChat(
+  document.getElementById("fchatBody"),
+  document.getElementById("fchatQuick"),
+  document.getElementById("fchatForm"),
+  document.getElementById("fchatText")
+);
+
+/* ============ Panel flotante ============ */
+var fabChat = document.getElementById("fabChat");
+var chatPanel = document.getElementById("chatPanel");
+var chatClose = document.getElementById("chatClose");
+
+function togglePanel(open){
+  chatPanel.classList.toggle("is-open", open);
+  fabChat.setAttribute("aria-expanded", String(open));
+  if (open) document.getElementById("fchatText").focus();
+}
+fabChat.addEventListener("click", function(){
+  togglePanel(!chatPanel.classList.contains("is-open"));
+});
+chatClose.addEventListener("click", function(){ togglePanel(false); });
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape" && chatPanel.classList.contains("is-open")) togglePanel(false);
+});
+
+})();
+</script>
+</body>
+</html>

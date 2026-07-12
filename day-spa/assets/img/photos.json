@@ -1,0 +1,36 @@
+{
+  "query": "spa massage stones candles towels calm atmosphere",
+  "fuente": "Pexels (profesional)",
+  "fotos": [
+    {
+      "archivo": "assets/img/foto-1.jpg",
+      "autor": "Tima Miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/white-candle-holder-on-wooden-surface-6186740/"
+    },
+    {
+      "archivo": "assets/img/foto-2.jpg",
+      "autor": "Marine Fougère",
+      "fuente": "https://www.pexels.com/photo/cozy-spa-massage-table-with-candle-and-decor-35884499/"
+    },
+    {
+      "archivo": "assets/img/foto-3.jpg",
+      "autor": "Aan Amrin",
+      "fuente": "https://www.pexels.com/photo/lighted-candles-on-white-candle-holder-1926811/"
+    },
+    {
+      "archivo": "assets/img/foto-4.jpg",
+      "autor": "Sergey Torbik",
+      "fuente": "https://www.pexels.com/photo/a-couple-having-a-hot-stone-massage-7365414/"
+    },
+    {
+      "archivo": "assets/img/foto-5.jpg",
+      "autor": "Tima Miroshnichenko",
+      "fuente": "https://www.pexels.com/photo/rolled-towels-on-the-wooden-table-6186752/"
+    },
+    {
+      "archivo": "assets/img/foto-6.jpg",
+      "autor": "Anna Tarazevich",
+      "fuente": "https://www.pexels.com/photo/a-topless-woman-lying-down-with-basalt-at-her-back-6560276/"
+    }
+  ]
+}

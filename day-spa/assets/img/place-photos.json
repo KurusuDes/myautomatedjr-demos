@@ -1,0 +1,65 @@
+{
+  "negocio": "Day Spa",
+  "fotos": [
+    {
+      "archivo": "assets/img/place-1.jpg",
+      "ancho": 3024,
+      "alto": 1702,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-2.jpg",
+      "ancho": 1440,
+      "alto": 811,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-3.jpg",
+      "ancho": 1080,
+      "alto": 1079,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-4.jpg",
+      "ancho": 2947,
+      "alto": 2948,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-5.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-6.jpg",
+      "ancho": 1080,
+      "alto": 1080,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-7.jpg",
+      "ancho": 1200,
+      "alto": 1600,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-8.jpg",
+      "ancho": 3024,
+      "alto": 3025,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-9.jpg",
+      "ancho": 1080,
+      "alto": 1081,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    },
+    {
+      "archivo": "assets/img/place-10.jpg",
+      "ancho": 2811,
+      "alto": 3401,
+      "autor": "Day Spa Miraflores | Spa en Miraflores"
+    }
+  ]
+}
