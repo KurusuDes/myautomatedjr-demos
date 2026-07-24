@@ -1228,10 +1228,12 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     });
   });
 
-  /* --- Failsafe de la entrada orquestada: si anime.js no arranca en 2.5s,
-         la página vuelve al estado visible (nada se queda oculto). --- */
+  /* --- Failsafe de la entrada orquestada: pase lo que pase, a los 2.5s la clase .anim
+         se quita SIEMPRE. Sus reglas solo definen el estado inicial oculto; quitarla deja
+         todo en su estado final visible. Así ningún elemento (p.ej. el botón del chat)
+         queda atascado invisible aunque una animación no complete su onComplete. --- */
   setTimeout(function(){
-    if (!window.__animeOK) document.documentElement.classList.remove('anim');
+    document.documentElement.classList.remove('anim');
   }, 2500);
 
   /* --- Contadores (cifras reales, tabular-nums: no saltan) --- */
@@ -1446,7 +1448,12 @@ if (motionOK) {
       .add('.hero-ctas', { opacity: [0, 1], translateY: [18, 0], duration: 550 }, 1050)
       .add('.hero-proof > div', { opacity: [0, 1], translateY: [16, 0], duration: 500, delay: stagger(80) }, 1160)
       .add('.chat-fab', { opacity: [0, 1], scale: [0.5, 1], duration: 550, ease: 'outBack(1.7)',
-        onComplete: () => { const f = document.querySelector('.chat-fab'); if (f) f.removeAttribute('style'); } }, 1350);
+        onComplete: () => {
+          /* Al terminar la entrada, quitar .anim ANTES de limpiar el inline:
+             si no, el CSS html.anim .chat-fab{opacity:0} deja el botón invisible pero clickeable. */
+          document.documentElement.classList.remove('anim');
+          const f = document.querySelector('.chat-fab'); if (f) f.removeAttribute('style');
+        } }, 1350);
 
     /* Parallax sutil de la foto del hero (solo desktop, se mira, no janktea) */
     if (window.matchMedia('(min-width: 920px)').matches) {
