@@ -1,0 +1,46 @@
+{
+  "query": "strength coach spotting client gym training",
+  "fuente": "Pexels (profesional)",
+  "fotos": [
+    {
+      "archivo": "assets/img/foto-1.jpg",
+      "autor": "Julia Larson",
+      "fuente": "https://www.pexels.com/photo/professional-trainer-instructing-black-woman-doing-exercises-with-dumbbell-6455906/"
+    },
+    {
+      "archivo": "assets/img/foto-2.jpg",
+      "autor": "Abdelilah Hibat Allah",
+      "fuente": "https://www.pexels.com/photo/fitness-trainer-assisting-client-with-dumbbell-workout-33846716/"
+    },
+    {
+      "archivo": "assets/img/foto-3.jpg",
+      "autor": "Vitaly Gariev",
+      "fuente": "https://www.pexels.com/photo/personal-trainer-consulting-with-client-at-gym-39219660/"
+    },
+    {
+      "archivo": "assets/img/foto-4.jpg",
+      "autor": "Justin L U C K",
+      "fuente": "https://www.pexels.com/photo/strong-sportsman-doing-exercises-with-instructor-5646004/"
+    },
+    {
+      "archivo": "assets/img/foto-5.jpg",
+      "autor": "Mikhail Nilov",
+      "fuente": "https://www.pexels.com/photo/two-people-in-a-gym-7697693/"
+    },
+    {
+      "archivo": "assets/img/foto-6.jpg",
+      "autor": "Andres  Ayrton",
+      "fuente": "https://www.pexels.com/photo/positive-young-ethnic-male-trainer-instructing-sportswoman-during-workout-in-gym-6551094/"
+    },
+    {
+      "archivo": "assets/img/foto-7.jpg",
+      "autor": "Ketut Subiyanto",
+      "fuente": "https://www.pexels.com/photo/a-woman-holding-a-metal-bar-in-front-of-a-man-4853271/"
+    },
+    {
+      "archivo": "assets/img/foto-8.jpg",
+      "autor": "Ketut Subiyanto",
+      "fuente": "https://www.pexels.com/photo/man-bench-pressing-with-help-from-his-coach-4853662/"
+    }
+  ]
+}

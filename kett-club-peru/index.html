@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kett Club Perú — Aquí el coach no se va</title>
+<meta name="description" content="Centro de preparación física en Magdalena. Crosstraining con plan personalizado y un coach encima de tu técnica. 4.8 en Google con 198 reseñas." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --negro:#0B0D0F; --negro-2:#14181C; --humo:#1D2329;
+  --hueso:#F2F4F3; --gris:#9AA6AE;
+  --azul:#12A5E8;          /* el azul de su monograma K */
+  --cesped:#7DC242;        /* la franja de grama que cruza su local */
+  --rosa:#F0709E; --amarillo:#F2C230;   /* kettlebells del rack */
+  --display:'Clash Display','Archivo Black',system-ui,sans-serif;
+  --cuerpo:'Switzer','Inter',system-ui,-apple-system,sans-serif;
+  --casa:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--negro);color:var(--hueso);font-family:var(--cuerpo);
+  -webkit-font-smoothing:antialiased;
+  /* OJO: overflow-x:HIDDEN convierte al body en contenedor de scroll y ROMPE
+     position:sticky en todos sus descendientes — el coach se soltaba y no habia
+     forma de verlo mirando el CSS del sticky. overflow-x:CLIP recorta igual pero
+     NO crea contenedor de scroll, asi que el sticky sigue vivo. */
+  overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--azul);color:var(--negro)}
+.env{width:min(1180px,92vw);margin:0 auto}
+
+/* ── marca y nav ───────────────────────────────────────── */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;padding:18px 4vw;
+  background:linear-gradient(180deg,rgba(11,13,15,.92),transparent)}
+.marca{display:flex;align-items:center;gap:11px;font-family:var(--display);
+  font-weight:700;letter-spacing:.02em;font-size:17px}
+.marca .k{width:30px;height:30px;flex:none}
+.nav .tel{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.04em;
+  text-decoration:none;padding:9px 16px;border-radius:100px;background:var(--cesped);
+  color:var(--negro);transition:transform .3s var(--casa),background .3s var(--casa)}
+.nav .tel:hover{transform:translateY(-2px);background:#8FD44E}
+.nav .tel:focus-visible{outline:2px solid var(--hueso);outline-offset:3px}
+
+/* ── hero ──────────────────────────────────────────────── */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;
+  padding:0 0 clamp(40px,7vh,90px);overflow:hidden}
+.hero__foto{position:absolute;inset:0}
+.hero__foto img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero__velo{position:absolute;inset:0;
+  background:linear-gradient(75deg,rgba(11,13,15,.95) 12%,rgba(11,13,15,.62) 48%,rgba(11,13,15,.2))}
+.hero .env{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);
+  font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cesped);margin:0 0 18px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--cesped)}
+h1{font-family:var(--display);font-weight:700;margin:0 0 20px;
+  font-size:clamp(44px,9.4vw,116px);line-height:.9;letter-spacing:-.025em;
+  text-wrap:balance;max-width:13ch}
+h1 em{font-style:normal;color:var(--azul)}
+.hero p{font-size:clamp(16px,2vw,20px);line-height:1.55;max-width:44ch;color:var(--gris);margin:0 0 30px}
+.acciones{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);
+  font-weight:600;font-size:15px;text-decoration:none;padding:15px 26px;border-radius:100px;
+  background:var(--cesped);color:var(--negro);
+  transition:transform .3s var(--casa),box-shadow .3s var(--casa)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px -12px rgba(125,194,66,.6)}
+.btn--linea{background:transparent;color:var(--hueso);border:1px solid rgba(242,244,243,.3)}
+.btn--linea:hover{border-color:var(--hueso);box-shadow:none}
+.btn:focus-visible{outline:2px solid var(--azul);outline-offset:3px}
+.prueba{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;
+  font-size:13px;color:var(--gris);letter-spacing:.02em}
+.prueba b{color:var(--hueso);font-weight:600}
+.prueba .estrella{color:var(--amarillo)}
+
+/* ── LA SECCIÓN FIRMA: el coach no se va ───────────────── */
+.firma{position:relative;background:var(--negro)}
+.firma__pista{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+  gap:clamp(24px,5vw,70px)}   /* SIN align-items:start — anula el stretch y mata el sticky */
+/* En movil el coach no puede ser una FILA de la grilla: su celda mediria solo su
+   contenido y el sticky no tendria recorrido (medido: se iba a top -1503). Se pasa a
+   flujo normal, y entonces el contenedor del sticky es la seccion entera: el coach se
+   queda pegado arriba mientras los pasos pasan por debajo, que es justo la tesis. */
+@media(max-width:900px){
+  .firma__pista{display:block}
+  /* en flujo normal el contenedor del sticky debe ser la SECCION, no la caja del
+     coach: el sticky sube al bloque padre y el hijo vuelve a estatico */
+  .coach{position:sticky;top:64px;z-index:3}
+  .coach__pegado{position:static}
+  .coach__marco{aspect-ratio:16/10}
+  .coach__pegado{padding-bottom:14px;background:linear-gradient(180deg,var(--negro) 82%,transparent)}
+  .pasos{padding-top:5vh}
+}
+/* el coach queda ANCLADO con sticky puro — sin librería sosteniéndolo */
+/* OJO, cazado midiendo: el sticky NO puede ir en la propia celda de la grilla. Si la
+   celda mide solo su contenido (align-self:start, o height:max-content) el sticky se
+   queda SIN RECORRIDO y se suelta a media seccion — medido, el coach saltaba de top
+   108 a -386. La celda ESTIRA (stretch por defecto) y el sticky vive en un hijo. */
+.coach{align-self:stretch}
+.coach__pegado{position:sticky;top:clamp(72px,12vh,120px)}
+/* cuanto MAS ALTA es la imagen, MENOS recorrido le queda al sticky (recorrido =
+   alto de la celda - alto del elemento). A 4/5 sin tope se soltaba al 58% de la
+   seccion, antes de que se leyera el ultimo paso. Con el tope aguanta los cuatro. */
+.coach__marco{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:4/5;max-height:54vh}
+.coach__marco img{width:100%;height:100%;object-fit:cover;transform:scale(1.03)}
+.coach__sello{position:absolute;left:0;bottom:0;right:0;padding:20px;
+  background:linear-gradient(0deg,rgba(11,13,15,.94),transparent);
+  font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--cesped)}
+.coach__nota{margin:14px 0 0;font-size:13px;color:var(--gris);line-height:1.6}
+.pasos{display:flex;flex-direction:column;gap:clamp(50px,11vh,120px);padding:8vh 0 12vh}
+.paso h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4.2vw,46px);
+  line-height:1.02;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+.paso p{font-size:17px;line-height:1.68;color:var(--gris);margin:0;max-width:46ch}
+.paso .num{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.16em;
+  color:var(--azul);display:block;margin-bottom:12px}
+.paso--miedo h2{color:var(--gris)}
+.paso--miedo em{font-style:italic;color:var(--hueso)}
+
+/* ── servicios ─────────────────────────────────────────── */
+.bloque{padding:clamp(70px,11vh,130px) 0}
+.titulo-sec{font-family:var(--display);font-weight:700;font-size:clamp(30px,5.4vw,60px);
+  line-height:1;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
+.sub-sec{color:var(--gris);font-size:17px;line-height:1.6;max-width:52ch;margin:0 0 46px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px}
+.carta{background:var(--negro-2);border:1px solid rgba(242,244,243,.07);
+  border-radius:4px;padding:28px 24px 30px;position:relative;overflow:hidden;
+  transition:border-color .35s var(--casa),transform .35s var(--casa)}
+.carta:hover{border-color:rgba(18,165,232,.5);transform:translateY(-4px)}
+.carta::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:var(--azul);transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .45s var(--casa)}
+.carta:hover::after{transform:scaleX(1)}
+.carta h3{font-family:var(--display);font-weight:600;font-size:20px;margin:0 0 10px;letter-spacing:-.01em}
+.carta p{margin:0;font-size:15px;line-height:1.6;color:var(--gris)}
+.carta .tag{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--cesped);display:block;margin-bottom:14px}
+
+/* ── voces ─────────────────────────────────────────────── */
+.voces{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.voz{background:var(--negro-2);border-left:2px solid var(--azul);border-radius:0 4px 4px 0;
+  padding:26px 24px}
+.voz p{margin:0 0 16px;font-size:16px;line-height:1.66}
+.voz .quien{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.06em;
+  color:var(--gris);text-transform:uppercase}
+.voz .quien b{color:var(--hueso);font-weight:600}
+.voz--destacada{border-left-color:var(--cesped);grid-column:span 2}
+@media(max-width:760px){.voz--destacada{grid-column:span 1}}
+.voz--destacada p{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.6vw,27px);
+  line-height:1.24;letter-spacing:-.01em}
+
+/* ── el local ──────────────────────────────────────────── */
+.tira{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:820px){.tira{grid-template-columns:repeat(2,1fr)}}
+.tira figure{margin:0;overflow:hidden;border-radius:3px;aspect-ratio:3/4;background:var(--humo)}
+.tira img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--casa)}
+.tira figure:hover img{transform:scale(1.06)}
+.tira figure:nth-child(1){grid-column:span 2;aspect-ratio:3/2}
+@media(max-width:820px){.tira figure:nth-child(1){grid-column:span 2;aspect-ratio:3/2}}
+
+/* ── cierre ────────────────────────────────────────────── */
+.cierre{position:relative;padding:clamp(80px,14vh,150px) 0;text-align:center;
+  background:linear-gradient(180deg,var(--negro),#0F1418)}
+.cierre h2{font-family:var(--display);font-weight:700;font-size:clamp(34px,7vw,84px);
+  line-height:.95;letter-spacing:-.03em;margin:0 0 18px;text-wrap:balance}
+.cierre p{color:var(--gris);font-size:18px;line-height:1.6;max-width:40ch;margin:0 auto 32px}
+.cierre .acciones{justify-content:center}
+.franja{height:6px;background:var(--cesped)}
+
+footer{padding:44px 0 60px;font-size:13px;color:var(--gris);line-height:1.9}
+footer b{color:var(--hueso);font-weight:600}
+.aviso{margin-top:26px;padding-top:20px;border-top:1px solid rgba(242,244,243,.09);
+  font-size:12px;color:#67727A;max-width:62ch}
+
+/* ── movil: suelo de 12 px y targets de 44 px ───────────── */
+@media(max-width:768px){
+  .eyebrow,.carta .tag,.voz .quien,.prueba,.coach__nota,.aviso,footer{font-size:12px}
+  .nav .tel{padding:13px 18px;font-size:14px}
+  .btn{padding:16px 24px}
+  .hero{min-height:92svh}
+}
+
+/* ── entradas ──────────────────────────────────────────── */
+.rev{opacity:0;transform:translateY(26px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rev{opacity:1;transform:none}
+  .coach__pegado{position:static}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="marca">
+    <svg class="k" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M20 12v40M20 32l16-20M20 32l16 20" stroke="#12A5E8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="46" cy="32" r="9" stroke="#12A5E8" stroke-width="6"/>
+    </svg>
+    Kett Club
+  </span>
+  <a class="tel" href="https://wa.me/51904089954" target="_blank" rel="noopener">Clase de prueba</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero__foto">
+    <img src="assets/img/place-1.jpg" alt="El local de Kett Club en Magdalena: coaches acompañando a cada persona durante el entrenamiento" />
+  </div>
+  <div class="hero__velo"></div>
+  <div class="env">
+    <p class="eyebrow rev">Centro de preparación física · Magdalena</p>
+    <h1 class="rev">Aquí el coach <em>no se va.</em></h1>
+    <p class="rev">Nadie te enseña una máquina y te deja solo. Alguien está contigo,
+      mirando tu técnica, corrigiendo, y ajustando el plan a lo que tu cuerpo puede hoy.</p>
+    <div class="acciones rev">
+      <a class="btn" href="https://wa.me/51904089954" target="_blank" rel="noopener">Pide tu clase de prueba</a>
+      <a class="btn btn--linea" href="#voces">Lee lo que dicen</a>
+    </div>
+    <div class="prueba rev">
+      <span><b class="estrella">4.8 ★</b> · 198 reseñas en Google</span>
+      <span><b>Crosstraining</b> · presencial y online</span>
+      <span>Magdalena del Mar</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ LA SECCIÓN FIRMA — el coach queda anclado mientras todo pasa ═══ -->
+<section class="firma">
+  <div class="env firma__pista">
+
+    <div class="coach">
+     <div class="coach__pegado">
+      <div class="coach__marco">
+        <img src="assets/img/foto-7.jpg" alt="Un coach corrigiendo la posición de la barra y de las manos de una alumna" />
+        <div class="coach__sello">Sigue aquí ↓</div>
+      </div>
+      <p class="coach__nota">Baja: el contenido se mueve, él no.</p>
+     </div>
+    </div>
+
+    <div class="pasos">
+      <div class="paso paso--miedo rev">
+        <span class="num">Lo que pasa en otros lados</span>
+        <h2>«Te dicen qué hacer y <em>se van a otro lado.</em>»</h2>
+        <p>No lo decimos nosotros: lo escribió María José en su reseña de Google.
+          Es el miedo real de quien entra por primera vez a un gimnasio — no el esfuerzo,
+          sino quedarse solo entre máquinas sin saber si lo está haciendo mal.</p>
+      </div>
+
+      <div class="paso rev">
+        <span class="num">01 · Te miran</span>
+        <h2>Alguien revisa tu postura mientras entrenas.</h2>
+        <p>Cada repetición tiene a alguien mirándola. Si la cadera se va, si el hombro se
+          adelanta, si estás compensando con la espalda — lo corriges en el momento, no
+          tres meses después en el fisioterapeuta.</p>
+      </div>
+
+      <div class="paso rev">
+        <span class="num">02 · Te preguntan</span>
+        <h2>El plan se arma sobre lo que tu cuerpo puede hoy.</h2>
+        <p>Trazas tu objetivo y ellos preparan un plan de entrenamiento personalizado.
+          Si tienes una lesión, se trabaja alrededor de ella. Hay quien llegó aquí
+          <b>por indicación de su médico</b>, y eso cambia cómo se entrena.</p>
+      </div>
+
+      <div class="paso rev">
+        <span class="num">03 · Te quedas</span>
+        <h2>La gente no dura semanas. Dura años.</h2>
+        <p>«Casi 2 años con ellos», escribe Francisco. En un rubro donde la matrícula de
+          enero se evapora en marzo, quedarse es el único indicador que no se puede
+          maquillar.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══ -->
+<section class="bloque env" id="entrenar">
+  <h2 class="titulo-sec rev">Cómo se entrena aquí</h2>
+  <p class="sub-sec rev">Crosstraining: fuerza, resistencia y movilidad en la misma sesión.
+    Con acompañamiento, no con una rutina impresa.</p>
+  <div class="rejilla">
+    <article class="carta rev">
+      <span class="tag">Presencial</span>
+      <h3>Crosstraining en grupo</h3>
+      <p>Sesiones guiadas de principio a fin. Grupos que permiten que el coach vea a cada
+        persona, no una clase de cincuenta.</p>
+    </article>
+    <article class="carta rev">
+      <span class="tag">A tu medida</span>
+      <h3>Plan personalizado</h3>
+      <p>Se traza el objetivo y se arma el plan. Fuerza, resistencia, recomposición o
+        preparación para competir.</p>
+    </article>
+    <article class="carta rev">
+      <span class="tag">Con cuidado</span>
+      <h3>Entreno con lesión</h3>
+      <p>Si vienes con una lesión o derivado por tu médico, se entrena alrededor de ella.
+        Se avanza, pero sin pasar por encima de tu cuerpo.</p>
+    </article>
+    <article class="carta rev">
+      <span class="tag">Online</span>
+      <h3>Entrena donde quieras</h3>
+      <p>Programa personalizado para seguir desde casa o de viaje, sin perder el
+        seguimiento del coach.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ VOCES ═══ -->
+<section class="bloque env" id="voces">
+  <h2 class="titulo-sec rev">198 personas ya lo escribieron</h2>
+  <p class="sub-sec rev">4.8 en Google. Estas son textuales, con nombre y verificables en
+    su ficha de Maps — no las escribimos nosotros.</p>
+  <div class="voces">
+    <blockquote class="voz voz--destacada rev">
+      <p>«No son el típico entrenamiento en el que el coach solo te dice qué hacer y se va
+        a otro lado, sino que está ahí contigo revisando tu postura.»</p>
+      <span class="quien"><b>María José</b> · Google · reseña verificable</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Por indicaciones del doctor que debiera hacer ejercicios, en busca de algún gym
+        que no me ignoren… fui a mi clase de prueba y me encantó.»</p>
+      <span class="quien"><b>Andrea del Pilar</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Me ha ayudado mucho con la fuerza, resistencia y me siento súper segura en ese
+        ambiente. Son súper considerados y te ayudan en caso tengas alguna lesión.»</p>
+      <span class="quien"><b>María Fernanda Yep</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Es un centro de preparación física excelente, con instructores muy preparados…
+        Debes trazar tu objetivo y ellos preparan un plan de entrenamiento personalizado.»</p>
+      <span class="quien"><b>Emilio Chocobar Reyes</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Tengo casi 2 años con ellos y he aumentado mi fuerza y resistencia
+        considerablemente. La atención es A1 y los coaches son top.»</p>
+      <span class="quien"><b>Francisco Mejía Ortiz</b> · Google</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ═══ EL LOCAL ═══ -->
+<section class="bloque env">
+  <h2 class="titulo-sec rev">El local, sin filtro</h2>
+  <p class="sub-sec rev">Ventanal a la calle, franja de grama que cruza el piso y un rack
+    de kettlebells de colores. Fotos reales de su ficha de Google.</p>
+  <div class="tira">
+    <figure class="rev"><img src="assets/img/place-1.jpg" alt="Vista del local con la franja de grama y el rack de kettlebells" loading="lazy" /></figure>
+    <figure class="rev"><img src="assets/img/place-4.jpg" alt="Entrenamiento con neumáticos y coach acompañando" loading="lazy" /></figure>
+    <figure class="rev"><img src="assets/img/foto-1.jpg" alt="Coach observando la técnica durante una serie" loading="lazy" /></figure>
+  </div>
+</section>
+
+<!-- ═══ CIERRE ═══ -->
+<section class="cierre">
+  <div class="env">
+    <h2 class="rev">La primera clase es de prueba.</h2>
+    <p class="rev">Escribe por WhatsApp, cuenta qué buscas y si tienes alguna lesión.
+      Te responden ellos, no un bot.</p>
+    <div class="acciones rev">
+      <a class="btn" href="https://wa.me/51904089954" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="btn btn--linea" href="tel:+51904089954">904 089 954</a>
+    </div>
+  </div>
+</section>
+<div class="franja"></div>
+
+<footer class="env">
+  <p><b>Kett Club Perú</b> · Centro de preparación física · Crosstraining<br />
+  Magdalena del Mar, Lima · WhatsApp <b>904 089 954</b></p>
+  <p class="aviso">Propuesta de página web preparada por Ninawi para Kett Club Perú. Las
+    reseñas son textuales de su ficha de Google y las fotos del local son las suyas; dos
+    imágenes de apoyo son de banco. Sin datos inventados: no se afirman resultados,
+    precios ni número de socios. Esta página no es asesoría médica.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (quieto || !window.gsap) {
+    document.querySelectorAll(".rev").forEach(function (e) {
+      e.style.opacity = 1; e.style.transform = "none";
+    });
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* entrada del hero: escalonada, una sola vez */
+  gsap.to(".hero .rev", {
+    opacity: 1, y: 0, duration: .9, ease: "power3.out", stagger: .09, delay: .15
+  });
+
+  /* todo lo demás entra al aparecer */
+  gsap.utils.toArray(".rev:not(.hero .rev)").forEach(function (el) {
+    gsap.to(el, {
+      opacity: 1, y: 0, duration: .8, ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 88%", once: true }
+    });
+  });
+
+  /* el hero respira al salir: la foto se aleja un poco */
+  gsap.to(".hero__foto img", {
+    scale: 1.12, ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .6 }
+  });
+
+  /* EL MOMENTO FIRMA — el coach queda anclado con `position: sticky` puro (CSS nativo,
+     sin pin-spacer ni JS sosteniéndolo: más barato y más seguro en móvil). GSAP solo
+     pone el detalle: mientras los pasos pasan por delante, la imagen del coach hace un
+     parallax mínimo, para que se note que ÉL se queda y el resto se mueve. */
+  gsap.to(".coach__marco img", {
+    yPercent: -6, ease: "none",
+    scrollTrigger: { trigger: ".firma", start: "top center", end: "bottom bottom", scrub: .8 }
+  });
+
+  /* el rótulo del coach cambia cuando ya se entendió que sigue ahí */
+  ScrollTrigger.create({
+    trigger: ".pasos .paso:last-child",
+    start: "top 70%",
+    onEnter: function () { document.querySelector(".coach__sello").textContent = "Sigue aquí."; },
+    onLeaveBack: function () { document.querySelector(".coach__sello").textContent = "Sigue aquí ↓"; }
+  });
+})();
+</script>
+</body>
+</html>

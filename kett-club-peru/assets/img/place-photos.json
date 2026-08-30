@@ -1,0 +1,65 @@
+{
+  "negocio": "Kett Club Perú",
+  "fotos": [
+    {
+      "archivo": "assets/img/place-1.jpg",
+      "ancho": 4608,
+      "alto": 3456,
+      "autor": "Emilio Chocobar Reyes"
+    },
+    {
+      "archivo": "assets/img/place-2.jpg",
+      "ancho": 1600,
+      "alto": 1200,
+      "autor": "Kett Club Perú"
+    },
+    {
+      "archivo": "assets/img/place-3.jpg",
+      "ancho": 1290,
+      "alto": 2085,
+      "autor": "Alan Peixoto"
+    },
+    {
+      "archivo": "assets/img/place-4.jpg",
+      "ancho": 3456,
+      "alto": 4608,
+      "autor": "Emilio Chocobar Reyes"
+    },
+    {
+      "archivo": "assets/img/place-5.jpg",
+      "ancho": 1280,
+      "alto": 960,
+      "autor": "Kett Club Perú"
+    },
+    {
+      "archivo": "assets/img/place-6.jpg",
+      "ancho": 3060,
+      "alto": 4080,
+      "autor": "Genny Rueda"
+    },
+    {
+      "archivo": "assets/img/place-7.jpg",
+      "ancho": 1375,
+      "alto": 1375,
+      "autor": "Kett Club Perú"
+    },
+    {
+      "archivo": "assets/img/place-8.jpg",
+      "ancho": 1375,
+      "alto": 1375,
+      "autor": "Kett Club Perú"
+    },
+    {
+      "archivo": "assets/img/place-9.jpg",
+      "ancho": 1080,
+      "alto": 1080,
+      "autor": "Kett Club Perú"
+    },
+    {
+      "archivo": "assets/img/place-10.jpg",
+      "ancho": 1080,
+      "alto": 1080,
+      "autor": "Kett Club Perú"
+    }
+  ]
+}
