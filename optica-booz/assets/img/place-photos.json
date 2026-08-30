@@ -1,0 +1,65 @@
+{
+  "negocio": "Óptica Booz",
+  "fotos": [
+    {
+      "archivo": "assets/img/place-1.jpg",
+      "ancho": 960,
+      "alto": 1280,
+      "autor": "Óptica Booz"
+    },
+    {
+      "archivo": "assets/img/place-2.jpg",
+      "ancho": 960,
+      "alto": 1280,
+      "autor": "Óptica Booz"
+    },
+    {
+      "archivo": "assets/img/place-3.jpg",
+      "ancho": 960,
+      "alto": 1280,
+      "autor": "Óptica Booz"
+    },
+    {
+      "archivo": "assets/img/place-4.jpg",
+      "ancho": 1920,
+      "alto": 1080,
+      "autor": "Fabiola Barreto"
+    },
+    {
+      "archivo": "assets/img/place-5.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Julisa Zurichaqui Machaca"
+    },
+    {
+      "archivo": "assets/img/place-6.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Gisella Lazarte"
+    },
+    {
+      "archivo": "assets/img/place-7.jpg",
+      "ancho": 1440,
+      "alto": 1920,
+      "autor": "KT “akoreangary” Nam"
+    },
+    {
+      "archivo": "assets/img/place-8.jpg",
+      "ancho": 1440,
+      "alto": 1440,
+      "autor": "Fredy Valdivia"
+    },
+    {
+      "archivo": "assets/img/place-9.jpg",
+      "ancho": 3000,
+      "alto": 4000,
+      "autor": "Marialaura Lavado"
+    },
+    {
+      "archivo": "assets/img/place-10.jpg",
+      "ancho": 1200,
+      "alto": 1200,
+      "autor": "Óptica Booz"
+    }
+  ]
+}

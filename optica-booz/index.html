@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Óptica Booz — Aquí no se espera una semana</title>
+<meta name="description" content="Óptica en Santiago de Surco, a dos cuadras del Óvalo Higuereta. Salud y estilo visual. 5.0 en Google con 200 reseñas." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  /* muestreados de la foto de su propia fachada, no elegidos a ojo */
+  --azul:#0191DA; --azul-vivo:#01A0EB; --amarillo:#ECAC02;
+  /* Su azul real NO pasa AA como texto pequeno: blanco sobre #0191DA da 3.46:1 y
+     el azul sobre el papel da 3.25 (lo cazo axe). Se conserva el azul de marca
+     para lo GRAFICO —logo, filetes, bordes— y se usa esta variante oscura para
+     TEXTO y para el fondo de los botones. La marca no cambia; se lee. */
+  --azul-txt:#0170A8;
+  /* Y AL REVES sobre fondo oscuro: ahi el azul de marca da 5.3:1 y es el correcto;
+     el oscurecido daba 3.21 y lo cazo axe. Dos azules de texto, uno por fondo:
+     --azul sobre oscuro, --azul-txt sobre claro. */
+  --tinta:#0C1116; --tinta-2:#141B22; --linea:#222C35;
+  --papel:#F6F8FA; --hueso:#E8EDF2; --gris:#8D9AA6;
+  --display:'Cabinet Grotesk','Archivo',system-ui,sans-serif;
+  --cuerpo:'General Sans','Inter',system-ui,-apple-system,sans-serif;
+  --casa:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tinta);color:var(--hueso);font-family:var(--cuerpo);
+  -webkit-font-smoothing:antialiased;
+  /* clip y NO hidden: hidden convierte al body en contenedor de scroll y rompe sticky */
+  overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--azul);color:#fff}
+.env{width:min(1180px,92vw);margin:0 auto}
+
+/* ── nav ───────────────────────────────────────────────── */
+.nav{position:fixed;inset:0 0 auto;z-index:60;display:flex;align-items:center;
+  justify-content:space-between;padding:16px 4vw;
+  background:linear-gradient(180deg,rgba(12,17,22,.94),transparent)}
+.marca{display:flex;align-items:center;gap:10px;font-family:var(--display);
+  font-weight:800;font-size:19px;letter-spacing:-.01em}
+.marca svg{flex:none}
+.nav .cta{font-family:var(--display);font-weight:700;font-size:14px;
+  text-decoration:none;padding:12px 20px;border-radius:100px;
+  background:var(--azul-txt);color:#fff;
+  transition:transform .3s var(--casa),background .3s var(--casa)}
+.nav .cta:hover{transform:translateY(-2px);background:var(--azul-vivo)}
+.nav .cta:focus-visible{outline:2px solid var(--amarillo);outline-offset:3px}
+
+/* ── hero ──────────────────────────────────────────────── */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;
+  padding:0 0 clamp(38px,7vh,86px);overflow:hidden}
+.hero__foto{position:absolute;inset:0}
+.hero__foto img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+.hero__velo{position:absolute;inset:0;
+  background:linear-gradient(72deg,rgba(12,17,22,.96) 10%,rgba(12,17,22,.66) 46%,rgba(12,17,22,.24))}
+.hero .env{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);
+  font-weight:700;font-size:12px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--amarillo);margin:0 0 16px}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--amarillo)}
+h1{font-family:var(--display);font-weight:800;margin:0 0 18px;
+  font-size:clamp(40px,8.6vw,104px);line-height:.92;letter-spacing:-.03em;
+  text-wrap:balance;max-width:14ch}
+h1 em{font-style:normal;color:var(--azul-vivo)}
+.hero .lede{font-size:clamp(16px,1.9vw,19px);line-height:1.6;max-width:46ch;
+  color:var(--gris);margin:0 0 28px}
+.acciones{display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:700;
+  font-size:15px;text-decoration:none;padding:16px 26px;border-radius:100px;
+  background:var(--azul-txt);color:#fff;
+  transition:transform .3s var(--casa),box-shadow .3s var(--casa)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 32px -12px rgba(1,145,218,.7)}
+.btn--linea{background:transparent;color:var(--hueso);border:1px solid rgba(232,237,242,.28)}
+.btn--linea:hover{border-color:var(--hueso);box-shadow:none}
+.btn:focus-visible{outline:2px solid var(--amarillo);outline-offset:3px}
+.prueba{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;font-size:13px;color:var(--gris)}
+.prueba b{color:var(--hueso);font-weight:600}
+.prueba .est{color:var(--amarillo)}
+
+/* ── LA CARTILLA — momento firma ───────────────────────── */
+/* la seccion necesita ALTO EXTRA o el sticky no tiene recorrido y el scrub no
+   avanza: medido, --n se quedaba en 0. El pin ocupa 100svh; el resto es la pista. */
+.cartilla{position:relative;background:var(--papel);color:var(--tinta);height:185vh}
+.cartilla__pin{position:sticky;top:0;min-height:100svh;display:grid;
+  align-content:center;justify-items:center;gap:clamp(8px,1.6vh,18px);
+  padding:clamp(80px,12vh,120px) 5vw clamp(40px,7vh,70px);text-align:center}
+.cartilla__rot{font-family:var(--display);font-weight:700;font-size:12px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--azul-txt);margin:0 0 clamp(6px,2vh,20px)}
+/* cada línea nace borrosa y se resuelve por orden; --n lo escribe el JS */
+.linea{font-family:var(--display);font-weight:800;letter-spacing:.06em;line-height:1;
+  margin:0;color:var(--tinta);
+  filter:blur(calc((1 - var(--n,0)) * 14px));
+  /* el desenfoque hace el efecto; la OPACIDAD se queda alta para que incluso la
+     linea sin resolver pase contraste. Con .25 de base, axe cazaba 9 violaciones:
+     una cartilla ilegible de verdad no es un efecto, es un fallo. */
+  opacity:calc(.62 + var(--n,0) * .38);
+  transform:scale(calc(.97 + var(--n,0) * .03))}
+.l1{font-size:clamp(52px,11vw,124px)}
+.l2{font-size:clamp(34px,7vw,78px)}
+.l3{font-size:clamp(22px,4.4vw,50px)}
+.l4{font-size:clamp(15px,2.9vw,32px)}
+.l5{font-size:clamp(12px,2vw,22px);font-weight:700}
+.linea--clave{color:var(--azul-txt);opacity:calc(.78 + var(--n,0) * .22);letter-spacing:0;font-size:clamp(20px,3.8vw,44px);
+  max-width:22ch;text-wrap:balance;margin-top:clamp(10px,2.4vh,26px)}
+.cartilla__pie{font-size:13px;color:#4A5560;margin:clamp(12px,2.6vh,28px) 0 0;max-width:44ch}
+.cartilla__pie b{color:var(--tinta);font-weight:600}
+
+/* ── bloques ───────────────────────────────────────────── */
+.bloque{padding:clamp(70px,11vh,128px) 0}
+.tit{font-family:var(--display);font-weight:800;font-size:clamp(30px,5.2vw,58px);
+  line-height:1.02;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.sub{color:var(--gris);font-size:17px;line-height:1.62;max-width:54ch;margin:0 0 44px}
+
+/* las dos visitas */
+.visitas{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.visita{background:var(--tinta-2);border:1px solid var(--linea);border-radius:5px;
+  padding:30px 26px 32px;position:relative}
+.visita .paso{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--azul);display:block;margin-bottom:14px}
+.visita h3{font-family:var(--display);font-weight:700;font-size:23px;margin:0 0 10px;
+  letter-spacing:-.015em}
+.visita p{margin:0;font-size:15.5px;line-height:1.62;color:var(--gris)}
+.visita--medio{background:linear-gradient(160deg,rgba(1,145,218,.16),var(--tinta-2) 62%);
+  border-color:rgba(1,145,218,.45)}
+.visita--medio .paso{color:var(--amarillo)}
+.visita--medio h3{color:#fff}
+
+/* voces */
+.voces{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:14px}
+.voz{background:var(--tinta-2);border-left:2px solid var(--azul);border-radius:0 5px 5px 0;
+  padding:26px 24px}
+.voz p{margin:0 0 15px;font-size:16px;line-height:1.64}
+.voz .quien{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.05em;
+  color:var(--gris);text-transform:uppercase}
+.voz .quien b{color:var(--hueso);font-weight:700}
+.voz--ancha{grid-column:span 2;border-left-color:var(--amarillo)}
+@media(max-width:760px){.voz--ancha{grid-column:span 1}}
+.voz--ancha p{font-family:var(--display);font-weight:700;font-size:clamp(19px,2.5vw,27px);
+  line-height:1.26;letter-spacing:-.015em}
+
+/* vitrina */
+.vitrina{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
+@media(max-width:820px){.vitrina{grid-template-columns:1fr}}
+.vitrina figure{margin:0;overflow:hidden;border-radius:5px;background:var(--tinta-2)}
+.vitrina img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--casa)}
+.vitrina figure:hover img{transform:scale(1.05)}
+.vitrina figure:first-child{aspect-ratio:4/5}
+.vitrina figure:last-child{aspect-ratio:4/5}
+@media(max-width:820px){.vitrina figure{aspect-ratio:4/3}}
+
+/* cierre */
+.cierre{background:linear-gradient(180deg,var(--tinta),#0A1D2A);padding:clamp(80px,13vh,146px) 0;
+  text-align:center}
+.cierre h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,6.4vw,76px);
+  line-height:.97;letter-spacing:-.03em;margin:0 0 16px;text-wrap:balance}
+.cierre .sub{margin:0 auto 30px;text-align:center}
+.cierre .acciones{justify-content:center}
+.franja{height:6px;background:linear-gradient(90deg,var(--azul) 60%,var(--amarillo))}
+
+footer{padding:42px 0 58px;font-size:13.5px;color:var(--gris);line-height:1.9}
+footer b{color:var(--hueso);font-weight:600}
+.aviso{margin-top:24px;padding-top:20px;border-top:1px solid var(--linea);
+  font-size:12.5px;color:#7C8994;max-width:64ch}
+
+.rev{opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rev{opacity:1;transform:none}
+  .cartilla__pin{position:static;min-height:0}
+  .linea{filter:none;opacity:1;transform:none}
+}
+@media(max-width:768px){
+  .eyebrow,.prueba,.voz .quien,.visita .paso,.aviso,footer,.cartilla__pie{font-size:12.5px}
+  .cartilla__pin{min-height:96svh}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="marca">
+    <svg width="46" height="20" viewBox="0 0 46 20" fill="none" aria-hidden="true">
+      <circle cx="11" cy="10" r="8" stroke="#0191DA" stroke-width="3.4"/>
+      <circle cx="33" cy="10" r="8" stroke="#0191DA" stroke-width="3.4"/>
+      <path d="M19 10h6" stroke="#0191DA" stroke-width="3.4" stroke-linecap="round"/>
+    </svg>
+    Óptica Booz
+  </span>
+  <a class="cta" href="https://wa.me/51962207093" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero__foto">
+    <img src="assets/img/place-1.jpg" alt="Fachada de Óptica Booz en la calle Barlovento, Santiago de Surco" />
+  </div>
+  <div class="hero__velo"></div>
+  <div class="env">
+    <p class="eyebrow rev">Salud y estilo visual · Surco</p>
+    <h1 class="rev">Aquí no se espera <em>una semana.</em></h1>
+    <p class="lede rev">Tres de sus cinco reseñas en Google hablan de lo mismo, y no es el
+      precio: los lentes estuvieron listos <b>al día siguiente</b>.</p>
+    <div class="acciones rev">
+      <a class="btn" href="https://wa.me/51962207093" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <a class="btn btn--linea" href="#voces">Leer las reseñas</a>
+    </div>
+    <div class="prueba rev">
+      <span><b class="est">5.0 ★</b> · 200 reseñas en Google</span>
+      <span>Calle Barlovento 189</span>
+      <span>A 2 cuadras del <b>Óvalo Higuereta</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ LA CARTILLA — momento firma ═══ -->
+<section class="cartilla" id="cartilla">
+  <div class="cartilla__pin">
+    <p class="cartilla__rot">¿Estás viendo bien?</p>
+    <p class="linea l1" data-linea>E</p>
+    <p class="linea l2" data-linea>F P</p>
+    <p class="linea l3" data-linea>T O Z L D</p>
+    <p class="linea l4" data-linea>P E C F D E O</p>
+    <p class="linea l5" data-linea>L E F O D P C T E O</p>
+    <p class="linea linea--clave" data-linea>Y esto, ¿lo lees? Entonces ya sabes por qué viniste.</p>
+    <p class="cartilla__pie">La cartilla es suya: está impresa en la puerta de su local.
+      <b>Aquí se resuelve en un scroll</b> — que es más o menos lo que tardan ellos.</p>
+  </div>
+</section>
+
+<!-- ═══ LAS DOS VISITAS ═══ -->
+<section class="bloque env">
+  <h2 class="tit rev">A una óptica se entra dos veces</h2>
+  <p class="sub rev">Una a elegir y otra a recoger. Todo el rubro compite en la primera.
+    Nadie compite en lo que hay en medio — y es justo lo que sus clientes recuerdan.</p>
+  <div class="visitas">
+    <article class="visita rev">
+      <span class="paso">Primera visita</span>
+      <h3>Te sacan los modelos que pidas</h3>
+      <p>«Me permitió probarme los modelos que deseaba», «nos sacó muchos modelos de
+        acuerdo a las preferencias de mi hijita». Con paciencia, incluso con una niña
+        pequeña de por medio.</p>
+    </article>
+    <article class="visita visita--medio rev">
+      <span class="paso">En medio</span>
+      <h3>Aquí es donde se gana</h3>
+      <p>Donde el rubro dice «vuelva en una semana», a Lucía sus lentes le estuvieron
+        listos al día siguiente. Y a KT le prometieron el martes y lo llamaron el sábado
+        — <b>antes de lo prometido</b>.</p>
+    </article>
+    <article class="visita rev">
+      <span class="paso">Segunda visita</span>
+      <h3>Y te explican qué cambió</h3>
+      <p>«El profesional me explicó detalladamente los cambios en mi vista y el por qué».
+        Además le dijeron que puede volver a recargar el líquido limpiador sin costo.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ VITRINA ═══ -->
+<section class="bloque env">
+  <h2 class="tit rev">La vitrina, tal como está</h2>
+  <p class="sub rev">Sin render ni catálogo de banco: es su mostrador, con sus monturas y
+    sus etiquetas puestas.</p>
+  <div class="vitrina">
+    <figure class="rev"><img src="assets/img/place-3.jpg" alt="Vitrina de Óptica Booz con decenas de monturas en estantes de vidrio" loading="lazy" /></figure>
+    <figure class="rev"><img src="assets/img/place-1.jpg" alt="Entrada del local, abierta a la calle" loading="lazy" /></figure>
+  </div>
+</section>
+
+<!-- ═══ VOCES ═══ -->
+<section class="bloque env" id="voces">
+  <h2 class="tit rev">200 reseñas, 5.0 limpio</h2>
+  <p class="sub rev">Textuales, con nombre, verificables en su ficha de Google. No las
+    escribimos nosotros.</p>
+  <div class="voces">
+    <blockquote class="voz voz--ancha rev">
+      <p>«Mis lentes estuvieron listos al día siguiente, fue demasiado rápido 10/10.»</p>
+      <span class="quien"><b>Lucía Gómez Guimaray</b> · Google · reseña verificable</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Me dijeron que los lentes los tendrían listos para el martes… me llamaron el
+        sábado en la tarde diciéndome que ya llegaron. Mi esposa está feliz.»</p>
+      <span class="quien"><b>KT Nam</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Fui con mi hija pequeña y la señorita que nos atendió tuvo bastante paciencia…
+        La entrega de los lentes fue rápida, de un día para otro.»</p>
+      <span class="quien"><b>Lia C.</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Excelente servicio. Buenos precios y rápidos. Atentos a dudas y transparentes.»</p>
+      <span class="quien"><b>KT Nam</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Cada mirada cuenta una historia, y ustedes hacen posible que se vea con mayor
+        claridad.»</p>
+      <span class="quien"><b>Julia Mercedes Bardales</b> · Google</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ═══ CIERRE ═══ -->
+<section class="cierre">
+  <div class="env">
+    <h2 class="rev">Pásate y pruébatelos.</h2>
+    <p class="sub rev">Calle Barlovento 189, Santiago de Surco — a dos cuadras del Óvalo
+      Higuereta. O escribe antes y pregunta lo que quieras.</p>
+    <div class="acciones rev">
+      <a class="btn" href="https://wa.me/51962207093" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="btn btn--linea" href="https://maps.google.com/?q=Calle+Barlovento+189+Santiago+de+Surco" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</section>
+<div class="franja"></div>
+
+<footer class="env">
+  <p><b>Óptica Booz</b> · Salud y estilo visual<br />
+  Calle Barlovento 189, Santiago de Surco · WhatsApp <b>962 207 093</b></p>
+  <p class="aviso">Propuesta de página web preparada por Ninawi para Óptica Booz. Las
+    reseñas son textuales de su ficha de Google y las fotos son las suyas. No se afirman
+    plazos de entrega, precios ni marcas: lo que se cita sobre tiempos es lo que
+    escribieron sus clientes, con nombre y fuente. Esta página no da consejo médico ni
+    reemplaza un examen visual profesional.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var lineas = [].slice.call(document.querySelectorAll("[data-linea]"));
+
+  if (quieto || !window.gsap) {
+    document.querySelectorAll(".rev").forEach(function (e) {
+      e.style.opacity = 1; e.style.transform = "none";
+    });
+    lineas.forEach(function (l) { l.style.setProperty("--n", 1); });
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".hero .rev", { opacity: 1, y: 0, duration: .9, ease: "power3.out", stagger: .09, delay: .15 });
+  gsap.utils.toArray(".rev:not(.hero .rev)").forEach(function (el) {
+    gsap.to(el, { opacity: 1, y: 0, duration: .8, ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 88%", once: true } });
+  });
+  gsap.to(".hero__foto img", { scale: 1.1, ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .6 } });
+
+  /* ── MOMENTO FIRMA: la cartilla se resuelve línea por línea ────────────────
+     La ventana de scrub es CORTA a propósito. La tesis es que aquí no se espera,
+     así que la página tampoco puede hacerte esperar: en un scroll está resuelta.
+     Cada línea abre un poco después que la anterior (stagger por índice) y el
+     desenfoque se levanta con `--n`, que es lo único que escribe el JS. */
+  ScrollTrigger.create({
+    trigger: ".cartilla",
+    start: "top top",
+    end: "+=90%",
+    scrub: .35,
+    onUpdate: function (self) {
+      var p = self.progress, n = lineas.length;
+      for (var i = 0; i < n; i++) {
+        var t = p * 1.75 - (i / n) * 0.72;
+        lineas[i].style.setProperty("--n", Math.min(1, Math.max(0, t)).toFixed(3));
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
