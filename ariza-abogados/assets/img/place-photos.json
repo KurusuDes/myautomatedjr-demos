@@ -1,0 +1,65 @@
+{
+  "negocio": "ARIZA ABOGADOS",
+  "fotos": [
+    {
+      "archivo": "assets/img/place-1.jpg",
+      "ancho": 2448,
+      "alto": 3264,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-2.jpg",
+      "ancho": 1197,
+      "alto": 1600,
+      "autor": "Carlos Ariza"
+    },
+    {
+      "archivo": "assets/img/place-3.jpg",
+      "ancho": 1080,
+      "alto": 810,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-4.jpg",
+      "ancho": 1080,
+      "alto": 991,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-5.jpg",
+      "ancho": 934,
+      "alto": 526,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-6.jpg",
+      "ancho": 760,
+      "alto": 805,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-7.jpg",
+      "ancho": 862,
+      "alto": 462,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-8.jpg",
+      "ancho": 1080,
+      "alto": 571,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-9.jpg",
+      "ancho": 909,
+      "alto": 484,
+      "autor": "ARIZA ABOGADOS"
+    },
+    {
+      "archivo": "assets/img/place-10.jpg",
+      "ancho": 1080,
+      "alto": 1434,
+      "autor": "ARIZA ABOGADOS"
+    }
+  ]
+}

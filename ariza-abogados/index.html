@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ariza Abogados — El caso a favor de Ariza no lo escribimos nosotros</title>
+<meta name="description" content="Estudio jurídico en La Molina. Penal, civil y familia, recuperación de crédito y litigio de tierras. 5.0 en Google con 222 reseñas." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=erode@400,500,700&f[]=tanker@400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --tinta:#0E0B08; --tinta-2:#16110B; --humo:#221A12;
+  --papel:#E3D0A6; --papel-2:#D8C093;
+  --madera:#7B4A28; --madera-clara:#9C6B3C;
+  --oro:#E7B854; --oro-brillo:#FBE7B8; --placa:#A9A15C;
+  --texto:#F3E9D6; --gris:#9C8F79;
+  --serif:'Erode','Iowan Old Style','Palatino Linotype',Georgia,serif;
+  --sello:'Tanker','Futura','Century Gothic',sans-serif;
+  --casa:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tinta);color:var(--texto);font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--oro);color:var(--tinta)}
+.env{width:min(1140px,92vw);margin:0 auto}
+
+.nav{position:fixed;inset:0 0 auto;z-index:60;display:flex;align-items:center;
+  justify-content:space-between;padding:16px 4vw;
+  background:linear-gradient(180deg,rgba(14,11,8,.95),transparent)}
+.marca{display:flex;align-items:center;gap:11px;font-family:var(--sello);font-size:17px;
+  letter-spacing:.02em}
+.nav .cta{font-family:var(--sello);font-size:13px;letter-spacing:.06em;text-decoration:none;
+  padding:12px 20px;border-radius:2px;background:var(--oro);color:var(--tinta);
+  transition:transform .3s var(--casa),background .3s var(--casa)}
+.nav .cta:hover{transform:translateY(-2px);background:var(--oro-brillo)}
+.nav .cta:focus-visible{outline:2px solid var(--texto);outline-offset:3px}
+
+/* ── hero ─────────────────────────────────────────────── */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;
+  padding:0 0 clamp(38px,7vh,84px);overflow:hidden}
+.hero__foto{position:absolute;inset:0}
+.hero__foto img{width:100%;height:100%;object-fit:cover;object-position:58% 45%}
+.hero__velo{position:absolute;inset:0;
+  background:linear-gradient(74deg,rgba(14,11,8,.97) 12%,rgba(14,11,8,.72) 48%,rgba(14,11,8,.3))}
+.hero .env{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--sello);font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--placa);margin:0 0 18px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--placa)}
+h1{font-weight:500;font-style:italic;margin:0 0 20px;
+  font-size:clamp(36px,6.6vw,82px);line-height:1.02;letter-spacing:-.02em;
+  text-wrap:balance;max-width:17ch}
+h1 em{font-style:normal;color:var(--oro)}
+.hero .lede{font-size:clamp(16px,1.9vw,19px);line-height:1.62;max-width:48ch;
+  color:var(--gris);margin:0 0 28px}
+.acciones{display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;font-family:var(--sello);font-size:14px;
+  letter-spacing:.05em;text-decoration:none;padding:16px 26px;border-radius:2px;
+  background:var(--oro);color:var(--tinta);
+  transition:transform .3s var(--casa),box-shadow .3s var(--casa)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 32px -12px rgba(231,184,84,.6)}
+.btn--linea{background:transparent;color:var(--texto);border:1px solid rgba(243,233,214,.3)}
+.btn--linea:hover{border-color:var(--texto);box-shadow:none}
+.btn:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+.prueba{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;font-size:13.5px;color:var(--gris)}
+.prueba b{color:var(--texto);font-weight:500}
+.prueba .est{color:var(--oro)}
+
+.bloque{padding:clamp(70px,11vh,126px) 0}
+.tit{font-weight:500;font-style:italic;font-size:clamp(28px,5vw,54px);line-height:1.06;
+  letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
+.sub{color:var(--gris);font-size:17px;line-height:1.62;max-width:54ch;margin:0 0 42px}
+
+/* ── EL EXPEDIENTE: los fólders que se convierten en ficha (Flip) ─────── */
+.archivador{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px}
+/* En el móvil van DOS columnas, no una. Por diseño —cuatro tarjetas a ancho
+   completo leen como una lista, no como un archivador— y por mecánica: un fólder
+   que ya ocupa todo el ancho no tiene de dónde crecer, y el Flip se quedaba en
+   una escala de 0.98 (medido). Con dos columnas vuelve a ser una apertura. */
+@media(max-width:600px){
+  .archivador{grid-template-columns:1fr 1fr;gap:10px}
+  .folder{min-height:170px;padding:18px 15px 20px}
+  .folder h3{font-size:18px;margin-top:10px}
+  .folder .abrir{margin-top:12px}
+}
+.folder{position:relative;background:linear-gradient(168deg,var(--papel),var(--papel-2));
+  color:var(--tinta);border:0;border-radius:2px 10px 2px 2px;padding:26px 22px 30px;
+  text-align:left;cursor:pointer;font-family:inherit;min-height:224px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 18px 34px -22px rgba(0,0,0,.9);
+  transition:transform .4s var(--casa),box-shadow .4s var(--casa)}
+.folder::before{content:"";position:absolute;top:0;right:0;width:52px;height:16px;
+  background:var(--madera-clara);border-radius:0 10px 0 8px}
+.folder:hover{transform:translateY(-6px);box-shadow:0 26px 44px -22px rgba(0,0,0,.95)}
+.folder:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+.folder .num{font-family:var(--sello);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--madera)}
+.folder h3{font-weight:500;font-style:italic;font-size:24px;line-height:1.1;margin:14px 0 0;
+  letter-spacing:-.01em}
+.folder .abrir{font-family:var(--sello);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--madera);margin-top:18px}
+.folder--grueso{box-shadow:0 18px 34px -22px rgba(0,0,0,.9), 6px 6px 0 -2px var(--papel-2),
+  12px 12px 0 -4px var(--madera-clara)}
+
+/* la ficha abierta: mismo elemento, otra caja — Flip interpola entre las dos */
+.ficha{position:fixed;inset:6vh 4vw;z-index:80;background:var(--papel);color:var(--tinta);
+  border-radius:3px;padding:clamp(26px,4vw,54px);overflow:auto;display:none;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
+.ficha.abierta{display:block}
+.ficha__num{font-family:var(--sello);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--madera)}
+.ficha h3{font-weight:500;font-style:italic;font-size:clamp(28px,4.4vw,50px);line-height:1.04;
+  margin:12px 0 22px;letter-spacing:-.02em;max-width:20ch}
+.ficha blockquote{margin:0 0 14px;padding:18px 22px;border-left:2px solid var(--madera);
+  background:rgba(123,74,40,.09);font-size:clamp(15px,1.8vw,18px);line-height:1.62;font-style:italic}
+.ficha .fuente{font-family:var(--sello);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--madera);margin:0 0 26px}
+.ficha .cerrar{font-family:var(--sello);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--tinta);color:var(--papel);border:0;border-radius:2px;padding:14px 22px;
+  cursor:pointer}
+.ficha .cerrar:focus-visible{outline:2px solid var(--madera);outline-offset:3px}
+.velo{position:fixed;inset:0;z-index:70;background:rgba(6,4,3,.82);display:none}
+.velo.abierto{display:block}
+
+/* ── la prueba de terceros ─────────────────────────────── */
+.pruebas{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:14px}
+.pcard{background:var(--tinta-2);border:1px solid rgba(243,233,214,.09);border-radius:3px;
+  overflow:hidden}
+.pcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pcard .cuerpo{padding:24px 22px 28px}
+.pcard .rot{font-family:var(--sello);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--oro);display:block;margin-bottom:10px}
+.pcard h3{font-weight:500;font-style:italic;font-size:21px;margin:0 0 9px}
+.pcard p{margin:0;font-size:15px;line-height:1.6;color:var(--gris)}
+
+/* ── voces ─────────────────────────────────────────────── */
+.voces{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.voz{background:var(--tinta-2);border-left:2px solid var(--oro);border-radius:0 3px 3px 0;
+  padding:26px 24px}
+.voz p{margin:0 0 15px;font-size:16px;line-height:1.64}
+.voz .quien{font-family:var(--sello);font-size:11px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--gris)}
+.voz .quien b{color:var(--texto);font-weight:500}
+.voz--ancha{grid-column:span 2;border-left-color:var(--placa)}
+@media(max-width:760px){.voz--ancha{grid-column:span 1}}
+.voz--ancha p{font-style:italic;font-size:clamp(19px,2.4vw,26px);line-height:1.3}
+
+.cierre{background:linear-gradient(180deg,var(--tinta),#1A120A);
+  padding:clamp(78px,13vh,142px) 0;text-align:center}
+.cierre h2{font-weight:500;font-style:italic;font-size:clamp(30px,6vw,70px);line-height:1.02;
+  letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance}
+.cierre .sub{margin:0 auto 30px;text-align:center}
+.cierre .acciones{justify-content:center}
+.franja{height:5px;background:linear-gradient(90deg,var(--madera) 55%,var(--oro))}
+
+footer{padding:42px 0 58px;font-size:13.5px;color:var(--gris);line-height:1.9}
+footer b{color:var(--texto);font-weight:500}
+.aviso{margin-top:24px;padding-top:20px;border-top:1px solid rgba(243,233,214,.1);
+  font-size:12.5px;color:#8A7E6B;max-width:64ch}
+
+.rev{opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rev{opacity:1;transform:none}}
+@media(max-width:768px){
+  .eyebrow,.prueba,.voz .quien,.aviso,footer,.folder .num,.folder .abrir,.pcard .rot,.ficha .fuente{font-size:12.5px}
+  .ficha{inset:3vh 3vw}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="marca">Ariza Abogados</span>
+  <a class="cta" href="https://wa.me/51946535761" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero__foto">
+    <img src="assets/img/place-2.jpg" alt="Cartel del estudio: Ariza Morales Rubén, abogado" />
+  </div>
+  <div class="hero__velo"></div>
+  <div class="env">
+    <p class="eyebrow rev">Estudio jurídico · La Molina</p>
+    <h1 class="rev">El caso a favor de Ariza <em>no lo escribimos nosotros.</em></h1>
+    <p class="lede rev">222 personas ya lo escribieron en Google, un canal de televisión lo
+      llamó como experto y el Colegio de Abogados le dio un número. Esta página solo
+      <b>exhibe el expediente</b>.</p>
+    <div class="acciones rev">
+      <a class="btn" href="https://wa.me/51946535761" target="_blank" rel="noopener">Consultar el caso</a>
+      <a class="btn btn--linea" href="#expediente">Abrir el expediente</a>
+    </div>
+    <div class="prueba rev">
+      <span><b class="est">5.0 ★</b> · 222 reseñas en Google</span>
+      <span>C.A.C. <b>508</b></span>
+      <span>C. Córcega 122, Ate</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ EL EXPEDIENTE — momento firma ═══ -->
+<section class="bloque env" id="expediente">
+  <h2 class="tit rev">Cuatro materias, cuatro fólders</h2>
+  <p class="sub rev">Ninguna la elegimos nosotros: cada una la nombra un cliente suyo en su
+    reseña. <b>Abre uno</b> y el fólder se convierte en la ficha.</p>
+  <div class="archivador">
+    <button class="folder rev" data-materia="credito">
+      <span class="num">Materia 01</span>
+      <h3>Recuperación de crédito</h3>
+      <span class="abrir">Abrir ficha</span>
+    </button>
+    <button class="folder rev" data-materia="civil">
+      <span class="num">Materia 02</span>
+      <h3>Civil y familia</h3>
+      <span class="abrir">Abrir ficha</span>
+    </button>
+    <button class="folder folder--grueso rev" data-materia="penal">
+      <span class="num">Materia 03</span>
+      <h3>Penal</h3>
+      <span class="abrir">Abrir ficha</span>
+    </button>
+    <button class="folder rev" data-materia="tierras">
+      <span class="num">Materia 04</span>
+      <h3>Litigio de tierras</h3>
+      <span class="abrir">Abrir ficha</span>
+    </button>
+  </div>
+</section>
+
+<div class="velo" id="velo"></div>
+<article class="ficha" id="ficha" role="dialog" aria-modal="true" aria-labelledby="fichaTit">
+  <span class="ficha__num" id="fichaNum"></span>
+  <h3 id="fichaTit"></h3>
+  <blockquote id="fichaCita"></blockquote>
+  <p class="fuente" id="fichaFuente"></p>
+  <button class="cerrar" id="fichaCerrar">Cerrar el fólder</button>
+</article>
+
+<!-- ═══ LA PRUEBA DE TERCEROS ═══ -->
+<section class="bloque env">
+  <h2 class="tit rev">Tres pruebas, y ninguna la firmamos nosotros</h2>
+  <p class="sub rev">Un abogado que se describe a sí mismo no prueba nada. Aquí no hace
+    falta: el expediente ya está escrito por otros.</p>
+  <div class="pruebas">
+    <article class="pcard rev">
+      <img src="assets/img/place-5.jpg" alt="Rótulo de una entrevista de televisión: Rubén Ariza Morales, abogado penalista" loading="lazy" />
+      <div class="cuerpo">
+        <span class="rot">Televisión</span>
+        <h3>Lo llamaron como experto</h3>
+        <p>El rótulo del programa dice, textual: «Rubén Ariza Morales · Abogado penalista».
+          En vivo, vía Zoom.</p>
+      </div>
+    </article>
+    <article class="pcard rev">
+      <img src="assets/img/place-10.jpg" alt="Placa en la puerta del estudio: Rubén Ariza Morales, abogado, C.A.C. 508" loading="lazy" />
+      <div class="cuerpo">
+        <span class="rot">Colegiatura</span>
+        <h3>C.A.C. 508</h3>
+        <p>Grabado en la placa de su puerta. Un número de colegiatura es, literalmente, un
+          identificador verificable.</p>
+      </div>
+    </article>
+    <article class="pcard rev">
+      <img src="assets/img/place-1.jpg" alt="Escritorio del estudio con documentos y sello" loading="lazy" />
+      <div class="cuerpo">
+        <span class="rot">Google</span>
+        <h3>5.0 con 222 reseñas</h3>
+        <p>Un volumen que casi ningún estudio de la zona toca. Es un promedio, y está a un
+          clic de comprobarse.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ VOCES ═══ -->
+<section class="bloque env" id="voces">
+  <h2 class="tit rev">Lo que escribieron sus clientes</h2>
+  <p class="sub rev">Textuales, con nombre, verificables en su ficha de Google.</p>
+  <div class="voces">
+    <blockquote class="voz voz--ancha rev">
+      <p>«Tomaron el caso a la mitad porque otros abogados nos fallaron anteriormente.»</p>
+      <span class="quien"><b>Alberto Daniel Palacios Orbegozo</b> · Google · reseña verificable</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Excelente abogado en lo civil… ayudó a mi hermana menor a recuperar el cincuenta
+        por ciento de su patrimonio, lo que era su derecho. Contrató el mejor bufete y ni
+        así nos pudo ganar.»</p>
+      <span class="quien"><b>Bruce Cárdenas</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Excelente estudio jurídico en materia de recuperación de crédito, obligación de
+        dar suma de dinero.»</p>
+      <span class="quien"><b>Giselle Aquino Sudario</b> · Google</span>
+    </blockquote>
+    <blockquote class="voz rev">
+      <p>«Excelente profesional en litigio de tierras.»</p>
+      <span class="quien"><b>Kevin C. Torres</b> · Google</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ═══ CIERRE ═══ -->
+<section class="cierre">
+  <div class="env">
+    <h2 class="rev">Cuente su caso.</h2>
+    <p class="sub rev">C. Córcega 122, Ate — zona La Molina. Escriba por WhatsApp y explique
+      la situación; de ahí se ve si hay caso y qué se puede hacer.</p>
+    <div class="acciones rev">
+      <a class="btn" href="https://wa.me/51946535761" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="btn btn--linea" href="tel:+51946535761">946 535 761</a>
+    </div>
+  </div>
+</section>
+<div class="franja"></div>
+
+<footer class="env">
+  <p><b>Ariza Abogados</b> · Rubén Ariza Morales, abogado · C.A.C. 508<br />
+  C. Córcega 122, Ate, Lima · WhatsApp <b>946 535 761</b></p>
+  <p class="aviso">Propuesta de página web preparada por Ninawi para Ariza Abogados. Las
+    reseñas son textuales de su ficha de Google, recortadas solo donde el detalle del caso
+    era sensible; las fotos son las suyas. El 5.0 es el promedio que muestra Google sobre
+    222 reseñas, no un pleno. No se afirman resultados, plazos, tarifas ni número de casos
+    ganados: un resultado pasado no garantiza uno futuro. Esta página no es asesoría legal.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- Flip era plugin de pago del Club GSAP; desde la 3.13 esta en el CDN publico.
+     Es la receta `mosby-files R1` del catalogo: la ficha del indice SE CONVIERTE
+     en la pagina, en vez de aparecer encima de ella. -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* el contenido de cada ficha: textual de sus resenas, sin inventar nada.
+     En Penal se cita el TRABAJO y no el detalle del caso, que es sensible. */
+  var FICHAS = {
+    credito: { num: "Materia 01", tit: "Recuperación de crédito",
+      cita: "Excelente estudio jurídico en materia de recuperación de crédito, obligación de dar suma de dinero.",
+      quien: "Giselle Aquino Sudario · Google · reseña verificable" },
+    civil: { num: "Materia 02", tit: "Civil y familia",
+      cita: "Ayudó a mi hermana menor a recuperar el cincuenta por ciento de su patrimonio, lo que era su derecho. Contrató el mejor bufete y ni así nos pudo ganar.",
+      quien: "Bruce Cárdenas · Google · reseña verificable" },
+    penal: { num: "Materia 03", tit: "Penal",
+      cita: "Tomaron el caso a la mitad porque otros abogados nos fallaron anteriormente.",
+      quien: "Alberto Daniel Palacios Orbegozo · Google · reseña verificable" },
+    tierras: { num: "Materia 04", tit: "Litigio de tierras",
+      cita: "Excelente profesional en litigio de tierras.",
+      quien: "Kevin C. Torres · Google · reseña verificable" }
+  };
+
+  var ficha = document.getElementById("ficha"),
+      velo = document.getElementById("velo"),
+      folders = [].slice.call(document.querySelectorAll(".folder")),
+      abierto = null;
+
+  function pintar(k) {
+    var d = FICHAS[k];
+    document.getElementById("fichaNum").textContent = d.num;
+    document.getElementById("fichaTit").textContent = d.tit;
+    document.getElementById("fichaCita").textContent = "«" + d.cita + "»";
+    document.getElementById("fichaFuente").textContent = d.quien;
+  }
+
+  /* ── MOMENTO FIRMA: el fólder SE CONVIERTE en la ficha (GSAP Flip) ───────
+     Receta `mosby-files R1`. No es un modal que aparece encima: es el MISMO
+     rectángulo, que Flip interpola desde su casilla del archivador hasta ocupar
+     la pantalla. Por eso se lee como abrir un fólder y no como abrir una ventana. */
+  function abrir(btn) {
+    var k = btn.dataset.materia;
+    pintar(k);
+    abierto = btn;
+    if (quieto || !window.Flip) {
+      ficha.classList.add("abierta"); velo.classList.add("abierto");
+      document.getElementById("fichaCerrar").focus();
+      return;
+    }
+    var estado = Flip.getState(btn);          // dónde está AHORA el fólder
+    ficha.classList.add("abierta");
+    velo.classList.add("abierto");
+    gsap.set(velo, { opacity: 0 });
+    gsap.to(velo, { opacity: 1, duration: .45, ease: "power2.out" });
+    /* OJO al orden, que es donde se rompe. `Flip.fit(..., {returnState:true})`
+       devuelve null aqui y `Flip.from(null)` revienta con "Cannot read properties
+       of null (reading 'targets')" — un error que NO se ve en pantalla, solo en
+       consola, y deja la ficha congelada encajada sobre el folder.
+       El patron que si funciona: ENCAJAR sobre el folder, CAPTURAR ese estado,
+       LIMPIAR la transformada para que vuelva a su sitio final, y animar DESDE
+       el estado capturado. */
+    Flip.fit(ficha, estado, { scale: true });
+    var desde = Flip.getState(ficha);
+    gsap.set(ficha, { clearProps: "transform" });
+    Flip.from(desde, {
+      duration: 1.05, ease: "power3.inOut", scale: true, absolute: true,
+      onComplete: function () {
+        gsap.set(ficha, { clearProps: "transform,width,height" });
+        document.getElementById("fichaCerrar").focus();
+      }
+    });
+    gsap.from(ficha.children, { opacity: 0, y: 16, duration: .5, stagger: .06, delay: .38, ease: "power2.out" });
+  }
+
+  function cerrar() {
+    if (!abierto) return;
+    if (quieto || !window.Flip) {
+      ficha.classList.remove("abierta"); velo.classList.remove("abierto");
+      abierto.focus(); abierto = null; return;
+    }
+    var destino = Flip.getState(abierto);
+    var estado = Flip.getState(ficha);
+    Flip.fit(ficha, destino, {
+      scale: true, duration: .85, ease: "power3.inOut",
+      onComplete: function () {
+        ficha.classList.remove("abierta"); velo.classList.remove("abierto");
+        gsap.set(ficha, { clearProps: "all" });
+        if (abierto) { abierto.focus(); abierto = null; }
+      }
+    });
+    gsap.to(velo, { opacity: 0, duration: .6, ease: "power2.in" });
+    void estado;
+  }
+
+  folders.forEach(function (b) { b.addEventListener("click", function () { abrir(b); }); });
+  document.getElementById("fichaCerrar").addEventListener("click", cerrar);
+  velo.addEventListener("click", cerrar);
+  addEventListener("keydown", function (e) { if (e.key === "Escape") cerrar(); });
+
+  /* ── entradas ─────────────────────────────────────────────────────────── */
+  if (quieto || !window.gsap) {
+    document.querySelectorAll(".rev").forEach(function (e) {
+      e.style.opacity = 1; e.style.transform = "none";
+    });
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  if (window.Flip) gsap.registerPlugin(Flip);
+  gsap.to(".hero .rev", { opacity: 1, y: 0, duration: .9, ease: "power3.out", stagger: .09, delay: .15 });
+  gsap.utils.toArray(".rev:not(.hero .rev)").forEach(function (el) {
+    gsap.to(el, { opacity: 1, y: 0, duration: .8, ease: "power3.out",
+      scrollTrigger: { trigger: el, start: "top 88%", once: true } });
+  });
+  gsap.to(".hero__foto img", { scale: 1.1, ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .6 } });
+})();
+</script>
+</body>
+</html>
