@@ -62,6 +62,7 @@ h1{font-family:var(--display);font-weight:700;margin:0 0 20px;
   font-size:clamp(44px,9.4vw,116px);line-height:.9;letter-spacing:-.025em;
   text-wrap:balance;max-width:13ch}
 h1 em{font-style:normal;color:var(--azul)}
+.hero h1 .palabra{display:inline-block;overflow:hidden;padding-bottom:.06em}
 .hero p{font-size:clamp(16px,2vw,20px);line-height:1.55;max-width:44ch;color:var(--gris);margin:0 0 30px}
 .acciones{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);
@@ -174,7 +175,11 @@ h1 em{font-style:normal;color:var(--azul)}
 footer{padding:44px 0 60px;font-size:13px;color:var(--gris);line-height:1.9}
 footer b{color:var(--hueso);font-weight:600}
 .aviso{margin-top:26px;padding-top:20px;border-top:1px solid rgba(242,244,243,.09);
-  font-size:12px;color:#67727A;max-width:62ch}
+  /* #67727A daba 3.95:1 sobre el negro — bajo el 4.5 de AA. Lo cazo axe-core a la
+     primera. Y es la TERCERA vez que el texto que falla es justo el aviso de
+     honestidad: en Ninawi fue el rotulo ESTUDIO, en Ariza el parrafo bajo el velo.
+     La letra chica legal es la que menos se mira y la que mas hay que medir. */
+  font-size:12px;color:#7E8890;max-width:62ch}
 
 /* ── movil: suelo de 12 px y targets de 44 px ───────────── */
 @media(max-width:768px){
@@ -382,8 +387,12 @@ footer b{color:var(--hueso);font-weight:600}
     precios ni número de socios. Esta página no es asesoría médica.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- SplitText era plugin de pago del Club GSAP; desde la 3.13 esta en el CDN publico.
+     El reveal por caracter es la firma recurrente del nivel awwwards (Zentry, Mosby,
+     NK Studio) y lo estabamos imitando a mano. -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script>
 (function () {
   "use strict";
@@ -400,6 +409,18 @@ footer b{color:var(--hueso);font-weight:600}
   gsap.to(".hero .rev", {
     opacity: 1, y: 0, duration: .9, ease: "power3.out", stagger: .09, delay: .15
   });
+
+  /* el titular entra PALABRA A PALABRA con SplitText — la firma que se repite en las
+     tres referencias cosechadas. Se revierte al terminar para no dejar el DOM partido
+     (lectores de pantalla y seleccion de texto). */
+  if (window.SplitText) {
+    gsap.registerPlugin(SplitText);
+    var corte = new SplitText(".hero h1", { type: "words", wordsClass: "palabra" });
+    gsap.from(corte.words, {
+      yPercent: 108, opacity: 0, duration: .95, ease: "power4.out", stagger: .07, delay: .28,
+      onComplete: function () { corte.revert(); }
+    });
+  }
 
   /* todo lo demás entra al aparecer */
   gsap.utils.toArray(".rev:not(.hero .rev)").forEach(function (el) {
