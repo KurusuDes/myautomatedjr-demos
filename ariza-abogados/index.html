@@ -3,15 +3,26 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ariza Abogados — El caso a favor de Ariza no lo escribimos nosotros</title>
+<title>Ariza Abogados — El expediente</title>
 <meta name="description" content="Estudio jurídico en La Molina. Penal, civil y familia, recuperación de crédito y litigio de tierras. 5.0 en Google con 222 reseñas." />
 <meta name="robots" content="noindex, nofollow" />
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link href="https://api.fontshare.com/v2/css?f[]=erode@400,500,700&f[]=tanker@400&display=swap" rel="stylesheet" />
 <style>
+/* ═══════════════════════════════════════════════════════════════════════════
+   ARIZA ABOGADOS — adaptación COMPLETA de Mosby's Files (Tubik, Awwwards SOTD
+   13-ago-2026) al expediente de un estudio jurídico.
+   Estudio: biblioteca/estudios/mosby-files.md
+   Se toma su ARQUITECTURA entera, no un efecto: portada-archivador con grupos de
+   peso desigual, hero de solo texto, hover que precondiciona la apertura, Flip
+   fólder→ficha, salida por bloques del resto del archivador, ficha como collage
+   de scrapbook, pestañas hermanas con page-turn, y cierre con Flip inverso.
+   Lo que NO se toma: su paleta (#D71E1E/#1E4BD7), su registro académico de museo
+   y sus props físicos literales (regla, carrete, tijera). La identidad es de Ariza.
+   ═══════════════════════════════════════════════════════════════════════════ */
 :root{
-  --tinta:#0E0B08; --tinta-2:#16110B; --humo:#221A12;
-  --papel:#E3D0A6; --papel-2:#D8C093;
+  --tinta:#0E0B08; --tinta-2:#16110B;
+  --papel:#E3D0A6; --papel-2:#D6C193; --papel-3:#C9B183;
   --madera:#7B4A28; --madera-clara:#9C6B3C;
   --oro:#E7B854; --oro-brillo:#FBE7B8; --placa:#A9A15C;
   --texto:#F3E9D6; --gris:#9C8F79;
@@ -23,40 +34,178 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--tinta);color:var(--texto);font-family:var(--serif);
   -webkit-font-smoothing:antialiased;overflow-x:clip}
+body.congelado{overflow:hidden}      /* el equivalente a lenis.freeze() durante la transición */
 img{display:block;max-width:100%}
 a{color:inherit}
+button{font-family:inherit}
 ::selection{background:var(--oro);color:var(--tinta)}
-.env{width:min(1140px,92vw);margin:0 auto}
+.env{width:min(1180px,92vw);margin:0 auto}
 
-.nav{position:fixed;inset:0 0 auto;z-index:60;display:flex;align-items:center;
-  justify-content:space-between;padding:16px 4vw;
-  background:linear-gradient(180deg,rgba(14,11,8,.95),transparent)}
-.marca{display:flex;align-items:center;gap:11px;font-family:var(--sello);font-size:17px;
-  letter-spacing:.02em}
-.nav .cta{font-family:var(--sello);font-size:13px;letter-spacing:.06em;text-decoration:none;
-  padding:12px 20px;border-radius:2px;background:var(--oro);color:var(--tinta);
-  transition:transform .3s var(--casa),background .3s var(--casa)}
-.nav .cta:hover{transform:translateY(-2px);background:var(--oro-brillo)}
-.nav .cta:focus-visible{outline:2px solid var(--texto);outline-offset:3px}
+/* ── 1 · NAV MÍNIMA — una sola entrada, como la de Mosby's ─────────────── */
+.nav{position:fixed;inset:0 0 auto;z-index:70;display:flex;align-items:center;
+  justify-content:space-between;padding:22px 5vw;pointer-events:none}
+.nav > *{pointer-events:auto}
+.nav__marca{font-family:var(--sello);font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--placa)}
+.nav__link{font-family:var(--sello);font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase;text-decoration:none;color:var(--oro);
+  padding:13px 18px;border:1px solid rgba(231,184,84,.4);border-radius:2px;
+  transition:background .35s var(--casa),border-color .35s var(--casa)}
+.nav__link:hover{background:rgba(231,184,84,.14);border-color:var(--oro)}
+.nav__link:focus-visible{outline:2px solid var(--oro);outline-offset:4px}
 
-/* ── hero ─────────────────────────────────────────────── */
-.hero{position:relative;min-height:100svh;display:grid;align-items:end;
-  padding:0 0 clamp(38px,7vh,84px);overflow:hidden}
-.hero__foto{position:absolute;inset:0}
-.hero__foto img{width:100%;height:100%;object-fit:cover;object-position:58% 45%}
-.hero__velo{position:absolute;inset:0;
-  background:linear-gradient(74deg,rgba(14,11,8,.97) 12%,rgba(14,11,8,.72) 48%,rgba(14,11,8,.3))}
-.hero .env{position:relative;z-index:2}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--sello);font-size:12px;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--placa);margin:0 0 18px}
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--placa)}
-h1{font-weight:500;font-style:italic;margin:0 0 20px;
-  font-size:clamp(36px,6.6vw,82px);line-height:1.02;letter-spacing:-.02em;
-  text-wrap:balance;max-width:17ch}
-h1 em{font-style:normal;color:var(--oro)}
-.hero .lede{font-size:clamp(16px,1.9vw,19px);line-height:1.62;max-width:48ch;
-  color:var(--gris);margin:0 0 28px}
-.acciones{display:flex;gap:11px;flex-wrap:wrap}
+/* ── 2 · HERO DE SOLO TEXTO — el texto ES la pantalla, no hay imagen ───── */
+.hero{min-height:100svh;display:grid;align-content:center;padding:16vh 0 12vh}
+.hero__rot{font-family:var(--sello);font-size:12px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--placa);margin:0 0 clamp(24px,5vh,50px)}
+.hero h1{font-weight:500;font-style:italic;margin:0 0 clamp(26px,5vh,48px);
+  font-size:clamp(38px,7.4vw,104px);line-height:.98;letter-spacing:-.03em;
+  max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero__manifiesto{font-size:clamp(16px,1.75vw,20px);line-height:1.68;color:var(--gris);
+  max-width:58ch;margin:0 0 12px}
+.hero__manifiesto b{color:var(--texto);font-weight:500}
+.hero__pie{display:flex;gap:26px;flex-wrap:wrap;margin-top:clamp(28px,5vh,54px);
+  font-family:var(--sello);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--placa)}
+.hero__pie b{color:var(--oro)}
+.hero__baja{margin-top:clamp(30px,6vh,64px);font-family:var(--sello);font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+
+/* ── 3-6 · EL ARCHIVADOR: grupos de PESO DESIGUAL ─────────────────────────
+   Mosby's reparte 2+1+3+2. El vacío es decisión: un nombre solo pesa distinto
+   que un grupo de tres. Aquí: 1 (Penal, sola) + 1 + 2. */
+.grupo{padding:clamp(60px,11vh,130px) 0;position:relative}
+.grupo__inner{position:relative}
+.grupo__cab{margin:0 0 clamp(26px,4vh,46px);max-width:52ch}
+/* #9C6B3C daba 4.28:1 sobre la tinta — lo cazo axe. --placa pasa. */
+.grupo__num{font-family:var(--sello);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--placa);display:block;margin-bottom:12px}
+.grupo__tit{font-weight:500;font-style:italic;font-size:clamp(24px,3.6vw,42px);
+  line-height:1.08;letter-spacing:-.02em;margin:0 0 10px}
+.grupo__desc{font-size:16px;line-height:1.62;color:var(--gris);margin:0}
+/* la pila: los fólders se solapan con offset, como carpetas apiladas */
+.pila{display:flex;flex-wrap:wrap;gap:0}
+.pila--una{max-width:min(430px,80vw)}
+.pila--dos > .folder:nth-child(2){margin-left:clamp(-70px,-5vw,-30px);margin-top:clamp(18px,4vh,46px)}
+
+/* el fólder: tapa + cuerpo, con pestaña física arriba */
+.folder{position:relative;width:min(430px,80vw);aspect-ratio:5/6;border:0;padding:0;
+  background:none;cursor:pointer;perspective:1400px;flex:none}
+.folder:focus-visible{outline:2px solid var(--oro);outline-offset:8px}
+.folder__cuerpo{position:absolute;inset:0;background:linear-gradient(168deg,var(--papel-2),var(--papel-3));
+  border-radius:2px 14px 2px 2px;box-shadow:0 26px 50px -30px rgba(0,0,0,.95)}
+.folder__cuerpo::before{content:"";position:absolute;top:0;right:0;width:38%;height:22px;
+  background:var(--madera-clara);border-radius:0 14px 0 10px}
+/* la TAPA es la que gira: rotateY 0 → -180, como un libro que se abre */
+.folder__tapa{position:absolute;inset:0;transform-origin:0% 50%;backface-visibility:hidden;
+  background:linear-gradient(150deg,var(--papel),var(--papel-2) 62%,var(--papel-3));
+  border-radius:2px 14px 2px 2px;padding:clamp(24px,3vw,38px);text-align:left;
+  display:flex;flex-direction:column;justify-content:space-between;color:var(--tinta);
+  box-shadow:0 26px 50px -30px rgba(0,0,0,.95), inset -1px 0 0 rgba(123,74,40,.25);
+  transition:transform .5s var(--casa),box-shadow .5s var(--casa)}
+.folder__tapa::before{content:"";position:absolute;top:0;right:0;width:38%;height:22px;
+  background:var(--madera);border-radius:0 14px 0 10px}
+/* R3 · el hover PRECONDICIONA la apertura: la tapa se despega y enseña el filo */
+.folder:hover .folder__tapa,.folder:focus-visible .folder__tapa{
+  transform:rotateY(-3deg) translateX(-1rem);
+  box-shadow:-14px 26px 54px -26px rgba(0,0,0,.98), inset -1px 0 0 rgba(123,74,40,.25)}
+.folder__num{font-family:var(--sello);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--madera)}
+.folder__etq{display:block}
+.folder__tit{font-weight:500;font-style:italic;font-size:clamp(22px,2.6vw,32px);
+  line-height:1.06;margin:12px 0 0;letter-spacing:-.015em;display:block}
+.folder__pie{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  font-family:var(--sello);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--madera)}
+.folder__filo{position:absolute;left:0;top:8%;bottom:8%;width:3px;background:var(--madera);
+  opacity:0;transition:opacity .4s var(--casa)}
+.folder:hover .folder__filo{opacity:.55}
+
+/* OJO A LA CASCADA: este bloque tiene que ir DESPUES de la regla base de .folder.
+   Estaba antes y, con la misma especificidad, ganaba la base: el folder seguia a
+   ancho completo (312px contra los 367 de la ficha) y al Flip le quedaba un 1.18x. */
+@media(max-width:700px){
+  .pila--dos > .folder:nth-child(2){margin-left:0;margin-top:14px}
+  .pila{flex-direction:column}
+  /* el folder se estrecha en el telefono: a ancho completo medía 312 contra los
+     367 de la ficha, y al Flip le quedaba un 1.18x — no se leía como apertura. */
+  .folder{width:min(210px,58vw)}
+  .pila--una{max-width:none}
+}
+
+
+/* ── 7 · LA FICHA — collage de scrapbook, NO una tarjeta ────────────────── */
+.velo{position:fixed;inset:0;z-index:80;background:rgba(6,4,3,.88);display:none}
+.velo.abierto{display:block}
+.ficha{position:fixed;inset:4vh 4vw;z-index:90;display:none;
+  background:linear-gradient(158deg,var(--papel),var(--papel-2) 70%);
+  color:var(--tinta);border-radius:3px;overflow:hidden;
+  box-shadow:0 50px 110px -40px rgba(0,0,0,.98)}
+.ficha.abierta{display:block}
+.ficha__scroll{position:absolute;inset:0;overflow:auto;padding:clamp(26px,4vw,60px)}
+.ficha__num{font-family:var(--sello);font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--madera)}
+.ficha__tit{font-weight:500;font-style:italic;font-size:clamp(30px,5.2vw,66px);
+  line-height:.98;margin:10px 0 0;letter-spacing:-.025em;max-width:16ch;overflow:hidden}
+.ficha__tit .car{display:inline-block;white-space:pre}
+/* pestañas hermanas: las otras materias del MISMO grupo */
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0}
+.tag{font-family:var(--sello);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(123,74,40,.14);border:1px solid rgba(123,74,40,.32);color:var(--madera);
+  padding:9px 15px;border-radius:2px 10px 10px 2px;cursor:pointer;
+  transition:background .3s var(--casa),color .3s var(--casa)}
+.tag:hover{background:var(--madera);color:var(--papel)}
+.tag:focus-visible{outline:2px solid var(--madera);outline-offset:3px}
+.tag[aria-current="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+
+/* el collage: cada pieza trae SU posición y SU rotación horneadas */
+/* el collage repartia las piezas en el 60% de arriba y dejaba un vacio muerto abajo.
+   Las posiciones se abren y la caja se ajusta al alto real disponible. */
+.scrapbook{position:relative;margin:clamp(24px,4vh,44px) 0 0;min-height:clamp(460px,62vh,680px)}
+.pieza{position:absolute;left:var(--x);top:var(--y);width:var(--w);
+  transform:rotate(var(--r,0deg))}
+.pieza--cita{background:var(--papel);border-left:3px solid var(--madera);
+  padding:22px 24px;box-shadow:0 20px 40px -26px rgba(0,0,0,.7)}
+.pieza--cita p{margin:0 0 12px;font-style:italic;font-size:clamp(15px,1.65vw,19px);line-height:1.55}
+.pieza--cita .fuente{font-family:var(--sello);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--madera);margin:0}
+.pieza--foto{padding:10px 10px 34px;background:#F6EFDC;
+  box-shadow:0 22px 46px -24px rgba(0,0,0,.8)}
+.pieza--foto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pieza--foto figcaption{font-family:var(--sello);font-size:10.5px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--madera);margin-top:10px;text-align:center}
+.pieza--nota{background:var(--placa);color:var(--tinta);padding:18px 20px;
+  font-family:var(--sello);font-size:12px;letter-spacing:.06em;line-height:1.7;
+  box-shadow:0 16px 32px -20px rgba(0,0,0,.7)}
+.pieza--sello{width:auto}
+.sello-cac{width:clamp(96px,11vw,132px);height:clamp(96px,11vw,132px);border-radius:50%;
+  border:2px solid var(--madera);display:grid;place-content:center;text-align:center;
+  font-family:var(--sello);font-size:11px;letter-spacing:.1em;color:var(--madera);
+  line-height:1.5;transform:rotate(-9deg);opacity:.82}
+.sello-cac b{display:block;font-size:22px;letter-spacing:.04em}
+/* la cinta que sujeta una pieza al fólder — decorativa, no un prop literal */
+.cinta{position:absolute;left:50%;top:-14px;transform:translateX(-50%) rotate(-2deg);
+  width:86px;height:26px;background:rgba(169,161,94,.55);
+  box-shadow:0 2px 6px rgba(0,0,0,.18)}
+@media(max-width:900px){
+  .scrapbook{min-height:0;display:flex;flex-direction:column;gap:16px}
+  .pieza{position:static;width:auto;transform:none}
+  .cinta{display:none}
+}
+.ficha__cerrar{position:absolute;right:clamp(16px,2.4vw,28px);top:clamp(16px,2.4vw,28px);
+  z-index:3;font-family:var(--sello);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--tinta);color:var(--papel);border:0;
+  border-radius:2px;padding:13px 18px;cursor:pointer}
+.ficha__cerrar:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+
+/* ── cierre ────────────────────────────────────────────────────────────── */
+.cierre{padding:clamp(80px,14vh,150px) 0;text-align:center;
+  background:linear-gradient(180deg,var(--tinta),#1A120A)}
+.cierre h2{font-weight:500;font-style:italic;font-size:clamp(30px,6vw,70px);
+  line-height:1;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance}
+.cierre p{color:var(--gris);font-size:17px;line-height:1.62;max-width:44ch;margin:0 auto 30px}
+.acciones{display:flex;gap:11px;flex-wrap:wrap;justify-content:center}
 .btn{display:inline-flex;align-items:center;font-family:var(--sello);font-size:14px;
   letter-spacing:.05em;text-decoration:none;padding:16px 26px;border-radius:2px;
   background:var(--oro);color:var(--tinta);
@@ -65,249 +214,142 @@ h1 em{font-style:normal;color:var(--oro)}
 .btn--linea{background:transparent;color:var(--texto);border:1px solid rgba(243,233,214,.3)}
 .btn--linea:hover{border-color:var(--texto);box-shadow:none}
 .btn:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
-.prueba{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;font-size:13.5px;color:var(--gris)}
-.prueba b{color:var(--texto);font-weight:500}
-.prueba .est{color:var(--oro)}
-
-.bloque{padding:clamp(70px,11vh,126px) 0}
-.tit{font-weight:500;font-style:italic;font-size:clamp(28px,5vw,54px);line-height:1.06;
-  letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
-.sub{color:var(--gris);font-size:17px;line-height:1.62;max-width:54ch;margin:0 0 42px}
-
-/* ── EL EXPEDIENTE: los fólders que se convierten en ficha (Flip) ─────── */
-.archivador{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px}
-/* En el móvil van DOS columnas, no una. Por diseño —cuatro tarjetas a ancho
-   completo leen como una lista, no como un archivador— y por mecánica: un fólder
-   que ya ocupa todo el ancho no tiene de dónde crecer, y el Flip se quedaba en
-   una escala de 0.98 (medido). Con dos columnas vuelve a ser una apertura. */
-@media(max-width:600px){
-  .archivador{grid-template-columns:1fr 1fr;gap:10px}
-  .folder{min-height:170px;padding:18px 15px 20px}
-  .folder h3{font-size:18px;margin-top:10px}
-  .folder .abrir{margin-top:12px}
-}
-.folder{position:relative;background:linear-gradient(168deg,var(--papel),var(--papel-2));
-  color:var(--tinta);border:0;border-radius:2px 10px 2px 2px;padding:26px 22px 30px;
-  text-align:left;cursor:pointer;font-family:inherit;min-height:224px;
-  display:flex;flex-direction:column;justify-content:space-between;
-  box-shadow:0 18px 34px -22px rgba(0,0,0,.9);
-  transition:transform .4s var(--casa),box-shadow .4s var(--casa)}
-.folder::before{content:"";position:absolute;top:0;right:0;width:52px;height:16px;
-  background:var(--madera-clara);border-radius:0 10px 0 8px}
-.folder:hover{transform:translateY(-6px);box-shadow:0 26px 44px -22px rgba(0,0,0,.95)}
-.folder:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
-.folder .num{font-family:var(--sello);font-size:11px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--madera)}
-.folder h3{font-weight:500;font-style:italic;font-size:24px;line-height:1.1;margin:14px 0 0;
-  letter-spacing:-.01em}
-.folder .abrir{font-family:var(--sello);font-size:11px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--madera);margin-top:18px}
-.folder--grueso{box-shadow:0 18px 34px -22px rgba(0,0,0,.9), 6px 6px 0 -2px var(--papel-2),
-  12px 12px 0 -4px var(--madera-clara)}
-
-/* la ficha abierta: mismo elemento, otra caja — Flip interpola entre las dos */
-.ficha{position:fixed;inset:6vh 4vw;z-index:80;background:var(--papel);color:var(--tinta);
-  border-radius:3px;padding:clamp(26px,4vw,54px);overflow:auto;display:none;
-  box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
-.ficha.abierta{display:block}
-.ficha__num{font-family:var(--sello);font-size:12px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--madera)}
-.ficha h3{font-weight:500;font-style:italic;font-size:clamp(28px,4.4vw,50px);line-height:1.04;
-  margin:12px 0 22px;letter-spacing:-.02em;max-width:20ch}
-.ficha blockquote{margin:0 0 14px;padding:18px 22px;border-left:2px solid var(--madera);
-  background:rgba(123,74,40,.09);font-size:clamp(15px,1.8vw,18px);line-height:1.62;font-style:italic}
-.ficha .fuente{font-family:var(--sello);font-size:11px;letter-spacing:.07em;
-  text-transform:uppercase;color:var(--madera);margin:0 0 26px}
-.ficha .cerrar{font-family:var(--sello);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--tinta);color:var(--papel);border:0;border-radius:2px;padding:14px 22px;
-  cursor:pointer}
-.ficha .cerrar:focus-visible{outline:2px solid var(--madera);outline-offset:3px}
-.velo{position:fixed;inset:0;z-index:70;background:rgba(6,4,3,.82);display:none}
-.velo.abierto{display:block}
-
-/* ── la prueba de terceros ─────────────────────────────── */
-.pruebas{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:14px}
-.pcard{background:var(--tinta-2);border:1px solid rgba(243,233,214,.09);border-radius:3px;
-  overflow:hidden}
-.pcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.pcard .cuerpo{padding:24px 22px 28px}
-.pcard .rot{font-family:var(--sello);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--oro);display:block;margin-bottom:10px}
-.pcard h3{font-weight:500;font-style:italic;font-size:21px;margin:0 0 9px}
-.pcard p{margin:0;font-size:15px;line-height:1.6;color:var(--gris)}
-
-/* ── voces ─────────────────────────────────────────────── */
-.voces{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
-.voz{background:var(--tinta-2);border-left:2px solid var(--oro);border-radius:0 3px 3px 0;
-  padding:26px 24px}
-.voz p{margin:0 0 15px;font-size:16px;line-height:1.64}
-.voz .quien{font-family:var(--sello);font-size:11px;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--gris)}
-.voz .quien b{color:var(--texto);font-weight:500}
-.voz--ancha{grid-column:span 2;border-left-color:var(--placa)}
-@media(max-width:760px){.voz--ancha{grid-column:span 1}}
-.voz--ancha p{font-style:italic;font-size:clamp(19px,2.4vw,26px);line-height:1.3}
-
-.cierre{background:linear-gradient(180deg,var(--tinta),#1A120A);
-  padding:clamp(78px,13vh,142px) 0;text-align:center}
-.cierre h2{font-weight:500;font-style:italic;font-size:clamp(30px,6vw,70px);line-height:1.02;
-  letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance}
-.cierre .sub{margin:0 auto 30px;text-align:center}
-.cierre .acciones{justify-content:center}
 .franja{height:5px;background:linear-gradient(90deg,var(--madera) 55%,var(--oro))}
-
 footer{padding:42px 0 58px;font-size:13.5px;color:var(--gris);line-height:1.9}
 footer b{color:var(--texto);font-weight:500}
 .aviso{margin-top:24px;padding-top:20px;border-top:1px solid rgba(243,233,214,.1);
   font-size:12.5px;color:#8A7E6B;max-width:64ch}
 
-.rev{opacity:0;transform:translateY(24px)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rev{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .folder:hover .folder__tapa{transform:none}
+}
 @media(max-width:768px){
-  .eyebrow,.prueba,.voz .quien,.aviso,footer,.folder .num,.folder .abrir,.pcard .rot,.ficha .fuente{font-size:12.5px}
-  .ficha{inset:3vh 3vw}
+  .nav__marca,.nav__link,.hero__rot,.hero__pie,.aviso,footer,.grupo__num,
+  .folder__num,.folder__pie,.ficha__num,.tag,.pieza--cita .fuente,
+  .pieza--foto figcaption,.pieza--nota{font-size:12.5px}
+  .ficha{inset:2vh 3vw}
 }
 </style>
 </head>
 <body>
 
+<!-- 1 · nav mínima -->
 <nav class="nav">
-  <span class="marca">Ariza Abogados</span>
-  <a class="cta" href="https://wa.me/51946535761" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  <span class="nav__marca">Ariza Abogados</span>
+  <a class="nav__link" href="https://wa.me/51946535761" target="_blank" rel="noopener">Consultar el caso</a>
 </nav>
 
-<!-- ═══ HERO ═══ -->
-<header class="hero">
-  <div class="hero__foto">
-    <img src="assets/img/place-2.jpg" alt="Cartel del estudio: Ariza Morales Rubén, abogado" />
-  </div>
-  <div class="hero__velo"></div>
-  <div class="env">
-    <p class="eyebrow rev">Estudio jurídico · La Molina</p>
-    <h1 class="rev">El caso a favor de Ariza <em>no lo escribimos nosotros.</em></h1>
-    <p class="lede rev">222 personas ya lo escribieron en Google, un canal de televisión lo
-      llamó como experto y el Colegio de Abogados le dio un número. Esta página solo
-      <b>exhibe el expediente</b>.</p>
-    <div class="acciones rev">
-      <a class="btn" href="https://wa.me/51946535761" target="_blank" rel="noopener">Consultar el caso</a>
-      <a class="btn btn--linea" href="#expediente">Abrir el expediente</a>
-    </div>
-    <div class="prueba rev">
-      <span><b class="est">5.0 ★</b> · 222 reseñas en Google</span>
-      <span>C.A.C. <b>508</b></span>
-      <span>C. Córcega 122, Ate</span>
-    </div>
-  </div>
+<!-- 2 · hero de solo texto — el texto ES la pantalla -->
+<header class="hero env">
+  <p class="hero__rot">Estudio jurídico · C. Córcega 122, Ate · La Molina</p>
+  <h1>El caso a favor de Ariza <em>no lo escribimos nosotros.</em></h1>
+  <p class="hero__manifiesto">Un abogado que se describe a sí mismo no prueba nada. Aquí
+    no hace falta describirlo: hay <b>un expediente entero escrito por otros</b> — 222
+    clientes en Google, un canal de televisión que lo llamó como experto, y el Colegio de
+    Abogados, que le dio un número.</p>
+  <p class="hero__manifiesto">Lo único que hace esta página es <b>abrir el expediente</b>.</p>
+  <p class="hero__pie">
+    <span><b>5.0</b> · 222 reseñas · Google</span>
+    <span>C.A.C. <b>508</b></span>
+    <span>Rubén Ariza Morales</span>
+  </p>
+  <p class="hero__baja">Abajo, el archivador — abre un fólder</p>
+  <p style="margin-top:22px"><a class="btn" href="https://wa.me/51946535761" target="_blank" rel="noopener">Escribir por WhatsApp</a></p>
 </header>
 
-<!-- ═══ EL EXPEDIENTE — momento firma ═══ -->
-<section class="bloque env" id="expediente">
-  <h2 class="tit rev">Cuatro materias, cuatro fólders</h2>
-  <p class="sub rev">Ninguna la elegimos nosotros: cada una la nombra un cliente suyo en su
-    reseña. <b>Abre uno</b> y el fólder se convierte en la ficha.</p>
-  <div class="archivador">
-    <button class="folder rev" data-materia="credito">
-      <span class="num">Materia 01</span>
-      <h3>Recuperación de crédito</h3>
-      <span class="abrir">Abrir ficha</span>
-    </button>
-    <button class="folder rev" data-materia="civil">
-      <span class="num">Materia 02</span>
-      <h3>Civil y familia</h3>
-      <span class="abrir">Abrir ficha</span>
-    </button>
-    <button class="folder folder--grueso rev" data-materia="penal">
-      <span class="num">Materia 03</span>
-      <h3>Penal</h3>
-      <span class="abrir">Abrir ficha</span>
-    </button>
-    <button class="folder rev" data-materia="tierras">
-      <span class="num">Materia 04</span>
-      <h3>Litigio de tierras</h3>
-      <span class="abrir">Abrir ficha</span>
-    </button>
-  </div>
-</section>
+<!-- 3-5 · el archivador: tres grupos de peso desigual -->
+<main>
+  <section class="grupo env" data-grupo="0">
+    <div class="grupo__inner">
+      <div class="grupo__cab">
+        <span class="grupo__num">Carpeta 01 — una sola pieza</span>
+        <h2 class="grupo__tit">La defensa</h2>
+        <p class="grupo__desc">La materia que la televisión le reconoce y por la que lo
+          llaman cuando otro abogado ya falló.</p>
+      </div>
+      <div class="pila pila--una">
+        <button class="folder" data-materia="penal" data-grupo="0">
+          <span class="folder__cuerpo"></span>
+          <span class="folder__filo"></span>
+          <span class="folder__tapa">
+            <span class="folder__etq"><span class="folder__num">Materia 01</span><span class="folder__tit">Penal</span></span>
+            <span class="folder__pie"><span>Abrir fólder</span><span>1 pieza</span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
 
+  <section class="grupo env" data-grupo="1">
+    <div class="grupo__inner">
+      <div class="grupo__cab">
+        <span class="grupo__num">Carpeta 02 — una sola pieza</span>
+        <h2 class="grupo__tit">La familia</h2>
+        <p class="grupo__desc">Lo que se reparte cuando algo se rompe, y lo que pasa
+          cuando del otro lado contratan al bufete más caro.</p>
+      </div>
+      <div class="pila pila--una">
+        <button class="folder" data-materia="civil" data-grupo="1">
+          <span class="folder__cuerpo"></span>
+          <span class="folder__filo"></span>
+          <span class="folder__tapa">
+            <span class="folder__etq"><span class="folder__num">Materia 02</span><span class="folder__tit">Civil y familia</span></span>
+            <span class="folder__pie"><span>Abrir fólder</span><span>1 pieza</span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="grupo env" data-grupo="2">
+    <div class="grupo__inner">
+      <div class="grupo__cab">
+        <span class="grupo__num">Carpeta 03 — dos piezas</span>
+        <h2 class="grupo__tit">El dinero y la tierra</h2>
+        <p class="grupo__desc">Dos materias que comparten la misma pregunta: de quién es
+          lo que está en disputa, y cómo se prueba.</p>
+      </div>
+      <div class="pila pila--dos">
+        <button class="folder" data-materia="credito" data-grupo="2">
+          <span class="folder__cuerpo"></span>
+          <span class="folder__filo"></span>
+          <span class="folder__tapa">
+            <span class="folder__etq"><span class="folder__num">Materia 03</span><span class="folder__tit">Recuperación de crédito</span></span>
+            <span class="folder__pie"><span>Abrir fólder</span><span>Pieza 1 de 2</span></span>
+          </span>
+        </button>
+        <button class="folder" data-materia="tierras" data-grupo="2">
+          <span class="folder__cuerpo"></span>
+          <span class="folder__filo"></span>
+          <span class="folder__tapa">
+            <span class="folder__etq"><span class="folder__num">Materia 04</span><span class="folder__tit">Litigio de tierras</span></span>
+            <span class="folder__pie"><span>Abrir fólder</span><span>Pieza 2 de 2</span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- la ficha: se rellena por JS y Flip la trae desde el fólder -->
 <div class="velo" id="velo"></div>
 <article class="ficha" id="ficha" role="dialog" aria-modal="true" aria-labelledby="fichaTit">
-  <span class="ficha__num" id="fichaNum"></span>
-  <h3 id="fichaTit"></h3>
-  <blockquote id="fichaCita"></blockquote>
-  <p class="fuente" id="fichaFuente"></p>
-  <button class="cerrar" id="fichaCerrar">Cerrar el fólder</button>
+  <button class="ficha__cerrar" id="fichaCerrar">Cerrar el fólder</button>
+  <div class="ficha__scroll">
+    <span class="ficha__num" id="fichaNum"></span>
+    <h2 class="ficha__tit" id="fichaTit"></h2>
+    <div class="tags" id="fichaTags"></div>
+    <div class="scrapbook" id="scrapbook"></div>
+  </div>
 </article>
 
-<!-- ═══ LA PRUEBA DE TERCEROS ═══ -->
-<section class="bloque env">
-  <h2 class="tit rev">Tres pruebas, y ninguna la firmamos nosotros</h2>
-  <p class="sub rev">Un abogado que se describe a sí mismo no prueba nada. Aquí no hace
-    falta: el expediente ya está escrito por otros.</p>
-  <div class="pruebas">
-    <article class="pcard rev">
-      <img src="assets/img/place-5.jpg" alt="Rótulo de una entrevista de televisión: Rubén Ariza Morales, abogado penalista" loading="lazy" />
-      <div class="cuerpo">
-        <span class="rot">Televisión</span>
-        <h3>Lo llamaron como experto</h3>
-        <p>El rótulo del programa dice, textual: «Rubén Ariza Morales · Abogado penalista».
-          En vivo, vía Zoom.</p>
-      </div>
-    </article>
-    <article class="pcard rev">
-      <img src="assets/img/place-10.jpg" alt="Placa en la puerta del estudio: Rubén Ariza Morales, abogado, C.A.C. 508" loading="lazy" />
-      <div class="cuerpo">
-        <span class="rot">Colegiatura</span>
-        <h3>C.A.C. 508</h3>
-        <p>Grabado en la placa de su puerta. Un número de colegiatura es, literalmente, un
-          identificador verificable.</p>
-      </div>
-    </article>
-    <article class="pcard rev">
-      <img src="assets/img/place-1.jpg" alt="Escritorio del estudio con documentos y sello" loading="lazy" />
-      <div class="cuerpo">
-        <span class="rot">Google</span>
-        <h3>5.0 con 222 reseñas</h3>
-        <p>Un volumen que casi ningún estudio de la zona toca. Es un promedio, y está a un
-          clic de comprobarse.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ═══ VOCES ═══ -->
-<section class="bloque env" id="voces">
-  <h2 class="tit rev">Lo que escribieron sus clientes</h2>
-  <p class="sub rev">Textuales, con nombre, verificables en su ficha de Google.</p>
-  <div class="voces">
-    <blockquote class="voz voz--ancha rev">
-      <p>«Tomaron el caso a la mitad porque otros abogados nos fallaron anteriormente.»</p>
-      <span class="quien"><b>Alberto Daniel Palacios Orbegozo</b> · Google · reseña verificable</span>
-    </blockquote>
-    <blockquote class="voz rev">
-      <p>«Excelente abogado en lo civil… ayudó a mi hermana menor a recuperar el cincuenta
-        por ciento de su patrimonio, lo que era su derecho. Contrató el mejor bufete y ni
-        así nos pudo ganar.»</p>
-      <span class="quien"><b>Bruce Cárdenas</b> · Google</span>
-    </blockquote>
-    <blockquote class="voz rev">
-      <p>«Excelente estudio jurídico en materia de recuperación de crédito, obligación de
-        dar suma de dinero.»</p>
-      <span class="quien"><b>Giselle Aquino Sudario</b> · Google</span>
-    </blockquote>
-    <blockquote class="voz rev">
-      <p>«Excelente profesional en litigio de tierras.»</p>
-      <span class="quien"><b>Kevin C. Torres</b> · Google</span>
-    </blockquote>
-  </div>
-</section>
-
-<!-- ═══ CIERRE ═══ -->
-<section class="cierre">
+<section class="cierre" id="cierre">
   <div class="env">
-    <h2 class="rev">Cuente su caso.</h2>
-    <p class="sub rev">C. Córcega 122, Ate — zona La Molina. Escriba por WhatsApp y explique
-      la situación; de ahí se ve si hay caso y qué se puede hacer.</p>
-    <div class="acciones rev">
+    <h2>Cuente su caso.</h2>
+    <p>C. Córcega 122, Ate — zona La Molina. Escriba por WhatsApp y explique la
+      situación; de ahí se ve si hay caso y qué se puede hacer.</p>
+    <div class="acciones">
       <a class="btn" href="https://wa.me/51946535761" target="_blank" rel="noopener">Escribir por WhatsApp</a>
       <a class="btn btn--linea" href="tel:+51946535761">946 535 761</a>
     </div>
@@ -327,124 +369,254 @@ footer b{color:var(--texto);font-weight:500}
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<!-- Flip era plugin de pago del Club GSAP; desde la 3.13 esta en el CDN publico.
-     Es la receta `mosby-files R1` del catalogo: la ficha del indice SE CONVIERTE
-     en la pagina, en vez de aparecer encima de ella. -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 <script>
 (function () {
   "use strict";
   var quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (window.gsap) {
+    if (window.Flip) gsap.registerPlugin(Flip);
+    if (window.SplitText) gsap.registerPlugin(SplitText);
+    if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+  }
 
-  /* el contenido de cada ficha: textual de sus resenas, sin inventar nada.
+  /* Entradas del archivador. Mosby's tambien las tiene: el archivador no aparece
+     puesto, se arma al llegar. La cabecera del grupo sube antes que su pila, para
+     que se lea "primero la carpeta, luego lo que hay dentro". */
+  if (!quieto && window.gsap && window.ScrollTrigger) {
+    gsap.utils.toArray(".grupo").forEach(function (g) {
+      gsap.from(g.querySelector(".grupo__cab"), {
+        y: 34, opacity: 0, duration: .85, ease: "power3.out",
+        scrollTrigger: { trigger: g, start: "top 78%", once: true }
+      });
+      gsap.from(g.querySelectorAll(".folder"), {
+        y: 70, opacity: 0, rotateZ: 1.5, duration: 1, ease: "power3.out", stagger: .12,
+        scrollTrigger: { trigger: g, start: "top 72%", once: true }
+      });
+    });
+    gsap.from(".hero__rot, .hero h1, .hero__manifiesto, .hero__pie, .hero__baja", {
+      y: 22, opacity: 0, duration: .9, ease: "power3.out", stagger: .08, delay: .1
+    });
+  }
+
+  /* Los mismos `transitionDefaults` que Mosby's: 1.5s / power3.inOut para la
+     apertura, .75s para la salida del resto del archivador. Están sincronizados
+     a propósito — es lo que hace que se lea como UN gesto y no como dos. */
+  var D = { abrir: 1.5, salir: .75, giro: .75, ease: "power3.inOut" };
+
+  /* ── el contenido, textual de sus reseñas ────────────────────────────────
      En Penal se cita el TRABAJO y no el detalle del caso, que es sensible. */
-  var FICHAS = {
-    credito: { num: "Materia 01", tit: "Recuperación de crédito",
-      cita: "Excelente estudio jurídico en materia de recuperación de crédito, obligación de dar suma de dinero.",
-      quien: "Giselle Aquino Sudario · Google · reseña verificable" },
-    civil: { num: "Materia 02", tit: "Civil y familia",
-      cita: "Ayudó a mi hermana menor a recuperar el cincuenta por ciento de su patrimonio, lo que era su derecho. Contrató el mejor bufete y ni así nos pudo ganar.",
-      quien: "Bruce Cárdenas · Google · reseña verificable" },
-    penal: { num: "Materia 03", tit: "Penal",
+  var MATERIAS = {
+    penal: { grupo: 0, num: "Materia 01", tit: "Penal",
       cita: "Tomaron el caso a la mitad porque otros abogados nos fallaron anteriormente.",
-      quien: "Alberto Daniel Palacios Orbegozo · Google · reseña verificable" },
-    tierras: { num: "Materia 04", tit: "Litigio de tierras",
+      quien: "Alberto Daniel Palacios Orbegozo · Google",
+      foto: "assets/img/place-5.jpg",
+      pie: "Rótulo de televisión: «Rubén Ariza Morales · Abogado penalista»",
+      nota: "La materia que la televisión\nle reconoce como experto." },
+    civil: { grupo: 1, num: "Materia 02", tit: "Civil y familia",
+      cita: "Ayudó a mi hermana menor a recuperar el cincuenta por ciento de su patrimonio, lo que era su derecho. Contrató el mejor bufete y ni así nos pudo ganar.",
+      quien: "Bruce Cárdenas · Google",
+      foto: "assets/img/place-10.jpg",
+      pie: "La placa de su puerta: Rubén Ariza Morales, abogado, C.A.C. 508",
+      nota: "Divorcio por causal.\nEl patrimonio, repartido\ncomo correspondía." },
+    credito: { grupo: 2, num: "Materia 03", tit: "Recuperación de crédito",
+      cita: "Excelente estudio jurídico en materia de recuperación de crédito, obligación de dar suma de dinero.",
+      quien: "Giselle Aquino Sudario · Google",
+      foto: "assets/img/place-1.jpg",
+      pie: "El escritorio del estudio",
+      nota: "Obligación de dar\nsuma de dinero." },
+    tierras: { grupo: 2, num: "Materia 04", tit: "Litigio de tierras",
       cita: "Excelente profesional en litigio de tierras.",
-      quien: "Kevin C. Torres · Google · reseña verificable" }
+      quien: "Kevin C. Torres · Google",
+      foto: "assets/img/place-2.jpg",
+      pie: "El cartel del estudio, en su fachada",
+      nota: "De quién es la tierra,\ny cómo se prueba." }
   };
+  var ORDEN = ["penal", "civil", "credito", "tierras"];
 
   var ficha = document.getElementById("ficha"),
       velo = document.getElementById("velo"),
+      scrap = document.getElementById("scrapbook"),
+      elTit = document.getElementById("fichaTit"),
       folders = [].slice.call(document.querySelectorAll(".folder")),
-      abierto = null;
+      grupos = [].slice.call(document.querySelectorAll(".grupo")),
+      actual = null, botonOrigen = null, animando = false, corte = null;
 
-  function pintar(k) {
-    var d = FICHAS[k];
-    document.getElementById("fichaNum").textContent = d.num;
-    document.getElementById("fichaTit").textContent = d.tit;
-    document.getElementById("fichaCita").textContent = "«" + d.cita + "»";
-    document.getElementById("fichaFuente").textContent = d.quien;
+  /* R5 · el collage: cada pieza trae SU posición y SU rotación horneadas.
+     No es una grilla — si fuera automático se vería a grilla, que es justo lo
+     que un expediente no es. */
+  var COLLAGE = [
+    { cls: "pieza--cita",  x: "0%",   y: "0%",  w: "min(50%,420px)", r: "-1.5deg" },
+    { cls: "pieza--foto",  x: "54%",  y: "4%",  w: "min(42%,340px)", r: "2.5deg" },
+    { cls: "pieza--nota",  x: "6%",   y: "52%", w: "min(34%,280px)", r: "-3deg" },
+    { cls: "pieza--sello", x: "50%",  y: "72%", w: "auto",            r: "0deg" }
+  ];
+
+  function armarFicha(k) {
+    var m = MATERIAS[k];
+    document.getElementById("fichaNum").textContent = m.num;
+    elTit.textContent = m.tit;
+
+    /* pestañas hermanas: las otras materias del MISMO grupo (R4) */
+    var tags = document.getElementById("fichaTags");
+    tags.innerHTML = "";
+    var hermanas = ORDEN.filter(function (o) { return MATERIAS[o].grupo === m.grupo; });
+    /* una pestana sola no es una pestana: solo se dibujan si hay a donde ir */
+    (hermanas.length > 1 ? hermanas : [])
+      .forEach(function (o) {
+        var b = document.createElement("button");
+        b.className = "tag"; b.textContent = MATERIAS[o].tit;
+        if (o === k) b.setAttribute("aria-current", "true");
+        else b.addEventListener("click", function () { pasarPagina(o); });
+        tags.appendChild(b);
+      });
+
+    scrap.innerHTML = "";
+    COLLAGE.forEach(function (c) {
+      var el = document.createElement("div");
+      el.className = "pieza " + c.cls;
+      el.style.setProperty("--x", c.x); el.style.setProperty("--y", c.y);
+      el.style.setProperty("--w", c.w); el.style.setProperty("--r", c.r);
+      if (c.cls === "pieza--cita") {
+        el.innerHTML = '<span class="cinta"></span><p>«' + m.cita + '»</p>' +
+          '<p class="fuente">' + m.quien + ' · reseña verificable</p>';
+      } else if (c.cls === "pieza--foto") {
+        el.innerHTML = '<figure style="margin:0"><img src="' + m.foto + '" alt="' + m.pie +
+          '" loading="lazy" /><figcaption>' + m.pie + '</figcaption></figure>';
+      } else if (c.cls === "pieza--nota") {
+        el.textContent = m.nota;
+        el.style.whiteSpace = "pre-line";
+      } else {
+        el.innerHTML = '<div class="sello-cac">C.A.C.<b>508</b>Colegiatura</div>';
+      }
+      scrap.appendChild(el);
+    });
+    actual = k;
   }
 
-  /* ── MOMENTO FIRMA: el fólder SE CONVIERTE en la ficha (GSAP Flip) ───────
-     Receta `mosby-files R1`. No es un modal que aparece encima: es el MISMO
-     rectángulo, que Flip interpola desde su casilla del archivador hasta ocupar
-     la pantalla. Por eso se lee como abrir un fólder y no como abrir una ventana. */
+  /* el titular entra por CARÁCTER — SplitText, xPercent -150 → 0, stagger .025,
+     arrancando cuando la tapa ya giró más de media vuelta (R1) */
+  function entrarTitulo(desdeDerecha) {
+    if (!window.SplitText || quieto) return;
+    if (corte) { corte.revert(); corte = null; }
+    corte = new SplitText(elTit, { type: "chars", charsClass: "car" });
+    gsap.from(corte.chars, {
+      xPercent: desdeDerecha ? 150 : -150, opacity: 0,
+      duration: .65, ease: "power2.out",
+      stagger: desdeDerecha ? -.025 : .025,
+      onComplete: function () { if (corte) { corte.revert(); corte = null; } }
+    });
+  }
+
+  /* ── R1 + R2 · FOLDER-OPEN ───────────────────────────────────────────────
+     Dos timelines a la vez, como en Mosby's: una abre el fólder (Flip + tapa
+     girando) y otra saca del cuadro el resto del archivador. Que compartan la
+     curva es lo que las hace leer como un solo gesto. */
   function abrir(btn) {
-    var k = btn.dataset.materia;
-    pintar(k);
-    abierto = btn;
+    if (animando) return;
+    var k = btn.dataset.materia, g = +btn.dataset.grupo;
+    botonOrigen = btn;
+    armarFicha(k);
+
     if (quieto || !window.Flip) {
       ficha.classList.add("abierta"); velo.classList.add("abierto");
+      document.body.classList.add("congelado");
       document.getElementById("fichaCerrar").focus();
       return;
     }
-    var estado = Flip.getState(btn);          // dónde está AHORA el fólder
+    animando = true;
+    document.body.classList.add("congelado");   // el equivalente a lenis.freeze()
+
+    /* R2 · el resto del archivador se va con yPercent 120, stagger .1 */
+    var otros = grupos.filter(function (s) { return +s.dataset.grupo !== g; })
+                      .map(function (s) { return s.querySelector(".grupo__inner"); });
+    gsap.to(otros, { yPercent: 120, opacity: 0, duration: D.salir, ease: "power2.out", stagger: .1 });
+    gsap.to(".hero__manifiesto, .hero h1, .hero__rot, .hero__pie, .hero__baja",
+      { y: "2rem", opacity: 0, duration: D.salir, ease: "power2.out", stagger: .04 });
+
+    /* la tapa gira como un libro: rotateY 0 (o -3 si venía de hover) → -180 */
+    var tapa = btn.querySelector(".folder__tapa");
+    gsap.to(tapa, { rotateY: -180, duration: D.abrir, ease: D.ease });
+
+    /* R1 · Flip: la ficha arranca EN la casilla del fólder y crece hasta su sitio */
+    var estado = Flip.getState(btn);
     ficha.classList.add("abierta");
     velo.classList.add("abierto");
-    gsap.set(velo, { opacity: 0 });
-    gsap.to(velo, { opacity: 1, duration: .45, ease: "power2.out" });
-    /* OJO al orden, que es donde se rompe. `Flip.fit(..., {returnState:true})`
-       devuelve null aqui y `Flip.from(null)` revienta con "Cannot read properties
-       of null (reading 'targets')" — un error que NO se ve en pantalla, solo en
-       consola, y deja la ficha congelada encajada sobre el folder.
-       El patron que si funciona: ENCAJAR sobre el folder, CAPTURAR ese estado,
-       LIMPIAR la transformada para que vuelva a su sitio final, y animar DESDE
-       el estado capturado. */
+    gsap.fromTo(velo, { opacity: 0 }, { opacity: 1, duration: .5, ease: "power2.out" });
     Flip.fit(ficha, estado, { scale: true });
     var desde = Flip.getState(ficha);
     gsap.set(ficha, { clearProps: "transform" });
     Flip.from(desde, {
-      duration: 1.05, ease: "power3.inOut", scale: true, absolute: true,
+      duration: D.abrir, ease: D.ease, scale: true, absolute: true,
       onComplete: function () {
         gsap.set(ficha, { clearProps: "transform,width,height" });
+        animando = false;
         document.getElementById("fichaCerrar").focus();
       }
     });
-    gsap.from(ficha.children, { opacity: 0, y: 16, duration: .5, stagger: .06, delay: .38, ease: "power2.out" });
+    gsap.delayedCall(.65, function () { entrarTitulo(false); });
+    gsap.from(scrap.children, {
+      y: "50vh", opacity: 0, duration: .8, ease: "power3.out", stagger: .07, delay: .55,
+      clearProps: "y"
+    });
   }
 
+  /* ── R4 · PAGE-TURN: cambiar de materia SIN volver al índice ───────────── */
+  function pasarPagina(k) {
+    if (animando || k === actual) return;
+    animando = true;
+    var tl = gsap.timeline({
+      defaults: { duration: D.giro, ease: "power3.in" },
+      onComplete: function () { animando = false; }
+    });
+    tl.to(ficha.querySelector(".ficha__scroll"), { opacity: 0, duration: .32 })
+      .add(function () { armarFicha(k); entrarTitulo(true); })
+      .to(ficha.querySelector(".ficha__scroll"), { opacity: 1, duration: .38, ease: "power2.out" })
+      .from(scrap.children, { y: "50vh", opacity: 0, duration: .7, ease: "power3.out",
+        stagger: .06, clearProps: "y" }, "-=.3");
+  }
+
+  /* ── FOLDER-CLOSE: el Flip inverso, de vuelta a su casilla exacta ──────── */
   function cerrar() {
-    if (!abierto) return;
+    if (!botonOrigen || animando) return;
     if (quieto || !window.Flip) {
       ficha.classList.remove("abierta"); velo.classList.remove("abierto");
-      abierto.focus(); abierto = null; return;
+      document.body.classList.remove("congelado");
+      botonOrigen.focus(); botonOrigen = null; return;
     }
-    var destino = Flip.getState(abierto);
-    var estado = Flip.getState(ficha);
-    Flip.fit(ficha, destino, {
-      scale: true, duration: .85, ease: "power3.inOut",
+    animando = true;
+    var g = +botonOrigen.dataset.grupo;
+    var otros = grupos.filter(function (s) { return +s.dataset.grupo !== g; })
+                      .map(function (s) { return s.querySelector(".grupo__inner"); });
+    gsap.to(otros, { yPercent: 0, opacity: 1, duration: D.salir, ease: "power2.out", stagger: .08 });
+    gsap.to(".hero__manifiesto, .hero h1, .hero__rot, .hero__pie, .hero__baja",
+      { y: 0, opacity: 1, duration: D.salir, ease: "power2.out", stagger: .03 });
+    gsap.to(botonOrigen.querySelector(".folder__tapa"), { rotateY: 0, duration: D.abrir, ease: D.ease });
+    gsap.to(velo, { opacity: 0, duration: .6, ease: "power2.in" });
+
+    /* grabar el estado ABIERTO, encajar sobre el folder, y animar DESDE el abierto:
+       Flip.from devuelve el elemento al estado grabado y lo lleva a donde esta ahora
+       (el folder). Con Flip.fit + vars el onComplete no llegaba a dispararse y la
+       ficha se quedaba abierta — medido: display seguia en "block". */
+    var abierto = Flip.getState(ficha);
+    Flip.fit(ficha, Flip.getState(botonOrigen), { scale: true });
+    Flip.from(abierto, {
+      scale: true, absolute: true, duration: D.abrir * .8, ease: D.ease,
       onComplete: function () {
         ficha.classList.remove("abierta"); velo.classList.remove("abierto");
+        document.body.classList.remove("congelado");
         gsap.set(ficha, { clearProps: "all" });
-        if (abierto) { abierto.focus(); abierto = null; }
+        animando = false;
+        if (botonOrigen) { botonOrigen.focus(); botonOrigen = null; }
       }
     });
-    gsap.to(velo, { opacity: 0, duration: .6, ease: "power2.in" });
-    void estado;
   }
 
   folders.forEach(function (b) { b.addEventListener("click", function () { abrir(b); }); });
   document.getElementById("fichaCerrar").addEventListener("click", cerrar);
   velo.addEventListener("click", cerrar);
   addEventListener("keydown", function (e) { if (e.key === "Escape") cerrar(); });
-
-  /* ── entradas ─────────────────────────────────────────────────────────── */
-  if (quieto || !window.gsap) {
-    document.querySelectorAll(".rev").forEach(function (e) {
-      e.style.opacity = 1; e.style.transform = "none";
-    });
-    return;
-  }
-  gsap.registerPlugin(ScrollTrigger);
-  if (window.Flip) gsap.registerPlugin(Flip);
-  gsap.to(".hero .rev", { opacity: 1, y: 0, duration: .9, ease: "power3.out", stagger: .09, delay: .15 });
-  gsap.utils.toArray(".rev:not(.hero .rev)").forEach(function (el) {
-    gsap.to(el, { opacity: 1, y: 0, duration: .8, ease: "power3.out",
-      scrollTrigger: { trigger: el, start: "top 88%", once: true } });
-  });
-  gsap.to(".hero__foto img", { scale: 1.1, ease: "none",
-    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .6 } });
 })();
 </script>
 </body>
