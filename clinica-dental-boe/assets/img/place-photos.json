@@ -1,0 +1,65 @@
+{
+  "negocio": "Clínica Dental BOE",
+  "fotos": [
+    {
+      "archivo": "assets/img/place-1.jpg",
+      "ancho": 500,
+      "alto": 510,
+      "autor": "Clínica Dental BOE"
+    },
+    {
+      "archivo": "assets/img/place-2.jpg",
+      "ancho": 442,
+      "alto": 280,
+      "autor": "Clínica Dental BOE"
+    },
+    {
+      "archivo": "assets/img/place-3.jpg",
+      "ancho": 4000,
+      "alto": 1800,
+      "autor": "Carlos Hu Va"
+    },
+    {
+      "archivo": "assets/img/place-4.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Hopeless Wanderer"
+    },
+    {
+      "archivo": "assets/img/place-5.jpg",
+      "ancho": 4000,
+      "alto": 1800,
+      "autor": "Carlos Hu Va"
+    },
+    {
+      "archivo": "assets/img/place-6.jpg",
+      "ancho": 1800,
+      "alto": 4000,
+      "autor": "Carlos Hu Va"
+    },
+    {
+      "archivo": "assets/img/place-7.jpg",
+      "ancho": 3024,
+      "alto": 4032,
+      "autor": "Hopeless Wanderer"
+    },
+    {
+      "archivo": "assets/img/place-8.jpg",
+      "ancho": 3840,
+      "alto": 2160,
+      "autor": "Daivelis Ramirez Torres"
+    },
+    {
+      "archivo": "assets/img/place-9.jpg",
+      "ancho": 510,
+      "alto": 510,
+      "autor": "Clínica Dental BOE"
+    },
+    {
+      "archivo": "assets/img/place-10.jpg",
+      "ancho": 510,
+      "alto": 510,
+      "autor": "Clínica Dental BOE"
+    }
+  ]
+}

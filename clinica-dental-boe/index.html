@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clínica Dental BOE — Al dentista sí se vuelve · Pueblo Libre, Lima</title>
+<meta name="description" content="Clínica Dental BOE · 4.9 de 5 en 228 reseñas de Google · Implantes, ortodoncia y estética dental en Pueblo Libre, Lima." />
+<meta name="theme-color" content="#F7F1EC" />
+<meta property="og:title" content="Clínica Dental BOE — Al dentista sí se vuelve" />
+<meta property="og:description" content="4.9 de 5 en 228 reseñas de Google. Casos reales de implantes, ortodoncia y rehabilitación en Pueblo Libre, Lima." />
+<meta property="og:type" content="website" />
+<!-- B1 · absoluta: WhatsApp no resuelve rutas relativas y el prospecto ve el preview ANTES que la web -->
+<meta property="og:image" content="https://KurusuDes.github.io/myautomatedjr-demos/clinica-dental-boe/assets/img/og.jpg" />
+<meta property="og:url" content="https://KurusuDes.github.io/myautomatedjr-demos/clinica-dental-boe/" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_PE" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- La curva de sonrisa del logo, en el icono -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%230F1B18'/%3E%3Cpath%20d='M7%2012.5c4.6%208.6%2013.4%208.6%2018%200'%20stroke='%2335BFA9'%20stroke-width='3.4'%20fill='none'%20stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="assets/img/icono-180.png" />
+<script>document.documentElement.className += ' js';</script>
+
+<!-- Tipografía del CONCEPTO: Bricolage Grotesque (display) + Albert Sans (body). -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- JSON-LD con datos reales del HANDOFF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clínica Dental BOE",
+  "telephone": "+51992300475",
+  "address": { "@type": "PostalAddress", "streetAddress": "Av Antonio José de Sucre 161", "addressLocality": "Pueblo Libre, Lima", "postalCode": "15084", "addressCountry": "PE" },
+  "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "22:00" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "228" }
+}
+</script>
+
+<style>
+/* ============================================================
+   TOKENS — derivados de CONCEPTO.md ("Al dentista sí se vuelve").
+   Paleta del local real: las puertas menta de los consultorios.
+   ============================================================ */
+:root{
+  /* El mundo sale del local real: el muro rosado del arco, la reja menta,
+     la porcelana de una pieza bien hecha y un grafito verdoso de teatro.
+     Dos materiales (porcelana ↔ grafito), jamás banderas pastel. */
+  --menta:#35BFA9;
+  --menta-profunda:#1E8E7C;
+  --porcelana:#F7F1EC;      /* claro: porcelana cálida con memoria del muro rosado */
+  --rosa-muro:#DCA9A6;      /* el muro real del arco — solo como halo/tinte, nunca UI */
+  --grafito:#0F1B18;        /* oscuro: grafito verdoso profundo, el teatro */
+  --grafito-alto:#1A2B27;   /* paneles y fichas sobre el teatro */
+  --hueso:#F5F9F7;          /* texto sobre grafito */
+  --tinta:#1C2624;          /* texto sobre porcelana */
+
+  --cta:#167B69;            /* el verde de accion: 4.87:1 con --hueso (AA) */
+  --bg:var(--porcelana);
+  --ink:var(--tinta);
+  --primary:var(--cta);     /* CTA y foco: 4.6:1 sobre porcelana = AA */
+
+  --font-display:'Bricolage Grotesque', sans-serif;
+  --font-body:'Albert Sans', sans-serif;
+
+  /* Motion de la casa: easing propio SIEMPRE */
+  --ease-casa:cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-hover:180ms;
+
+  /* EL ARCO como sistema de formas. Un solo token ELÍPTICO y PORCENTUAL:
+     el radio superior es SIEMPRE media caja, así que cualquier ventana lee
+     como arco sin importar su proporción (un radio en píxeles sobre una caja
+     ancha lee "card", no "puerta"). Si una caja no lee como arco, se cambia
+     su proporción — nunca su radio. Sin excepciones: las doce ventanas del
+     sitio usan este token. La única variante es --arco-piso, para el arco
+     cuyo pie ES el piso del viewport y por tanto no tiene esquinas. */
+  --arco:50% 50% var(--r-md) var(--r-md) / 42% 42% var(--r-md) var(--r-md);
+  --arco-piso:50% 50% 0 0 / 42% 42% 0 0;
+  --r-md:24px; --r-lg:32px;
+  --container:1180px;
+}
+
+/* Piso de calidad (no tocar sin razón) */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}   /* el viaje lo conduce el JS con el easing de la casa */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;-webkit-user-drag:none;user-select:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px;position:relative}
+section{scroll-margin-top:24px}
+h1,h2,h3{font-family:var(--font-display);line-height:1.04;letter-spacing:-0.02em;font-weight:700;text-wrap:balance}
+.cifra{font-variant-numeric:tabular-nums}
+
+/* Escala tipográfica real (arquitectura, no "título de blog"):
+   xxl = la palabra protagonista de tramo · xl = titular de tramo. */
+.display-xxl{font-size:clamp(3rem, 8.4vw, 7rem);line-height:.94;letter-spacing:-0.035em;max-width:15ch;
+  font-variation-settings:'opsz' 96}
+.display-xl{font-size:clamp(2.4rem, 5.2vw, 4.2rem);letter-spacing:-0.028em;font-variation-settings:'opsz' 72}
+.display-l{font-size:clamp(1.9rem, 3.6vw, 2.9rem);font-variation-settings:'opsz' 48}
+.ceja{font-variation-settings:'opsz' 14}
+
+/* Grano: textura GRIS, el color siempre lo pone la paleta (ley 9) */
+.grano{position:fixed;inset:0;z-index:96;pointer-events:none;opacity:.13;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:260px}
+
+/* ============================================================
+   CABECERA
+   ============================================================ */
+.cabecera{position:absolute;top:0;left:0;right:0;z-index:40}
+.cabecera-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 24px;max-width:var(--container);margin:0 auto}
+.marca{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.12rem;letter-spacing:-0.01em}
+.marca svg{color:currentColor;opacity:.9}   /* el mundo en reposo es monocromo (ley 1) */
+.nav{display:flex;gap:28px;font-size:.92rem;font-weight:500}
+.nav a{opacity:.78;transition:opacity var(--dur-hover) var(--ease-casa)}
+.nav a:hover{opacity:1}
+/* Un solo CTA en el nav: la acción es el único menta en reposo, con N6 */
+.cabecera-cta{position:relative;font-size:.9rem;font-weight:600;color:var(--hueso);background:var(--cta);
+  padding:11px 22px;border-radius:999px;will-change:transform}
+.cabecera-cta::after{content:"";position:absolute;inset:-8px;border-radius:999px;pointer-events:none;
+  box-shadow:0 0 0 5px rgba(53,191,169,.25), 0 8px 26px rgba(53,191,169,.45);opacity:var(--cerca,0);transition:opacity 240ms var(--ease-casa)}
+@media (max-width:860px){.nav{display:none}}
+
+/* ============================================================
+   1 · EL UMBRAL — hero y momento firma en un solo tramo.
+   La puerta real del local, centrada como un altar y apoyada en el
+   borde inferior del viewport: estás parado frente a ella. Con JS,
+   desktop y motion: pin + scrub — la máscara-arco crece hasta
+   tragarse el viewport, cruzas al teatro y aterriza el "sí." XXL.
+   Fallbacks (ley 7): móvil y reduced-motion = corte limpio con
+   costura; sin JS la página completa se lee. El LCP (la puerta)
+   solo anima transform en CSS puro.
+   ============================================================ */
+.umbral{position:relative;min-height:100svh;background:var(--porcelana);overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;text-align:center;padding:118px 24px 0}
+.umbral::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(58% 52% at 50% 66%, rgba(220,169,166,.2), transparent 70%)}
+.ceja{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.62;margin-bottom:18px}
+.umbral-texto{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.umbral-texto h1{font-size:clamp(2.7rem, 6vw, 5.1rem);max-width:14ch}
+.umbral-texto h1 .si{color:var(--menta-profunda)}   /* el único menta quieto: la tesis */
+.umbral-sub{margin-top:18px;font-size:1.05rem;max-width:52ch;opacity:.85;text-wrap:balance}
+.umbral-ctas{display:flex;align-items:center;justify-content:center;gap:26px;margin-top:28px;flex-wrap:wrap}
+.boton-wsp{position:relative;display:inline-flex;align-items:center;gap:10px;background:var(--cta);color:var(--hueso);
+  font-weight:600;font-size:1rem;padding:16px 28px;border-radius:999px;will-change:transform}
+.iman .iman-texto{display:inline-flex;align-items:center;gap:10px;will-change:transform}
+.boton-wsp::after{content:"";position:absolute;inset:-10px;border-radius:999px;pointer-events:none;
+  box-shadow:0 0 0 6px rgba(53,191,169,.28), 0 10px 34px rgba(53,191,169,.5);opacity:var(--cerca,0);transition:opacity 240ms var(--ease-casa)}
+.enlace-flecha{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.98rem;color:var(--tinta);
+  transition:color var(--dur-hover) var(--ease-casa)}
+.enlace-flecha svg{transition:transform var(--dur-hover) var(--ease-casa)}
+.enlace-flecha:hover{color:var(--cta)}   /* el menta responde al gesto y decae */
+.enlace-flecha:hover svg{transform:translateY(3px)}
+.enlace-flecha:active{transform:scale(.97)}
+.datos a:active{opacity:.7}
+@media (hover:none){.boton-wsp:active,.cabecera-cta:active{transform:scale(.97)}}
+
+/* La ventana-arco: la forma maestra, flush con el piso del viewport */
+.umbral-arco{position:relative;z-index:1;margin-top:auto;height:min(44svh, 480px);aspect-ratio:4/5;
+  border-radius:var(--arco-piso);overflow:hidden;   /* arco con el pie en el piso del viewport */
+  transform-origin:50% 46%;will-change:transform}
+.umbral-arco figure{position:absolute;inset:0}
+.umbral-arco img{width:100%;height:100%;object-fit:cover;will-change:transform;transform-origin:50% 60%}
+/* El paso: al cruzar, el interior se apaga hacia el teatro (solo opacity) */
+.umbral-arco::after{content:"";position:absolute;inset:0;background:var(--grafito);opacity:var(--paso,0);pointer-events:none}
+
+/* El otro lado: teatro + la palabra protagonista. Solo existen con el
+   umbral activo (html.umbral-on); en el fallback ni se montan. */
+.umbral-noche,.umbral-si{display:none}
+/* El halo de la puerta recien cruzada ilumina la palabra: no flota en
+   negro puro, esta parada en el umbral que acabas de atravesar. */
+html.umbral-on .umbral-noche{display:block;position:absolute;inset:0;z-index:3;opacity:0;pointer-events:none;
+  background:radial-gradient(58% 50% at 50% 58%, rgba(53,191,169,.26), transparent 72%), var(--grafito)}
+/* La palabra NO se dimensiona con font-size: un tamaño en vw controla el alto
+   del cuerpo, jamás el ancho del glifo — la tinta se quedaba en 37,5vw y la
+   palabra no tocaba nada. Con <text textLength> el navegador estira el propio
+   trazo hasta el ancho que le pedimos, así que "sí." mide 92vw en cualquier
+   viewport, escritorio y móvil. */
+html.umbral-on .umbral-si{display:grid;position:absolute;inset:0;z-index:4;place-items:center;opacity:0;pointer-events:none}
+.si-glifo{width:92vw;max-width:none}
+.si-glifo svg{display:block;width:100%;height:auto;overflow:visible}
+.si-glifo text{font-family:var(--font-display);font-weight:700;font-variation-settings:'opsz' 96;
+  font-size:205px;fill:var(--menta)}
+
+/* Llegada: cada pieza con duración y retraso PROPIOS (ley 4); los targets
+   del scrub (arco, img, texto) quedan libres — GSAP es el único dueño
+   de su transform (ley 8). */
+@media (prefers-reduced-motion: no-preference){
+  .umbral .ceja{animation:llega-sube .7s var(--ease-casa) .05s both}
+  .umbral-texto h1{animation:llega-sube .95s var(--ease-casa) .12s both}
+  .umbral-sub{animation:llega-sube .8s var(--ease-casa) .3s both}
+  .umbral-ctas{animation:llega-sube .85s var(--ease-casa) .42s both}
+  .umbral-arco figure{animation:llega-abre 1.15s var(--ease-casa) .15s both}
+}
+@keyframes llega-sube{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes llega-abre{from{opacity:0;transform:translateY(4%) scale(1.05)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* MOVIL (el 100% del trafico real llega por WhatsApp en Android):
+   la puerta es full-bleed hasta el borde inferior del viewport — no una
+   foto recortada por una recta — y el "si." tiene su propia pantalla. */
+@media (max-width:899px){
+  .umbral{height:100svh;min-height:0;padding:100px 20px 0}
+  /* full-bleed de verdad: `width:100vw` + `margin-left:calc(50% - 50vw)` se
+     calcula sobre el content-box y el flex vuelve a centrar — dejaba 10px
+     cortados a la izquierda y una franja clara a la derecha. Con stretch el
+     arco toma el ancho del contenedor y solo hay que devolver el padding. */
+  .umbral-arco{margin-top:auto;align-self:stretch;width:auto;margin-inline:-20px;
+    height:auto;flex:1 1 auto;min-height:34svh;aspect-ratio:auto;border-radius:var(--arco-piso)}
+  .umbral-texto h1{font-size:clamp(2.5rem, 10vw, 3.6rem)}
+  .umbral-sub{font-size:.98rem;margin-top:14px}
+  .umbral-ctas{margin-top:22px;gap:16px}
+  /* la onda se dibuja SOBRE la puerta: la foto llega al borde inferior
+     del viewport y el grafito entra por encima, sin banda de porcelana */
+  .umbral + .costura{background:transparent;position:relative;z-index:5;
+    margin-top:calc(-1 * clamp(44px,7vw,92px))}
+  .umbral + .costura::before{display:none}
+}
+/* La pantalla del "si." en movil: grafito completo, la palabra a ancho de
+   pantalla como primer golpe. Sin pin — entra con el scroll (--paso).
+   Sin JS nace puesta (--paso:1): el concepto existe igual (ley 7). */
+.si-movil{display:none}
+@media (max-width:899px){
+  /* E · era 100svh: 400px de vacío con la palabra pegada al suelo, detrás
+     de la barra de WhatsApp. Se recorta el cuarto y se centra de verdad,
+     con el pie reservado para la barra flotante. */
+  .si-movil{display:grid;place-items:center;height:min(78svh,620px);background:var(--grafito);
+    padding-bottom:72px;position:relative;overflow:hidden}
+  .si-movil::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(64% 46% at 50% 54%, rgba(53,191,169,.18), transparent 72%)}
+  .si-movil .si-glifo{position:relative;
+    opacity:calc(.15 + var(--paso,1) * .85);
+    transform:translateY(calc((1 - var(--paso,1)) * 14svh)) scale(calc(.88 + var(--paso,1) * .12))}
+  /* el pulso de halo detrás del glifo: el payoff físico que en escritorio da
+     el cruce de la puerta. Envelope sin(PI*t), una sola vez (misma ley que
+     la manija y la brasa del monumento). */
+  .si-movil::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(46% 34% at 50% 50%, rgba(53,191,169,.5), transparent 70%);
+    opacity:var(--pulso,0)}
+  /* B4 · esta pantalla no tiene contenido ni CTA: sin un indicio, se lee como
+     que la página se cortó. */
+  .si-cue{position:absolute;bottom:84px;left:50%;transform:translateX(-50%);
+    color:var(--hueso);opacity:.58;z-index:2}
+}
+
+/* ============================================================
+   COSTURAS — N5 · Costura de onda (efecto reservado del catálogo).
+   Divisores SVG vivos: la amplitud responde a la velocidad del
+   scroll; quietos, se aplanan al arco de sonrisa. Jamás una línea
+   recta entre secciones (ley 6).
+   ============================================================ */
+/* el bloque ya no arranca en color plano: sale del mismo tinte con el que
+   muere el puente, asi la costura no deja una recta visible (ley 6) */
+.costura{background:linear-gradient(to top, var(--de), color-mix(in srgb, var(--a) 10%, var(--de)));
+  line-height:0;margin-bottom:-1px;position:relative;z-index:1}
+.costura svg{width:100%;height:clamp(44px,7vw,92px);display:block}
+.costura path{fill:var(--a)}
+/* Puente de gradiente (patrón 8): el color del tramo que llega respira por
+   encima de la onda — la costura jamás es una silueta dura. */
+.costura::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:200px;pointer-events:none;
+  background:linear-gradient(to bottom, transparent, color-mix(in srgb, var(--a) 10%, transparent))}
+/* Con el umbral pineado activo, el cruce ES la costura: la onda de
+   fallback solo existe en el corte limpio (móvil / reduced / sin JS) */
+html.umbral-on .solo-plano{display:none}
+
+/* ============================================================
+   LA PRUEBA — EL MONUMENTO. La cifra ES el activo: 4.9 XXL que
+   crece con el scroll (patrón 5, valor final prerenderizado —
+   ley 7) con halo-brasa proporcional a la velocidad de
+   crecimiento (N4). Las reseñas: filas tipográficas sin cajitas,
+   flanco alterno. Texto real, nombre real.
+   ============================================================ */
+.monumento{background:var(--grafito);color:var(--hueso);padding:72px 0 76px;position:relative}
+.monumento::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(52% 40% at 50% 12%, rgba(53,191,169,.09), transparent 70%),
+    radial-gradient(40% 44% at 10% 88%, rgba(220,169,166,.05), transparent 72%)}
+/* C1 · el monumento es el 228, no el 4.9.
+   La tesis es "al dentista sí se vuelve": lo que la prueba no es la nota
+   —que además es el molde "big number + gradiente" que ya usan las dos
+   dentales del portafolio— sino la cantidad de gente que volvió y lo
+   escribió. La cifra vive en el MISMO eje izquierdo que "Casos reales":
+   este tramo ya no mezcla centrado con alineado. */
+.mon-linea{display:block;text-align:left;margin-top:10px}
+.mon-cifra{position:relative;display:block;font-family:var(--font-display);font-weight:700;line-height:.86;
+  font-size:clamp(6.5rem,20vw,15rem);letter-spacing:-0.05em;font-variation-settings:'opsz' 96}
+.mon-brasa{position:absolute;inset:-18% -12% -18% -6%;pointer-events:none;opacity:var(--brasa,0);
+  background:radial-gradient(46% 50% at 34% 54%, rgba(53,191,169,.3), transparent 70%)}
+.mon-cifra span{position:relative}
+.mon-meta{display:block;margin-top:6px;font-family:var(--font-display);font-weight:600;font-variation-settings:'opsz' 48;
+  font-size:clamp(1.5rem,3.2vw,2.5rem);line-height:1.16;letter-spacing:-0.02em;max-width:19ch}
+/* el 4.9 baja a dato secundario, en línea */
+.mon-secundaria{margin-top:22px;font-size:.95rem;opacity:.6;max-width:56ch}
+.mon-secundaria .cifra{font-weight:600;opacity:.9}
+
+/* C2 · las cinco reseñas no son iguales, así que no se tratan igual.
+   Cuatro dicen variantes de "muy buena atención" — es lo que da la API.
+   La de giugliana diaz es la única con carne (doctora, minuciosos, limpio,
+   confiable): sostiene el tramo como pull-quote y las otras cuatro pasan a
+   coro corrido debajo. Se deja de exhibir la pobreza del corpus. */
+.mon-cita{margin:44px 0 0}
+.mon-cita blockquote{font-family:var(--font-display);font-weight:600;font-variation-settings:'opsz' 72;
+  font-size:clamp(1.7rem,4vw,3.1rem);line-height:1.14;letter-spacing:-0.022em;max-width:17ch}
+.mon-cita cite{display:block;font-style:normal;margin-top:20px;font-size:.92rem;font-weight:600;white-space:nowrap}
+.mon-cita .fuente{font-weight:400;opacity:.5}
+.mon-coro{list-style:none;margin:38px 0 0;display:flex;flex-direction:column;gap:12px;
+  border-top:1px solid rgba(245,249,247,.1);padding-top:24px}
+/* B2 · el li NO lleva opacidad: anidada con la de .fuente se multiplicaban
+   (.72 x .5 = .36 efectivo = 3.2:1, por debajo de AA). El contraste se
+   controla en un solo sitio, en la firma. */
+.mon-coro li{font-size:.94rem;line-height:1.5}
+.mon-coro q{quotes:"\201C" "\201D"}
+.mon-coro cite{font-style:normal;font-weight:600;opacity:.92}
+.mon-coro .fuente{opacity:.66;font-weight:400}
+@media (min-width:900px){
+  .mon-cuerpo{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
+  .mon-cita{margin-top:0}
+  .mon-coro{margin-top:0;border-top:0;padding-top:9px}
+}
+
+/* ============================================================
+   3 · EL EXPEDIENTE — antes / después.
+   Ya NO es el momento firma: la única escena firma del sitio es el
+   umbral (CONCEPTO: "una sola escena firma; el resto respira
+   quieto"). Aquí no hay comparador de arrastre porque ningún par
+   del consultorio registra — ver el bloque .ventanas más abajo.
+   ============================================================ */
+.casos{background:var(--grafito);color:var(--hueso);padding:24px 0 68px;position:relative}
+/* El teatro no es un bloque plano: halo de menta arriba, aliento rosado abajo */
+.casos::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(56% 38% at 50% 0%, rgba(53,191,169,.08), transparent 70%),
+    radial-gradient(46% 44% at 88% 96%, rgba(220,169,166,.05), transparent 72%)}
+.casos-sub{margin-top:20px;max-width:56ch;opacity:.8}
+.casos-cabeza{max-width:none}
+.casos-instruccion{display:flex;align-items:center;gap:10px;margin-top:34px;font-size:.88rem;opacity:.66;flex-wrap:wrap}
+
+/* El expediente: cada caso es una ficha clínica sobre panel propio —
+   primero qué se hizo, la foto como evidencia contenida (no póster).
+   Los 3 casos SIEMPRE visibles y numerados 01–03 (el filtro murió: con
+   3 fichas era utilería; el FLIP vuelve cuando haya 6+ casos reales). */
+.casos-grilla{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+.caso{grid-column:auto}
+.caso.es-destacado{grid-column:1/-1}
+/* B4 · UNA SOLA LEY DE ORDEN en las tres fichas y en las dos vistas:
+   número → qué se hizo → la prueba → el botón. Nunca se pide actuar
+   antes de enseñar la evidencia. El DOM ya viene en ese orden; el grid
+   del destacado solo lo dispone en dos columnas sin invertirlo. */
+.caso-inner{display:flex;flex-direction:column;align-items:flex-start;
+  background:var(--grafito-alto);border:1px solid rgba(245,249,247,.07);border-radius:30px;
+  padding:26px 26px 28px;height:100%;
+  transition:transform 300ms var(--ease-casa), border-color 300ms var(--ease-casa)}
+.es-destacado .caso-inner{display:grid;grid-template-columns:minmax(0,340px) 1fr;
+  grid-template-rows:auto 1fr;gap:22px 52px;align-items:start;padding:36px 40px}
+.es-destacado .ficha{grid-column:1;grid-row:1}
+.es-destacado .evidencia{grid-column:2;grid-row:1;align-self:center}
+/* el botón cierra el bloque entero: nunca queda por encima de la prueba */
+.es-destacado .ficha-cta{grid-column:1/-1;grid-row:2;align-self:start;justify-self:start}
+@media (hover:hover){
+  .caso:not(.es-destacado) .caso-inner:hover{transform:translateY(-6px);border-color:rgba(245,249,247,.16)}
+}
+.ficha{display:flex;flex-direction:column;gap:6px;width:100%}
+.ficha-numero{display:flex;align-items:baseline;gap:14px}
+.ficha-numero strong{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,4.6vw,3.8rem);
+  line-height:1;letter-spacing:-0.03em;color:var(--hueso);opacity:.28}   /* recesivo en reposo (ley 1) */
+.ficha-numero em{font-style:normal;font-family:var(--font-display);font-weight:600;font-size:clamp(1.25rem,2vw,1.6rem);letter-spacing:-0.01em}
+.ficha-hecho{font-size:.96rem;opacity:.78;max-width:34ch}
+.ficha-sello{margin-top:10px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;opacity:.52}
+/* Ningún tramo sin camino a WhatsApp: la sección de máxima intención
+   lleva su propio micro-CTA por ficha, con el caso ya escrito. */
+/* B3 · era el CTA de más intención de la página y medía 27px de alto:
+   cuerpo de botón sutil, sin competir con el CTA primario. */
+.ficha-cta{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:18px;
+  font-weight:600;font-size:.93rem;color:var(--menta);
+  padding:11px 18px;border-radius:999px;
+  border:1px solid rgba(53,191,169,.34);background:rgba(53,191,169,.07);
+  transition:border-color var(--dur-hover) var(--ease-casa), background var(--dur-hover) var(--ease-casa)}
+.ficha-cta svg{transition:transform var(--dur-hover) var(--ease-casa)}
+@media (hover:hover){.ficha-cta:hover{border-color:var(--menta);background:rgba(53,191,169,.14)}.ficha-cta:hover svg{transform:translateX(3px)}}
+.ficha-cta:active{transform:scale(.97)}
+.caso:not(.es-destacado) .ficha{margin-bottom:18px}
+@media (hover:hover){
+  .caso-inner:hover .ficha-numero strong{opacity:.85;color:var(--menta);transition:opacity 260ms var(--ease-casa), color 260ms var(--ease-casa)}
+}
+.casos-sello{margin:34px auto 0;max-width:62ch;text-align:center;font-size:.9rem;opacity:.74;line-height:1.7}
+
+/* LA EVIDENCIA · DOS PUERTAS DE LA MISMA PROPORCIÓN.
+   Ningún par de este consultorio registra para un comparador de arrastre
+   (se midió línea media interincisal, borde incisal y ancho de los
+   incisivos centrales forzando el wipe al 35/38/42/50/62/75 %): las dos
+   tomas de cada caso son de días, distancias y ángulos distintos. Por eso
+   se muestran SIMULTÁNEAS, nunca superpuestas.
+   Ley de esta sección: las dos ventanas comparten proporción exacta
+   (50/31) y las seis fotos se exportaron a 1000x620 desde el compuesto
+   original del consultorio, con el MISMO rectángulo de recorte dentro de
+   cada compuesto. Así el "antes" y el "después" enseñan la misma
+   extensión de boca y la comparación no miente. La jerarquía la dan el
+   TAMAÑO (grid .72fr 1fr) y el color (saturate), jamás el recorte: si una
+   ventana necesita otra proporción, se cambia el grid, no el encuadre.
+   El gesto: al entrar en viewport el arco grande crece del 60% al 100%
+   de su alto (clip-path, la foto no se deforma) y el "antes" recupera
+   color, con 140ms de desfase entre ambas (ley 4: nada llega junto).
+   Sin JS o con reduced-motion nacen abiertas (ley 7). */
+.evidencia{position:relative;width:100%}
+/* R6 · las dos ventanas comparten PISO, no techo. Con align-items:start
+   quedaban colgadas del borde superior: como la chica mide .72 de la
+   grande, sus pies caían 47px más arriba y los dos figcaption aterrizaban
+   a alturas distintas. Leía como descuido, no como jerarquía. Al alinear
+   por el final, las dos fotos apoyan en la misma línea y los dos rótulos
+   comparten renglón; la jerarquía la sigue dando el tamaño. */
+.ventanas{display:grid;grid-template-columns:.72fr 1fr;gap:16px;align-items:end}
+.ventana{position:relative;display:flex;flex-direction:column;min-width:0}
+.ventana img{width:100%;height:auto;object-fit:cover;background:#0e1b19;border-radius:var(--arco)}
+.ventana figcaption{margin-top:10px;font-size:.85rem;opacity:.74;padding-left:4px}
+.ventana-lienzo{position:relative;display:block;width:100%}
+.ventana-antes img,.ventana-despues img{aspect-ratio:50/31}
+/* A4 · LA PIEZA TÁCTIL. Al morir el comparador la página se quedó sin una
+   sola superficie que respondiera a la mano (el imán de los CTA está
+   gateado a !tactil, o sea que el tráfico real no tocaba nada).
+   Patrón hold-to-delete de Sonner: el gesto que decide es LENTO y
+   deliberado (560ms sosteniendo), la respuesta del sistema es RÁPIDA
+   (200ms al soltar). Una sola transición CSS sobre `filter`, así que es
+   interrumpible y se retarguetea sola: soltar a mitad de camino decae
+   desde donde iba, nunca desde el final. Idéntico en dedo y en mouse
+   (Pointer Events + setPointerCapture) y con paridad de teclado.
+   NO promete ningún registro entre las dos fotos: solo devuelve el color
+   real del "antes", que en reposo va con el grado de archivo del sitio
+   (ley 1: el mundo en reposo es monocromo, el color lo pone el gesto).
+   SIN JS el "antes" nace a TODO COLOR (--sat por defecto 1): el grado de
+   archivo solo existe cuando existe la mano que puede deshacerlo. */
+.ventana-antes img{
+  filter:saturate(var(--sat,1));
+  transition:filter var(--sat-dur,200ms) var(--sat-ease,var(--ease-casa))}
+.js .ventana-antes .ventana-lienzo{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:pan-y}
+.js .ventana-antes .ventana-lienzo:focus-visible{outline:2px solid var(--menta);outline-offset:4px;border-radius:var(--arco)}
+/* la pista solo existe si el gesto existe */
+.ventana-pista{display:none}
+.js .ventana-pista{display:inline;opacity:.72}
+/* D1 · las dos ventanas no llegan en el mismo tick: 140ms de desfase
+   entre la pequeña y la grande (ley 4, nada llega junto). */
+.ventana-despues img{
+  clip-path:inset(calc((1 - var(--abre,1)) * 40%) 0 0 0 round var(--arco));
+  transition:clip-path 1s var(--ease-casa) 140ms}
+@media (prefers-reduced-motion: reduce){
+  .ventana-antes img,.ventana-despues img{transition:none}
+}
+@media (max-width:900px){
+  /* el destacado vuelve a la columna única: se anulan las colocaciones
+     de grid o las ventanas colapsan a unos pocos píxeles. */
+  .es-destacado .caso-inner{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:26px 26px 28px}
+  .es-destacado .ficha{margin-bottom:18px}
+  .es-destacado .evidencia,.es-destacado .ficha-cta{grid-column:auto;grid-row:auto}
+}
+@media (max-width:719px){
+  .casos-grilla{grid-template-columns:1fr}
+  .caso.es-destacado{grid-column:auto}
+  .caso-inner,.es-destacado .caso-inner{padding:20px 20px 24px}
+  /* En 390px dos ventanas en fila daban 121px de foto: la evidencia
+     dejaba de ser evidencia. Se apilan y la jerarquía la sigue dando
+     el ANCHO (72% / 100%), nunca el recorte: ambas siguen a 50/31. */
+  .ventanas{grid-template-columns:1fr;gap:16px}
+  .ventana-antes{width:72%}
+}
+
+/* ============================================================
+   4 · ESPECIALIDADES — el índice del expediente, no una segunda galería
+   ============================================================ */
+/* el padding inferior está ATADO al margin-top:-124px de .consultorio y al
+   -150px de .revelado: es el colchón que absorbe el solape de la foto del
+   pasillo. Si se toca aquí, la foto se sube sobre la última fila. */
+.especialidades{background:var(--porcelana);padding:56px 0 164px;position:relative}
+.especialidades::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(44% 50% at 12% 70%, rgba(220,169,166,.11), transparent 70%)}
+.especialidades h2{max-width:15ch}
+/* R6 · ESTA SECCIÓN NO TIENE MATERIAL PROPIO, Y FINGIR QUE SÍ LA MATÓ.
+   Hasta la r5 las cuatro filas re-recortaban las MISMAS fotos del
+   expediente que están 400px más arriba. Un compuesto de 1000x620 metido
+   en una caja 4/5 con object-fit:cover pierde el 70% del ancho: lo que
+   quedaba era un primerísimo plano de un diente, ilegible como
+   miniatura y clínico de más. Era una repetición disfrazada de
+   información nueva. Y la cuarta fila —sin caso que enseñar— era un
+   bloque menta VACÍO: el único hueco sin foto real de toda la página,
+   justo lo que la regla dura del proyecto prohíbe.
+   Además la componía mal: texto corto contra miniatura alta con
+   align-items:center dejaba ~250px de crema muerta por fila y una
+   columna de fotos flotando sin anclaje a la derecha.
+   El arreglo no es buscar cuatro fotos que no existen. Es aceptar qué
+   ES esta sección: el ÍNDICE del expediente. El numeral fantasma dice a
+   qué caso de arriba remite cada especialidad, y la que todavía no tiene
+   caso lo dice con una raya en el mismo sitio en vez de fingir imagen.
+   La ausencia, DICHA, es un camino más a WhatsApp.
+   El numeral hereda el lenguaje de .ficha-numero —mismo display, misma
+   opacidad recesiva, mismo encendido a menta—: remite, no compite. */
+.esp-guia{margin-top:14px;font-size:.95rem;opacity:.7;max-width:52ch;line-height:1.65}
+.esp-lista{list-style:none;margin-top:30px;border-top:1px solid rgba(28,38,36,.13)}
+.esp-lista a{position:relative;display:grid;
+  grid-template-columns:clamp(64px,7vw,96px) minmax(0,1fr) auto auto;
+  align-items:baseline;gap:0 clamp(18px,2.4vw,34px);
+  padding:26px 10px 24px;
+  border-bottom:1px solid rgba(28,38,36,.13);
+  transition:transform 260ms var(--ease-casa)}
+/* la referencia al caso, en el mismo idioma que .ficha-sello del
+   expediente: es un sello de archivo, no un botón. Vive en su propia
+   columna para que la fila ocupe su ancho — antes el texto moría a los
+   740px y la flecha quedaba varada 500px más a la derecha, sin nada
+   que la anclara. */
+.esp-ref{align-self:center;justify-self:end;
+  font-size:.79rem;letter-spacing:.06em;text-transform:uppercase;
+  opacity:.72;white-space:nowrap;
+  transition:opacity var(--dur-hover) var(--ease-casa), color var(--dur-hover) var(--ease-casa)}
+.esp-ref.es-abierta{color:var(--cta);opacity:1}    /* 4.60:1 — el verde solo pasa AA a opacidad plena */
+/* el gesto de la sección: la regla se dibuja bajo la fila tocada */
+.esp-lista a::after{content:"";position:absolute;left:10px;right:10px;bottom:-1px;height:1px;
+  background:var(--cta);transform:scaleX(0);transform-origin:left;
+  transition:transform 420ms var(--ease-casa)}
+.esp-marca{font-family:var(--font-display);font-weight:700;
+  font-size:clamp(2.2rem,4.2vw,3.4rem);line-height:.9;letter-spacing:-0.03em;
+  color:var(--tinta);opacity:.22;   /* recesivo en reposo (ley 1) */
+  transition:opacity 300ms var(--ease-casa), color 300ms var(--ease-casa)}
+.esp-cuerpo strong{display:block;font-family:var(--font-display);font-size:clamp(1.55rem,2.6vw,2.2rem);font-weight:600;letter-spacing:-0.015em}
+.esp-cuerpo span{display:inline-block;margin-top:7px;font-size:.98rem;opacity:.72;max-width:46ch;line-height:1.6}
+.esp-flecha{align-self:center;color:var(--tinta);opacity:.42;
+  transition:transform var(--dur-hover) var(--ease-casa), color var(--dur-hover) var(--ease-casa), opacity var(--dur-hover) var(--ease-casa)}
+@media (hover:hover){
+  .esp-lista a:hover{transform:translateX(10px)}
+  .esp-lista a:hover::after{transform:scaleX(1)}
+  .esp-lista a:hover .esp-marca{opacity:1;color:var(--cta)}
+  .esp-lista a:hover .esp-ref{opacity:1;color:var(--cta)}
+  .esp-lista a:hover .esp-flecha{transform:translate(5px,-5px);color:var(--cta);opacity:1}
+}
+/* en dedo el mismo encendido lo da el press: el 100% del tráfico real
+   toca algo que responde, no solo el que tiene mouse. */
+.esp-lista a:active .esp-marca{opacity:1;color:var(--cta)}
+.esp-lista a:active::after{transform:scaleX(1)}
+.esp-lista a:focus-visible{outline:2px solid var(--menta);outline-offset:-2px;border-radius:var(--r-md)}
+.esp-nota{margin-top:26px;font-size:.9rem;opacity:.72;max-width:56ch}
+@media (max-width:640px){
+  /* en móvil la referencia baja bajo el texto, en su columna, y la
+     flecha desaparece: el tap es la fila entera. */
+  .esp-lista a{grid-template-columns:clamp(52px,14vw,64px) 1fr;padding:22px 4px 20px}
+  .esp-cuerpo span{max-width:none}
+  .esp-ref{grid-column:2;justify-self:start;margin-top:12px;font-size:.74rem}
+  .esp-flecha{display:none}
+}
+
+/* ============================================================
+   5 · EL CONSULTORIO — revelado por máscara con parallax de dos
+   velocidades (semilla LAVA), SOLO en esta sección. Fallback y
+   reduced-motion: nace revelada (--rev:1 inline, ley 7).
+   ============================================================ */
+/* A3 · SE SUPERPONEN DE VERDAD (tercera vez que se pide, y las dos
+   anteriores solo subieron la foto).
+   Lo que fallaba: la foto estaba anclada con justify-self:end y ancho
+   propio, así que mover su columna de grid no la movía ni un píxel — se
+   quedaba a 888px mientras el titular moría en 155px, con 200px de crema
+   muerta entre ambos. Ahora hay DOS anclajes explícitos y medibles:
+     1. la caja de la foto empieza DENTRO de la columna del texto
+        (grid-column 6/13 con margin-left negativo: se solapan las
+        columnas, no solo se acercan);
+     2. el titular lleva su propio salto de línea, así que la última línea
+        —"y números gigantes."— es larga a propósito y muere ENCIMA del
+        borde de la foto, sobre el tramo de arco que aún viene curvado
+        (el arco vacía su esquina superior izquierda: la palabra se mete
+        en la curva y sigue leyéndose sobre porcelana).
+   Y se adelgaza: 172px de aire muerto encima del titular pasan a 76, y
+   el mosaico baja de 3 fotos a 2 — era el tramo más pesado del móvil y el
+   que menos vende; la confianza de lugar ya la sostienen la puerta del
+   hero y la fachada de Visítanos. */
+.consultorio{background:var(--porcelana);padding:0 0 56px;position:relative;margin-top:-124px}
+.consultorio::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(50% 46% at 82% 26%, rgba(53,191,169,.09), transparent 70%)}
+.consultorio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:0;align-items:start}
+.consultorio-texto{grid-column:1/10;grid-row:1;position:relative;z-index:2;padding:56px 0 40px}
+.consultorio-texto h2{max-width:none;font-size:clamp(2.4rem,6.6vw,4.9rem);letter-spacing:-0.03em}
+.consultorio-texto p{margin-top:18px;max-width:38ch;opacity:.85}
+.consultorio-horario{max-width:none;white-space:nowrap;display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-size:.92rem;font-weight:600;
+  background:var(--porcelana);border:1px solid rgba(28,38,36,.16);border-radius:999px;padding:12px 20px;color:var(--tinta)}
+/* LA MASCARA DE LA SEMILLA, de verdad: de inset(72%) a inset(0) con el
+   radio del arco, mientras la foto interior viaja a otra velocidad. */
+/* la foto se escapa del contenedor hasta el borde del viewport: el tramo
+   deja de leerse como dos columnas paralelas */
+/* R6 · SE PROBÓ ESTIRAR ESTA FOTO Y SE DESCARTÓ. El arco terminaba 437px
+   antes que el mosaico y dejaba media reja en crema muerta; estirarlo a
+   su área de dos filas cerraba el hueco a 0, pero object-fit:cover sobre
+   una caja de 997px recortaba fuera los números 1 y 2 de las puertas
+   —justo lo que el titular de al lado promete, "números gigantes"— y
+   dejaba dos tercios de puerta plana. Cambiar la mejor foto de la
+   clínica por un hueco de crema es mal negocio: la proporción 5/6 se
+   queda. El hueco se cierra por el otro lado, acortando el mosaico. */
+.revelado{position:relative;grid-column:6/13;grid-row:1/3;margin-top:-150px;margin-left:-96px;
+  justify-self:end;z-index:1;
+  margin-right:min(0px, calc((var(--container) - 100vw) / 2 - 24px))}
+.revelado-masc{clip-path:inset(calc((1 - var(--rev,1)) * 72%) 0 0 0 round var(--arco));
+  border-radius:var(--arco);overflow:hidden;width:clamp(300px,45.5vw,660px);height:auto;aspect-ratio:5/6}
+.revelado-masc img{width:100%;height:100%;object-fit:cover;
+  transform:translateY(calc((1 - var(--rev,1)) * -14%)) scale(1.16)}   /* la foto viaja más lento que su máscara */
+.revelado figcaption{margin-top:12px;font-size:.85rem;opacity:.72;padding-left:4px}
+/* dos fotos, no tres: el mosaico ocupa media reja y deja respirar el tramo */
+.consultorio-mosaico{grid-column:1/7;grid-row:2;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:4px;align-items:start}
+.consultorio-mosaico figure{position:relative;display:flex;flex-direction:column}
+.consultorio-mosaico figure:nth-child(2){margin-top:34px}
+.consultorio-mosaico img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:var(--arco)}
+/* el rotulo va bajo la foto, como el figcaption del pasillo (cero pills) */
+.consultorio-mosaico figcaption{margin-top:10px;font-size:.85rem;opacity:.72;padding-left:4px}
+@media (max-width:900px){
+  .especialidades{padding-bottom:48px}
+  .consultorio{margin-top:0;padding-top:40px}
+  .consultorio-grid{grid-template-columns:1fr;gap:32px;align-items:stretch}
+  .consultorio-texto{grid-column:1;grid-row:1;padding:0}
+  .consultorio-texto h2{font-size:clamp(2.2rem,8vw,3.2rem)}
+  .revelado{grid-column:1;grid-row:2;margin-top:0;margin-left:0;justify-self:stretch;margin-right:0}
+  .revelado-masc{height:auto;width:100%;aspect-ratio:4/5}
+  /* dos fotos de ambiente en fila: el tramo deja de ser el más pesado
+     del móvil (medía 2.446px = 2,9 pantallas) y baja a menos de una. */
+  .consultorio-mosaico{grid-column:1;grid-row:3;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  .consultorio-mosaico figure:nth-child(2){margin-top:0}
+  .consultorio-mosaico img{aspect-ratio:3/4}
+}
+
+/* ============================================================
+   7 · VISÍTANOS
+   ============================================================ */
+.visitanos{background:var(--porcelana);padding:56px 0 72px;position:relative}
+.visitanos::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(48% 54% at 18% 34%, rgba(220,169,166,.15), transparent 70%)}
+.visitanos-grid{display:grid;grid-template-columns:1.28fr .72fr;gap:56px;align-items:center}
+
+/* el "si" del cierre no es relleno quieto: es un subrayado que se dibuja
+   al entrar en viewport (el acento llega por el gesto, no por decoracion) */
+.visitanos h2 .si{position:relative;color:inherit}
+.visitanos h2 .si::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.09em;
+  background:var(--menta-profunda);transform:scaleX(var(--traza,1));transform-origin:0 50%;
+  transition:transform .9s var(--ease-casa)}
+.datos{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:22px}
+.datos li{display:flex;align-items:flex-start;gap:14px;font-size:1rem}
+.datos svg{flex:none;color:var(--tinta);opacity:.55;margin-top:2px}
+.datos a{font-weight:600;text-decoration:underline;text-decoration-color:rgba(28,38,36,.3);text-underline-offset:3px;
+  transition:text-decoration-color var(--dur-hover) var(--ease-casa)}
+.datos a:hover{text-decoration-color:var(--cta)}
+.visitanos .boton-wsp{margin-top:32px}
+.visitanos-foto figure{border-radius:var(--arco);overflow:hidden;aspect-ratio:4/3;max-width:442px;margin-left:auto}
+.visitanos-foto img{width:100%;height:100%;object-fit:cover}
+.visitanos-foto figcaption{margin-top:12px;font-size:.85rem;opacity:.74;padding-left:4px;max-width:442px;margin-left:auto}
+@media (max-width:900px){.visitanos-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ============================================================
+   PREGUNTALE A LA CLINICA — chat de intents (GUIA §4).
+   Vive DENTRO de Visitanos: nada flotante, nada de cromo de
+   chatbot. Sin JS es una lista de preguntas y respuestas legible.
+   ============================================================ */
+.pregunta{margin-top:56px;background:var(--grafito);color:var(--hueso);
+  border-radius:var(--r-lg);padding:40px clamp(22px,4vw,48px) 34px;position:relative;overflow:hidden}
+.pregunta::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(46% 60% at 88% 8%, rgba(53,191,169,.10), transparent 70%)}
+.pregunta > *{position:relative}
+.pregunta h3{font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,2.1rem);
+  font-variation-settings:'opsz' 48;letter-spacing:-0.02em;margin-top:8px;max-width:22ch}
+.pregunta .ceja{opacity:.5;margin-bottom:0}
+.pregunta-hilo{list-style:none;margin:22px 0 0;display:flex;flex-direction:column;gap:8px}
+.pregunta-hilo li{max-width:min(52ch,88%);padding:11px 16px;font-size:.96rem;line-height:1.42}
+.pregunta-hilo .dice-visita{align-self:flex-end;background:var(--hueso);color:var(--tinta);
+  border-radius:20px 20px 6px 20px;font-weight:500}
+.pregunta-hilo .dice-clinica{align-self:flex-start;background:var(--grafito-alto);
+  border:1px solid rgba(245,249,247,.09);border-radius:20px 20px 20px 6px}
+.pregunta-hilo li{opacity:0;transform:translateY(10px);animation:dice .5s var(--ease-casa) forwards}
+@keyframes dice{to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion: reduce){.pregunta-hilo li{opacity:1;transform:none;animation:none}}
+.pregunta-opciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;
+  padding-top:24px;border-top:1px solid rgba(245,249,247,.1)}
+.pregunta-chip{font-size:.9rem;font-weight:600;padding:10px 18px;border-radius:999px;
+  border:1px solid rgba(245,249,247,.26);color:var(--hueso);
+  transition:border-color 200ms var(--ease-casa), background 200ms var(--ease-casa), transform 160ms var(--ease-casa)}
+@media (hover:hover){.pregunta-chip:hover{border-color:rgba(245,249,247,.6);background:rgba(245,249,247,.06)}}
+.pregunta-chip:active{transform:scale(.97)}
+/* No se usa [disabled]: deshabilitar un botón enfocado manda el foco a
+   <body> y el usuario de teclado pierde su lugar. Estado visual + aria. */
+/* B2 · a .32 sobre grafito el chip usado quedaba ilegible (~2.5:1). Lo
+   usado se marca TACHADO, que es la señal, y se mantiene legible. */
+.pregunta-chip[aria-disabled="true"]{opacity:.62;text-decoration:line-through;
+  text-decoration-thickness:1.5px;border-color:rgba(245,249,247,.14);pointer-events:none}
+/* La respuesta de precios es la de más intención y hasta la r3 moría sin
+   salida: lleva su propio WhatsApp dentro de la burbuja. */
+.burbuja-wsp{display:inline-flex;align-items:center;gap:8px;margin-top:12px;
+  background:var(--cta);color:var(--hueso);font-weight:600;font-size:.9rem;
+  padding:10px 18px;border-radius:999px}
+.burbuja-wsp:active{transform:scale(.97)}
+.pregunta-cierre{margin-top:24px;font-size:.92rem;opacity:.7}
+.pregunta-cierre a{color:var(--menta);font-weight:600;text-decoration:underline;text-underline-offset:3px;
+  display:inline-flex;align-items:center;min-height:44px}
+/* sin JS: la conversacion es una lista legible, no un cascaron muerto */
+.pregunta-lista{margin-top:26px;display:grid;gap:20px}
+.pregunta-lista dt{font-family:var(--font-display);font-weight:600;font-size:1.05rem}
+.pregunta-lista dd{opacity:.82;margin-top:4px;max-width:60ch}
+html.js .pregunta-lista{display:none}
+html.js .pregunta-hilo,html.js .pregunta-opciones{display:flex}
+.pregunta-hilo[hidden],.pregunta-opciones[hidden]{display:none}
+
+/* ============================================================
+   PIE
+   ============================================================ */
+.pie{background:var(--grafito);color:var(--hueso);padding:48px 0 92px}
+.pie-inner{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+.pie .marca{color:var(--hueso)}
+.pie .marca svg{color:currentColor;opacity:.75}
+/* B6 · destino táctil de 44px sin tocar el layout: el enlace sigue siendo
+   inline y el área la pone un pseudo-elemento centrado en su caja. */
+.tap44{position:relative;display:inline-block}
+.tap44::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;
+  transform:translateY(-50%);height:44px;min-width:44px}
+.pie-datos{font-size:.92rem;opacity:.8;line-height:2.1}
+.pie-datos a{text-decoration:underline;text-decoration-color:rgba(245,249,247,.35);text-underline-offset:3px;
+  transition:text-decoration-color var(--dur-hover) var(--ease-casa)}
+.pie-datos a:hover{text-decoration-color:var(--menta)}
+.pie-demo{margin-top:34px;padding-top:22px;border-top:1px solid rgba(251,253,252,.12);font-size:.8rem;opacity:.5}
+
+/* ============================================================
+   BARRA DE WHATSAPP — CTA persistente por dirección de scroll
+   (semilla LAVA): se oculta al bajar, vuelve al subir y JAMÁS
+   tapa la evidencia. Botón con N6 · Imán de CTA (reservado).
+   ============================================================ */
+.cta-barra{position:fixed;left:24px;bottom:22px;z-index:60;display:flex;align-items:center;gap:14px;
+  transition:transform .5s var(--ease-casa), opacity .5s var(--ease-casa)}
+body.barra-oculta .cta-barra{transform:translateY(160%);opacity:0;pointer-events:none}
+.cta-barra .boton-wsp{box-shadow:0 14px 40px rgba(24,43,40,.28)}
+.cta-nota{font-size:.8rem;font-weight:500;background:rgba(251,253,252,.92);padding:8px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(24,43,40,.12)}
+@media (max-width:640px){
+  .cta-barra{left:16px;right:16px;bottom:16px}
+  .cta-barra .boton-wsp{width:100%;justify-content:center;padding:15px 20px}
+  .cta-nota{display:none}
+}
+
+</style>
+</head>
+<body>
+
+<div class="grano" aria-hidden="true"></div>
+
+<!-- ==========================================================
+     CABECERA
+     ========================================================== -->
+<header class="cabecera">
+  <div class="cabecera-inner">
+    <a class="marca" href="#inicio" aria-label="Clínica Dental BOE — inicio">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9c3.5 6 12.5 6 16 0"/></svg>
+      Clínica Dental BOE
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#casos">Casos</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#consultorio">El consultorio</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <a class="cabecera-cta iman" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener"><span class="iman-texto">Agendar</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ==========================================================
+     1 · EL UMBRAL — la tesis y la puerta. Con pin, la máscara-arco
+     se traga el viewport y se cruza al teatro de los casos.
+     ========================================================== -->
+<section class="umbral" id="inicio">
+  <div class="umbral-texto">
+    <p class="ceja">Clínica dental de barrio · Pueblo Libre, Lima</p>
+    <h1>Al dentista <span class="si">sí</span> se vuelve.</h1>
+    <p class="umbral-sub"><span class="cifra">4.9 de 5</span> en <span class="cifra">228</span> reseñas de Google.
+      La puerta de la foto es la de verdad, en Av. Antonio José de Sucre, Pueblo Libre.</p>
+    <div class="umbral-ctas">
+      <a class="boton-wsp iman" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener">
+        <span class="iman-texto">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Agendar por WhatsApp
+        </span>
+      </a>
+      <a class="enlace-flecha tap44" href="#casos">
+        Entrar a ver los casos
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="umbral-arco">
+    <figure>
+      <img src="assets/img/place-6-arco.jpg" alt="La entrada real de la clínica en Av. Sucre: un arco de reja verde menta sobre pared rosada" fetchpriority="high" width="1000" height="1250" />
+    </figure>
+  </div>
+  <div class="umbral-noche" aria-hidden="true"></div>
+  <div class="umbral-si" aria-hidden="true">
+    <div class="si-glifo">
+      <svg viewBox="0 0 300 176" preserveAspectRatio="xMidYMid meet" focusable="false"><text x="150" y="152" text-anchor="middle" textLength="300" lengthAdjust="spacingAndGlyphs">s&iacute;.</text></svg>
+    </div>
+  </div>
+</section>
+
+
+<div class="costura solo-plano" aria-hidden="true" style="--de:var(--porcelana);--a:var(--grafito)">
+  <svg viewBox="0 0 1440 92" preserveAspectRatio="none"><path d="M0,58 Q720,84 1440,58 L1440,93 L0,93 Z"/></svg>
+</div>
+
+<!-- El otro lado de la puerta, en movil: pantalla completa y la palabra
+     a ancho de pantalla. En desktop no se monta (el pin ya lo hace). -->
+<section class="si-movil" aria-hidden="true">
+  <div class="si-glifo">
+    <svg viewBox="0 0 300 176" preserveAspectRatio="xMidYMid meet" focusable="false"><text x="150" y="152" text-anchor="middle" textLength="300" lengthAdjust="spacingAndGlyphs">s&iacute;.</text></svg>
+  </div>
+  <span class="si-cue">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+  </span>
+</section>
+
+<!-- ==========================================================
+     3 · EL EXPEDIENTE — antes / después
+     Cada caso son DOS fotos reales del consultorio, recortadas de
+     su compuesto original y mostradas enteras y a la vez. Sin JS
+     las dos ventanas nacen abiertas (ley 7).
+     ========================================================== -->
+<section class="casos" id="casos">
+  <div class="container">
+    <div class="casos-cabeza">
+      <p class="ceja" style="opacity:.55">El expediente · antes / después</p>
+      <h2 class="display-xxl">Casos reales, sin retoques.</h2>
+      <p class="casos-sub">Pacientes de esta clínica, presentados como lo que son: expedientes.
+        Primero qué se hizo; la foto es la evidencia.</p>
+    </div>
+    <p class="casos-instruccion">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 20V9a3.2 3.2 0 0 1 6.4 0v11"/><path d="M13.6 20V7a4.2 4.2 0 0 1 8.4 0v13"/></svg>
+      <span>Dos ventanas por caso, del mismo tamaño de encuadre: el antes y el después, enteros y a la vez.</span>
+    </p>
+    <div class="casos-grilla">
+      <!-- 01 · ORTODONCIA (compuesto place-1, rotulado "Rehabilitación" por
+           el consultorio). Las dos ventanas salen del MISMO rectángulo de
+           recorte del compuesto: misma extensión de boca, misma proporción. -->
+      <article class="caso es-destacado">
+        <div class="caso-inner">
+          <div class="ficha">
+            <p class="ficha-numero"><strong class="cifra">01</strong><em>Ortodoncia y rehabilitación</em></p>
+            <p class="ficha-hecho">De brackets a la boca terminada. El consultorio archivó el caso como
+              rehabilitación: la ortodoncia fue el camino, no el final. Las dos fotos son suyas, de días
+              distintos, y van enteras y del mismo tamaño.</p>
+            <p class="ficha-sello">Material del consultorio &middot; archivo EOL</p>
+          </div>
+          <div class="evidencia">
+            <div class="ventanas">
+              <figure class="ventana ventana-antes">
+                <div class="ventana-lienzo">
+                  <img src="assets/img/caso-01-antes.jpg" alt="Antes: la boca completa con brackets cerámicos en las dos arcadas, los dientes apiñados y la encía inflamada." loading="lazy" draggable="false" width="1000" height="620" />
+                </div>
+                <figcaption>Antes<span class="ventana-pista"> &middot; mantén pulsado</span></figcaption>
+              </figure>
+              <figure class="ventana ventana-despues">
+                <div class="ventana-lienzo">
+                  <img src="assets/img/caso-01-despues.jpg" alt="Después: la misma boca con los dientes alineados y la mordida cerrada, sin aparatos." loading="lazy" draggable="false" width="1000" height="620" />
+                </div>
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
+          </div>
+          <a class="ficha-cta" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20vi%20el%20caso%2001%20de%20ortodoncia%20en%20su%20web%20y%20quiero%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">
+            Preguntar por este caso
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+      <!-- 02 · IMPLANTES (compuesto place-9). -->
+      <article class="caso">
+        <div class="caso-inner">
+          <div class="ficha">
+            <p class="ficha-numero"><strong class="cifra">02</strong><em>Implantes</em></p>
+            <p class="ficha-hecho">Se recuperó la pieza que faltaba. El mismo tramo de la arcada, antes
+              con el reborde vacío y después con la pieza puesta entre sus vecinas.</p>
+            <p class="ficha-sello">Material del consultorio &middot; archivo EOL</p>
+          </div>
+          <div class="evidencia">
+            <div class="ventanas">
+              <figure class="ventana ventana-antes">
+                <div class="ventana-lienzo">
+                  <img src="assets/img/caso-02-antes.jpg" alt="Antes: el reborde de encía donde falta la pieza, entre los dos dientes vecinos." loading="lazy" draggable="false" width="1000" height="620" />
+                </div>
+                <figcaption>Antes<span class="ventana-pista"> &middot; mantén pulsado</span></figcaption>
+              </figure>
+              <figure class="ventana ventana-despues">
+                <div class="ventana-lienzo">
+                  <img src="assets/img/caso-02-despues.jpg" alt="Después: la pieza repuesta, integrada entre los mismos dientes vecinos." loading="lazy" draggable="false" width="1000" height="620" />
+                </div>
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
+          </div>
+          <a class="ficha-cta" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20vi%20el%20caso%2002%20de%20implantes%20en%20su%20web%20y%20quiero%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">
+            Preguntar por este caso
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+      <!-- 03 · REHABILITACIÓN (compuesto place-10). -->
+      <article class="caso">
+        <div class="caso-inner">
+          <div class="ficha">
+            <p class="ficha-numero"><strong class="cifra">03</strong><em>Rehabilitación</em></p>
+            <p class="ficha-hecho">Devolver forma y color a las piezas gastadas. Antes la mordida no
+              cerraba y los bordes venían desiguales; después las dos arcadas encajan.</p>
+            <p class="ficha-sello">Material del consultorio &middot; archivo EOL</p>
+          </div>
+          <div class="evidencia">
+            <div class="ventanas">
+              <figure class="ventana ventana-antes">
+                <div class="ventana-lienzo">
+                  <img src="assets/img/caso-03-antes.jpg" alt="Antes: las dos arcadas con los bordes gastados y desiguales y la mordida sin cerrar." loading="lazy" draggable="false" width="1000" height="620" />
+                </div>
+                <figcaption>Antes<span class="ventana-pista"> &middot; mantén pulsado</span></figcaption>
+              </figure>
+              <figure class="ventana ventana-despues">
+                <div class="ventana-lienzo">
+                  <img src="assets/img/caso-03-despues.jpg" alt="Después: las mismas piezas con forma y color devueltos y las dos arcadas encajadas." loading="lazy" draggable="false" width="1000" height="620" />
+                </div>
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
+          </div>
+          <a class="ficha-cta" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20vi%20el%20caso%2003%20de%20rehabilitaci%C3%B3n%20en%20su%20web%20y%20quiero%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">
+            Preguntar por este caso
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+    <p class="casos-sello">Los tres casos salen del material que el propio consultorio publica firmado con su marca —
+      <strong>EOL, Especialidades Odontológicas de Lima</strong>, el mismo sello que verás en la puerta.
+      De cada compuesto original se recortó el mismo rectángulo para el antes y para el después, así que
+      las dos ventanas enseñan la misma extensión de boca. Ninguna foto está retocada, ninguna viene de un
+      banco de imágenes y ninguna se superpone a la otra para fingir que fueron tomadas el mismo día.</p>
+  </div>
+</section>
+
+<div class="costura" aria-hidden="true" style="--de:var(--grafito);--a:var(--porcelana)">
+  <svg viewBox="0 0 1440 92" preserveAspectRatio="none"><path d="M0,58 Q720,26 1440,58 L1440,93 L0,93 Z"/></svg>
+</div>
+
+<!-- ==========================================================
+     4 · ESPECIALIDADES — precios NO: derivar a WhatsApp
+     ========================================================== -->
+<section class="especialidades" id="especialidades">
+  <div class="container">
+    <p class="ceja">Especialidades</p>
+    <h2 class="display-xl">Cuatro maneras de volver.</h2>
+    <p class="esp-guia">Tres de las cuatro ya están documentadas en el expediente de arriba.
+      El número de cada fila dice en cuál.</p>
+    <ul class="esp-lista">
+      <li>
+        <a href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20una%20evaluaci%C3%B3n%20de%20implantes." target="_blank" rel="noopener">
+          <span class="esp-marca cifra" aria-hidden="true">02</span>
+          <span class="esp-cuerpo">
+            <strong>Implantes</strong>
+            <span>Reponer la pieza que falta sin tocar las vecinas.</span>
+          </span>
+          <span class="esp-ref">Caso <b class="cifra">02</b> del expediente</span>
+          <span class="esp-flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20informaci%C3%B3n%20sobre%20ortodoncia." target="_blank" rel="noopener">
+          <span class="esp-marca cifra" aria-hidden="true">01</span>
+          <span class="esp-cuerpo">
+            <strong>Ortodoncia</strong>
+            <span>Brackets y alineación. De las cuatro es la que más tarda, y la única que se ve avanzar mes a mes.</span>
+          </span>
+          <span class="esp-ref">Caso <b class="cifra">01</b> del expediente</span>
+          <span class="esp-flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20informaci%C3%B3n%20sobre%20rehabilitaci%C3%B3n%20oral." target="_blank" rel="noopener">
+          <span class="esp-marca cifra" aria-hidden="true">03</span>
+          <span class="esp-cuerpo">
+            <strong>Rehabilitación oral</strong>
+            <span>Varias piezas a la vez, para volver a masticar sin pensarlo.</span>
+          </span>
+          <span class="esp-ref">Caso <b class="cifra">03</b> del expediente</span>
+          <span class="esp-flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20informaci%C3%B3n%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener">
+          <span class="esp-marca" aria-hidden="true">&mdash;</span>
+          <span class="esp-cuerpo">
+            <strong>Estética dental</strong>
+            <span>Color, forma y proporción: el acabado. El tuyo puede ser el primero del expediente.</span>
+          </span>
+          <span class="esp-ref es-abierta">Sin caso publicado aún</span>
+          <span class="esp-flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        </a>
+      </li>
+    </ul>
+    <p class="esp-nota">Cada caso se evalúa en consulta: escríbenos por WhatsApp y te orientamos sin compromiso.</p>
+  </div>
+</section>
+
+<!-- ==========================================================
+     5 · EL CONSULTORIO — revelado por máscara (solo aquí)
+     ========================================================== -->
+<section class="consultorio" id="consultorio">
+  <div class="container">
+    <div class="consultorio-grid">
+      <div class="consultorio-texto">
+        <p class="ceja">El consultorio</p>
+        <h2 class="display-xl">Puertas menta<br />y números gigantes.</h2>
+        <p>El local de Av. Sucre no parece hospital: consultorios numerados detrás de puertas
+          verde menta, recepción clara y una sala de espera simple. Lo que las reseñas repiten
+          — &ldquo;el lugar súper limpio y confiable&rdquo; — se nota a simple vista.</p>
+        <p class="consultorio-horario">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Lunes a sábado · 10:00 — 22:00 · previa cita
+        </p>
+      </div>
+      <figure class="revelado">
+        <div class="revelado-masc" style="--rev:1">
+          <img src="assets/img/place-7.jpg" alt="Pasillo real de la clínica: puertas verde menta con los números gigantes de los consultorios 1 y 2" loading="lazy" width="1600" height="2133" />
+        </div>
+        <figcaption>Consultorios 1 y 2 — el pasillo real de la clínica.</figcaption>
+      </figure>
+      <div class="consultorio-mosaico">
+        <figure><img src="assets/img/place-3.jpg" alt="Recepción de la clínica con pared verde menta y mampara de vidrio" loading="lazy" width="1600" height="720" /><figcaption>Recepción</figcaption></figure>
+        <figure><img src="assets/img/place-5.jpg" alt="Interior de un consultorio con unidad dental y taburetes verde menta" loading="lazy" width="1600" height="720" /><figcaption>Consultorio</figcaption></figure>
+      </div>    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     LA PRUEBA · EL MONUMENTO — el 4.9 y las 228 reseñas son el
+     activo. Cifra XXL (valor final prerenderizado, ley 7) y
+     reseñas reales como filas tipográficas. Citas textuales de
+     reviews.json — jamás editadas ni traducidas.
+     ========================================================== -->
+<div class="costura" aria-hidden="true" style="--de:var(--porcelana);--a:var(--grafito)">
+  <svg viewBox="0 0 1440 92" preserveAspectRatio="none"><path d="M0,58 Q720,84 1440,58 L1440,93 L0,93 Z"/></svg>
+</div>
+<section class="monumento" id="prueba">
+  <div class="container">
+    <p class="ceja">La prueba</p>
+    <p class="mon-linea">
+      <span class="mon-cifra cifra"><span class="mon-brasa" aria-hidden="true"></span><span data-cuenta="228">228</span></span>
+      <span class="mon-meta">rese&ntilde;as p&uacute;blicas en el rubro que todo el mundo posterga.</span>
+    </p>
+    <p class="mon-secundaria">Promedio <span class="cifra">4.9 de 5</span> &middot; rese&ntilde;as de Google Maps,
+      citadas tal cual se escribieron. Eso no es una nota: es gente que volvi&oacute;.</p>
+    <div class="mon-cuerpo">
+      <figure class="mon-cita">
+        <blockquote>&ldquo;Muy buena atenci&oacute;n por parte de la doctora, muy minuciosos en su trabajo,
+          el lugar s&uacute;per limpio y confiable&rdquo;</blockquote>
+        <cite>giugliana diaz <span class="fuente">&middot; Google, hace 6 meses</span></cite>
+      </figure>
+      <ul class="mon-coro">
+        <li><q>Excelente atenci&oacute;n personalizada y te brindan opciones seg&uacute;n la necesidad para la sonrisa</q>
+          &mdash; <cite>Nathaly Gamarra</cite> <span class="fuente">&middot; hace 1 mes</span></li>
+        <li><q>Muy buena atenci&oacute;n y s&uacute;per amables todos</q>
+          &mdash; <cite>Stefany Mu&ntilde;oz Sanchez</cite> <span class="fuente">&middot; hace 7 meses</span></li>
+        <li><q>Muy buena atenci&oacute;n. Recomendado!</q>
+          &mdash; <cite>Gabriel Bedoya Carcausto</cite> <span class="fuente">&middot; hace 3 semanas</span></li>
+        <li><q>Muy buena atenci&oacute;n en general me gusto</q>
+          &mdash; <cite>Diego Alanoca</cite> <span class="fuente">&middot; hace 4 meses</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="costura" aria-hidden="true" style="--de:var(--grafito);--a:var(--porcelana)">
+  <svg viewBox="0 0 1440 92" preserveAspectRatio="none"><path d="M0,58 Q720,26 1440,58 L1440,93 L0,93 Z"/></svg>
+</div>
+
+<!-- ==========================================================
+     7 · VISÍTANOS
+     ========================================================== -->
+<section class="visitanos" id="visitanos">
+  <div class="container visitanos-grid">
+    <div>
+      <p class="ceja">Visítanos</p>
+      <h2 class="display-xl">Esta semana también se puede decir que <span class="si">sí</span>.</h2>
+      <ul class="datos">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Av. Antonio José de Sucre 161, Pueblo Libre, Lima ·
+            <a href="https://maps.google.com/?q=Cl%C3%ADnica+Dental+BOE,+Av.+Antonio+Jos%C3%A9+de+Sucre+161,+Pueblo+Libre,+Lima" target="_blank" rel="noopener" class="tap44">ver en Google Maps</a></span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Lunes a sábado, de 10:00 a 22:00 — atención previa cita</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>WhatsApp y llamadas: <a class="tap44" href="tel:+51992300475"><span class="cifra">992 300 475</span></a></span>
+        </li>
+      </ul>
+      <a class="boton-wsp iman" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener">
+        <span class="iman-texto">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Agendar por WhatsApp
+        </span>
+      </a>
+    </div>
+    <div class="visitanos-foto">
+      <figure>
+        <img src="assets/img/place-2.jpg" alt="Fachada de la clínica de día: casa blanca con ventanas de arco y rejas verde menta" loading="lazy" width="442" height="280" />
+      </figure>
+      <figcaption>La fachada, de día. Una casa de barrio, no un hospital.</figcaption>
+    </div>
+  </div>
+  <!-- Chat de intents: TODAS las respuestas salen del HANDOFF. Sin JS se
+       lee como lista de preguntas frecuentes (ley 7). -->
+  <div class="container">
+    <div class="pregunta">
+      <p class="ceja">Preg&uacute;ntale a la cl&iacute;nica</p>
+      <h3>Lo que m&aacute;s nos preguntan, respondido al toque.</h3>
+      <ul class="pregunta-hilo" aria-live="polite" hidden></ul>
+      <div class="pregunta-opciones" role="group" aria-label="Preguntas frecuentes" hidden></div>
+      <dl class="pregunta-lista">
+        <div>
+          <dt>&iquest;Qu&eacute; horario tienen?</dt>
+          <dd>Lunes a s&aacute;bado, de 10:00 a 22:00. Siempre con cita previa: escr&iacute;benos y coordinamos la hora.</dd>
+        </div>
+        <div>
+          <dt>&iquest;D&oacute;nde quedan?</dt>
+          <dd>En Av. Antonio Jos&eacute; de Sucre, Pueblo Libre, Lima. Es una casa de barrio con arco y reja verde menta: la foto de arriba es la puerta.</dd>
+        </div>
+        <div>
+          <dt>&iquest;Qu&eacute; tratamientos hacen?</dt>
+          <dd>Implantes, ortodoncia, rehabilitaci&oacute;n oral y est&eacute;tica dental. Los tres primeros tienen casos reales publicados en esta p&aacute;gina.</dd>
+        </div>
+        <div>
+          <dt>&iquest;Cu&aacute;nto cuesta un tratamiento?</dt>
+          <dd>Depende de cada caso, as&iacute; que no publicamos precios: se ven en la consulta. Escr&iacute;benos por WhatsApp y te orientamos sin compromiso.</dd>
+        </div>
+        <div>
+          <dt>&iquest;C&oacute;mo pido una cita?</dt>
+          <dd>Por WhatsApp al 992 300 475. Nos escribes, te pasamos las horas libres y queda reservada.</dd>
+        </div>
+      </dl>
+      <p class="pregunta-cierre">&iquest;Tu pregunta no est&aacute; ac&aacute;?
+        <a href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener">Escr&iacute;benos por WhatsApp</a> &mdash; contesta una persona.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="costura" aria-hidden="true" style="--de:var(--porcelana);--a:var(--grafito)">
+  <svg viewBox="0 0 1440 92" preserveAspectRatio="none"><path d="M0,58 Q720,84 1440,58 L1440,93 L0,93 Z"/></svg>
+</div>
+
+<footer class="pie">
+  <div class="container">
+    <div class="pie-inner">
+      <div>
+        <a class="marca" href="#inicio">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9c3.5 6 12.5 6 16 0"/></svg>
+          Clínica Dental BOE
+        </a>
+        <p class="pie-datos" style="margin-top:14px">Av. Antonio José de Sucre 161, Pueblo Libre, Lima<br />
+          Lunes a sábado · 10:00 — 22:00 · previa cita<br />
+          WhatsApp y llamadas: <a class="tap44" href="tel:+51992300475"><span class="cifra">992 300 475</span></a></p>
+      </div>
+      <p class="pie-datos"><span class="cifra">4.9 de 5</span> en Google<br /><span class="cifra">228</span> reseñas públicas</p>
+    </div>
+    <p class="pie-demo">Página de demostración preparada por Juan Neyra · juanneyra1399@gmail.com</p>
+  </div>
+</footer>
+
+<!-- Barra de WhatsApp: se oculta al bajar, vuelve al subir; jamás tapa la evidencia -->
+<div class="cta-barra">
+  <a class="boton-wsp iman" href="https://wa.me/51992300475?text=Hola%20Cl%C3%ADnica%20Dental%20BOE%2C%20quiero%20agendar%20una%20cita." target="_blank" rel="noopener">
+    <span class="iman-texto">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Agendar por WhatsApp
+    </span>
+  </a>
+  <span class="cta-nota cifra">Lun–Sáb · 10:00–22:00</span>
+</div>
+
+<!-- PENDIENTE (decide Juan): verificar antes de publicar: marca vigente ¿BOE o EOL? (ver CONCEPTO.md) -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+'use strict';
+
+/* ————— utilidades de la casa ————— */
+var $ = function(s, c){ return (c || document).querySelector(s); };
+var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+var clamp = function(v, a, b){ return Math.max(a, Math.min(b, v)); };
+/* la curva de la casa como funcion — declarada UNA vez, usada por todos */
+var casaEase = function(p){ return 1 - Math.pow(1 - p, 3.6); };
+/* lerp de semivida: independiente del framerate (ley 5) */
+var lerpSuave = function(actual, objetivo, mitad, dt){ return objetivo + (actual - objetivo) * Math.pow(2, -dt / mitad); };
+/* azar determinista Park–Miller (ley 3): idéntico en cada visita */
+function crearAzar(semilla){ var s = semilla % 2147483647; if(s <= 0) s += 2147483646;
+  return function(){ s = s * 16807 % 2147483647; return (s - 1) / 2147483646; }; }
+var azar = crearAzar(20260816);
+var WSP = function(t){ return 'https://wa.me/51992300475?text=' + encodeURIComponent(t); };
+
+var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var tactil = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+/* ————— ticker global único: los sistemas solo ESCRIBEN estilos (ley 8).
+   Cada sistema devuelve true mientras tenga trabajo; cuando todos callan
+   medio segundo, el rAF se detiene y solo lo despierta un gesto real. ————— */
+var sistemas = [];
+var tAntes = performance.now();
+var corriendo = false, ocioso = 0;
+function tick(t){
+  var dt = Math.min(0.05, (t - tAntes) / 1000); tAntes = t;
+  var vivo = false;
+  for(var i = 0; i < sistemas.length; i++){ if(sistemas[i](dt)) vivo = true; }
+  ocioso = vivo ? 0 : ocioso + dt;
+  if(ocioso > 0.6 || document.hidden){ corriendo = false; return; }
+  requestAnimationFrame(tick);
+}
+function despertar(){
+  if(corriendo || document.hidden) return;
+  corriendo = true; ocioso = 0; tAntes = performance.now();
+  requestAnimationFrame(tick);
+}
+['scroll','pointermove','pointerdown','pointerup','keydown','resize','wheel','touchstart'].forEach(function(ev){
+  window.addEventListener(ev, despertar, { passive: true });
+});
+document.addEventListener('visibilitychange', function(){ if(!document.hidden) despertar(); });
+despertar();
+
+/* ————— scroll compartido: velocidad + rumbo ————— */
+var yAntes = window.scrollY, velScroll = 0, velSuave = 0, rumboAbajo = false;
+sistemas.push(function(dt){
+  var y = window.scrollY;
+  velScroll = (y - yAntes) / Math.max(dt, 0.001);
+  yAntes = y;
+  velSuave = lerpSuave(velSuave, velScroll, 0.09, dt);
+  /* Solo se oculta MIENTRAS bajas de verdad; al frenar (o subir) vuelve.
+     Antes solo se reseteaba con un scroll rapido hacia ARRIBA: en tactil la
+     barra quedaba oculta durante todo el recorrido normal — el 100% del
+     trafico real se quedaba sin camino a WhatsApp. */
+  if(velSuave > 90) rumboAbajo = true;
+  else if(velSuave < 20) rumboAbajo = false;
+  return Math.abs(velSuave) > 1;
+});
+
+/* ==========================================================
+   N5 · COSTURA DE ONDA (reservado para este proyecto)
+   El path se regenera SOLO si hay energía: amplitud desde la
+   velocidad del scroll, fase que viaja con el scroll, envelope
+   sin(PI*t) para soldar los bordes. Quieta: arco de sonrisa.
+   ========================================================== */
+if(!reduce){
+  $$('.costura').forEach(function(el){
+    var path = $('path', el);
+    if(!path) return;
+    var freq = 1.3 + azar() * 1.5;
+    var fase0 = azar() * Math.PI * 2;
+    var dir = azar() < 0.5 ? 1 : -1;
+    var base = 58, arco = 26, amp = 0, visible = false, dormida = false;
+
+    new IntersectionObserver(function(es){ visible = es[0].isIntersecting; }, { rootMargin: '80px' }).observe(el);
+
+    function render(){
+      var fase = fase0 + window.scrollY * 0.0055;
+      var d = '';
+      for(var i = 0; i <= 14; i++){
+        var t = i / 14;
+        var env = Math.sin(Math.PI * t);
+        var y = base - dir * arco * env - amp * Math.sin(t * Math.PI * 2 * freq + fase) * env;
+        d += (i === 0 ? 'M' : ' L') + (t * 1440).toFixed(1) + ',' + y.toFixed(1);
+      }
+      d += ' L1440,93 L0,93 Z';
+      path.setAttribute('d', d);
+    }
+    render(); /* forma determinista desde el primer frame */
+
+    sistemas.push(function(dt){
+      if(!visible) return false;
+      var objetivo = Math.min(30, Math.abs(velSuave) * 0.022);
+      amp = lerpSuave(amp, objetivo, 0.12, dt);
+      if(amp < 0.35 && objetivo < 0.35){
+        if(!dormida){ amp = 0; render(); dormida = true; } /* se aplana y duerme */
+        return false;
+      }
+      dormida = false;
+      render();
+      return true;
+    });
+  });
+}
+
+/* ==========================================================
+   LA EVIDENCIA · dos ventanas que se abren.
+   Ningún par de este consultorio registra (se midió: ver el CSS),
+   así que no hay costura que arrastrar. El gesto que queda es
+   honesto: al entrar en viewport el arco grande crece del 60% al
+   100% de su alto y el "antes" recupera color — las dos fotos
+   estaban y siguen enteras. Es una transición CSS con la curva de
+   la casa, no un scrub: no compite con la escena firma del umbral.
+   Sin JS o con reduced-motion nace abierto (--abre:1 por defecto).
+   ========================================================== */
+var grilla = $('.casos-grilla');
+var SAT_REPOSO = '.66';   /* grado de archivo del "antes" (solo con JS) */
+/* El grado de reposo lo pone el JS, nunca el CSS: sin JS no hay hold que
+   lo deshaga, y una evidencia graduada sin salida sería una licencia. */
+$$('.ventana-antes img').forEach(function(i){
+  i.style.setProperty('--sat', reduce ? SAT_REPOSO : '.18');
+});
+if(!reduce && window.IntersectionObserver){
+  $$('.ventanas').forEach(function(el){
+    el.style.setProperty('--abre', '0');
+    var antes = el.querySelector('.ventana-antes img');
+    new IntersectionObserver(function(es, obs){
+      if(!es[0].isIntersecting) return;
+      el.style.setProperty('--abre', '1');
+      if(antes){
+        antes.style.setProperty('--sat-dur', '860ms');
+        antes.style.setProperty('--sat', SAT_REPOSO);
+      }
+      obs.disconnect();
+    }, { threshold: .3 }).observe(el);
+  });
+}
+
+/* ==========================================================
+   A4 · HOLD-TO-REVEAL sobre la ventana del "antes".
+   Sostener = ataque lento (560ms, lineal: el progreso se siente
+   parejo mientras decides); soltar = decaimiento rápido (200ms con
+   la curva de la casa: la respuesta del sistema es inmediata).
+   Es UNA transición CSS sobre `filter`, así que soltar a mitad de
+   camino retarguetea desde el valor actual — nunca salta.
+   setPointerCapture: el dedo puede salirse del arco y el gesto
+   sigue vivo; pointercancel (el navegador se lleva el gesto para
+   scrollear) suelta limpio. El teclado tiene el mismo gesto con
+   Espacio/Enter. La semántica de botón se añade SOLO aquí, cuando
+   el gesto de verdad existe: sin JS el arco es una imagen y ya.
+   ========================================================== */
+$$('.ventana-antes .ventana-lienzo').forEach(function(lienzo){
+  var img = lienzo.querySelector('img');
+  if(!img) return;
+  lienzo.setAttribute('role', 'button');
+  lienzo.setAttribute('tabindex', '0');
+  /* el aria-label de un role=button tapa el alt de la imagen que envuelve:
+     se compone con él para no perder la descripción clínica. */
+  lienzo.setAttribute('aria-label', (img.getAttribute('alt') || 'Foto del antes') +
+    ' Mantén pulsado para verla a todo color.');
+  var sujeto = false;
+
+  function sujetar(e){
+    if(sujeto) return;
+    sujeto = true;
+    if(e && e.pointerId != null && lienzo.setPointerCapture){
+      try{ lienzo.setPointerCapture(e.pointerId); }catch(_){}
+    }
+    img.style.setProperty('--sat-dur', '560ms');
+    img.style.setProperty('--sat-ease', 'linear');
+    img.style.setProperty('--sat', '1');
+  }
+  function soltar(){
+    if(!sujeto) return;
+    sujeto = false;
+    img.style.setProperty('--sat-dur', '200ms');
+    img.style.setProperty('--sat-ease', 'var(--ease-casa)');
+    img.style.setProperty('--sat', SAT_REPOSO);
+  }
+
+  lienzo.addEventListener('pointerdown', sujetar);
+  lienzo.addEventListener('pointerup', soltar);
+  lienzo.addEventListener('pointercancel', soltar);
+  lienzo.addEventListener('lostpointercapture', soltar);
+  lienzo.addEventListener('blur', soltar);
+  lienzo.addEventListener('contextmenu', function(e){ if(sujeto) e.preventDefault(); });
+  lienzo.addEventListener('keydown', function(e){
+    if(e.key !== ' ' && e.key !== 'Enter') return;
+    e.preventDefault();      /* Espacio no debe scrollear mientras se sujeta */
+    sujetar(null);
+  });
+  lienzo.addEventListener('keyup', function(e){
+    if(e.key !== ' ' && e.key !== 'Enter') return;
+    soltar();
+  });
+});
+
+/* ==========================================================
+   Semilla LAVA · revelado por máscara con parallax de dos
+   velocidades — SOLO "El consultorio". Sin GSAP o con
+   reduced-motion: nace revelada (--rev:1 inline).
+   ========================================================== */
+/* ==========================================================
+   EL UMBRAL · momento firma (pin + scrub 0.6)
+   La máscara-arco crece hasta tragarse el viewport (solo scale),
+   la puerta interior viaja más lento (dos velocidades), el paso
+   se apaga hacia el teatro y aterriza el "sí." XXL en menta
+   sólido. Todo es función del progreso (ley 2): reversible e
+   interrumpible. Solo desktop con puntero fino y motion; en el
+   resto, corte limpio con costura (ley 7).
+   ========================================================== */
+var puedeUmbral = window.gsap && window.ScrollTrigger && !reduce && !tactil
+  && window.matchMedia('(min-width: 900px)').matches;
+if(puedeUmbral){
+  gsap.registerPlugin(ScrollTrigger);
+  document.documentElement.classList.add('umbral-on');
+  gsap.set('.umbral-arco img', { scale: 1.22 });
+  /* Tramo comprimido (230% -> 160%) y scrub mas pegado a la rueda: el
+     gesto mas grande del sitio no puede sentirse remoto. El "si." entra
+     en .42 y no se va hasta .88 — casi la mitad del tramo es la palabra. */
+  var tlU = gsap.timeline({
+    defaults: { ease: 'none' },
+    scrollTrigger: { trigger: '.umbral', start: 'top top', end: '+=155%', scrub: 0.45, pin: true, anticipatePin: 1 }
+  });
+  tlU
+    .to('.umbral-texto', { y: -70, autoAlpha: 0, duration: .22 }, 0)
+    .to('.umbral-arco', { scale: 5.8, duration: .40, ease: 'power1.in' }, .04)
+    .to('.umbral-arco img', { scale: 1, duration: .40, ease: 'power1.in' }, .04)
+    .to('.umbral-arco', { '--paso': .66, duration: .22 }, .22)
+    .to('.umbral-noche', { autoAlpha: 1, duration: .16 }, .30)
+    .fromTo('.umbral-si', { autoAlpha: 0, y: 76, scale: .93 },
+                          { autoAlpha: 1, y: 0, scale: 1, duration: .09, ease: 'power2.out' }, .42)
+    /* respiracion del hold: el progreso nunca es cero absoluto */
+    .to('.umbral-si', { scale: 1.015, duration: .18, ease: 'sine.inOut' }, .53)
+    .to('.umbral-si', { scale: 1, duration: .17, ease: 'sine.inOut' }, .71)
+    /* NO se apaga dentro del pin: al soltarse, la seccion entera (900px)
+       seguia scrolleando en negro vacio antes de que llegaran los casos.
+       El 'si.' se queda encendido y sale ARRASTRADO por el propio scroll,
+       mientras 'Casos reales' sube desde abajo: handoff real, cero apagon. */
+    .to('.umbral-si', { y: -40, scale: .72, autoAlpha: .35, filter: 'blur(6px)', duration: .12 }, .88);
+}
+
+/* ==========================================================
+   EL UMBRAL EN MOVIL · sin pin, mismo concepto.
+   La palabra sube y se asienta conducida por la posicion de su
+   propia pantalla (funcion del progreso, ley 2). Reduced-motion o
+   sin JS: nace puesta con --paso:1 desde el CSS (ley 7).
+   ========================================================== */
+var siMovil = $('.si-movil');
+if(siMovil && !reduce){
+  var siVisible = false;
+  var pulsoT = -1, pulsoHecho = false;
+  new IntersectionObserver(function(es){ siVisible = es[0].isIntersecting; }, { rootMargin: '30%' }).observe(siMovil);
+  siMovil.style.setProperty('--paso', '0');
+  sistemas.push(function(dt){
+    if(!siVisible) return true;
+    var vh = window.innerHeight;
+    var r = siMovil.getBoundingClientRect();
+    /* Entra y SALE con la misma ley (ley 2, simetría): sube de 0 a 1 mientras
+       r.top va de .72vh a 0, y decae de 1 a 0 con LA MISMA rampa de .72vh
+       cuando r.top pasa de -.3vh a -1.02vh. (Hasta la r4 el comentario
+       prometía simetría y la salida medía .45vh: media ley.) */
+    var entra = clamp(1 - r.top / (vh * 0.72), 0, 1);
+    var sale  = clamp(1 + (r.top + vh * 0.3) / (vh * 0.72), 0, 1);
+    var p = Math.min(entra, sale);
+    siMovil.style.setProperty('--paso', p.toFixed(3));
+    /* El payoff físico que en escritorio da el cruce de la puerta: al llegar
+       arriba por primera vez, un pulso único de halo menta detrás del glifo.
+       Envelope sin(PI*t) — el mismo patrón de la manija. */
+    if(!pulsoHecho && p > 0.985){ pulsoHecho = true; pulsoT = 0; }
+    if(pulsoT >= 0){
+      pulsoT += dt;
+      var t = pulsoT / 0.9;
+      siMovil.style.setProperty('--pulso', t < 1 ? (Math.sin(Math.PI * t) * 0.85).toFixed(3) : '0');
+      if(t >= 1) pulsoT = -1;
+    }
+    return (p > 0 && p < 1) || pulsoT >= 0;
+  });
+}
+
+/* El relevo del umbral: el titular de los casos sube desde abajo justo
+   cuando el "si." se va — el ojo nunca cae en un hueco. */
+if(window.gsap && window.ScrollTrigger && !reduce && $('.casos-cabeza')){
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.casos-cabeza > *', {
+    y: 74, opacity: 0, duration: .9, stagger: .08,
+    ease: casaEase,
+    scrollTrigger: { trigger: '.casos-cabeza', start: 'top 94%', toggleActions: 'play none none reverse' }
+  });
+}
+
+/* ==========================================================
+   ESPECIALIDADES · NO se mueven.
+   Hasta la r3 las cuatro filas entraban deslizándose desde fuera
+   de página por flancos alternos: el efecto de diez mil
+   plantillas, y le robaba peso a la única escena firma (el
+   umbral). El CONCEPTO lo dice literal: "una sola escena firma;
+   el resto respira quieto". Aquí la única cosa que responde es
+   la fila bajo el cursor (ley 1) — y eso ya vive en el CSS.
+   ========================================================== */
+
+/* ==========================================================
+   EL MONUMENTO · contadores con el scroll (patrón 5) + brasa N4
+   La cifra crece conducida por el scrub (tween de objeto →
+   textContent; el HTML ya trae el valor final, ley 7). El halo
+   respira proporcional a la VELOCIDAD de crecimiento y decae
+   como brasa (ley 1). Las filas de reseñas llegan con flanco
+   alterno y duración propia (ley 4).
+   ========================================================== */
+if(window.gsap && window.ScrollTrigger && !reduce && $('.monumento')){
+  gsap.registerPlugin(ScrollTrigger);
+  var brasaEl = $('.mon-brasa'), brasaV = 0, brasaDespierta = false;
+  if(brasaEl){
+    sistemas.push(function(dt){
+      brasaV = lerpSuave(brasaV, 0, 0.42, dt);   /* la brasa decae sola */
+      if(brasaV < 0.006){
+        if(brasaDespierta){ brasaEl.style.opacity = '0'; brasaDespierta = false; }
+        return false;
+      }
+      brasaDespierta = true;
+      brasaEl.style.opacity = brasaV.toFixed(3);
+      return true;
+    });
+  }
+  /* El 4.9 JAMÁS cuenta: es un rating, no una cantidad — contarlo
+     mostraría un "2.0 de 5" falso a mitad de scroll. Solo crecen
+     las 228 reseñas; la brasa respira con ese esfuerzo. */
+  $$('.monumento [data-cuenta]').forEach(function(el){
+    var fin = parseFloat(el.dataset.cuenta);
+    var est = { v: 0 }, vAntes = 0, texto = '';
+    el.textContent = '0';
+    gsap.to(est, {
+      v: fin, ease: 'none',
+      scrollTrigger: { trigger: '.monumento', start: 'top 85%', end: 'top 35%', scrub: 0.5 },
+      onUpdate: function(){
+        var t = String(Math.round(est.v));
+        if(t !== texto){ texto = t; el.textContent = t; }
+        brasaV = Math.min(1, brasaV + Math.abs(est.v - vAntes) / fin * 2.4);
+        vAntes = est.v;
+      }
+    });
+  });
+  /* El coro llega como coro: fade + 8px. Nada entra por los flancos. */
+  $$('.mon-coro li').forEach(function(fila){
+    gsap.from(fila, {
+      y: 8, opacity: 0, duration: 0.55, ease: casaEase,
+      scrollTrigger: { trigger: fila, start: 'top 94%', toggleActions: 'play none none reverse' }
+    });
+  });
+}
+
+if(window.gsap && window.ScrollTrigger && !reduce){
+  gsap.registerPlugin(ScrollTrigger);
+  var masc = $('.revelado-masc');
+  if(masc){
+    masc.style.setProperty('--rev', '0');   /* con JS arranca cerrada, no revelada */
+    /* ~60svh de recorrido que termina cuando la seccion llega al centro */
+    ScrollTrigger.create({
+      trigger: '.revelado',
+      start: 'top 92%',
+      end: 'top 32%',
+      scrub: 0.45,
+      /* ley 5: la puerta tiene inercia — el progreso pasa por la curva de
+         la casa antes de llegar a la máscara, no va crudo al scrollbar */
+      onUpdate: function(self){ masc.style.setProperty('--rev', casaEase(self.progress).toFixed(4)); }
+    });
+  }
+}
+
+/* ==========================================================
+   N6 · IMÁN DE CTA (reservado): el botón se desplaza hacia el
+   cursor (cap 30% del radio propio), halo por cercanía, regreso
+   con resorte. Texto interior: paralaje de dos capas (+22%).
+   Touch y reduced-motion: imán apagado.
+   ========================================================== */
+if(!tactil && !reduce){
+  var imanes = $$('.iman').map(function(el){
+    var m = { el: el, tx: 0, ty: 0, ox: 0, oy: 0, cercaObj: 0, cerca: 0, presObj: 0, pres: 0, r: null };
+    el.addEventListener('pointerdown', function(){ m.presObj = 1; despertar(); });
+    return m;
+  });
+  /* un getBoundingClientRect por iman por pointermove era el peaje mas caro
+     del sitio: los rects se recalculan solo cuando pueden haber cambiado */
+  function medirImanes(){ imanes.forEach(function(m){ m.r = m.el.getBoundingClientRect(); }); }
+  medirImanes();
+  window.addEventListener('scroll', medirImanes, { passive: true });
+  window.addEventListener('resize', medirImanes, { passive: true });
+  window.addEventListener('load', medirImanes);
+  window.addEventListener('pointerup', function(){ imanes.forEach(function(m){ m.presObj = 0; }); despertar(); }, { passive: true });
+  document.addEventListener('pointermove', function(e){
+    imanes.forEach(function(m){
+      var r = m.r;
+      if(!r || !r.width) return;
+      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      var dx = e.clientX - cx, dy = e.clientY - cy;
+      var d = Math.hypot(dx, dy);
+      var R = 130;
+      if(d < R){
+        var cap = r.width * 0.3;
+        m.tx = clamp(dx * 0.34, -cap, cap);
+        m.ty = clamp(dy * 0.34, -cap, cap);
+        m.cercaObj = 1 - d / R;
+      } else {
+        m.tx = 0; m.ty = 0; m.cercaObj = 0;
+      }
+    });
+  }, { passive: true });
+  sistemas.push(function(dt){
+    var vivos = false;
+    imanes.forEach(function(m){
+      m.ox = lerpSuave(m.ox, m.tx, 0.07, dt);
+      m.oy = lerpSuave(m.oy, m.ty, 0.07, dt);
+      m.cerca = lerpSuave(m.cerca, m.cercaObj, 0.1, dt);
+      m.pres = lerpSuave(m.pres, m.presObj, m.presObj ? 0.04 : 0.09, dt);
+      if(Math.abs(m.ox) < 0.05 && Math.abs(m.tx) < 0.05 && m.cerca < 0.005 && m.pres < 0.004){
+        if(m.__vivo){ m.el.style.transform = ''; m.el.style.setProperty('--cerca', '0'); m.__vivo = false; }
+        return;
+      }
+      m.__vivo = true; vivos = true;
+      /* la presion va DENTRO del string del ticker: si fuera un :active de
+         CSS, la siguiente escritura del rAF la pisaria */
+      m.el.style.transform = 'translate(' + m.ox.toFixed(2) + 'px,' + m.oy.toFixed(2) + 'px) scale(' +
+        (1 - m.pres * 0.035).toFixed(4) + ')';
+      var texto = $('.iman-texto', m.el);
+      if(texto) texto.style.transform = 'translate(' + (m.ox * 0.22).toFixed(2) + 'px,' + (m.oy * 0.22).toFixed(2) + 'px)';
+      m.el.style.setProperty('--cerca', m.cerca.toFixed(3));
+    });
+    return vivos;
+  });
+}
+
+/* ==========================================================
+   Semilla LAVA · barra de WhatsApp por dirección de scroll:
+   se oculta al bajar, vuelve al subir, y JAMÁS tapa las
+   ventanas del expediente.
+   ========================================================== */
+var casosVisible = false;
+if(grilla){
+  new IntersectionObserver(function(es){ casosVisible = es[0].isIntersecting; }).observe(grilla);
+}
+sistemas.push(function(){
+  var tapa = false;
+  if(casosVisible){
+    var r = grilla.getBoundingClientRect();
+    tapa = r.bottom > window.innerHeight - 110 && r.top < window.innerHeight - 30;
+  }
+  var y = window.scrollY, vh = window.innerHeight;
+  /* Dentro del pin del umbral el texto del hero ya se fue: ahi la barra
+     aparece y SE QUEDA (no solo al subir) — jamas un tramo sin camino. */
+  var dentroPin = puedeUmbral && y > vh * 0.5 && y < vh * 1.55;
+  var ocultar = y < (puedeUmbral ? vh * 0.5 : 420) || tapa || (rumboAbajo && !dentroPin);
+  document.body.classList.toggle('barra-oculta', ocultar);
+  return false;   /* el scroll ya despierta el ticker: no necesita frames propios */
+});
+
+/* ==========================================================
+   Anclas con el easing de la casa. Con el umbral pineado, un
+   scroll-behavior:smooth nativo recorria ~2000px POR DENTRO del
+   pin: el viaje se conduce a mano, corto y con la curva propia.
+   ========================================================== */
+var viajeRAF = null;
+$$('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var id = a.getAttribute('href');
+    if(!id || id.length < 2) return;
+    var destino = document.getElementById(id.slice(1));
+    if(!destino) return;
+    e.preventDefault();
+    var y0 = window.scrollY;
+    var y1 = Math.max(0, destino.getBoundingClientRect().top + y0 - 8);
+    if(reduce || Math.abs(y1 - y0) < 4){ window.scrollTo(0, y1); return; }
+    var dur = clamp(400 + Math.abs(y1 - y0) * 0.14, 400, 900);
+    var t0 = performance.now();
+    if(viajeRAF) cancelAnimationFrame(viajeRAF);
+    (function paso(t){
+      var pr = clamp((t - t0) / dur, 0, 1);
+      window.scrollTo(0, Math.round(y0 + (y1 - y0) * casaEase(pr)));
+      if(pr < 1) viajeRAF = requestAnimationFrame(paso);
+    })(t0);
+  });
+});
+
+/* Las fotos que llegan tarde no aparecen de golpe (fuera de las escenas
+   especiales, que tienen su propia coreografia). */
+$$('img[loading="lazy"]').forEach(function(img){
+  if(img.closest('.ventanas') || img.closest('.revelado')) return;
+  if(img.complete) return;
+  img.style.opacity = '0';
+  img.style.transition = 'opacity .5s var(--ease-casa)';
+  var mostrar = function(){ img.style.opacity = '1'; };
+  img.addEventListener('load', mostrar, { once: true });
+  img.addEventListener('error', mostrar, { once: true });
+});
+
+/* ==========================================================
+   PREGUNTALE A LA CLINICA · chat de intents.
+   Los intents salen del propio DOM (la lista que ya se lee sin
+   JS): cero duplicacion de contenido, cero datos inventados.
+   ========================================================== */
+(function(){
+  var caja = $('.pregunta');
+  if(!caja) return;
+  var hilo = $('.pregunta-hilo', caja), ops = $('.pregunta-opciones', caja);
+  var pares = $$('.pregunta-lista > div', caja).map(function(d){
+    return { q: $('dt', d).textContent.trim(), a: $('dd', d).innerHTML.trim() };
+  });
+  if(!pares.length) return;
+  hilo.hidden = false; ops.hidden = false;
+  function burbuja(clase, html){
+    var li = document.createElement('li');
+    li.className = clase; li.innerHTML = html;
+    hilo.appendChild(li);
+    return li;
+  }
+  burbuja('dice-clinica', 'Hola. Soy el asistente de la cl&iacute;nica: respondo lo b&aacute;sico con los datos del consultorio. Toca una pregunta.');
+  pares.forEach(function(par, i){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'pregunta-chip'; b.textContent = par.q;
+      b.addEventListener('click', function(){
+        /* nada de b.disabled: apaga el botón y tira el foco a <body>.
+           Clase visual + aria, y el foco viaja a la siguiente pregunta. */
+        b.setAttribute('aria-disabled', 'true');
+        b.tabIndex = -1;
+        burbuja('dice-visita', par.q);
+        var siguiente = ops.querySelector('.pregunta-chip:not([aria-disabled])');
+        if(siguiente) siguiente.focus();
+        var espera = reduce ? 0 : 260;
+        setTimeout(function(){
+          var burb = burbuja('dice-clinica', par.a);
+          /* la burbuja de precios sale con su propio camino a WhatsApp */
+          /* B5 · precios Y cita: las dos de mayor intención llevan el mismo
+             botón. Antes la de cita moría en un número en texto plano. */
+          var esCita = /c[oó]mo pido una cita/i.test(par.q);
+          if(/cuesta|precio/i.test(par.q) || esCita){
+            var enlace = document.createElement('a');
+            enlace.className = 'burbuja-wsp';
+            enlace.href = WSP(esCita
+              ? 'Hola Clínica Dental BOE, quiero agendar una cita.'
+              : 'Hola Clínica Dental BOE, quiero saber el costo de un tratamiento y agendar una evaluación.');
+            enlace.target = '_blank'; enlace.rel = 'noopener';
+            enlace.textContent = esCita ? 'Pedir mi cita por WhatsApp' : 'Preguntar el costo por WhatsApp';
+            burb.appendChild(document.createElement('br'));
+            burb.appendChild(enlace);
+          }
+        }, espera);
+      });
+    ops.appendChild(b);
+  });
+})();
+
+/* El "si" del cierre: el subrayado se dibuja al entrar en viewport */
+var siCierre = $('.visitanos h2 .si');
+if(siCierre && window.IntersectionObserver){
+  siCierre.style.setProperty('--traza', reduce ? '1' : '0');
+  new IntersectionObserver(function(es, obs){
+    if(es[0].isIntersecting){ siCierre.style.setProperty('--traza', '1'); obs.disconnect(); }
+  }, { threshold: .9 }).observe(siCierre);
+}
+
+})();
+</script>
+</body>
+</html>
