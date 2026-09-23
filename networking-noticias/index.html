@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Networking Noticias — quién se juntó con quién</title>
+<meta name="description" content="Networking Noticias: economía, empresas y actualidad del Perú. La noticia es el vínculo.">
+<meta name="theme-color" content="#0B1F24">
+<!-- Recetas del catalogo: portales-noticias-rpp-biobio R1 (cabecera en dos capas), R3 (punto en vivo), R4 (apertura + columna fija);
+     united-in-football R1 (pinned stage: la ventana del anuncio queda fija mientras la pagina pasa). La firma —el eslabon— es nuestra. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 24'%3E%3Crect x='2' y='4' width='28' height='16' rx='8' fill='none' stroke='%2300A39C' stroke-width='4'/%3E%3Crect x='26' y='4' width='28' height='16' rx='8' fill='none' stroke='%230B1F24' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=expose@400,700,900&f[]=synonym@400,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#fff;--tinta:#0B1F24;--tinta2:#133038;--rojo:#D62718;--teal:#00A39C;--tealt:#00716B;--tealc:#5FD3CC;
+  --niebla:#E9EFEF;--graf:#4E5D60;--linea:#D3DDDD;--gap:var(--papel);
+  --tit:"Expose",ui-sans-serif,system-ui,sans-serif;--txt:"Synonym",ui-sans-serif,system-ui,sans-serif;
+  --suave:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:120px}
+body{margin:0;background:var(--papel);color:var(--tinta);font:16px/1.5 var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.c{max-width:1296px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+/* ── cabecera: dos capas, se condensa al pasar el umbral (RPP/BioBio R1) ── */
+.top{background:var(--tinta);color:#B9CACC;font-size:13px}
+.top .c{display:flex;justify-content:space-between;align-items:center;min-height:34px;gap:16px}
+.top nav{display:flex;gap:18px;align-items:center}
+.top a:hover{color:#fff}
+.top svg{width:15px;height:15px;fill:currentColor}
+.cabecera{position:sticky;top:0;z-index:40}
+.cab{background:var(--tinta);color:#fff;--gap:var(--tinta);border-top:1px solid #1d3a42}
+.cab .c{display:flex;align-items:center;justify-content:space-between;height:84px;transition:height .22s var(--suave)}
+.marca{display:flex;align-items:center;gap:12px}
+.marca__esl{width:62px;height:27px;color:var(--teal);transition:width .22s var(--suave),height .22s var(--suave)}
+.marca__esl .lazo-b{color:#fff}
+.marca__txt{display:flex;flex-direction:column;line-height:.86}
+.marca__nw{font:900 34px/0.9 var(--tit);letter-spacing:-.02em;transition:font-size .22s var(--suave)}
+.marca__no{font:700 11px/1 var(--txt);letter-spacing:.42em;text-transform:uppercase;color:var(--tealc);margin-top:6px;transition:opacity .15s}
+.cab__acc{display:flex;gap:10px;align-items:center}
+.buscar{display:flex;align-items:center;background:var(--tinta2);border-radius:99px;padding:0 6px 0 14px;height:40px}
+.buscar input{background:none;border:0;color:#fff;font:15px var(--txt);width:190px;outline:0}
+.buscar input::placeholder{color:#8FA7AA}
+.buscar button{width:32px;height:32px;display:grid;place-items:center}
+.buscar svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2.2}
+.btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;border-radius:99px;font:700 14px var(--txt);background:var(--teal);color:var(--tinta)}
+.btn:hover{background:var(--tealc)}
+.nav{background:var(--papel);border-bottom:1px solid var(--linea)}
+.nav ul{display:flex;gap:0;list-style:none;margin:0 auto;padding:0 24px;max-width:1296px;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{display:block;padding:14px 13px 12px;font:700 15px var(--txt);white-space:nowrap;border-bottom:3px solid transparent}
+.nav li:first-child a{padding-left:0}
+.nav a:hover{border-color:var(--teal)}
+.chica .cab .c{height:54px}
+.chica .marca__esl{width:44px;height:19px}
+.chica .marca__nw{font-size:24px}
+.chica .marca__no{opacity:0;height:0;margin:0}
+
+/* ── la red de hoy: la puerta de la firma ── */
+.red{background:var(--niebla)}
+.red .c{display:flex;align-items:center;gap:10px;min-height:52px;overflow-x:auto;scrollbar-width:none}
+.red .c::-webkit-scrollbar{display:none}
+.red__h{display:flex;align-items:center;gap:8px;font:700 12px var(--txt);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--tealt);--gap:var(--niebla)}
+.red__h .esl{width:30px;height:13px;color:var(--tealt)}
+.red__chip{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 6px 0 14px;border-radius:99px;background:var(--papel);border:1px solid var(--linea);font:600 14px var(--txt);white-space:nowrap;transition:background .15s,border-color .15s}
+.red__chip span{display:grid;place-items:center;min-width:24px;height:24px;border-radius:99px;background:var(--niebla);font-weight:700;font-size:12px}
+.red__chip:hover{border-color:var(--tealt)}
+.red__chip[aria-pressed=true]{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.red__chip[aria-pressed=true] span{background:var(--teal);color:var(--tinta)}
+.red__nota{font-size:13px;color:var(--graf);white-space:nowrap;margin-left:auto}
+
+/* ── antetitulo: el eslabon ── */
+.k{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:700 12px/1.3 var(--txt);letter-spacing:.11em;text-transform:uppercase;color:var(--graf);margin:0 0 8px}
+.k--esl{color:var(--tealt)}
+.esl{width:28px;height:12px;flex:none;color:var(--teal);overflow:visible}
+.k__a{position:relative;z-index:2;letter-spacing:inherit;text-transform:inherit;font:inherit;color:inherit;border-bottom:1.5px dotted currentColor;padding:6px 0 2px;margin:-6px 0 -2px}
+.k__a:hover{color:var(--tinta)}
+.k__dato{margin-left:4px;background:var(--teal);color:var(--tinta);padding:2px 8px;border-radius:99px;letter-spacing:.04em}
+.k__dato--plano{background:var(--niebla);color:var(--tinta)}
+.t{font:600 13px var(--txt);color:var(--graf)}
+.t--ya{color:var(--rojo)}
+
+/* ── tarjetas ── */
+.nota{position:relative}
+.nota__tit{font:700 20px/1.12 var(--tit);letter-spacing:-.005em;margin:0 0 8px;text-wrap:balance}
+.nota__tit a::after{content:"";position:absolute;inset:0;z-index:1}
+.nota__foto{overflow:hidden;background:var(--niebla);margin-bottom:12px}
+.nota__foto img{width:100%;height:100%;object-fit:cover;transition:transform .2s ease-out}
+.nota__ex{margin:0 0 8px;color:var(--graf);font-size:15px;line-height:1.45}
+@media (hover:hover) and (pointer:fine){
+  .nota:hover .nota__foto img{transform:scale(1.03)}
+  .nota:hover .nota__tit a{color:var(--tealt)}
+}
+.nota__tit a{transition:color .15s ease}
+.nota--v .nota__foto{aspect-ratio:4/3}
+.nota--v .nota__tit{font-size:23px}
+.nota--v .nota__ex{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nota--m .nota__foto{aspect-ratio:16/9}
+.nota--L{display:grid;gap:20px;align-content:start}
+.nota--L .nota__foto{aspect-ratio:16/9;margin:0}
+.nota--L .nota__tit{font-size:clamp(26px,2.6vw,36px);line-height:1.02}
+.nota--h{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--linea)}
+.nota--h .nota__foto{aspect-ratio:3/2;margin:0}
+.nota--h .nota__tit{font-size:17px;margin-bottom:4px}
+.nota--h .k{margin-bottom:4px;font-size:11px}
+.nota--t{padding:12px 0;border-top:1px solid var(--linea)}
+.nota--t .nota__tit{font-size:17px;margin:2px 0 0}
+
+/* ── firma: la red encendida ── */
+.nota,.voz{transition:opacity .25s ease,filter .25s ease}
+.filtrando .nota:not(.en),.filtrando .voz:not(.en){opacity:.22;filter:grayscale(1)}
+.filtrando .nota.en{opacity:1}
+.nota.en::before{content:"";position:absolute;inset:-8px;border:2px solid var(--teal);border-radius:4px;pointer-events:none}
+.pill{position:fixed;left:0;right:0;margin:0 auto;width:max-content;bottom:20px;z-index:60;display:flex;align-items:center;gap:6px;background:var(--tinta);color:#fff;border-radius:99px;padding:6px 6px 6px 18px;box-shadow:0 12px 40px rgba(11,31,36,.35);transform:translateY(160%);transition:transform .32s var(--suave);--gap:var(--tinta);max-width:calc(100vw - 32px)}
+.pill.on{transform:translateY(0)}
+.gsap .pill{transition:none}
+.pill .esl{width:34px;height:15px;color:var(--teal)}
+.pill__txt{font:600 14px var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 6px}
+.pill__txt b{font-family:var(--tit);font-size:16px;letter-spacing:.01em}
+.pill button{height:40px;border-radius:99px;padding:0 14px;font:700 14px var(--txt);white-space:nowrap}
+.pill__sig{background:var(--teal);color:var(--tinta)}
+.pill__cerrar{width:40px;padding:0!important;font-size:18px!important}
+
+/* ── apertura: el grito (Fox) + lo ultimo (BioBio) ── */
+.aper{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;padding:28px 0 36px}
+.grito{position:relative;overflow:hidden;background:var(--tinta);color:#fff;min-height:560px;display:flex;align-items:flex-end;--gap:var(--tinta)}
+.grito .nota__foto{position:absolute;inset:0;margin:0}
+.grito .nota__foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,36,0) 30%,rgba(11,31,36,.55) 55%,rgba(11,31,36,.96) 100%)}
+.grito__txt{position:relative;padding:36px 40px 34px;max-width:980px}
+.grito .k{color:var(--tealc)}
+.grito .k span,.grito .k--esl{color:var(--tealc)}
+.grito .nota__tit{font:900 clamp(34px,4.3vw,62px)/.94 var(--tit);letter-spacing:-.018em;text-transform:uppercase;margin:6px 0 14px}
+.grito .nota__ex{color:#CFDCDD;font-size:17px;max-width:680px}
+.grito .t{color:#FF8A7E}
+.ultimo{border-top:4px solid var(--tinta)}
+.ultimo h2,.bloque__h{font:900 15px/1 var(--tit);letter-spacing:.14em;text-transform:uppercase;margin:0;padding:14px 0 10px;display:flex;align-items:center;gap:10px}
+.ultimo h2 i{width:9px;height:9px;border-radius:50%;background:var(--rojo);box-shadow:0 0 0 0 rgba(214,39,24,.5);animation:vivo 2s infinite}
+@keyframes vivo{70%{box-shadow:0 0 0 9px rgba(214,39,24,0)}100%{box-shadow:0 0 0 0 rgba(214,39,24,0)}}
+.ultimo .nota--t:first-of-type{border-top:0}
+
+/* ── vinculos de la semana: la tesis al primer scroll ── */
+.vinc{padding:8px 0 44px}
+.vinc__cab{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:4px solid var(--teal);padding-top:14px;margin-bottom:22px}
+.vinc__cab h2{font:900 clamp(30px,3.4vw,48px)/.95 var(--tit);letter-spacing:-.015em;margin:0;display:flex;align-items:center;gap:14px;--gap:var(--papel)}
+.vinc__cab h2 .esl{width:64px;height:28px;color:var(--teal)}
+.vinc__cab p{margin:0;color:var(--graf);max-width:420px;font-size:15px}
+.vinc__g{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+
+/* ── publicidad: se integra, no se pega ── */
+.ad{position:relative;background:var(--tinta);color:#fff;overflow:hidden;--gap:var(--tinta)}
+.ad video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ad__label{position:absolute;top:12px;left:14px;z-index:2;font:700 10px var(--txt);letter-spacing:.2em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--tinta);padding:4px 8px;border-radius:3px}
+.ad__label em{font-style:normal;font-weight:600;letter-spacing:.06em;text-transform:none;color:var(--graf)}
+.ad__copy{position:relative;z-index:2}
+.ad__marca{font:700 12px var(--txt);letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.ad__frase{font:900 clamp(26px,3vw,44px)/.98 var(--tit);letter-spacing:-.01em;margin:6px 0 16px;text-wrap:balance}
+.ad__cta{display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:99px;background:#fff;color:var(--tinta);font:700 14px var(--txt)}
+.ad__cta:hover{background:var(--tealc)}
+.ad__pausa{position:absolute;right:12px;top:12px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(11,31,36,.6);display:grid;place-items:center}
+.ad__pausa svg{width:12px;height:12px;fill:#fff}
+.ad__pausa.play svg{display:none}
+.ad__pausa.play::after{content:"";border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.billboard{height:300px;display:flex;align-items:flex-end;margin:0 0 48px}
+.billboard::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,31,36,.86) 0%,rgba(11,31,36,.35) 55%,rgba(11,31,36,0) 80%)}
+.billboard .ad__copy{padding:0 40px 34px;max-width:620px}
+.media{position:sticky;top:150px;height:600px;display:flex;align-items:flex-end}
+.media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,36,0) 40%,rgba(11,31,36,.9) 100%)}
+.media .ad__copy{padding:0 22px 24px}
+.media .ad__frase{font-size:30px}
+/* ventana: el video queda fijo detras y la pagina se abre sobre el (interscroller) */
+.ventana{position:relative;height:100vh;min-height:520px;clip-path:inset(0);margin:56px 0;background:var(--tinta);color:#fff;--gap:var(--tinta)}
+.ventana__media{position:fixed;inset:0;z-index:0}
+.ventana__media video{width:100%;height:100%;object-fit:cover}
+.ventana__media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,31,36,.85) 0%,rgba(11,31,36,0) 45%),linear-gradient(180deg,rgba(11,31,36,.55) 0%,rgba(11,31,36,0) 22%)}
+.ventana__top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;padding:14px 24px;font:700 11px var(--txt);letter-spacing:.2em;text-transform:uppercase}
+.ventana .ad__copy{position:absolute;left:0;right:0;bottom:0;padding:0 24px 44px;max-width:1296px;margin:0 auto}
+.ventana .ad__frase{font-size:clamp(40px,6.4vw,96px);line-height:.9;text-transform:uppercase}
+.ventana .ad__pausa{top:auto;bottom:44px;right:24px}
+
+/* ── bloques de seccion ── */
+.bloque{padding:8px 0 48px}
+.bloque__h{border-top:4px solid var(--tinta);margin-bottom:18px}
+.bloque__h a:hover{color:var(--tealt)}
+.bloque__h small{margin-left:auto;font:600 13px var(--txt);letter-spacing:0;text-transform:none;color:var(--graf)}
+.eco{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px}
+.eco__g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-content:start}
+.eco__g .nota--L{grid-column:1/-1;grid-template-columns:1.4fr 1fr;align-items:start}
+.act{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.act .nota--L{grid-column:span 2;grid-row:span 2}
+.act .nota--L{grid-template-columns:1fr}
+.emp{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.int{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px}
+.int__g{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.int__g .nota--L{grid-row:span 2;grid-template-columns:1fr}
+
+/* ── el dato: respiro hecho de cifras (nunca vacio) ── */
+.datos{background:var(--tinta);color:#fff;padding:52px 0 56px;margin:8px 0 48px;--gap:var(--tinta)}
+.datos h2{font:900 15px/1 var(--tit);letter-spacing:.14em;text-transform:uppercase;margin:0 0 30px;display:flex;align-items:center;gap:10px;color:var(--tealc)}
+.datos h2 .esl{width:34px;height:15px;color:var(--teal)}
+.datos__g{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+.dato{position:relative;padding:4px 20px 6px;border-left:1px solid #2A4850}
+.dato:first-child{border-left:0;padding-left:0}
+.dato b{display:block;font:900 clamp(34px,3.6vw,56px)/1 var(--tit);letter-spacing:-.02em;white-space:nowrap}
+.dato>span{display:block;margin-top:10px;font-size:14px;line-height:1.35;color:#B9CACC}
+.dato a::after{content:"";position:absolute;inset:0}
+.dato:hover b{color:var(--tealc)}
+
+/* ── lo mas leido: ranking (Forbes) ── */
+.leido{counter-reset:r}
+.leido ol{list-style:none;margin:0;padding:0}
+.leido li{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:14px 0;border-top:1px solid var(--linea);position:relative}
+.leido li:first-child{border-top:0}
+.leido li::before{counter-increment:r;content:counter(r);font:900 44px/.9 var(--tit);color:var(--teal)}
+.leido .nota__tit{font-size:17px;margin:0}
+
+/* ── compactas + vitrina de anuncios ── */
+.cajas{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px;padding-bottom:56px}
+.caja__h{font:900 15px/1 var(--tit);letter-spacing:.14em;text-transform:uppercase;border-top:4px solid var(--tinta);padding:14px 0 12px;margin:0 0 6px}
+.caja__h a:hover{color:var(--tealt)}
+.caja .nota--m .nota__tit{font-size:19px}
+.vitrina{background:var(--tinta);color:#fff;padding:26px 26px 28px;display:flex;flex-direction:column;--gap:var(--tinta)}
+.vitrina small{font:700 11px var(--txt);letter-spacing:.2em;text-transform:uppercase;color:var(--tealc)}
+.vitrina h2{font:900 34px/.95 var(--tit);letter-spacing:-.01em;margin:10px 0 14px}
+.vitrina ul{list-style:none;margin:0 0 22px;padding:0;font-size:15px}
+.vitrina li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid #2A4850}
+.vitrina li span{color:#8FA7AA;font-size:13px}
+.vitrina{position:relative;overflow:hidden}
+.vitrina .btn{align-self:flex-start;position:relative;z-index:1}
+.vitrina__esl{position:absolute;right:-60px;bottom:-40px;width:340px;height:146px;color:var(--teal);opacity:.22;--gap:var(--tinta)}
+
+/* ── opinion: las voces de la red ── */
+.voces{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.voz{position:relative;display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:start;padding-top:18px;border-top:1px solid var(--linea)}
+.voz img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center 25%}
+.voz__quien{font:700 14px var(--txt);margin:0 0 2px}
+.voz__cargo{font-size:13px;color:var(--graf);margin:0 0 10px;line-height:1.35}
+.voz .nota__tit{font-size:20px;margin:0}
+.voz a::after{content:"";position:absolute;inset:0}
+.voz:hover .nota__tit{color:var(--tealt)}
+
+/* ── boletin + pie ── */
+.boletin{background:var(--niebla);padding:48px 0;--gap:var(--niebla)}
+.boletin .c{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.boletin h2{font:900 clamp(30px,3.2vw,46px)/.95 var(--tit);letter-spacing:-.015em;margin:0 0 10px}
+.boletin p{margin:0;color:var(--graf)}
+.boletin form{display:flex;gap:10px}
+.boletin input{flex:1;height:52px;border:1px solid var(--linea);border-radius:99px;padding:0 20px;font:16px var(--txt);background:#fff;min-width:0}
+.boletin .btn{height:52px;background:var(--tinta);color:#fff;padding:0 26px}
+.boletin .btn:hover{background:var(--tinta2)}
+.boletin__ok{margin-top:10px;font-weight:700;color:var(--tealt)}
+.pie{background:var(--tinta);color:#B9CACC;padding:48px 0 28px;font-size:14px;--gap:var(--tinta)}
+.pie__g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid #2A4850}
+.pie h3{font:700 12px var(--txt);letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 12px}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pie a:hover{color:#fff}
+.pie .marca{margin-bottom:16px;color:#fff}
+.pie__fin{display:flex;justify-content:space-between;gap:16px;padding-top:20px;font-size:12px;flex-wrap:wrap}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:55;display:flex;align-items:center;gap:8px;height:48px;padding:0 18px 0 14px;border-radius:99px;background:var(--teal);color:var(--tinta);font:700 14px var(--txt);box-shadow:0 10px 30px rgba(11,31,36,.28);transition:opacity .2s,transform .2s var(--suave)}
+.wa svg{width:22px;height:22px;fill:currentColor}
+.wa:hover{background:var(--tealc)}
+.filtrando .wa{opacity:0;pointer-events:none;transform:translateY(12px)}
+.saltar{position:absolute;left:12px;top:-80px;z-index:99;display:flex;align-items:center;height:44px;padding:0 16px;background:#fff;color:var(--tinta);font-weight:700;border-radius:6px}
+.saltar:focus{top:12px}
+@media (max-width:1100px){
+  .aper{grid-template-columns:1fr}
+  .vinc__g{grid-template-columns:repeat(2,1fr)}
+  .eco{grid-template-columns:1fr}
+  .media{position:relative;top:0;height:auto;aspect-ratio:4/5;max-width:420px}
+  .datos__g{grid-template-columns:repeat(3,1fr);gap:28px 0}
+  .dato:nth-child(4){border-left:0;padding-left:0}
+  .int{grid-template-columns:1fr}
+  .cajas{grid-template-columns:repeat(2,1fr)}
+  .voces{grid-template-columns:1fr}
+  .pie__g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .c{padding:0 16px}
+  .top .c>span{display:none}
+  .top .c{justify-content:flex-end}
+  .cab .c{height:64px}
+  .marca__esl{width:46px;height:20px}
+  .marca__nw{font-size:26px}
+  .marca__no{font-size:12px;letter-spacing:.3em;margin-top:4px}
+  .buscar{display:none}
+  .btn--bol{height:36px;padding:0 14px;font-size:13px}
+  .nav ul{padding:0 16px}
+  .nav a{padding:12px 11px 10px;font-size:14px}
+  .red__nota{display:none}
+  .aper{padding:0 0 28px;gap:24px}
+  .aper .grito{margin:0 -16px;min-height:0;display:block}
+  .grito .nota__foto{position:relative;aspect-ratio:4/3}
+  .grito .nota__foto::after{background:linear-gradient(180deg,rgba(11,31,36,0) 55%,rgba(11,31,36,1) 100%)}
+  .grito__txt{padding:0 16px 24px;margin-top:-40px}
+  .grito .nota__ex{font-size:15px}
+  .vinc__cab{flex-direction:column;gap:8px}
+  .vinc__g,.act,.emp,.int__g,.eco__g{grid-template-columns:1fr;gap:0}
+  .vinc__g .nota--v,.emp .nota--m,.act>.nota--m{display:grid;grid-template-columns:112px 1fr;column-gap:14px;padding:14px 0;border-top:1px solid var(--linea)}
+  .vinc__g .nota--v .nota__foto,.emp .nota--m .nota__foto,.act>.nota--m .nota__foto{grid-row:span 4;aspect-ratio:1;margin:0}
+  .vinc__g .nota--v .nota__tit{font-size:18px}
+  .nota--v .nota__ex{display:none}
+  .act .nota--L,.int__g .nota--L,.eco__g .nota--L{grid-column:auto;grid-row:auto;grid-template-columns:1fr;gap:12px;padding-bottom:16px}
+  .billboard{height:auto;aspect-ratio:4/5;margin:0 -16px 40px}
+  .billboard::after{background:linear-gradient(180deg,rgba(11,31,36,0) 35%,rgba(11,31,36,.92) 100%)}
+  .billboard .ad__copy{padding:0 20px 26px}
+  .media{max-width:none;margin:24px 0 0}
+  .ventana{margin:40px 0}
+  .ventana .ad__copy{padding:0 16px 36px}
+  .datos__g{grid-template-columns:1fr 1fr}
+  .dato:nth-child(odd){border-left:0;padding-left:0}
+  .dato:nth-child(4){border-left:1px solid #2A4850;padding-left:20px}
+  .cajas{grid-template-columns:1fr}
+  .voz{grid-template-columns:72px 1fr}
+  .voz img{width:72px;height:72px}
+  .boletin .c{grid-template-columns:1fr;gap:20px}
+  .boletin form{flex-direction:column}
+  .pie__g{grid-template-columns:1fr}
+  .pill{bottom:12px;padding-left:12px}
+  .wa{right:14px;bottom:14px;padding:0 14px}
+  .wa span{display:none}
+  .ad__label,.ad__label em,.ventana__top,.vitrina small,.nota--h .k,.pie h3{font-size:12px}
+  .red__chip{height:40px}
+  .ad__pausa{width:40px;height:40px}
+  .btn--bol{height:40px}
+  .marca{min-height:44px}
+  .nota__tit a,.top a,.pie a,.dato a,.voz a,.bloque__h a,.caja__h a{padding-top:13px;padding-bottom:13px}
+  .k__a{padding-top:13px;padding-bottom:13px;margin:-13px 0}
+  .ventana__top{letter-spacing:.1em;padding:14px 16px;gap:12px}
+  .pill .esl{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><clipPath id="eslc"><rect x="18" y="12" width="20" height="13"/></clipPath></defs>
+  <symbol id="esl" viewBox="0 0 56 24">
+    <rect x="26" y="4" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3.4"/>
+    <rect x="2" y="4" width="28" height="16" rx="8" fill="none" stroke="var(--gap)" stroke-width="8"/>
+    <rect x="2" y="4" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3.4"/>
+    <g clip-path="url(#eslc)"><rect x="26" y="4" width="28" height="16" rx="8" fill="none" stroke="var(--gap)" stroke-width="8"/><rect x="26" y="4" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3.4"/></g>
+  </symbol>
+</svg>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="top"><div class="c">
+  <span>Martes 22 de septiembre de 2026 · Lima</span>
+  <nav aria-label="Enlaces de servicio">
+    <a href="https://wa.me/51999999999?text=Hola%20Networking%20Noticias%2C%20quiero%20enviar%20una%20nota%20de%20prensa">Envía tu nota</a><a href="#anuncia">Anuncia aquí</a><a href="#boletin">Boletín</a>
+    <a href="https://x.com/" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a>
+    <a href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.6V1.6L14 1.5c-4 0-4.9 3-4.9 4.9v2.1H6.8v4H9V22h5v-9.5h3.4l.4-4z"/></svg></a>
+    <a href="https://www.linkedin.com/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+  </nav>
+</div></div>
+
+<div class="cabecera" id="cabecera">
+  <header class="cab"><div class="c">
+    <a class="marca" href="#" aria-label="Networking Noticias, inicio">
+      <svg class="marca__esl" viewBox="0 0 56 24" aria-hidden="true">
+        <g class="lazo-b"><rect x="26" y="4" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3.4"/></g>
+        <g class="lazo-a"><rect x="2" y="4" width="28" height="16" rx="8" fill="none" stroke="var(--gap)" stroke-width="8"/><rect x="2" y="4" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3.4"/></g>
+        <g class="lazo-b" clip-path="url(#eslc)"><rect x="26" y="4" width="28" height="16" rx="8" fill="none" stroke="var(--gap)" stroke-width="8"/><rect x="26" y="4" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="3.4"/></g>
+      </svg>
+      <span class="marca__txt"><span class="marca__nw">NETWORKING</span><span class="marca__no">noticias</span></span>
+    </a>
+    <div class="cab__acc">
+      <form class="buscar" role="search" action="https://networkingnoticias.pe/" method="get">
+        <label class="sr" for="q">Buscar noticias</label><input id="q" name="s" placeholder="Buscar noticias, empresas…">
+        <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+      </form>
+      <a class="btn btn--bol" href="#boletin">Boletín</a>
+    </div>
+  </div></header>
+  <nav class="nav" aria-label="Secciones"><ul>
+    <li><a href="https://networkingnoticias.pe/economia/">Economía</a></li><li><a href="https://networkingnoticias.pe/actualidad/">Actualidad</a></li><li><a href="https://networkingnoticias.pe/emprendedores/">Emprendedores</a></li><li><a href="https://networkingnoticias.pe/salud/">Salud</a></li><li><a href="https://networkingnoticias.pe/internacional/">Internacional</a></li><li><a href="https://networkingnoticias.pe/motores/">Motores</a></li><li><a href="https://networkingnoticias.pe/tecnologia/">Tecnología</a></li><li><a href="https://networkingnoticias.pe/turismo/">Turismo</a></li><li><a href="https://networkingnoticias.pe/ocio-cultura/">Ocio y Cultura</a></li><li><a href="https://networkingnoticias.pe/opinion/">Opinión</a></li>
+  </ul></nav>
+</div>
+
+<div class="red" aria-label="La red de hoy"><div class="c">
+  <span class="red__h"><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg> La red de hoy</span>
+  <button class="red__chip" data-actor="motorola" type="button">Motorola <span>2</span></button><button class="red__chip" data-actor="sernanp" type="button">Sernanp <span>2</span></button><button class="red__chip" data-actor="ia" type="button">Inteligencia artificial <span>5</span></button><button class="red__chip" data-actor="pymes" type="button">Pymes <span>6</span></button>
+  <span class="red__nota">Toca un actor y la portada enciende sus notas</span>
+</div></div>
+
+<main id="contenido">
+<h1 class="sr">Networking Noticias — portada del 22 de septiembre de 2026</h1>
+
+<div class="c aper">
+  <article class="nota grito">
+    <div class="nota__foto"><img src="assets/img/01-papa-leon-xiv.jpg" alt="Vaticano confirma agenda del papa León XIV en Perú del 11 al 16 de noviembre" width="1600" height="900" fetchpriority="high" decoding="async"></div>
+    <div class="grito__txt"><div class="k k--esl"><span>Vaticano</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Perú</span><b class="k__dato">11–16 nov</b></div><h2 class="nota__tit"><a href="https://networkingnoticias.pe/vaticano-confirma-agenda-del-papa-leon-xiv-en-peru-del-11-al-16-de-noviembre/">Vaticano confirma agenda del papa León XIV en Perú del 11 al 16 de noviembre</a></h2><p class="nota__ex">El Vaticano dio a conocer el programa oficial del viaje apostólico del papa León XIV al Perú, previsto del 11 al 16 de noviembre de 2026.</p><time class="t" datetime="2026-09-21T10:48:58">Ayer</time></div>
+  </article>
+  <aside class="ultimo" aria-labelledby="h-ultimo">
+    <h2 id="h-ultimo"><i aria-hidden="true"></i>Lo último</h2>
+    <article class="nota nota--t"><time class="t" datetime="2026-09-20T18:31:44">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/peruana-ana-paula-alvarez-fue-coronada-como-embajadora-del-mini-model-world-2026/">Peruana Ana Paula Álvarez fue coronada como Embajadora del Mini Model World 2026</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-20T18:21:41">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/redmi-17-bateria-de-7-500-mah-camara-de-50-megapixeles-y-pantalla-de-69-pulgadas/">REDMI 17: batería de 7.500&nbsp;mAh, cámara de 50 megapíxeles y pantalla de 6,9 pulgadas</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-19T13:20:55">19 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/donde-vivir-una-experiencia-de-safari-sin-salir-de-sudamerica/">¿Dónde vivir una experiencia de safari sin salir de Sudamérica?</a></h3></article><article class="nota nota--t" data-a="motorola"><time class="t" datetime="2026-09-19T13:15:18">19 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/motorola-inaugura-su-primer-motorola-store-en-peru/">Motorola inaugura su primer Motorola Store en Perú</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-17T16:34:05">17 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/flores-por-delivery-demanda-se-duplica-en-septiembre-y-crece-72-en-provincias/">Flores por delivery: demanda se duplica en septiembre y crece 72&nbsp;% en provincias</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-14T17:00:31">14 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/el-auge-del-wellness-travel-cambia-la-forma-de-entender-las-vacaciones/">El auge del wellness travel cambia la forma de entender las vacaciones</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-13T13:10:07">13 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/camane-encabezara-la-novena-edicion-del-festival-fado-lima-2026/">Camané encabezará la novena edición del Festival Fado Lima 2026</a></h3></article>
+  </aside>
+</div>
+
+<section class="c vinc" aria-labelledby="h-vinc">
+  <div class="vinc__cab">
+    <h2 id="h-vinc"><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg>Vínculos de la semana</h2>
+    <p>Quién se juntó con quién, y por cuánto. Toca un nombre subrayado para ver el resto de su red.</p>
+  </div>
+  <div class="vinc__g"><article class="nota nota--v" data-a="ia"><div class="nota__foto"><img src="assets/img/09-icpna.jpg" alt="ICPNA y Miami Dade College sellan alianza en tecnología e inteligencia artificial" width="800" height="600" loading="lazy" decoding="async"></div><div class="k k--esl"><span>ICPNA</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Miami Dade College</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/icpna-y-miami-dade-college-sellan-alianza-en-tecnologia-e-inteligencia-artificial/">ICPNA y Miami Dade College sellan alianza en tecnología e inteligencia artificial</a></h3><p class="nota__ex">El Instituto Cultural Peruano Norteamericano (ICPNA) y Miami Dade College (MDC) formalizaron una alianza de cooperación interinstitucional orientada a desarrollar nuevas oportunidades de capacitación…</p><time class="t" datetime="2026-09-11T21:12:24">11 sep</time></article><article class="nota nota--v" data-a="sernanp pymes"><div class="nota__foto"><img src="assets/img/16-sernanp-emprendedores.jpg" alt="Emprendedores por Naturaleza: Sernanp amplía convocatoria con S/ 4.5 millones en financiamiento" width="800" height="600" loading="lazy" decoding="async"></div><div class="k k--esl"><button class="k__a" data-actor="sernanp" type="button">Sernanp</button><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Emprendedores</span><b class="k__dato">S/&nbsp;4,5 M</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/emprendedores-por-naturaleza-sernanp-amplia-convocatoria-con-s-4-5-millones-en-financiamiento/">Emprendedores por Naturaleza: Sernanp amplía convocatoria con S/&nbsp;4.5&nbsp;millones en financiamiento</a></h3><p class="nota__ex">El Servicio Nacional de Áreas Naturales Protegidas por el Estado (Sernanp), organismo adscrito al Ministerio del Ambiente, anunció la ampliación del plazo de postulación del concurso “Emprendedores…</p><time class="t" datetime="2026-03-11T09:46:53">11 mar</time></article><article class="nota nota--v"><div class="nota__foto"><img src="assets/img/10-rimac-anin.jpg" alt="ANIN destina más de S/ 360 millones para reducir riesgos en 13 quebradas del Rímac" width="800" height="600" loading="lazy" decoding="async"></div><div class="k k--esl"><span>ANIN</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Río Rímac</span><b class="k__dato">S/&nbsp;360 M</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/anin-destina-mas-de-s-360-millones-para-reducir-riesgos-en-13-quebradas-del-rimac/">ANIN destina más de S/&nbsp;360&nbsp;millones para reducir riesgos en 13 quebradas del Rímac</a></h3><p class="nota__ex">La Autoridad Nacional de Infraestructura (ANIN) amplió su cartera de intervención integral para el control de riesgos por movimientos de masa e inundaciones en la cuenca del río Rímac con la…</p><time class="t" datetime="2026-09-10T21:10:39">10 sep</time></article><article class="nota nota--v" data-a="pymes ia"><div class="nota__foto"><img src="assets/img/20-mibanco.jpg" alt="Mibanco lanza atención por WhatsApp con inteligencia artificial y biometría facial" width="800" height="600" loading="lazy" decoding="async"></div><div class="k k--esl"><span>Mibanco</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>WhatsApp</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/mibanco-lanza-atencion-por-whatsapp-con-inteligencia-artificial-y-biometria-facial/">Mibanco lanza atención por WhatsApp con inteligencia artificial y biometría facial</a></h3><p class="nota__ex">En su compromiso por fortalecer la inclusión financiera en el país, Mibanco presentó “Mibanco por WhatsApp”, una innovadora solución digital que permitirá a miles de microempresarios acceder a…</p><time class="t" datetime="2025-11-03T22:33:25">3 nov 2025</time></article></div>
+</section>
+
+<div class="c">
+  <aside class="ad billboard" aria-label="Publicidad">
+    <span class="ad__label">Publicidad <em>· ejemplo</em></span>
+    <video muted playsinline loop preload="none" poster="assets/video/costa.jpg"><source src="assets/video/costa.mp4" type="video/mp4"></video>
+    <button class="ad__pausa" type="button" aria-label="Pausar video del anuncio"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/></svg></button>
+    <div class="ad__copy">
+      <div class="ad__marca">Altamar Oficinas · Miraflores</div>
+      <p class="ad__frase">Tu próxima reunión, frente al mar.</p>
+      <a class="ad__cta" href="#anuncia">Agenda una visita</a>
+    </div>
+  </aside>
+</div>
+
+<section class="c bloque" aria-labelledby="h-eco">
+  <h2 class="bloque__h" id="h-eco"><a href="https://networkingnoticias.pe/economia/">Economía</a><small>6 notas esta semana</small></h2>
+  <div class="eco">
+    <div class="eco__g">
+      <article class="nota nota--L" data-a="motorola"><div class="nota__foto"><img src="assets/img/02-motorola-store.jpg" alt="Motorola inaugura su primer Motorola Store en Perú" width="1200" height="675" loading="lazy" decoding="async"></div><div><div class="k k--esl"><button class="k__a" data-actor="motorola" type="button">Motorola</button><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Mall del Sur</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/motorola-inaugura-su-primer-motorola-store-en-peru/">Motorola inaugura su primer Motorola Store en Perú</a></h3><p class="nota__ex">Motorola inauguró su primera tienda en Perú el viernes 18 de septiembre, en el tercer piso del centro comercial Mall del Sur, en Lima.</p><time class="t" datetime="2026-09-19T13:15:18">19 sep</time></div></article>
+      <div><article class="nota nota--h"><div class="nota__foto"><img src="assets/img/03-flores.jpg" alt="Flores por delivery: demanda se duplica en septiembre y crece 72 % en provincias" width="240" height="160" loading="lazy" decoding="async"></div><div><div class="k">Economía<b class="k__dato k__dato--plano">+72&nbsp;% provincias</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/flores-por-delivery-demanda-se-duplica-en-septiembre-y-crece-72-en-provincias/">Flores por delivery: demanda se duplica en septiembre y crece 72&nbsp;% en provincias</a></h3><time class="t" datetime="2026-09-17T16:34:05">17 sep</time></div></article><article class="nota nota--h"><div class="nota__foto"><img src="assets/img/04-marcas-propias.jpg" alt="Marcas propias se reinventan y conquistan el carrito de compras" width="240" height="160" loading="lazy" decoding="async"></div><div><div class="k">Economía</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/marcas-propias-se-reinventan-y-conquistan-el-carrito-de-compras/">Marcas propias se reinventan y conquistan el carrito de compras</a></h3><time class="t" datetime="2026-09-13T11:50:06">13 sep</time></div></article><article class="nota nota--h"><div class="nota__foto"><img src="assets/img/05-amsac-pasco.jpg" alt="AMSAC fortalece el diálogo con la población de Pasco durante visita de trabajo" width="240" height="160" loading="lazy" decoding="async"></div><div><div class="k k--esl"><span>AMSAC</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Pasco</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/amsac-fortalece-el-dialogo-con-la-poblacion-de-pasco-durante-visita-de-trabajo/">AMSAC fortalece el diálogo con la población de Pasco durante visita de trabajo</a></h3><time class="t" datetime="2026-09-11T20:58:12">11 sep</time></div></article></div>
+      <div><article class="nota nota--h"><div class="nota__foto"><img src="assets/img/06-jockey-plaza.jpg" alt="Jockey Plaza ocupa el primer lugar en Perú Top Brands 2026" width="240" height="160" loading="lazy" decoding="async"></div><div><div class="k k--esl"><span>Jockey Plaza</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Top Brands 2026</span><b class="k__dato">#1</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/jockey-plaza-ocupa-el-primer-lugar-en-peru-top-brands-2026/">Jockey Plaza ocupa el primer lugar en Perú Top Brands 2026</a></h3><time class="t" datetime="2026-09-05T15:51:24">5 sep</time></div></article><article class="nota nota--h"><div class="nota__foto"><img src="assets/img/07-gasto-hogar.jpg" alt="Cuatro decisiones para organizar mejor el gasto del hogar" width="240" height="160" loading="lazy" decoding="async"></div><div><div class="k">Economía</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/cuatro-decisiones-para-organizar-mejor-el-gasto-del-hogar/">Cuatro decisiones para organizar mejor el gasto del hogar</a></h3><time class="t" datetime="2026-09-04T13:10:26">4 sep</time></div></article></div>
+    </div>
+    <aside class="ad media" aria-label="Publicidad">
+      <span class="ad__label">Publicidad <em>· ejemplo</em></span>
+      <video muted playsinline loop preload="none" poster="assets/video/barista.jpg"><source src="assets/video/barista.mp4" type="video/mp4"></video>
+      <button class="ad__pausa" type="button" aria-label="Pausar video del anuncio"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/></svg></button>
+      <div class="ad__copy">
+        <div class="ad__marca">Café Altura</div>
+        <p class="ad__frase">De Villa Rica a tu reunión de las 9.</p>
+        <a class="ad__cta" href="#anuncia">Pide para tu oficina</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="c bloque" aria-labelledby="h-act">
+  <h2 class="bloque__h" id="h-act"><a href="https://networkingnoticias.pe/actualidad/">Actualidad</a></h2>
+  <div class="act"><article class="nota nota--L" data-a="sernanp"><div class="nota__foto"><img src="assets/img/14-manu.jpg" alt="Ejército, Fiscalía y Sernanp vigilan el Manu ante amenazas de actividades ilegales" width="1200" height="675" loading="lazy" decoding="async"></div><div><div class="k k--esl"><span>Ejército</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Fiscalía</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><button class="k__a" data-actor="sernanp" type="button">Sernanp</button></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/ejercito-fiscalia-y-sernanp-vigilan-el-manu-ante-amenazas-de-actividades-ilegales/">Ejército, Fiscalía y Sernanp vigilan el Manu ante amenazas de actividades ilegales</a></h3><p class="nota__ex">El Ministerio del Ambiente (Minam), a través del Servicio Nacional de Áreas Naturales Protegidas por el Estado (Sernanp), fortalece la vigilancia preventiva en el Parque Nacional del Manu mediante un…</p><time class="t" datetime="2026-09-06T19:08:35">6 sep</time></div></article><article class="nota nota--m"><div class="nota__foto"><img src="assets/img/08-coca.jpg" alt="Perú reduce en 5,8% la superficie de cultivos de coca" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Actualidad<b class="k__dato k__dato--plano">−5,8&nbsp;%</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/peru-reduce-en-58-la-superficie-de-cultivos-de-coca/">Perú reduce en 5,8% la superficie de cultivos de coca</a></h3><time class="t" datetime="2026-07-18T22:54:12">18 jul</time></article><article class="nota nota--m"><div class="nota__foto"><img src="assets/img/11-torre-trecca.jpg" alt="EsSalud: Torre Trecca avanza hacia su ejecución tras más de 15 años de espera" width="800" height="450" loading="lazy" decoding="async"></div><div class="k k--esl"><span>EsSalud</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Torre Trecca</span><b class="k__dato">15 años</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/essalud-torre-trecca-avanza-hacia-su-ejecucion-tras-mas-de-15-anos-de-espera/">EsSalud: Torre Trecca avanza hacia su ejecución tras más de 15 años de espera</a></h3><time class="t" datetime="2026-09-09T21:07:38">9 sep</time></article><article class="nota nota--m" data-a="ia"><div class="nota__foto"><img src="assets/img/12-ia-terremotos.jpg" alt="¿La inteligencia artificial puede predecir terremotos con mucha más antelación?" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Actualidad</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/la-inteligencia-artificial-puede-predecir-terremotos-con-mucha-mas-antelacion/">¿La inteligencia artificial puede predecir terremotos con mucha más antelación?</a></h3><time class="t" datetime="2026-09-09T20:52:19">9 sep</time></article><article class="nota nota--m"><div class="nota__foto"><img src="assets/img/13-oxapampa.jpg" alt="Oxapampa llega a Lima con feria de productos, premios y experiencias turísticas" width="800" height="450" loading="lazy" decoding="async"></div><div class="k k--esl"><span>Oxapampa</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Lima</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/oxapampa-llega-a-lima-con-feria-de-productos-premios-y-experiencias-turisticas/">Oxapampa llega a Lima con feria de productos, premios y experiencias turísticas</a></h3><time class="t" datetime="2026-09-07T16:27:48">7 sep</time></article></div>
+</section>
+
+<section class="datos" aria-labelledby="h-datos"><div class="c">
+  <h2 id="h-datos"><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg>Las cifras de la semana</h2>
+  <div class="datos__g">
+    <div class="dato nota"><b><span class="sr">S/ 360 M</span><span aria-hidden="true">S/ <span class="cuenta" data-n="360">360</span> M</span></b><span><a href="https://networkingnoticias.pe/anin-destina-mas-de-s-360-millones-para-reducir-riesgos-en-13-quebradas-del-rimac/">para 13 quebradas del Rímac</a></span></div><div class="dato nota" data-a="pymes ia"><b><span class="sr">83 %</span><span aria-hidden="true"><span class="cuenta" data-n="83">83</span> %</span></b><span><a href="https://networkingnoticias.pe/el-83-de-pymes-peruanas-afirman-estar-listas-para-adoptar-ia-hoy/">de pymes listas para la IA</a></span></div><div class="dato nota"><b><span class="sr">−5,8 %</span><span aria-hidden="true">−<span class="cuenta" data-n="5.8">5,8</span> %</span></b><span><a href="https://networkingnoticias.pe/peru-reduce-en-58-la-superficie-de-cultivos-de-coca/">de superficie de coca</a></span></div><div class="dato nota" data-a="sernanp pymes"><b><span class="sr">S/ 4,5 M</span><span aria-hidden="true">S/ <span class="cuenta" data-n="4.5">4,5</span> M</span></b><span><a href="https://networkingnoticias.pe/emprendedores-por-naturaleza-sernanp-amplia-convocatoria-con-s-4-5-millones-en-financiamiento/">para emprendedores de áreas naturales</a></span></div><div class="dato nota"><b><span class="sr">7500 mAh</span><span aria-hidden="true"><span class="cuenta" data-n="7500">7.500</span> mAh</span></b><span><a href="https://networkingnoticias.pe/redmi-17-bateria-de-7-500-mah-camara-de-50-megapixeles-y-pantalla-de-69-pulgadas/">de batería en el REDMI 17</a></span></div><div class="dato nota"><b><span class="sr">#1</span><span aria-hidden="true">#<span class="cuenta" data-n="1">1</span></span></b><span><a href="https://networkingnoticias.pe/jockey-plaza-ocupa-el-primer-lugar-en-peru-top-brands-2026/">Jockey Plaza en Top Brands 2026</a></span></div>
+  </div>
+</div></section>
+
+<section class="c bloque" aria-labelledby="h-emp">
+  <h2 class="bloque__h" id="h-emp"><a href="https://networkingnoticias.pe/emprendedores/">Emprendedores</a></h2>
+  <div class="emp"><article class="nota nota--m" data-a="pymes ia"><div class="nota__foto"><img src="assets/img/17-pymes-ia.jpg" alt="El 83% de pymes peruanas afirman estar listas para adoptar IA hoy" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Emprendedores<b class="k__dato k__dato--plano">83&nbsp;%</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/el-83-de-pymes-peruanas-afirman-estar-listas-para-adoptar-ia-hoy/">El 83% de pymes peruanas afirman estar listas para adoptar IA hoy</a></h3><time class="t" datetime="2026-02-20T10:15:33">20 feb</time></article><article class="nota nota--m" data-a="pymes"><div class="nota__foto"><img src="assets/img/18-pymes-optimismo.jpg" alt="Optimismo en las Pymes peruanas: 46% considera positivo el momento actual" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Emprendedores<b class="k__dato k__dato--plano">46&nbsp;%</b></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/optimismo-en-las-pymes-peruanas-46-considera-positivo-el-momento-actual/">Optimismo en las Pymes peruanas: 46% considera positivo el momento actual</a></h3><time class="t" datetime="2025-12-01T19:16:18">1 dic 2025</time></article><article class="nota nota--m" data-a="pymes"><div class="nota__foto"><img src="assets/img/15-indicadores.jpg" alt="Cuatro indicadores que todo emprendedor debería revisar cada mes" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Emprendedores</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/cuatro-indicadores-que-todo-emprendedor-deberia-revisar-cada-mes/">Cuatro indicadores que todo emprendedor debería revisar cada mes</a></h3><time class="t" datetime="2026-09-05T15:43:15">5 sep</time></article><article class="nota nota--m" data-a="pymes"><div class="nota__foto"><img src="assets/img/19-campana-navidena.jpg" alt="Campaña navideña: 5 estrategias digitales para destacar y generar más ventas en tu negocio" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Emprendedores</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/campana-navidena-5-estrategias-digitales-para-destacar-y-generar-mas-ventas-en-tu-negocio/">Campaña navideña: 5 estrategias digitales para destacar y generar más ventas en tu negocio</a></h3><time class="t" datetime="2025-11-23T21:40:06">23 nov 2025</time></article></div>
+</section>
+
+<section class="ventana" aria-label="Publicidad">
+  <div class="ventana__media"><video muted playsinline loop preload="none" poster="assets/video/ruta.jpg"><source src="assets/video/ruta.mp4" type="video/mp4"></video></div>
+  <div class="ventana__top"><span>Publicidad · ejemplo</span><span>La portada sigue abajo ↓</span></div>
+  <button class="ad__pausa" type="button" aria-label="Pausar video del anuncio"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/></svg></button>
+  <div class="ad__copy">
+    <div class="ad__marca">Vértice · SUV híbrida 2026</div>
+    <p class="ad__frase">La sierra<br>no espera.</p>
+    <a class="ad__cta" href="#anuncia">Prueba de manejo en 48 h</a>
+  </div>
+</section>
+
+<section class="c bloque" aria-labelledby="h-int">
+  <div class="int">
+    <div>
+      <h2 class="bloque__h" id="h-int"><a href="https://networkingnoticias.pe/internacional/">Internacional</a></h2>
+      <div class="int__g"><article class="nota nota--L"><div class="nota__foto"><img src="assets/img/28-maduro.jpg" alt="EE.UU ataca bases militares en Venezuela y captura a Maduro y a su esposa" width="1200" height="675" loading="lazy" decoding="async"></div><div><div class="k">Internacional</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/ee-uu-ataca-bases-militares-en-venezuela-y-captura-a-maduro-y-a-su-esposa/">EE.UU ataca bases militares en Venezuela y captura a Maduro y a su esposa</a></h3><p class="nota__ex">El presidente estadounidense, Donald Trump, confirmó este sábado que Estados Unidos ha llevado a cabo «con éxito un ataque a gran escala contra Venezuela» y afirmó que «su líder, el presidente Nicolás…</p><time class="t" datetime="2026-01-03T05:12:36">3 ene</time></div></article><article class="nota nota--m"><div class="nota__foto"><img src="assets/img/29-machado.jpg" alt="María Corina Machado, Premio Nobel de la Paz 2025" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Internacional</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/maria-corina-machado-premio-nobel-de-la-paz-2025/">María Corina Machado, Premio Nobel de la Paz 2025</a></h3><time class="t" datetime="2025-10-10T08:10:44">10 oct 2025</time></article><article class="nota nota--m"><div class="nota__foto"><img src="assets/img/27-ice.jpg" alt="ICE cita casos de dos peruanos en Nueva Jersey que podrían ser liberados" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Internacional</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/ice-cita-casos-de-dos-peruanos-en-nueva-jersey-que-podrian-ser-liberados/">ICE cita casos de dos peruanos en Nueva Jersey que podrían ser liberados</a></h3><time class="t" datetime="2026-07-14T20:42:50">14 jul</time></article></div>
+    </div>
+    <aside class="leido" aria-labelledby="h-leido">
+      <h2 class="bloque__h" id="h-leido">Lo más leído</h2>
+      <ol><li class="nota"><h3 class="nota__tit"><a href="https://networkingnoticias.pe/vaticano-confirma-agenda-del-papa-leon-xiv-en-peru-del-11-al-16-de-noviembre/">Vaticano confirma agenda del papa León XIV en Perú del 11 al 16 de noviembre</a></h3></li><li class="nota"><h3 class="nota__tit"><a href="https://networkingnoticias.pe/ee-uu-ataca-bases-militares-en-venezuela-y-captura-a-maduro-y-a-su-esposa/">EE.UU ataca bases militares en Venezuela y captura a Maduro y a su esposa</a></h3></li><li class="nota" data-a="motorola"><h3 class="nota__tit"><a href="https://networkingnoticias.pe/motorola-inaugura-su-primer-motorola-store-en-peru/">Motorola inaugura su primer Motorola Store en Perú</a></h3></li><li class="nota"><h3 class="nota__tit"><a href="https://networkingnoticias.pe/anin-destina-mas-de-s-360-millones-para-reducir-riesgos-en-13-quebradas-del-rimac/">ANIN destina más de S/&nbsp;360&nbsp;millones para reducir riesgos en 13 quebradas del Rímac</a></h3></li><li class="nota" data-a="sernanp pymes"><h3 class="nota__tit"><a href="https://networkingnoticias.pe/emprendedores-por-naturaleza-sernanp-amplia-convocatoria-con-s-4-5-millones-en-financiamiento/">Emprendedores por Naturaleza: Sernanp amplía convocatoria con S/&nbsp;4.5&nbsp;millones en financiamiento</a></h3></li></ol>
+    </aside>
+  </div>
+</section>
+
+<div class="c cajas">
+  <section class="caja" aria-labelledby="s-tecnologia">
+  <h2 class="caja__h" id="s-tecnologia"><a href="https://networkingnoticias.pe/tecnologia/">Tecnología</a></h2>
+  <article class="nota nota--m" data-a="motorola"><div class="nota__foto"><img src="assets/img/37-moto-things.jpg" alt="Moto things: qué aportan Bose, Polar, Google, Pantone y Swarovski al ecosistema de Motorola" width="800" height="450" loading="lazy" decoding="async"></div><div class="k k--esl"><button class="k__a" data-actor="motorola" type="button">Motorola</button><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Bose · Polar · Google · Pantone · Swarovski</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/moto-things-que-aportan-bose-polar-google-pantone-y-swarovski-al-ecosistema-de-motorola/">Moto things: qué aportan Bose, Polar, Google, Pantone y Swarovski al ecosistema de Motorola</a></h3><time class="t" datetime="2026-09-11T21:05:48">11 sep</time></article><article class="nota nota--t"><time class="t" datetime="2026-09-20T18:21:41">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/redmi-17-bateria-de-7-500-mah-camara-de-50-megapixeles-y-pantalla-de-69-pulgadas/">REDMI 17: batería de 7.500&nbsp;mAh, cámara de 50 megapíxeles y pantalla de 6,9 pulgadas</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-05T20:47:03">5 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/cinco-riesgos-que-los-padres-deben-conocer-cuando-sus-hijos-juegan-online/">Cinco riesgos que los padres deben conocer cuando sus hijos juegan online</a></h3></article></section>
+  <section class="caja" aria-labelledby="s-motores">
+  <h2 class="caja__h" id="s-motores"><a href="https://networkingnoticias.pe/motores/">Motores</a></h2>
+  <article class="nota nota--m"><div class="nota__foto"><img src="assets/img/22-chery.jpg" alt="“Chery, Sin Dudas” ¿De qué se trata la nueva campaña lanzada en Perú?" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Motores</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/chery-sin-dudas-de-que-se-trata-la-nueva-campana-lanzada-en-peru/">“Chery, Sin Dudas” ¿De qué se trata la nueva campaña lanzada en Perú?</a></h3><time class="t" datetime="2026-02-10T17:04:03">10 feb</time></article><article class="nota nota--t"><time class="t" datetime="2026-06-08T22:12:05">8 jun</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/mercado-automotor-peruano-acelera-su-crecimiento-en-2026/">Mercado automotor peruano acelera su crecimiento en 2026</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-01-12T21:32:49">12 ene</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/sol-sal-y-arena-tres-enemigos-de-la-pintura-del-auto-y-como-protegerla/">Sol, sal y arena: tres enemigos de la pintura del auto y cómo protegerla</a></h3></article></section>
+  <aside class="vitrina" id="anuncia" aria-labelledby="h-anuncia">
+    <small>Anuncia en Networking</small>
+    <h2 id="h-anuncia">Tu marca, en video, dentro de la red.</h2>
+    <ul>
+      <li>Ventana a pantalla completa <span>interscroller</span></li>
+      <li>Billboard en video <span>970 × 250</span></li>
+      <li>Media página en video <span>300 × 600</span></li>
+      <li>Presencia en el boletín <span>diario</span></li>
+    </ul>
+    <svg class="vitrina__esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg>
+    <a class="btn" href="mailto:networkingnoticias@gmail.com?subject=Publicidad%20en%20Networking%20Noticias">Pide el media kit</a>
+  </aside>
+  <section class="caja" aria-labelledby="s-salud">
+  <h2 class="caja__h" id="s-salud"><a href="https://networkingnoticias.pe/salud/">Salud</a></h2>
+  <article class="nota nota--m"><div class="nota__foto"><img src="assets/img/24-bruxismo.jpg" alt="Bruxismo diurno y nocturno: Ambos podrían estar fracturando tus piezas dentales" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Salud</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/bruxismo-diurno-y-nocturno-ambos-podrian-estar-fracturando-tus-piezas-dentales/">Bruxismo diurno y nocturno: Ambos podrían estar fracturando tus piezas dentales</a></h3><time class="t" datetime="2026-09-04T20:27:46">4 sep</time></article><article class="nota nota--t"><time class="t" datetime="2026-07-27T10:56:52">27 jul</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/recomendaciones-para-proteger-a-los-adultos-mayores-frente-a-altas-temperaturas/">Recomendaciones para proteger a los adultos mayores frente a altas temperaturas</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-07-08T22:22:06">8 jul</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/dia-mundial-de-las-zoonosis-claves-para-prevenir-contagios/">Día Mundial de las Zoonosis: claves para prevenir contagios</a></h3></article></section>
+  <section class="caja" aria-labelledby="s-turismo">
+  <h2 class="caja__h" id="s-turismo"><a href="https://networkingnoticias.pe/turismo/">Turismo</a></h2>
+  <article class="nota nota--m"><div class="nota__foto"><img src="assets/img/30-safari.jpg" alt="¿Dónde vivir una experiencia de safari sin salir de Sudamérica?" width="800" height="450" loading="lazy" decoding="async"></div><div class="k">Turismo</div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/donde-vivir-una-experiencia-de-safari-sin-salir-de-sudamerica/">¿Dónde vivir una experiencia de safari sin salir de Sudamérica?</a></h3><time class="t" datetime="2026-09-19T13:20:55">19 sep</time></article><article class="nota nota--t"><time class="t" datetime="2026-07-27T11:02:54">27 jul</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/te-quedas-en-lima-descubre-rincones-llenos-de-historia-y-cultura-sin-salir-de-la-ciudad/">¿Te quedas en Lima? Descubre rincones llenos de historia y cultura sin salir de la ciudad</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-07-24T11:36:24">24 jul</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/viajes-por-fiestas-patrias-como-usar-tu-seguro-en-un-viaje-al-extranjero/">Viajes por Fiestas Patrias: cómo usar tu seguro en un viaje al extranjero</a></h3></article></section>
+  <section class="caja" aria-labelledby="s-ocio-cultura">
+  <h2 class="caja__h" id="s-ocio-cultura"><a href="https://networkingnoticias.pe/ocio-cultura/">Ocio y Cultura</a></h2>
+  <article class="nota nota--m"><div class="nota__foto"><img src="assets/img/35-camane.jpg" alt="Camané encabezará la novena edición del Festival Fado Lima 2026" width="800" height="450" loading="lazy" decoding="async"></div><div class="k k--esl"><span>Camané</span><svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span>Fado Lima</span></div><h3 class="nota__tit"><a href="https://networkingnoticias.pe/camane-encabezara-la-novena-edicion-del-festival-fado-lima-2026/">Camané encabezará la novena edición del Festival Fado Lima 2026</a></h3><time class="t" datetime="2026-09-13T13:10:07">13 sep</time></article><article class="nota nota--t"><time class="t" datetime="2026-09-20T18:31:44">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/peruana-ana-paula-alvarez-fue-coronada-como-embajadora-del-mini-model-world-2026/">Peruana Ana Paula Álvarez fue coronada como Embajadora del Mini Model World 2026</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-14T17:00:31">14 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/el-auge-del-wellness-travel-cambia-la-forma-de-entender-las-vacaciones/">El auge del wellness travel cambia la forma de entender las vacaciones</a></h3></article></section>
+</div>
+
+<section class="c bloque" aria-labelledby="h-op">
+  <h2 class="bloque__h" id="h-op"><a href="https://networkingnoticias.pe/opinion/">Opinión</a><small>Las voces de la red</small></h2>
+  <div class="voces">
+    <article class="voz" data-a="ia"><img src="assets/img/39-op-arriada.jpg" alt="Sebastian Arriada" width="96" height="96" loading="lazy"><div><p class="voz__quien">Sebastian Arriada</p><p class="voz__cargo">Chief Information Officer en Globant</p><h3 class="nota__tit"><a href="https://networkingnoticias.pe/15580-2de-la-caja-negra-a-la-caja-blanca-por-que-los-agentes-de-ia-no-deben-ser-un-misterio-para-las-companias/">De la caja negra a la caja blanca: por qué los agentes de IA no deben ser un misterio para las compañías</a></h3></div></article><article class="voz"><img src="assets/img/40-op-chile.jpg" alt="Claudia Valdés Muñoz" width="96" height="96" loading="lazy"><div><p class="voz__quien">Claudia Valdés Muñoz</p><p class="voz__cargo">gerente general de BBSC</p><h3 class="nota__tit"><a href="https://networkingnoticias.pe/por-que-los-peruanos-deberian-mirar-a-chile-como-plataforma-de-inversion/">¿Por qué los peruanos deberían mirar a Chile como plataforma de inversión?</a></h3></div></article><article class="voz"><img src="assets/img/41-op-8m.jpg" alt="Jimena Chávez Fuentes" width="96" height="96" loading="lazy"><div><p class="voz__quien">Jimena Chávez Fuentes</p><p class="voz__cargo">Directora País de DVV International</p><h3 class="nota__tit"><a href="https://networkingnoticias.pe/8m-estotambieneseducacion-para-las-mujeres-jovenes-y-adultas/">8M: #EstoTambiénEsEducación para las mujeres jóvenes y adultas</a></h3></div></article>
+  </div>
+</section>
+</main>
+
+<section class="boletin" id="boletin" aria-labelledby="h-bol"><div class="c">
+  <div><h2 id="h-bol">Cada mañana, quién se juntó con quién.</h2><p>El boletín de Networking Noticias: los vínculos, las cifras y las voces del día, antes de las 8.</p></div>
+  <div><form id="f-bol"><label class="sr" for="mail">Tu correo</label><input id="mail" type="email" required placeholder="tu@empresa.pe" autocomplete="email"><button class="btn" type="submit">Suscribirme</button></form><p class="boletin__ok" id="bol-ok" hidden role="status">Listo. Te llegará mañana a primera hora.</p></div>
+</div></section>
+
+<footer class="pie"><div class="c">
+  <div class="pie__g">
+    <div>
+      <div class="marca"><svg class="marca__esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg><span class="marca__txt"><span class="marca__nw">NETWORKING</span><span class="marca__no">noticias</span></span></div>
+      <p>Economía, empresas y actualidad del Perú. Aquí la noticia es el vínculo.</p>
+    </div>
+    <div><h3>Secciones</h3><ul><li><a href="https://networkingnoticias.pe/economia/">Economía</a></li><li><a href="https://networkingnoticias.pe/actualidad/">Actualidad</a></li><li><a href="https://networkingnoticias.pe/emprendedores/">Emprendedores</a></li><li><a href="https://networkingnoticias.pe/salud/">Salud</a></li><li><a href="https://networkingnoticias.pe/internacional/">Internacional</a></li></ul></div>
+    <div><h3>&nbsp;</h3><ul><li><a href="https://networkingnoticias.pe/motores/">Motores</a></li><li><a href="https://networkingnoticias.pe/tecnologia/">Tecnología</a></li><li><a href="https://networkingnoticias.pe/turismo/">Turismo</a></li><li><a href="https://networkingnoticias.pe/ocio-cultura/">Ocio y Cultura</a></li><li><a href="https://networkingnoticias.pe/opinion/">Opinión</a></li></ul></div>
+    <div><h3>Contacto</h3><ul><li><a href="mailto:networkingnoticias@gmail.com">networkingnoticias@gmail.com</a></li><li><a href="https://wa.me/51999999999?text=Hola%20Networking%20Noticias%2C%20quiero%20enviar%20una%20nota%20de%20prensa">Envía tu nota de prensa por WhatsApp</a></li><li><a href="#anuncia">Publicidad y media kit</a></li><li><a href="#boletin">Boletín diario</a></li></ul></div>
+  </div>
+  <div class="pie__fin"><span>© 2026 Networking Noticias. Todos los derechos reservados.</span><span>Demo de rediseño. Anuncios de ejemplo con videos de Pexels.</span></div>
+</div></footer>
+
+<a class="wa" href="https://wa.me/51999999999?text=Hola%20Networking%20Noticias%2C%20quiero%20enviar%20una%20nota%20de%20prensa" aria-label="Envía tu nota de prensa por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg><span>Envía tu nota</span></a>
+<div class="pill" id="pill" role="status" aria-live="polite">
+  <svg class="esl" viewBox="0 0 56 24" aria-hidden="true"><use href="#esl"/></svg>
+  <span class="pill__txt" id="pill-txt"></span>
+  <button class="pill__sig" id="pill-sig" type="button">Siguiente ↓</button>
+  <button class="pill__cerrar" id="pill-x" type="button" aria-label="Apagar la red">✕</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+  const quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const gsap = window.gsap;
+  if (gsap && !quieto) document.documentElement.classList.add("gsap");
+
+  /* cabecera: estado binario, no scrub */
+  const cab = document.getElementById("cabecera");
+  let chica = false;
+  const alScroll = () => { const c = scrollY > 80; if (c !== chica) { chica = c; cab.classList.toggle("chica", c); } };
+  addEventListener("scroll", alScroll, { passive: true }); alScroll();
+
+  /* eslabon: se separa y se vuelve a cerrar, una vez por evento — nunca en bucle */
+  const marca = document.querySelector(".cab .marca__esl");
+  function latido() {
+    if (!gsap || quieto) return;
+    gsap.fromTo(marca.querySelectorAll(".lazo-a"), { x: -3 }, { x: 0, duration: .7, ease: "elastic.out(1,.45)", overwrite: true });
+    gsap.fromTo(marca.querySelectorAll(".lazo-b"), { x: 3 }, { x: 0, duration: .7, ease: "elastic.out(1,.45)", overwrite: true });
+  }
+
+  /* ── LA FIRMA: tocar un actor enciende su red ── */
+  const NOMBRE = {"motorola":"Motorola","sernanp":"Sernanp","ia":"Inteligencia artificial","pymes":"Pymes"};
+  const pill = document.getElementById("pill"), pillTxt = document.getElementById("pill-txt");
+  const chips = [...document.querySelectorAll(".red__chip")];
+  let actual = null;
+  function encender(k) {
+    if (actual === k) return apagar();
+    actual = k;
+    const notas = [...document.querySelectorAll(".nota,.voz")];
+    let n = 0;
+    notas.forEach(el => { const si = (el.dataset.a || "").split(" ").includes(k); el.classList.toggle("en", si); if (si && !el.closest(".ultimo,.leido,.datos")) n++; });
+    document.body.classList.add("filtrando");
+    chips.forEach(c => c.setAttribute("aria-pressed", c.dataset.actor === k));
+    pillTxt.innerHTML = "La red de <b>" + NOMBRE[k] + "</b> · " + n + " notas";
+    if (gsap && !quieto && !pill.classList.contains("on")) gsap.fromTo(pill, { y: 90 }, { y: 0, duration: .5, ease: "back.out(1.5)" });
+    pill.classList.add("on");
+    latido();
+    if (gsap && !quieto) {
+      gsap.fromTo(chips.filter(c => c.dataset.actor === k).map(c => c.querySelector("span")), { scale: 1.5 }, { scale: 1, duration: .5, ease: "back.out(3)" });
+      gsap.fromTo(document.querySelectorAll(".nota.en,.voz.en"), { opacity: .22 }, { opacity: 1, duration: .3, stagger: .05, ease: "power1.out", clearProps: "opacity" });
+    }
+    siguiente(true);
+  }
+  function apagar() {
+    actual = null;
+    document.body.classList.remove("filtrando");
+    document.querySelectorAll(".en").forEach(e => e.classList.remove("en"));
+    chips.forEach(c => c.setAttribute("aria-pressed", "false"));
+    if (gsap && !quieto) gsap.to(pill, { y: 90, duration: .22, ease: "power2.in" });
+    pill.classList.remove("on");
+  }
+  function siguiente(primera) {
+    const en = [...document.querySelectorAll(".nota.en,.voz.en")].filter(e => !e.closest(".ultimo,.leido,.datos"));
+    if (!en.length) return;
+    const y = primera ? -1 : scrollY + 170;
+    const prox = en.find(e => e.getBoundingClientRect().top + scrollY > y + 2) || en[0];
+    scrollTo({ top: prox.getBoundingClientRect().top + scrollY - 150, behavior: quieto ? "auto" : "smooth" });
+  }
+  chips.forEach(c => c.setAttribute("aria-pressed", "false"));
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-actor]");
+    if (b) { e.preventDefault(); encender(b.dataset.actor); }
+  });
+  document.getElementById("pill-sig").addEventListener("click", () => siguiente(false));
+  document.getElementById("pill-x").addEventListener("click", apagar);
+  addEventListener("keydown", e => { if (e.key === "Escape" && actual) apagar(); });
+
+  /* ── anuncios en video: solo corren cuando se ven, sin sonido, siempre pausables ── */
+  const vids = [...document.querySelectorAll(".ad video, .ventana video")];
+  const pausados = new WeakSet();
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    const v = en.target;
+    if (en.isIntersecting && !quieto && !pausados.has(v)) { v.play().catch(() => {}); } else v.pause();
+  }), { threshold: .35 });
+  vids.forEach(v => io.observe(v));
+  document.querySelectorAll(".ad__pausa").forEach(b => {
+    const v = b.parentElement.querySelector("video");
+    if (quieto) { b.classList.add("play"); b.setAttribute("aria-label", "Reproducir video del anuncio"); }
+    b.addEventListener("click", () => {
+      if (v.paused) { pausados.delete(v); v.play().catch(() => {}); b.classList.remove("play"); b.setAttribute("aria-label", "Pausar video del anuncio"); }
+      else { pausados.add(v); v.pause(); b.classList.add("play"); b.setAttribute("aria-label", "Reproducir video del anuncio"); }
+    });
+  });
+  /* la ventana: el video fijo solo se pinta cuando la ventana esta en pantalla */
+  const ventana = document.querySelector(".ventana"), vm = ventana.querySelector(".ventana__media");
+  new IntersectionObserver(([e]) => { vm.style.visibility = e.isIntersecting ? "visible" : "hidden"; }).observe(ventana);
+
+  /* ── las cifras cuentan UNA vez; el numero real ya esta en el HTML ── */
+  if (gsap && window.ScrollTrigger && !quieto) {
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll(".cuenta").forEach(el => {
+      const fin = parseFloat(el.dataset.n), dec = fin % 1 ? 1 : 0, o = { v: 0 };
+      const pinta = () => { el.textContent = fin >= 1000 ? Math.round(o.v).toLocaleString("es-PE").replace(",", ".") : o.v.toFixed(dec).replace(".", ","); };
+      ScrollTrigger.create({ trigger: el, start: "top 88%", once: true,
+        onEnter: () => gsap.to(o, { v: fin, duration: .9, ease: "power2.out", onUpdate: pinta, onStart: () => { o.v = 0; pinta(); } }) });
+    });
+  }
+
+  if (gsap && window.ScrollTrigger && !quieto) {
+    /* las cifras: el eslabon del rotulo se cierra cuando la franja llega */
+    const eslD = document.querySelector(".datos h2 .esl");
+    gsap.fromTo(eslD, { scaleX: .75 }, { scaleX: 1, duration: .8, ease: "elastic.out(1,.4)", transformOrigin: "0 50%",
+      scrollTrigger: { trigger: ".datos", start: "top 80%", once: true } });
+    const eslV = document.querySelector(".vinc__cab .esl");
+    gsap.fromTo(eslV, { scaleX: .8 }, { scaleX: 1, duration: .8, ease: "elastic.out(1,.4)", transformOrigin: "50% 50%",
+      scrollTrigger: { trigger: ".vinc__cab", start: "top 85%", once: true } });
+    /* billboard y media pagina: el mensaje del anunciante entra cuando el video ya corre */
+    gsap.from(".billboard .ad__copy > *", { opacity: 0, x: -24, duration: .6, stagger: .09, ease: "power3.out",
+      scrollTrigger: { trigger: ".billboard", start: "top 75%", once: true } });
+    gsap.from(".media .ad__copy > *", { opacity: 0, y: 18, duration: .6, stagger: .09, ease: "power3.out",
+      scrollTrigger: { trigger: ".media", start: "top 80%", once: true } });
+    /* la ventana: la frase sube con el scroll mientras la ventana se abre (scrub) */
+    gsap.fromTo(".ventana .ad__frase", { yPercent: 60, opacity: .2 }, { yPercent: 0, opacity: 1, ease: "none",
+      scrollTrigger: { trigger: ".ventana", start: "top 90%", end: "center 55%", scrub: .4 } });
+    gsap.fromTo(".ventana .ad__marca, .ventana .ad__cta", { opacity: 0 }, { opacity: 1, ease: "none",
+      scrollTrigger: { trigger: ".ventana", start: "top 40%", end: "top 10%", scrub: .4 } });
+    gsap.fromTo(".ventana__media video", { scale: 1.12 }, { scale: 1, ease: "none",
+      scrollTrigger: { trigger: ".ventana", start: "top bottom", end: "bottom top", scrub: true } });
+    /* la vitrina: su eslabon gigante se cierra al llegar */
+    gsap.fromTo(".vitrina__esl", { x: 40, opacity: 0 }, { x: 0, opacity: .22, duration: 1, ease: "power3.out",
+      scrollTrigger: { trigger: ".vitrina", start: "top 80%", once: true } });
+  }
+
+  /* boletin (demo) */
+  document.getElementById("f-bol").addEventListener("submit", e => { e.preventDefault(); document.getElementById("bol-ok").hidden = false; latido(); });
+  addEventListener("load", latido, { once: true });
+})();
+</script>
+</body>
+</html>
