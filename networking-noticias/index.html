@@ -268,8 +268,44 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .filtrando .wa{opacity:0;pointer-events:none;transform:translateY(12px)}
 .saltar{position:absolute;left:12px;top:-80px;z-index:99;display:flex;align-items:center;height:44px;padding:0 16px;background:#fff;color:var(--tinta);font-weight:700;border-radius:6px}
 .saltar:focus{top:12px}
+/* ── franja electoral: neutra, ni marca editorial ni anuncio comercial ── */
+.franja{background:#F3F3F1;border-bottom:1px solid #DCDCD8;color:#161616}
+.franja[hidden]{display:none}
+.franja__in{display:flex;align-items:center;gap:14px;min-height:48px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.franja__tag{display:inline-flex;align-items:center;gap:8px;background:#161616;color:#fff;font:700 12px var(--txt);letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;border-radius:3px;white-space:nowrap}
+.franja__tag i{width:8px;height:8px;border-radius:50%;background:#9A9A96}
+.franja--vivo .franja__tag i{background:#fff;animation:vivo 2s infinite}
+.franja__proc{font:600 14px var(--txt);color:#3A3A38}
+.franja__hora{font:600 14px var(--txt);color:#3A3A38;margin-left:auto;white-space:nowrap}
+.franja__btn{height:40px;padding:0 16px;border-radius:99px;border:1.5px solid #161616;font:700 14px var(--txt);white-space:nowrap}
+.franja__btn:hover{background:#161616;color:#fff}
+.franja__btn[hidden]{display:none}
+.franja__vivo{display:none;width:100%;padding:8px 0 22px}
+.franja--vivo .franja__vivo{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px}
+.franja--vivo .franja__hora{color:#161616}
+.franja__pant{position:relative;aspect-ratio:16/9;background:#1C1C1B;color:#fff;overflow:hidden;display:grid;place-items:center;text-align:center}
+.franja__pant video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.franja__spot{padding:24px;position:relative}
+.franja__spot small{display:block;font:700 12px var(--txt);letter-spacing:.14em;text-transform:uppercase;color:#B5B5B0}
+.franja__spot strong{display:block;font:900 clamp(26px,3vw,40px)/1 var(--tit);margin:12px 0 10px}
+.franja__spot p{margin:0 auto;max-width:420px;font-size:14px;color:#CFCFCA}
+.franja__rot{position:absolute;left:12px;top:12px;font:700 12px var(--txt);letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.94);color:#161616;padding:4px 8px;border-radius:3px}
+.franja__barra{position:absolute;left:0;right:0;bottom:0;height:5px;background:rgba(255,255,255,.18)}
+.franja__barra i{display:block;height:100%;width:0;background:#fff}
+.franja__lado h3{font:900 15px/1 var(--tit);letter-spacing:.12em;text-transform:uppercase;margin:4px 0 12px}
+.franja__orden{list-style:none;margin:0 0 16px;padding:0;counter-reset:f}
+.franja__orden li{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #DCDCD8;font:600 15px var(--txt);color:#5A5A56}
+.franja__orden li::before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1.5px solid currentColor;font:700 13px var(--txt);flex:none}
+.franja__orden li.ya{color:#6B6B67;text-decoration:line-through}
+.franja__orden li.al{color:#161616}
+.franja__orden li.al::before{background:#161616;color:#fff;border-color:#161616}
+.franja__orden li span{margin-left:auto;font-size:13px}
+.franja__nota{font-size:13px;line-height:1.45;color:#5A5A56;margin:0 0 14px}
+.franja__acc{display:flex;gap:10px;flex-wrap:wrap}
+.veda [data-electoral]{display:none!important}
+.fs{display:none}
 @media (max-width:1100px){
-  .aper{grid-template-columns:1fr}
+  .aper{grid-template-columns:minmax(0,1fr)}
   .vinc__g{grid-template-columns:repeat(2,1fr)}
   .eco{grid-template-columns:1fr}
   .media{position:relative;top:0;height:auto;aspect-ratio:4/5;max-width:420px}
@@ -293,7 +329,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .nav ul{padding:0 16px}
   .nav a{padding:12px 11px 10px;font-size:14px}
   .red__nota{display:none}
-  .aper{padding:0 0 28px;gap:24px}
+  .aper{padding-top:0;padding-bottom:20px;gap:18px}
   .aper .grito{margin:0 -16px;min-height:0;display:block}
   .grito .nota__foto{position:relative;aspect-ratio:4/3}
   .grito .nota__foto::after{background:linear-gradient(180deg,rgba(11,31,36,0) 55%,rgba(11,31,36,1) 100%)}
@@ -301,8 +337,20 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .grito .nota__ex{font-size:15px}
   .vinc__cab{flex-direction:column;gap:8px}
   .vinc__g,.act,.emp,.int__g,.eco__g{grid-template-columns:1fr;gap:0}
-  .vinc__g .nota--v,.emp .nota--m,.act>.nota--m{display:grid;grid-template-columns:112px 1fr;column-gap:14px;padding:14px 0;border-top:1px solid var(--linea)}
-  .vinc__g .nota--v .nota__foto,.emp .nota--m .nota__foto,.act>.nota--m .nota__foto{grid-row:span 4;aspect-ratio:1;margin:0}
+  .vinc__g .nota--v,.emp .nota--m,.act>.nota--m,.int__g>.nota--m{display:grid;grid-template-columns:112px 1fr;column-gap:14px;padding:14px 0;border-top:1px solid var(--linea)}
+  .vinc__g .nota--v .nota__foto,.emp .nota--m .nota__foto,.act>.nota--m .nota__foto,.int__g>.nota--m .nota__foto{grid-row:span 4;aspect-ratio:1;margin:0}
+  .bloque{padding-bottom:36px}
+  .bloque__h{margin-bottom:0}
+  .caja__h{margin-bottom:0}
+  .caja .nota--m{padding-top:14px}
+  .k{letter-spacing:.07em}
+  /* lo ultimo: tira deslizable (RPP R2, chips manuales), no una pantalla entera antes de la tesis */
+  .ultimo{border-top-width:3px}
+  .ultimo__lista{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}
+  .ultimo__lista::-webkit-scrollbar{display:none}
+  .ultimo .nota--t{flex:0 0 74%;scroll-snap-align:start;border-top:0;border-left:3px solid var(--linea);padding:2px 0 2px 12px}
+  .ultimo .nota--t:first-child{border-left-color:var(--rojo)}
+  .ultimo .nota--t .nota__tit{font-size:16px}
   .vinc__g .nota--v .nota__tit{font-size:18px}
   .nota--v .nota__ex{display:none}
   .act .nota--L,.int__g .nota--L,.eco__g .nota--L{grid-column:auto;grid-row:auto;grid-template-columns:1fr;gap:12px;padding-bottom:16px}
@@ -320,7 +368,11 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .voz img{width:72px;height:72px}
   .boletin .c{grid-template-columns:1fr;gap:20px}
   .boletin form{flex-direction:column}
-  .pie__g{grid-template-columns:1fr}
+  .boletin input{flex:none;width:100%;height:52px}
+  .pie__g{grid-template-columns:1fr 1fr;gap:28px 20px}
+  .pie__g>div:first-child,.pie__g>div:last-child{grid-column:1/-1}
+  .pie__g div:nth-child(3) h3{display:none}
+  .pie__g div:nth-child(3){padding-top:28px}
   .pill{bottom:12px;padding-left:12px}
   .wa{right:14px;bottom:14px;padding:0 14px}
   .wa span{display:none}
@@ -331,8 +383,25 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .marca{min-height:44px}
   .nota__tit a,.top a,.pie a,.dato a,.voz a,.bloque__h a,.caja__h a{padding-top:13px;padding-bottom:13px}
   .k__a{padding-top:13px;padding-bottom:13px;margin:-13px 0}
-  .ventana__top{letter-spacing:.1em;padding:14px 16px;gap:12px}
+  .ventana__top{letter-spacing:.14em;padding:14px 16px;gap:12px}
+  .ventana__top span:last-child{display:none}
   .pill .esl{display:none}
+  .franja__proc{display:none}
+  .fl{display:none}
+  .fs{display:inline}
+  .franja__in{flex-wrap:nowrap}
+  .franja--vivo .franja__in{flex-wrap:wrap}
+  .franja__hora{white-space:nowrap}
+  .franja__pant{aspect-ratio:4/3}
+  .franja__in{gap:10px;min-height:52px}
+  .franja__hora{font-size:13px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .franja--vivo .franja__vivo{grid-template-columns:minmax(0,1fr);gap:16px}
+  .franja__lado{min-width:0}
+  .franja__pant{margin:0 -16px}
+  .franja__orden{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 14px;padding:0 16px;scrollbar-width:none}
+  .franja__orden li{flex:0 0 auto;border:1px solid #DCDCD8;border-radius:99px;padding:6px 12px 6px 6px;font-size:14px}
+  .franja__orden li span{display:none}
+  .franja__lado h3{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
@@ -390,6 +459,28 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   <span class="red__nota">Toca un actor y la portada enciende sus notas</span>
 </div></div>
 
+<section class="franja" id="franja" aria-label="Franja electoral" hidden>
+  <div class="c franja__in">
+    <span class="franja__tag"><i aria-hidden="true"></i>Franja electoral</span>
+    <span class="franja__proc" id="franja-proc"></span>
+    <span class="franja__hora" id="franja-hora" aria-live="polite"></span>
+    <button class="franja__btn" id="franja-sim" type="button"><span class="fl">Ver cómo se emite</span><span class="fs">Ver</span></button>
+    <div class="franja__vivo" id="franja-vivo">
+      <div class="franja__pant" id="franja-pant">
+        <span class="franja__rot"><span class="fl">Franja electoral · espacio asignado por la ONPE</span><span class="fs">Franja electoral · ONPE</span></span>
+        <div class="franja__spot"><small id="franja-n"></small><strong id="franja-org"></strong><p>Aquí se emite el spot oficial de 30&nbsp;s tal como lo entrega la ONPE, sin cortes ni edición del medio.</p></div>
+        <div class="franja__barra"><i id="franja-barra"></i></div>
+      </div>
+      <div class="franja__lado">
+        <h3>Orden de hoy</h3>
+        <ol class="franja__orden" id="franja-orden"></ol>
+        <p class="franja__nota">Orden según el sorteo público de la ONPE. La emisión va sincronizada con la hora oficial: todos los lectores ven el mismo spot al mismo tiempo, como en radio y TV.</p>
+        <div class="franja__acc"><button class="franja__btn" id="franja-salta" type="button">Siguiente spot</button><button class="franja__btn" id="franja-fin" type="button">Terminar simulación</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <main id="contenido">
 <h1 class="sr">Networking Noticias — portada del 22 de septiembre de 2026</h1>
 
@@ -400,7 +491,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   </article>
   <aside class="ultimo" aria-labelledby="h-ultimo">
     <h2 id="h-ultimo"><i aria-hidden="true"></i>Lo último</h2>
-    <article class="nota nota--t"><time class="t" datetime="2026-09-20T18:31:44">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/peruana-ana-paula-alvarez-fue-coronada-como-embajadora-del-mini-model-world-2026/">Peruana Ana Paula Álvarez fue coronada como Embajadora del Mini Model World 2026</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-20T18:21:41">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/redmi-17-bateria-de-7-500-mah-camara-de-50-megapixeles-y-pantalla-de-69-pulgadas/">REDMI 17: batería de 7.500&nbsp;mAh, cámara de 50 megapíxeles y pantalla de 6,9 pulgadas</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-19T13:20:55">19 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/donde-vivir-una-experiencia-de-safari-sin-salir-de-sudamerica/">¿Dónde vivir una experiencia de safari sin salir de Sudamérica?</a></h3></article><article class="nota nota--t" data-a="motorola"><time class="t" datetime="2026-09-19T13:15:18">19 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/motorola-inaugura-su-primer-motorola-store-en-peru/">Motorola inaugura su primer Motorola Store en Perú</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-17T16:34:05">17 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/flores-por-delivery-demanda-se-duplica-en-septiembre-y-crece-72-en-provincias/">Flores por delivery: demanda se duplica en septiembre y crece 72&nbsp;% en provincias</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-14T17:00:31">14 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/el-auge-del-wellness-travel-cambia-la-forma-de-entender-las-vacaciones/">El auge del wellness travel cambia la forma de entender las vacaciones</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-13T13:10:07">13 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/camane-encabezara-la-novena-edicion-del-festival-fado-lima-2026/">Camané encabezará la novena edición del Festival Fado Lima 2026</a></h3></article>
+    <div class="ultimo__lista"><article class="nota nota--t"><time class="t" datetime="2026-09-20T18:31:44">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/peruana-ana-paula-alvarez-fue-coronada-como-embajadora-del-mini-model-world-2026/">Peruana Ana Paula Álvarez fue coronada como Embajadora del Mini Model World 2026</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-20T18:21:41">Ayer</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/redmi-17-bateria-de-7-500-mah-camara-de-50-megapixeles-y-pantalla-de-69-pulgadas/">REDMI 17: batería de 7.500&nbsp;mAh, cámara de 50 megapíxeles y pantalla de 6,9 pulgadas</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-19T13:20:55">19 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/donde-vivir-una-experiencia-de-safari-sin-salir-de-sudamerica/">¿Dónde vivir una experiencia de safari sin salir de Sudamérica?</a></h3></article><article class="nota nota--t" data-a="motorola"><time class="t" datetime="2026-09-19T13:15:18">19 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/motorola-inaugura-su-primer-motorola-store-en-peru/">Motorola inaugura su primer Motorola Store en Perú</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-17T16:34:05">17 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/flores-por-delivery-demanda-se-duplica-en-septiembre-y-crece-72-en-provincias/">Flores por delivery: demanda se duplica en septiembre y crece 72&nbsp;% en provincias</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-14T17:00:31">14 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/el-auge-del-wellness-travel-cambia-la-forma-de-entender-las-vacaciones/">El auge del wellness travel cambia la forma de entender las vacaciones</a></h3></article><article class="nota nota--t"><time class="t" datetime="2026-09-13T13:10:07">13 sep</time><h3 class="nota__tit"><a href="https://networkingnoticias.pe/camane-encabezara-la-novena-edicion-del-festival-fado-lima-2026/">Camané encabezará la novena edición del Festival Fado Lima 2026</a></h3></article></div>
   </aside>
 </div>
 
@@ -675,6 +766,95 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
     gsap.fromTo(".vitrina__esl", { x: 40, opacity: 0 }, { x: 0, opacity: .22, duration: 1, ease: "power3.out",
       scrollTrigger: { trigger: ".vitrina", start: "top 80%", once: true } });
   }
+
+  /* ── FRANJA ELECTORAL ──────────────────────────────────────────────────────
+     Todo lo que cambia de un proceso a otro vive en este objeto: fechas, ventana diaria,
+     orden del sorteo y los spots que entrega la ONPE. El resto no se toca.
+     ERM 2026: franja del 5 ago al 1 oct, en digital de 13:00 a 13:02:30 (hora de Lima),
+     spots de 30 s, eleccion el 4 oct. */
+  const FRANJA = {
+    proceso: "Elecciones Regionales y Municipales 2026",
+    inicio: "2026-08-05", fin: "2026-10-01", eleccion: "2026-10-04", vedaHoras: 48,
+    ventana: ["13:00:00", "13:02:30"],
+    demo: true,                        // en la demo se muestra aunque la fecha real este fuera del periodo
+    registro: null,                    // URL del medio para registrar cada emision (reporte a la ONPE)
+    spots: [                           // orden del sorteo; video = archivo que entrega la ONPE
+      { org: "Organización política A", seg: 30, video: null },
+      { org: "Organización política B", seg: 30, video: null },
+      { org: "Organización política C", seg: 30, video: null },
+      { org: "Organización política D", seg: 30, video: null },
+      { org: "Organización política E", seg: 30, video: null },
+    ],
+  };
+  const fr = document.getElementById("franja");
+  const $ = id => document.getElementById(id);
+  const lima = d => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", { timeZone: "America/Lima", year: "numeric", month: "2-digit",
+      day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23" }).formatToParts(d).map(x => [x.type, x.value]));
+    return { dia: p.year + "-" + p.month + "-" + p.day, seg: +p.hour * 3600 + +p.minute * 60 + +p.second };
+  };
+  const aSeg = h => h.split(":").reduce((a, b) => a * 60 + +b, 0);
+  const [V0, V1] = FRANJA.ventana.map(aSeg);
+  let sim = null, emitido = -1;
+  $("franja-proc").textContent = FRANJA.proceso;
+  $("franja-orden").innerHTML = FRANJA.spots.map(x => "<li>" + x.org + "<span>" + x.seg + " s</span></li>").join("");
+  const orden = [...$("franja-orden").children];
+  function estadoFranja() {
+    const ahora = new Date(), l = lima(ahora);
+    /* veda: las ultimas 48 h antes del dia de la eleccion, y el propio dia */
+    const hastaEleccion = (new Date(FRANJA.eleccion + "T00:00:00-05:00") - ahora) / 36e5;
+    document.body.classList.toggle("veda", hastaEleccion <= FRANJA.vedaHoras && hastaEleccion > -24);
+    const enPeriodo = l.dia >= FRANJA.inicio && l.dia <= FRANJA.fin;
+    if (!enPeriodo && !FRANJA.demo && !sim) { fr.hidden = true; return; }
+    fr.hidden = false;
+    const t = sim ? V0 + (performance.now() - sim.t0) / 1000 + sim.salto : l.seg;
+    const vivo = t >= V0 && t < V1;
+    fr.classList.toggle("franja--vivo", vivo);
+    $("franja-sim").hidden = vivo;
+    if (!vivo) {
+      if (sim) { sim = null; emitido = -1; }
+      const falta = V0 - t;
+      const h0 = FRANJA.ventana[0].slice(0, 5);
+      $("franja-hora").innerHTML = t < V0
+        ? "<span class=fl>Hoy de " + h0 + " a " + FRANJA.ventana[1] + " · faltan " + Math.floor(falta / 3600) + " h " + Math.floor(falta % 3600 / 60) + " min</span><span class=fs>Hoy " + h0 + "</span>"
+        : "<span class=fl>La de hoy ya se emitió · mañana a las " + h0 + "</span><span class=fs>Mañana " + h0 + "</span>";
+      return;
+    }
+    /* en vivo: el spot sale del reloj, no de un temporizador propio */
+    let pos = t - V0, i = 0;
+    while (i < FRANJA.spots.length - 1 && pos >= FRANJA.spots[i].seg) { pos -= FRANJA.spots[i].seg; i++; }
+    const spot = FRANJA.spots[i];
+    $("franja-hora").innerHTML = "<span class=fs>En emisión</span><span class=fl>En emisión · " + FRANJA.ventana[0].slice(0, 5) + " a " + FRANJA.ventana[1] + (sim ? " · simulación" : "") + "</span>";
+    $("franja-n").textContent = "Spot " + (i + 1) + " de " + FRANJA.spots.length + " · " + Math.max(1, Math.ceil(spot.seg - pos)) + " s";
+    $("franja-org").textContent = spot.org;
+    $("franja-barra").style.width = Math.min(100, pos / spot.seg * 100) + "%";
+    orden.forEach((li, k) => { li.className = k < i ? "ya" : k === i ? "al" : ""; });
+    if (i !== emitido) {
+      emitido = i;
+      const pant = $("franja-pant"), viejo = pant.querySelector("video");
+      if (viejo) viejo.remove();
+      if (spot.video) {
+        const v = document.createElement("video");
+        v.src = spot.video; v.muted = true; v.playsInline = true;
+        v.addEventListener("loadedmetadata", () => { v.currentTime = pos; v.play().catch(() => {}); }, { once: true });
+        pant.prepend(v);
+      }
+      if (FRANJA.registro && !sim) navigator.sendBeacon(FRANJA.registro, JSON.stringify({ spot: i, org: spot.org, dia: l.dia, t: l.seg }));
+      if (gsap && !quieto) gsap.fromTo("#franja-org", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .4, ease: "power2.out" });
+    }
+  }
+  $("franja-sim").addEventListener("click", () => {
+    sim = { t0: performance.now(), salto: 0 }; emitido = -1; estadoFranja();
+    fr.scrollIntoView({ behavior: quieto ? "auto" : "smooth", block: "start" });
+  });
+  $("franja-salta").addEventListener("click", () => {
+    if (!sim) return;
+    const t = (performance.now() - sim.t0) / 1000 + sim.salto;
+    let acc = 0; for (const x of FRANJA.spots) { acc += x.seg; if (acc > t + .01) break; }
+    sim.salto += acc - t; estadoFranja();
+  });
+  $("franja-fin").addEventListener("click", () => { sim = null; emitido = -1; estadoFranja(); });
+  estadoFranja(); setInterval(estadoFranja, 250);
 
   /* boletin (demo) */
   document.getElementById("f-bol").addEventListener("submit", e => { e.preventDefault(); document.getElementById("bol-ok").hidden = false; latido(); });
