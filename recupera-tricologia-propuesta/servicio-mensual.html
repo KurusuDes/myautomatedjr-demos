@@ -13,7 +13,8 @@
 
 <div class="actionbar">
   <a class="btn ghost" href="inversion.html">← Inversión</a>
-  <button class="btn" onclick="window.print()">Imprimir / Guardar PDF</button>
+  <a class="btn only-m" href="pdf/recupera-servicio-mensual.pdf" download>Descargar PDF</a>
+  <button class="btn no-m" onclick="window.print()">Imprimir / Guardar PDF</button>
   <a class="btn ghost" href="google-ads.html">Google Ads →</a>
   <p class="print-hint">Al imprimir, active "Gráficos de fondo" para conservar los colores.</p>
 </div>
@@ -34,8 +35,8 @@
   <div class="tag">— Adicionales, mes a mes</div>
   <h1 class="headline">Dos escalones, <em>sin letra chica.</em></h1>
   <p class="lede">
-    La plataforma ya es suya. Estos servicios cubren lo que necesita mes a mes: que siga
-    funcionando y que atienda a toda hora. Se suben, se bajan o se detienen cuando ustedes lo
+    La plataforma ya es suya. <span class="no-m">Estos servicios cubren lo que necesita mes a mes: que siga
+    funcionando y que atienda a toda hora. </span> Se suben, se bajan o se detienen cuando ustedes lo
     decidan.
   </p>
 
@@ -82,17 +83,17 @@
   </section>
 
   <h2 class="sec"><span class="n">01</span>Google, al lanzar y cada mes</h2>
-  <p class="tx">
+  <p class="tx no-m">
     Antes de escribir una línea, miramos lo que Google ya sabe: qué direcciones de su web actual
     tienen historia, qué buscan los pacientes y qué páginas usa la competencia para ganar esas
     búsquedas. Así la web nueva sale cubriendo lo que el rubro busca, y con el Escalón 02 sigue
     subiendo cada mes.
   </p>
   <ol class="steps">
-    <li><b>Su web actual</b> <i>(al lanzar).</i> Cada dirección que Google tiene de su web actual se redirige a su equivalente nueva, para que la posición ganada no se pierda.</li>
-    <li><b>La competencia</b> <i>(al lanzar).</i> Qué búsquedas cubren los centros capilares de Lima, con qué páginas y con qué títulos.</li>
-    <li><b>Lo que falta</b> <i>(al lanzar).</i> Cruzamos las búsquedas del rubro con las páginas de su sitio: una búsqueda está cubierta solo si tiene una página que la nombre.</li>
-    <li><b>Optimización</b> <i>(cada mes, Escalón 02).</i> Search Console nos dice por qué búsquedas ya aparecen. Donde aparecen y no los eligen, reforzamos esa página.</li>
+    <li><details class="acc acc-inline" open><summary><b>Su web actual</b> <i>(al lanzar).</i></summary> <span class="d">Cada dirección que Google tiene de su web actual se redirige a su equivalente nueva, para que la posición ganada no se pierda.</span></details></li>
+    <li><details class="acc acc-inline" open><summary><b>La competencia</b> <i>(al lanzar).</i></summary> <span class="d">Qué búsquedas cubren los centros capilares de Lima, con qué páginas y con qué títulos.</span></details></li>
+    <li><details class="acc acc-inline" open><summary><b>Lo que falta</b> <i>(al lanzar).</i></summary> <span class="d">Cruzamos las búsquedas del rubro con las páginas de su sitio: una búsqueda está cubierta solo si tiene una página que la nombre.</span></details></li>
+    <li><details class="acc acc-inline" open><summary><b>Optimización</b> <i>(cada mes, Escalón 02).</i></summary> <span class="d">Search Console nos dice por qué búsquedas ya aparecen. Donde aparecen y no los eligen, reforzamos esa página.</span></details></li>
   </ol>
 
   <div class="explainer">
@@ -119,5 +120,6 @@
   <p class="signoff">Recupera · Propuesta confidencial · Válida por 30 días</p>
 </main>
 
+<script src="propuesta.js"></script>
 </body>
 </html>

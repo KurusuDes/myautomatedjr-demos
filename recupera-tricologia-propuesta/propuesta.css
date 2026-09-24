@@ -164,12 +164,97 @@ p.tx b, li b { color:var(--ink); font-weight:700; }
 .docs .d-s { font-size:13px; color:var(--gris); margin-top:.15rem; }
 .docs .arrow { color:var(--keratina); font-size:20px; }
 
+/* Acordeones: en escritorio e impresión se leen como texto corrido */
+details.acc > summary { list-style:none; }
+details.acc > summary::-webkit-details-marker { display:none; }
+details.acc > summary::after { display:none; }
+.acc-inline > summary { display:inline; }
+.acc-inline::details-content { display:contents; }
+.acc-inline > .d { display:inline; }
+.acc-inline > .d::before { content:" "; }
+.sec-acc > summary h2.sec { display:inline-block; }
+.plan-tabs, .only-m { display:none; }
+
 @media screen and (max-width:760px) {
-  body { padding:1rem .6rem; }
-  .sheet { padding:9mm 6mm; }
-  .plans, .plans.two-col, .two, .proof, .foot-grid, .report ul { grid-template-columns:1fr; }
-  .headline { font-size:32px; }
-  .plans { gap:1.3rem; }
+  body { padding:0; background:var(--paper); font-size:15px; }
+  .sheet { padding:1.25rem 1rem 2rem; box-shadow:none; }
+  .actionbar { margin:0; padding:.9rem 1rem 0; background:var(--paper); justify-content:flex-start; gap:.5rem; }
+  .actionbar .btn { padding:.7rem 1.1rem; font-size:10.5px; letter-spacing:.16em; }
+  .no-m, .print-hint { display:none !important; }
+  .only-m { display:inline-flex; }
+
+  .doc-date { display:none; }
+  .hebra { margin:.7rem 0 .9rem; height:18px; }
+  .headline { font-size:29px; }
+  .lede { font-size:14px; line-height:1.55; }
+  h2.sec { font-size:19px; margin-top:1.6rem; }
+  p.tx { font-size:13.5px; }
+
+  /* Planes: carrusel que abre en el recomendado */
+  .plan-tabs { display:flex; gap:.35rem; margin-top:1.3rem; overflow-x:auto; scrollbar-width:none; }
+  .plan-tabs::-webkit-scrollbar { display:none; }
+  .plan-tabs button {
+    flex:1 0 auto; min-height:40px; padding:.5rem .8rem; border-radius:999px; cursor:pointer;
+    font-family:var(--display); font-weight:700; font-size:13px; white-space:nowrap;
+    background:#fff; color:var(--primary); border:1px solid var(--linea);
+    transition:background .2s cubic-bezier(.22,1,.36,1), color .2s cubic-bezier(.22,1,.36,1);
+  }
+  .plan-tabs button.is-star::after { content:" ★"; color:var(--keratina); }
+  .plan-tabs button[aria-pressed="true"] { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .plans, .plans.two-col {
+    display:flex; position:relative; gap:.7rem; margin:.4rem -1rem 0; padding:16px 1rem 6px;
+    overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; overscroll-behavior-x:contain;
+  }
+  .plans::-webkit-scrollbar { display:none; }
+  .plans > .plan { flex:0 0 86%; scroll-snap-align:center; padding:1.1rem 1rem; }
+  .feats li { font-size:13px; }
+
+  /* Acordeones cerrados en celular */
+  details.acc > summary { cursor:pointer; position:relative; padding-right:1.8rem; }
+  details.acc > summary::after {
+    display:block; content:""; position:absolute; right:.1rem; top:50%; width:8px; height:8px; margin-top:-6px;
+    border-right:1.6px solid var(--keratina); border-bottom:1.6px solid var(--keratina);
+    transform:rotate(45deg); transition:transform .25s cubic-bezier(.22,1,.36,1);
+  }
+  details.acc[open] > summary::after { transform:rotate(-135deg); margin-top:-2px; }
+  .acc-inline > summary { display:block; }
+  .acc-inline::details-content { display:block; }
+  .acc-inline > .d { display:block; margin-top:.35rem; }
+  .acc-inline > .d::before { content:none; }
+
+  .sec-acc { margin-top:1.6rem; border-top:1px solid var(--linea); border-bottom:1px solid var(--linea); }
+  .sec-acc > summary { padding:.8rem 1.8rem .8rem 0; }
+  .sec-acc > summary h2.sec { margin:0; font-size:17px; }
+  .sec-acc[open] { padding-bottom:.8rem; }
+
+  .two { grid-template-columns:1fr; gap:0; }
+  details.explainer { margin-top:.6rem; padding:.8rem 1rem; }
+  details.explainer > summary.explainer-head { margin:0; line-height:1.5; }
+  details.explainer[open] > summary.explainer-head { margin-bottom:.4rem; }
+
+  .compare { font-size:12px; }
+  .compare th { font-size:11.5px; padding:.45rem .25rem; }
+  .compare td { padding:.4rem .25rem; }
+  .compare td:first-child { width:46%; }
+  .compare tr.total td { font-size:13px; }
+
+  .steps li, .warn li { padding-top:.65rem; padding-bottom:.65rem; font-size:13.5px; }
+  .warn li > details > summary, .steps li > details > summary { line-height:1.45; }
+
+  .proof { grid-template-columns:1fr; gap:.4rem; }
+  .proof > div { display:grid; grid-template-columns:7.4rem 1fr; align-items:center; gap:.6rem; padding:.6rem .8rem; }
+  .proof .k { font-size:20px; }
+  .proof .t { margin:0; }
+
+  .footer { margin-top:1.4rem; }
+  .foot-grid { grid-template-columns:1fr; gap:.4rem; }
+  .foot-card { display:grid; grid-template-columns:6.8rem 1fr; gap:.6rem; align-items:baseline; padding:.6rem .8rem; }
+  .foot-card .n { font-size:16px; }
+  .foot-card .t { margin:0; }
+  .fine { font-size:10.5px; }
+  .closing { font-size:18px; margin-top:1.4rem; }
+  .signoff { font-size:9.5px; letter-spacing:.14em; }
+  .report ul { grid-template-columns:1fr; }
 }
 @page { size:A4; margin:10mm; }
 @media print {

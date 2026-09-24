@@ -12,7 +12,8 @@
 <body>
 
 <div class="actionbar">
-  <button class="btn" onclick="window.print()">Imprimir / Guardar PDF</button>
+  <button class="btn no-m" onclick="window.print()">Imprimir / Guardar PDF</button>
+  <a class="btn only-m" href="pdf/recupera-inversion.pdf" download>Descargar PDF</a>
   <a class="btn ghost" href="servicio-mensual.html">Servicio mensual →</a>
   <p class="print-hint">Al imprimir, active "Gráficos de fondo" para conservar los colores.</p>
 </div>
@@ -33,9 +34,9 @@
   <div class="tag">— Su nueva plataforma digital</div>
   <h1 class="headline">Una web a la altura <em>de su consulta.</em></h1>
   <p class="lede">
-    Recupera ya no compite por precio: compite por diagnóstico. La mayoría de centros capilares
+    Recupera ya no compite por precio: compite por diagnóstico.<span class="no-m"> La mayoría de centros capilares
     en Lima tiene una web básica; la suya va a explicar, con hechos y en calma, por qué
-    <b>no todas las alopecias se tratan igual</b>, y a llevar a cada visitante a su evaluación.
+    <b>no todas las alopecias se tratan igual</b>, y a llevar a cada visitante a su evaluación.</span>
     Tres caminos, cada uno un paso más allá del anterior.
   </p>
 
@@ -101,7 +102,8 @@
     </article>
   </section>
 
-  <h2 class="sec"><span class="n">01</span>Qué incluye cada plan, lado a lado</h2>
+  <details class="acc sec-acc" open>
+  <summary><h2 class="sec"><span class="n">01</span>Qué incluye cada plan, lado a lado</h2></summary>
   <table class="compare">
     <thead>
       <tr><th></th><th>Esencial</th><th class="c-star">Clínica Digital</th><th>Premium</th></tr>
@@ -129,16 +131,15 @@
       <tr class="total"><td>Inversión</td><td>S/ 6,000<small>+ S/ 1,080 IGV</small></td><td class="c-star">S/ 7,000<small>+ S/ 1,260 IGV</small></td><td>S/ 8,000<small>+ S/ 1,440 IGV</small></td></tr>
     </tbody>
   </table>
+  </details>
 
   <div class="two">
-    <div class="explainer">
-      <div class="explainer-head">¿Y si no quieren pagar la IA?</div>
+    <details class="explainer acc" open><summary class="explainer-head">¿Y si no quieren pagar la IA?</summary>
       <p>El chatbot y el blog con IA funcionan con el <b>servicio mensual de S/ 400</b>, que cubre su costo. Con el de S/ 200 nada se apaga: el chatbot responde con los textos que ustedes aprueban y el blog se sigue escribiendo desde el panel.</p>
-    </div>
-    <div class="explainer">
-      <div class="explainer-head">¿Por qué el test es gratis?</div>
+    </details>
+    <details class="explainer acc" open><summary class="explainer-head">¿Por qué el test es gratis?</summary>
       <p>Porque el resultado no lo da la web: lo da un tricólogo. El test orienta ("su patrón se parece a…") y lleva a la persona a conversar con ustedes, que es donde se decide la consulta.</p>
-    </div>
+    </details>
   </div>
 
   <div class="footer">
@@ -161,5 +162,6 @@
   <p class="signoff">Recupera · Propuesta confidencial · Válida por 30 días</p>
 </main>
 
+<script src="propuesta.js"></script>
 </body>
 </html>
